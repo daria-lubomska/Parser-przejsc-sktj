@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Index;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
@@ -14,7 +15,7 @@ import lombok.Getter;
 
 @Getter
 @Entity
-@Table(name = "country")
+@Table(name = "country", indexes = {@Index(name = "country_name", columnList = "name")})
 public class Country {
 
   @Id

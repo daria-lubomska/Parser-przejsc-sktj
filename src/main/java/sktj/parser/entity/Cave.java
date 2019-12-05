@@ -5,13 +5,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Index;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import lombok.Getter;
 
 @Getter
 @Entity
-@Table(name = "cave_name")
+@Table(name = "cave_name", indexes = {@Index(name = "name_cave", columnList = "name")})
 public class Cave {
 
   @Id
