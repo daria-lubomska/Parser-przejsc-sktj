@@ -11,7 +11,7 @@ import sktj.parser.service.DataProcessor;
 @SpringBootApplication
 @EnableJpaRepositories
 public class ParserApplication implements CommandLineRunner {
-  
+
   private final CaveAchievementsProcessor caveAchievementsProcessor;
   private final DataProcessor dataProcessor;
 
