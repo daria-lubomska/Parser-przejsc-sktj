@@ -5,7 +5,6 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import sktj.parser.entity.Country;
 
-
 public class CountryRepositoryCustomImpl implements CountryRepositoryCustom {
 
   @PersistenceContext

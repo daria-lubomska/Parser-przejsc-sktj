@@ -9,6 +9,7 @@ import java.io.InputStreamReader;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Pattern;
 import lombok.extern.slf4j.Slf4j;
@@ -26,7 +27,7 @@ import sktj.parser.repository.CountryRepository;
 import sktj.parser.repository.UserRepository;
 
 @Slf4j
-@Component("fileLoader")
+@Component("caveAchievementsLoader")
 public class CaveProcessor {
 
   private UserRepository userRepository;
@@ -83,29 +84,16 @@ public class CaveProcessor {
       cave.setAuthorsFromAnotherClubs(line[9].trim());
       cave.setComment(line[10].trim());
       String email = line[11].trim();
+      cave.setNotificationAuthor(userRepository.findByEmail(email));
       List<User> userBatchList = userRepository.findAll();
-      for (User user : userBatchList) {
-        if (email.equals(user.getEmail())) {
-          cave.setNotificationAuthor(user);
-        }
-      }
-//      cave.getAuthors().add(userRepository.findById(5L).orElse(null));
       String authors = line[8].trim();
       //todo tutaj może być czytana na koncu i poczatku "";
       String[] users = authors.split(",");
-      if (users[0].charAt(0) == '"') {
-        users[0] = users[0].substring(1);
-      }
-      String last = users[users.length - 1];
-      if (last.charAt(last.length() - 1) == '"') {
-        users[0] = users[0].substring(0, last.length() - 2);
-      }
-      //nieoptymalne
+      log.info("authors - raw from file: " + Arrays.toString(users));
       for (String s : users) {
         for (User user : userBatchList) {
           if (s.toUpperCase().contains(user.getSurname().toUpperCase())) {
-            log.info("authors from table:" + s);
-            log.info("authors from db:" + user.getSurname());
+            log.info("authors from db:" + user.getEmail());
             cave.getAuthors().add(user);
           }
         }
@@ -129,7 +117,6 @@ public class CaveProcessor {
     if (dateTimePattern.matcher(trimmedTimestamp).matches()) {
       trimmedTimestamp = trimmedTimestamp + ":00";
     }
-    LocalDateTime localDateTime = LocalDateTime.parse(trimmedTimestamp, formatter);
     return LocalDateTime.parse(trimmedTimestamp, formatter);
   }
 
