@@ -2,9 +2,8 @@ package sktj.parser.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import sktj.parser.entity.Country;
+import sktj.parser.entity.Cave;
 
 @Repository
-public interface CountryRepository extends CountryRepositoryBasic, CountryRepositoryCustom {
-
+public interface CaveRepositoryBasic extends JpaRepository<Cave, Long> {
 }

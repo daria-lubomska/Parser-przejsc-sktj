@@ -60,10 +60,10 @@ public class ClimbingAchievements implements Serializable {
 
   @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
   @JoinColumn(name = "notification_author")
-  private Users notificationAuthor;
+  private User notificationAuthor;
 
   @ManyToMany(mappedBy = "climbs")
-  private List<Users> authors = new ArrayList<>();
+  private List<User> authors = new ArrayList<>();
 
   @Column(name = "authors_from_another_clubs")
   private String anotherAuthors;

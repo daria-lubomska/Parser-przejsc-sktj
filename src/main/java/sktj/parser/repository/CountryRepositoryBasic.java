@@ -5,6 +5,6 @@ import org.springframework.stereotype.Repository;
 import sktj.parser.entity.Country;
 
 @Repository
-public interface CountryRepository extends CountryRepositoryBasic, CountryRepositoryCustom {
+public interface CountryRepositoryBasic extends JpaRepository<Country, Long> {
 
 }

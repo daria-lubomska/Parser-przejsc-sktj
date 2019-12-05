@@ -22,7 +22,7 @@ import lombok.Setter;
 @Setter
 @Entity
 @Table(name = "users", indexes = {@Index(name = "user_surname", columnList = "surname")})
-public class Users {
+public class User {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -67,6 +67,6 @@ public class Users {
       inverseJoinColumns = @JoinColumn(name = "other_id"))
   private List<OtherActivityAchievements> others = new ArrayList<>();
 
-  public Users() {
+  public User() {
   }
 }

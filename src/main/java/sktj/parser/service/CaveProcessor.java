@@ -18,9 +18,10 @@ import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 import sktj.parser.entity.CaveAchievements;
-import sktj.parser.entity.Users;
+import sktj.parser.entity.User;
 import sktj.parser.enums.CaveOvercomeStyle;
 import sktj.parser.repository.CaveAchievementsRepository;
+import sktj.parser.repository.CaveRepository;
 import sktj.parser.repository.CountryRepository;
 import sktj.parser.repository.UserRepository;
 
@@ -29,17 +30,18 @@ import sktj.parser.repository.UserRepository;
 public class CaveProcessor {
 
   private UserRepository userRepository;
-  private CaveAchievementsRepository caveRepository;
+  private CaveAchievementsRepository caveAchievementsRepository;
   private CountryRepository countryRepository;
+  private CaveRepository caveRepository;
 
   @Autowired
-  public CaveProcessor(UserRepository userRepository, CaveAchievementsRepository caveRepository,
-      CountryRepository countryRepository) {
+  public CaveProcessor(UserRepository userRepository, CaveAchievementsRepository caveAchievementsRepository,
+      CountryRepository countryRepository, CaveRepository caveRepository) {
     this.userRepository = userRepository;
-    this.caveRepository = caveRepository;
+    this.caveAchievementsRepository = caveAchievementsRepository;
     this.countryRepository = countryRepository;
+    this.caveRepository = caveRepository;
   }
-
 
   @Value("classpath:caves.csv")
   Resource caveResource;
@@ -72,17 +74,17 @@ public class CaveProcessor {
       cave.setEntryTimestamp(entryTimestamp);
       cave.setExitTimestamp(compareTime(entryTimestamp, exitTimestamp));
       String caveName = line[3].trim();
-
-      cave.setCaveName(caveName);
+      cave.setCaveName(caveRepository.findByName(caveName).getName());
       cave.setReachedParts(line[4].trim());
       cave.setCaveOvercomeStyle(CaveOvercomeStyle.valueOf(line[5].trim().toUpperCase()).getType());
-      cave.setCountry(line[6].trim());
+      String country = line[6].trim();
+      cave.setCountry(countryRepository.findByName(country).getName());
       cave.setRegion(line[7].trim());
       cave.setAuthorsFromAnotherClubs(line[9].trim());
       cave.setComment(line[10].trim());
       String email = line[11].trim();
-      List<Users> usersBatchList = userRepository.findAll();
-      for (Users user : usersBatchList) {
+      List<User> userBatchList = userRepository.findAll();
+      for (User user : userBatchList) {
         if (email.equals(user.getEmail())) {
           cave.setNotificationAuthor(user);
         }
@@ -100,7 +102,7 @@ public class CaveProcessor {
       }
       //nieoptymalne
       for (String s : users) {
-        for (Users user : usersBatchList) {
+        for (User user : userBatchList) {
           if (s.toUpperCase().contains(user.getSurname().toUpperCase())) {
             log.info("authors from table:" + s);
             log.info("authors from db:" + user.getSurname());
@@ -109,7 +111,7 @@ public class CaveProcessor {
         }
       }
       log.info("cave {} achievement on {}", caveName, notificationTimestamp.toString());
-      caveRepository.save(cave);
+      caveAchievementsRepository.save(cave);
     }
   }
 
