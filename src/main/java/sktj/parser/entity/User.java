@@ -31,6 +31,10 @@ public class User {
 
   @Column
   @NotNull
+  private int cardNumber;
+
+  @Column
+  @NotNull
   private String name;
 
   @Column

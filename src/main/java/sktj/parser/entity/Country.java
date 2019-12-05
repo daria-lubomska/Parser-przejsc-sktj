@@ -33,7 +33,7 @@ public class Country {
   public Country() {
   }
 
-  public Country(String name) {
+  public Country(@NotNull String name) {
     this.name = name;
   }
 }

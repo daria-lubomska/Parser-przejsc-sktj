@@ -55,9 +55,10 @@ public class DataProcessor {
     for (String record : userRecords) {
       String[] line = record.split(",");
       User user = new User();
-      user.setSurname(line[0].trim());
-      user.setName(line[1].trim());
-      user.setEmail(line[2].trim());
+      user.setCardNumber(Integer.parseInt(line[0]));
+      user.setSurname(line[1].trim());
+      user.setName(line[2].trim());
+      user.setEmail(line[3].trim());
       log.info("user {} was saved to DB", Arrays.toString(line));
       userRepository.save(user);
     }

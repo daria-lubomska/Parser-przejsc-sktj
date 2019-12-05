@@ -47,11 +47,7 @@ public class CaveAchievements implements Serializable {
 
   @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
   @JoinColumn(name = "caves")
-  private String country;
-
-  @Column
-  @NotNull
-  private String region;
+  private Country country;
 
   @Column
   @NotNull

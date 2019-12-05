@@ -18,6 +18,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
+import sktj.parser.entity.Cave;
 import sktj.parser.entity.CaveAchievements;
 import sktj.parser.entity.User;
 import sktj.parser.enums.CaveOvercomeStyle;
@@ -75,30 +76,34 @@ public class CaveAchievementsProcessor {
       cave.setEntryTimestamp(entryTimestamp);
       cave.setExitTimestamp(compareTime(entryTimestamp, exitTimestamp));
       String caveName = line[3].trim();
-      cave.setCaveName(caveRepository.findByName(caveName).getName());
+      String region = line[7].trim();
+      if (caveRepository.findByName(caveName) == null){
+        Cave newCave = new Cave(caveName,region);
+        caveRepository.save(newCave);
+        cave.setCaveName(caveName);
+      }else {
+        cave.setCaveName(caveRepository.findByName(caveName).getName());
+      }
       cave.setReachedParts(line[4].trim());
       cave.setCaveOvercomeStyle(CaveOvercomeStyle.valueOf(line[5].trim().toUpperCase()).getType());
-      String region = line[7].trim();
-      cave.setRegion(region);
       String country = line[6].trim();
-      cave.setCountry(countryRepository.findByNameAndRegion(country, region).getName());
-      cave.setAuthorsFromAnotherClubs(line[9].trim());
-      cave.setComment(line[10].trim());
-      String email = line[11].trim();
-      cave.setNotificationAuthor(userRepository.findByEmail(email));
       List<User> userBatchList = userRepository.findAll();
       String authors = line[8].trim();
       //todo tutaj może być czytana na koncu i poczatku "";
       String[] users = authors.split(",");
       log.info("authors - raw from file: " + Arrays.toString(users));
       for (String s : users) {
-        for (User user : userBatchList) {
+        for (User user : userBatchList)
           if (s.toUpperCase().contains(user.getSurname().toUpperCase())) {
             log.info("authors from db:" + user.getEmail());
             cave.getAuthors().add(user);
           }
-        }
       }
+      cave.setCountry(countryRepository.findByNameAndRegion(country, region));
+      cave.setAuthorsFromAnotherClubs(line[9].trim());
+      cave.setComment(line[10].trim());
+      String email = line[11].trim();
+      cave.setNotificationAuthor(userRepository.findByEmail(email));
       log.info("cave {} achievement on {}", caveName, notificationTimestamp.toString());
       caveAchievementsRepository.save(cave);
     }
