@@ -5,5 +5,5 @@ import sktj.parser.entity.Country;
 
 @Repository()
 public interface CountryRepositoryCustom {
-  Country findByName(String name);
+  Country findByNameAndRegion(String name, String region);
 }

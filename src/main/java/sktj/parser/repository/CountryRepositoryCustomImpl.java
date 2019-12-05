@@ -11,9 +11,9 @@ public class CountryRepositoryCustomImpl implements CountryRepositoryCustom {
   EntityManager entityManager;
 
   @Override
-  public Country findByName(String name) {
+  public Country findByNameAndRegion(String name, String region) {
     Query query = entityManager
-        .createQuery("select c from Country c where c.name like :name", Country.class);
+        .createQuery("select c from Country c where c.name like :name and c.region like :region", Country.class);
     return (Country) query.getResultList().get(0);
   }
 }

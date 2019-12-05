@@ -28,7 +28,7 @@ import sktj.parser.repository.UserRepository;
 
 @Slf4j
 @Component("caveAchievementsLoader")
-public class CaveProcessor {
+public class CaveAchievementsProcessor {
 
   private UserRepository userRepository;
   private CaveAchievementsRepository caveAchievementsRepository;
@@ -36,7 +36,7 @@ public class CaveProcessor {
   private CaveRepository caveRepository;
 
   @Autowired
-  public CaveProcessor(UserRepository userRepository, CaveAchievementsRepository caveAchievementsRepository,
+  public CaveAchievementsProcessor(UserRepository userRepository, CaveAchievementsRepository caveAchievementsRepository,
       CountryRepository countryRepository, CaveRepository caveRepository) {
     this.userRepository = userRepository;
     this.caveAchievementsRepository = caveAchievementsRepository;
@@ -44,7 +44,7 @@ public class CaveProcessor {
     this.caveRepository = caveRepository;
   }
 
-  @Value("classpath:caves.csv")
+  @Value("classpath:caveAchiev.csv")
   Resource caveResource;
 
   private final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
@@ -78,9 +78,10 @@ public class CaveProcessor {
       cave.setCaveName(caveRepository.findByName(caveName).getName());
       cave.setReachedParts(line[4].trim());
       cave.setCaveOvercomeStyle(CaveOvercomeStyle.valueOf(line[5].trim().toUpperCase()).getType());
+      String region = line[7].trim();
+      cave.setRegion(region);
       String country = line[6].trim();
-      cave.setCountry(countryRepository.findByName(country).getName());
-      cave.setRegion(line[7].trim());
+      cave.setCountry(countryRepository.findByNameAndRegion(country, region).getName());
       cave.setAuthorsFromAnotherClubs(line[9].trim());
       cave.setComment(line[10].trim());
       String email = line[11].trim();
@@ -128,6 +129,6 @@ public class CaveProcessor {
     return processedExit;
   }
 
-  public CaveProcessor() {
+  public CaveAchievementsProcessor() {
   }
 }

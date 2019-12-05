@@ -1,4 +1,4394 @@
-2015-02-26 10:44:05,2015-02-25 20:00,2015-02-25 20:15,Śpiącego Szweda,all in,rekreacja,Polska,Niż Polski,"Jan Kowalski, Anna Kowalska",Przykład,jakiś fajny komentarz,j.kowalski@przykład.com
-2010-11-21 21:51:54,2010-02-06 00:00:00,2010-02-06 00:00:00,Zimna,Czarny Komin,sportowy,Polska,Tatry,Jan Kowalski,,,j.kowalski@przykład.com
-2015-08-04 23:12:37,2015-07-04,2015-07-04,Jaskinia Mylna,całość,rekreacja,Polska,Tatry,"Jan Kowalski, Anna Kowalska",,,j.kowalski@przykład.com
-2013-03-06 20:25:21,2013-02-14 00:00:00,2013-02-15 00:00:00,Jaskinia Kasprowa Niżnia,Do zalanego Długiego Chodnika + Partie Gąbczaste,sportowy,Polska,Tatry,"Jan Kowalski, Anna Kowalska, barbara Nowak",,baaaaaaaaaaaaaaaaaaaaardzo dłuiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii komentaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaarz,j.kowalski@przykład.com
+Grota w Mechowej,Niż Polski
+Schronisko w Połchowie,Niż Polski
+Jaskinia w Kępie Redłowskiej,Niż Polski
+Jaskinia Śpiącego Szweda,Niż Polski
+Czarcie Okna,Niż Polski
+Nisze nad Czarcimi Oknami,Niż Polski
+Grota Mirachowska I,Niż Polski
+Grota Mirachowska II,Niż Polski
+Jaskinia Bajka I,Niż Polski
+Jaskinia Bajka II,Niż Polski
+Jaskinia Klonowa,Niż Polski
+Jaskinia pod Wierzbą,Niż Polski
+Płaska Nisza,Niż Polski
+Ciasna Dziura,Niż Polski
+Szczelina w Kurowie,Niż Polski
+Dziura w Maruszynie,Pieniny
+Schronisko w Szaflarach,Pieniny
+Jaskinia w Szaflarach,Pieniny
+Jaskinia w Obłazowej,Pieniny
+Schronisko w Obłazowej I,Pieniny
+Schronisko w Obłazowej II,Pieniny
+Schronisko w Kramnicy,Pieniny
+Schronisko Wodne pod Kramnicą,Pieniny
+Schronisko w Lorencowych Skałkach,Pieniny
+Schronisko w Borsukowej Skale I,Pieniny
+Schronisko w Borsukowej Skale II,Pieniny
+Schronisko w Borsukowej Skale III,Pieniny
+Schronisko w Dziurowej Skale,Pieniny
+Jaskinia w Dziurowej Skale,Pieniny
+Schronisko w Żorze,Pieniny
+Prosta Dziura,Pieniny
+Krzywa Dziura,Pieniny
+Schronisko przy Zielonej Drodze,Pieniny
+Schronisko w Zielonych Skałkach,Pieniny
+Schronisko w Zielonych Skałkach Górne,Pieniny
+Schronisko Czorsztyńskie,Pieniny
+Jaskinia w Starym Puszczykowie,Niż Polski
+Nisze w Bielawach,Niż Polski
+Komora Kryształowa,Niż Polski
+Groty w Nagórzycach,Niż Polski
+Jaskinia Wielka Śnieżna,Tatry
+Jaskinia Wielka Litworowa,Tatry
+Jaskinia nad Kotlinami,Tatry
+Jasny Awen,Tatry
+Jaskinia Wilcza,Tatry
+Jaskinia Śnieżna,Tatry
+Jaskinia w Antolce,Niecka Nidziańska
+Schronisko w Bogucicach,Niecka Nidziańska
+Jaskinia w Czarkowych,Niecka Nidziańska
+Jaskinia koło Skorocic,Niecka Nidziańska
+Jaskinia w Skotnikach Małych,Niecka Nidziańska
+Jaskinia Magierowska,Niecka Nidziańska
+Lejowa Studnia (N-2.5),Niecka Nidziańska
+Jaskinia w Krzyżanowicach Górna,Niecka Nidziańska
+Jaskinia Lucyny,Niecka Nidziańska
+Jaskinia w Gackach,Niecka Nidziańska
+Schron w Marzęcinie,Niecka Nidziańska
+Jaskinia w Skorocicach wzmiankowana przez Sawickiego,Niecka Nidziańska
+Jaskinia Żydowska,Niecka Nidziańska
+Schronisko w Chwałowicach,Niecka Nidziańska
+Schronisko przy Rowie,Niecka Nidziańska
+Jaskinia Lisia,Niecka Nidziańska
+Schronisko przy Lisiej,Niecka Nidziańska
+Schronisko Bajkowe,Niecka Nidziańska
+Schronisko Ciepłe,Region Świętokrzyski
+Schronisko Równoległe,Region Świętokrzyski
+Jaskinia Debiutantów,Region Świętokrzyski
+Schronisko Gliniaste,Region Świętokrzyski
+Jaskinia na Wietrzni,Region Świętokrzyski
+Schronisko z Żyłą,Region Świętokrzyski
+Jaskinia Odkrywców,Region Świętokrzyski
+Prochownia,Region Świętokrzyski
+Szczelina na Kadzielni,Region Świętokrzyski
+Schronisko Zjazdowe,Region Świętokrzyski
+Schronisko Kontaktowe,Region Świętokrzyski
+Schronisko nad Szczeliną,Region Świętokrzyski
+Jaskinia pod Łodzikami,Region Świętokrzyski
+Nocna Loża,Region Świętokrzyski
+Jaskinia Wschodnia na Kadzielni,Region Świętokrzyski
+Kominy I,Region Świętokrzyski
+Schronisko z Koralami,Region Świętokrzyski
+Schronisko w Rafie,Region Świętokrzyski
+Kominy II,Region Świętokrzyski
+Schronisko Mysie,Region Świętokrzyski
+Piotrusiowa Jama,Region Świętokrzyski
+Jaskinia Zawaliskowa,Region Świętokrzyski
+Schronisko nad Zawaliskową,Region Świętokrzyski
+Schronisko Nietoperza,Region Świętokrzyski
+Komin Geologów,Region Świętokrzyski
+Jaskinia Urwista na Kadzielni,Region Świętokrzyski
+Polny Schron,Niecka Nidziańska
+Schronisko w Chotelku,Niecka Nidziańska
+Schronisko Niespodzianka w Wielkiej Górze,Niecka Nidziańska
+Tunel w Skorocicach,Niecka Nidziańska
+Schronisko przy Tunelu,Niecka Nidziańska
+Szczelina w Skorocicach,Niecka Nidziańska
+Szczelina Magdaleny,Niecka Nidziańska
+Schronisko w Zielonej Górze,Niecka Nidziańska
+Jaskinia z Potokiem,Niecka Nidziańska
+Schronisko Ptaszników,Niecka Nidziańska
+Schronisko ze Studnią,Niecka Nidziańska
+Jaskinia w Skotnikach Górnych,Niecka Nidziańska
+Schronisko w Skotnikach Dolnych,Niecka Nidziańska
+Schronisko nad Jaskinią z Potokiem,Niecka Nidziańska
+Wielki Schron,Niecka Nidziańska
+Jaskinia Stara,Niecka Nidziańska
+Schronisko z Zaciskiem,Niecka Nidziańska
+Mały Tunel,Niecka Nidziańska
+Schronisko Trójkątne,Niecka Nidziańska
+Schronisko Marcina,Niecka Nidziańska
+Jaskinia w Krzyżanowicach Dolna,Niecka Nidziańska
+Schronisko Piecowe,Niecka Nidziańska
+Dwie Studnie,Niecka Nidziańska
+Schronisko przy Dziupli,Niecka Nidziańska
+Dziura w Leju,Niecka Nidziańska
+Jaskinia Sawickiego,Niecka Nidziańska
+Schronisko Wschodnie pod Skałką,Niecka Nidziańska
+Jaskinia Dzwonów,Niecka Nidziańska
+Jaskinia Górna,Niecka Nidziańska
+Jaskinia Skorocicka,Niecka Nidziańska
+Słomiany Tunel,Niecka Nidziańska
+Schronisko Północne,Niecka Nidziańska
+Schronisko w Skorocicach pod Drogą Zachodnie,Niecka Nidziańska
+Schronisko w Skorocicach pod Drogą Wschodnie,Niecka Nidziańska
+Jaskinia Ucho Olki,Niecka Nidziańska
+Schronisko w Okrągłej Górze,Niecka Nidziańska
+Jaskinia w Skorocicach u Ujścia Doliny,Niecka Nidziańska
+Jaskinia nad Wodą,Niecka Nidziańska
+Mostek w Aleksandrowie,Niecka Nidziańska
+Jaskinia Flisa,Niecka Nidziańska
+Jaskinia w Aleksandrowie,Niecka Nidziańska
+Schron z Przepływem,Niecka Nidziańska
+Schronisko Narożne,Niecka Nidziańska
+Jaskinia w Łagiewnikach,Niecka Nidziańska
+Jaskinia w Ryglu,Niecka Nidziańska
+Jaskinia na Kontakcie,Niecka Nidziańska
+Jaskinia pod Wygódką,Niecka Nidziańska
+Schronisko Samotne,Niecka Nidziańska
+Schronisko z Czosnkiem,Niecka Nidziańska
+Dziupla,Niecka Nidziańska
+Jaskinia w Woli Zagojskiej,Niecka Nidziańska
+Jaskinia Szeroka,Niecka Nidziańska
+Jaskinia Półkolista,Niecka Nidziańska
+Jaskinia w Siesławicach,Niecka Nidziańska
+Schronisko Wschodnie w Siesławicach,Niecka Nidziańska
+Schronisko Wodne I,Niecka Nidziańska
+Jaskinia Wodna w Siesławicach,Niecka Nidziańska
+Smocza Jama,Tatry
+Schronisko w Łatanicach II,Niecka Nidziańska
+Schronisko w Grodzisku,Niecka Nidziańska
+Schronisko Mokre,Niecka Nidziańska
+Studzienka w Siesławicach,Niecka Nidziańska
+Jaskinia ze Świetlikami,Niecka Nidziańska
+Jaskinia Opalowa,Niecka Nidziańska
+Jaskinia w Śladkowie Dużym,Niecka Nidziańska
+Schronisko w Śladkowie Małym,Niecka Nidziańska
+Grota Szydły I,Niecka Nidziańska
+Grota Szydły II,Niecka Nidziańska
+Jaskinia pod Świecami,Niecka Nidziańska
+Schronisko Wschodnie w Podwalu,Niecka Nidziańska
+Jamy w Podwalu,Niecka Nidziańska
+Jaskinia Szydłowska,Niecka Nidziańska
+Schronisko w Siesławicach I,Niecka Nidziańska
+Schronisko w Siesławicach II,Niecka Nidziańska
+Jaskinie w Leszczach,Niecka Nidziańska
+Jaskinia w Sielcu,Niecka Nidziańska
+Jaskinia w Unikowie,Niecka Nidziańska
+Pustki podziemne w Staszowie,Niecka Nidziańska
+Jaskinia krasowa w Staszowie,Niecka Nidziańska
+Jaskinie w Piasecznie i Machowie,Niecka Nidziańska
+Pustki podziemne w Posądzy,Niecka Nidziańska
+Studnia w Szańcu I,Niecka Nidziańska
+Studnia w Szańcu II,Niecka Nidziańska
+Jaskinia w Marzęcinie,Niecka Nidziańska
+Schronisko Stołowe,Niecka Nidziańska
+Schronisko Mysia Nora,Niecka Nidziańska
+Jaskinia Deszczowa,Niecka Nidziańska
+Studnia w Jędrzejowie,Niecka Nidziańska
+Sołecka Studnia w Gackach (N-2.6),Niecka Nidziańska
+Schronisko Małe (N-2.8),Niecka Nidziańska
+Jaskinia w Łatanicach (N-2.56),Niecka Nidziańska
+Schron w Małym Żlebku,Tatry
+Jaskinia za Filarem,Region Świętokrzyski
+Schronisko Niedostępne,Region Świętokrzyski
+Schronisko nad Przepaścią,Region Świętokrzyski
+Jaskinia Jeleniowska,Region Świętokrzyski
+Jaskinia na Kadzielni Górna,Region Świętokrzyski
+Jaskinia pod Fałdem,Region Świętokrzyski
+Wojtkowa Dziura,Region Świętokrzyski
+Jaskinia Pajęcza,Region Świętokrzyski
+Schronisko Krótkie w Jaworzni,Region Świętokrzyski
+Schronisko nad Chelosiową Jamą,Region Świętokrzyski
+Gazownia,Region Świętokrzyski
+Lisia Jama w Jaworzni,Region Świętokrzyski
+Duża Dziura w Jaworzni,Region Świętokrzyski
+Ciasny Kominek,Region Świętokrzyski
+Schronisko Pustułek,Region Świętokrzyski
+Chelosiowa Jama-Jaskinia Jaworznicka,Region Świętokrzyski
+Schronisko Zygmunta,Region Świętokrzyski
+Jaskinia na Czerwonej Górze,Region Świętokrzyski
+Studnia Gwarków,Region Świętokrzyski
+Jaskinia Gwarecka,Region Świętokrzyski
+Schronisko Jacka,Region Świętokrzyski
+Jaskinia z Prześwitami,Region Świętokrzyski
+Schronisko pod Płytą,Region Świętokrzyski
+Schronisko na Szczelinie,Region Świętokrzyski
+Schronisko Mechate,Region Świętokrzyski
+Czyściec,Region Świętokrzyski
+Piekło pod Skibami,Region Świętokrzyski
+Schronisko Łaszczyńskich,Region Świętokrzyski
+Jaskinia w Marzyszu,Region Świętokrzyski
+Schronisko Okopcone,Region Świętokrzyski
+Jaskinia Wodna,Region Świętokrzyski
+Raj,Region Świętokrzyski
+Schron Polichniański,Region Świętokrzyski
+Jaskinia Nowa na Miedziance,Region Świętokrzyski
+Jaskinia w Sztolni Zofia na Miedziance,Region Świętokrzyski
+Schronisko Zachodnie na Miedziance,Region Świętokrzyski
+Schronisko Zakryte,Region Świętokrzyski
+Jaskinia Południowa na Miedziance,Region Świętokrzyski
+Schronisko Dwuotworowe na Miedziance,Region Świętokrzyski
+Jaskinia Hematytowa,Region Świętokrzyski
+Schronisko z Mostem Skalnym,Region Świętokrzyski
+Jaskinia Psia,Region Świętokrzyski
+Jaskinia w Sztolni Teresa na Miedziance,Region Świętokrzyski
+Jaskinia Zbójecka w Łagowie,Region Świętokrzyski
+Lisia Dziura w Łagowie,Region Świętokrzyski
+Jaskinia Ponurego,Region Świętokrzyski
+Jaskinia Dolomitowa,Region Świętokrzyski
+Jaskinia Lubańska,Region Świętokrzyski
+Schronisko Szklarków,Region Świętokrzyski
+Piekło pod Małogoszczem,Region Świętokrzyski
+Schronisko Dolne pod Starym Piekłem,Region Świętokrzyski
+Stare Piekło,Region Świętokrzyski
+Schronisko Górne nad Starym Piekłem,Region Świętokrzyski
+Schronisko Ciasne,Region Świętokrzyski
+Schronisko Pochyłe,Region Świętokrzyski
+Jaskinia Chalcedonitowa I,Region Świętokrzyski
+Jaskinia Chalcedonitowa II,Region Świętokrzyski
+Duża Dziurawa Studnia,Region Świętokrzyski
+Mała Dziurawa Studnia,Region Świętokrzyski
+Grota Świętej Rozalii,Region Świętokrzyski
+Schronisko w Zlepieńcach,Region Świętokrzyski
+Czarcie Wrota,Region Świętokrzyski
+Schronisko Bardzo Niskie,Region Świętokrzyski
+Schronisko pod Wodospadem,Region Świętokrzyski
+Okap Massalskiego,Region Świętokrzyski
+Ślubny Schron,Region Świętokrzyski
+Schronisko Lisa w Okopankach,Region Świętokrzyski
+Płaska Jama I w Krynkach,Region Świętokrzyski
+Płaska Jama II w Krynkach,Region Świętokrzyski
+Jaskinia Świętej Barbary,Region Świętokrzyski
+Grota Skrzatów,Region Świętokrzyski
+Płaska Jama III w Krynkach,Region Świętokrzyski
+Schronisko pod Drutami,Region Świętokrzyski
+Dziura na Przestrzał,Region Świętokrzyski
+Tunelik w Skałkach Adamowskich,Region Świętokrzyski
+Schronisko Osobne,Region Świętokrzyski
+Jaskinia nad Zalewem,Region Świętokrzyski
+Schronisko Gotyckie,Region Świętokrzyski
+Okap nad Jamą,Region Świętokrzyski
+Schronisko pod Osiedłem,Region Świętokrzyski
+Dziurawe Okno,Region Świętokrzyski
+Jama Agi,Region Świętokrzyski
+Tomkowa Dziura,Region Świętokrzyski
+Brama Piekło,Region Świętokrzyski
+Duża Grota w Skałkach Dalejowskich,Region Świętokrzyski
+Płaska Jama w Skałkach Dalejowskich,Region Świętokrzyski
+Wilcza Jama,Region Świętokrzyski
+Schronisko z Kością,Region Świętokrzyski
+Piwnica Zamkowa,Region Świętokrzyski
+Rajska Brama,Region Świętokrzyski
+Grzybowa Dziura,Region Świętokrzyski
+Schron Traperów,Region Świętokrzyski
+Schronisko Sympozjalne,Region Świętokrzyski
+Schronisko Wsiowe,Region Świętokrzyski
+Jaskinia Wysoka w Podgrodziu,Region Świętokrzyski
+Studnia Jaskini Wysokiej,Region Świętokrzyski
+Schronisko Trójkątne,Region Świętokrzyski
+Jaskinia Babia w Podgrodziu,Region Świętokrzyski
+Schronisko Dolne w Podgrodziu,Region Świętokrzyski
+Jaskinia za Berberysem,Region Świętokrzyski
+Jaskinia pod Gajem,Region Świętokrzyski
+Schronisko w Bałtowie,Region Świętokrzyski
+Stroma Szczelina,Region Świętokrzyski
+Szpara w Łomiku,Region Świętokrzyski
+Schronisko w Starej Kamionce,Region Świętokrzyski
+Niespodzianka,Region Świętokrzyski
+Jaskinia na Ołowiance,Region Świętokrzyski
+Jaskinie na Rzepce,Region Świętokrzyski
+Duża Dziura II w Jaworzni,Region Świętokrzyski
+Schronisko Dujące,Region Świętokrzyski
+Jaskinia w Szczukowskich Górkach,Region Świętokrzyski
+Jaskinia w Laskowej I,Region Świętokrzyski
+Jaskinia w Laskowej II,Region Świętokrzyski
+Jaskinia w Laskowej III,Region Świętokrzyski
+Jaskinia w Mogiłkach,Region Świętokrzyski
+Jaskinia w Jaźwicy,Region Świętokrzyski
+Jaskinia Okopcona,Region Świętokrzyski
+Jaskinia w Bliżynie,Region Świętokrzyski
+Jaskinia w Czarnowie,Region Świętokrzyski
+Jaskinia przy Cmentarzu,Region Świętokrzyski
+Jaskinie na Kadzielni,Region Świętokrzyski
+Jaskinie na Wietrzni,Region Świętokrzyski
+Jaskinia Jubileuszowa,Region Świętokrzyski
+Jaskinia w Rudkach,Region Świętokrzyski
+Jaskinia w Sudole,Region Świętokrzyski
+Jaskinia w Budach,Region Świętokrzyski
+Schronisko Galenowe,Region Świętokrzyski
+Gruzowa Jama,Region Świętokrzyski
+Siwiańska Dziura,Tatry
+Schronisko w Małym Żlebku,Tatry
+Jasiowy Schron,Tatry
+Dziura pod Nosalem,Tatry
+Schron z Prowokatorem,Tatry
+Jaskinia Jaszczurowska Wyżnia,Tatry
+Nyża nad Jaworzyńskim Żlebem,Tatry
+Grota w Jaworzyńskim Żlebie,Tatry
+Jaskinia w Jaworzyńskim Żlebie,Tatry
+Schron w Wielkich Koryciskach,Tatry
+Dziura w Kończystej Turni,Tatry
+Dziura w Kończystej Niżnia,Tatry
+Dziura Stanikowa Niżnia,Tatry
+Dziura Stanikowa Wyżnia,Tatry
+Dziura Niżnia w Kończystej Turni,Tatry
+Mała Dziura w Kończystej Turni,Tatry
+Koleba za Kończystą,Tatry
+Nyża w Kończystej,Tatry
+Schron pod Kończystą,Tatry
+Okap w Kończystej Turni,Tatry
+Dziura w Żlebku,Tatry
+Schronisko Dudowe Górne,Tatry
+Dziura nad Potokiem,Tatry
+Schronik w Kończystej Turni,Tatry
+Jaskinia Rybia,Tatry
+Dudowa Studnia,Tatry
+Jaskinia pod Baranami,Tatry
+Szemrzący Schron,Tatry
+Ciasna Norka,Tatry
+Jaskinia Niska,Tatry
+Nyża pod Progiem w Kończystej,Tatry
+Schronisko Wschodnie w Kończystej,Tatry
+Jaskinia Barłogowa,Tatry
+Dziura za Smrekiem w Zawiesistej,Tatry
+Szczelina Przysłopczańska,Tatry
+Tunel w Jatkach,Tatry
+Okno w Jatkach I,Tatry
+Okno w Jatkach II,Tatry
+Jaskinia w Jatkach,Tatry
+Kominek w Jatkach,Tatry
+Dziurawa Nisza w Jatkach,Tatry
+Komora w Jatkach,Tatry
+Nyża przy Jatkach,Tatry
+Schron za Irgą,Tatry
+Dziura,Tatry
+Dziura Wyżnia,Tatry
+Lisia Jama,Tatry
+Nisza w Jatkach,Tatry
+Jaskinia w Cycku,Tatry
+Nyża nad Olczyską II,Tatry
+Grota Filipczańska nad Mostkiem,Tatry
+Filipczańska Szczelina,Tatry
+Grota Filipczańska Wyżnia,Tatry
+Jaskinia Filipczańska Niżnia,Tatry
+Schronisko w Międzyścianach I,Tatry
+Schronisko w Międzyścianach II,Tatry
+Schronisko w Międzyścianach III,Tatry
+Schron w Skale Kmietowicza I,Tatry
+Schron w Skale Kmietowicza II,Tatry
+Wojtkowa Szpara,Tatry
+Schron pod Zbójnicką Turnią,Tatry
+Jaskinia w Małym Krakowie,Tatry
+Tatowa Szczelina,Tatry
+Dziura nad Doliną Strążyską,Tatry
+Nyża Giewontowa,Tatry
+Kominek Giewontowy,Tatry
+Mała Dziura Giewontowa,Tatry
+Dziura za Głazami,Tatry
+Płaska Nyża,Tatry
+Szczelina w Suchym Żlebie,Tatry
+Nyża z Mostem,Tatry
+Kalacki Tunelik,Tatry
+Mokra Koleba,Tatry
+Frapująca Nyża,Tatry
+Szczelina pod Frapującą Nyżą,Tatry
+Kalacka Nyża I,Tatry
+Kalacka Szczelina,Tatry
+Kalacka Nyża II,Tatry
+Jaskinia Kalacka,Tatry
+Korytarzyk przy Kalackiej,Tatry
+Korytarzyk nad Kalacką,Tatry
+Nyża nad Olczyską I,Tatry
+Zbójecka Dziura,Tatry
+Szczelina Chochołowska,Tatry
+Kamienne Mleko,Tatry
+Jaskinia Mała,Tatry
+Jaskinia pod Szczytem,Tatry
+Jaskinia Korytarzowa,Tatry
+Piwnica,Tatry
+Schron przy Szczelinie,Tatry
+Schronisko Dudowe,Tatry
+Dudowy Schron,Tatry
+Szczelina Zawaliskowa nad Kufą,Tatry
+Jaskinia Lodowa nad Kufą,Tatry
+Szczelina przy Lodowej nad Kufą,Tatry
+Schron w Opalonem I,Tatry
+Schron w Opalonem II,Tatry
+Schron pod Kufą Zachodni,Tatry
+Szczelina przed Kufą,Tatry
+Schron Wschodni pod Kufą,Tatry
+Nisza przy Szemrzącym Schronie I,Tatry
+Nisza przy Szemrzącym Schronie II,Tatry
+Dziurawiec,Tatry
+Jaskinia nad Mostkiem Niżnia,Tatry
+Jaskinia nad Mostkiem Wyżnia,Tatry
+Wielka Nyża,Tatry
+Korytarz do Naciekowej,Tatry
+Jaskinia Goryckiego,Tatry
+Jaskinia między Żleby,Tatry
+Jaskinia Mroźna,Tatry
+Jaskinia Zimna,Tatry
+Okna Zbójnickie Niżnie,Tatry
+Schronisko przy Ścianach,Tatry
+Okno Zbójnickie Wyżnie,Tatry
+Schron w Wyżniej Bramie Chochołowskiej,Tatry
+Przelot,Tatry
+Dziura pod Oknem,Tatry
+Jaskinia Balkonowa,Tatry
+Jaskinia Naciekowa,Tatry
+Jaskinia pod Ostrewką,Tatry
+Nyża w Wąwozie Między Ściany,Tatry
+Zbójnicka Nyża,Tatry
+Jaskinia Trójotworowa,Tatry
+Jaskinia Krwawego Nosa,Tatry
+Szczelina nad Zimną,Tatry
+Schron pod Jaskinią Goryckiego,Tatry
+Lejek,Tatry
+Szczelina nad Mostkiem,Tatry
+Dziura w Stołach,Tatry
+Wielka Szczelina,Tatry
+Jaskinia Zawaliskowa w Stołach,Tatry
+Otwarty Schron,Tatry
+Korytarz z Różą,Tatry
+Dziura pod Kazalnicą,Tatry
+Schron pod Kazalnicą,Tatry
+Dziura w Organach VII,Tatry
+Schron przed Sową I,Tatry
+Schron przed Sową II,Tatry
+Schron przed Sową III,Tatry
+Kopalnia Maturka,Tatry
+Szczelina przy Dziurawcu,Tatry
+Dziura nad Wapiennikiem,Tatry
+Zimna Szczelina I,Tatry
+Zimna Szczelina II,Tatry
+Zimna Szczelina III,Tatry
+Sowia Jama I,Tatry
+Sowia Jama II,Tatry
+Sowia Jama III,Tatry
+Wiciowy Schron,Tatry
+Szczelina za Okrętem I,Tatry
+Dziurawa Koleba,Tatry
+Szczelina za Okrętem II,Tatry
+Szczelina za Okrętem III,Tatry
+Nisza z Jaworem,Tatry
+Komora w Okręcie,Tatry
+Szczelina pod Tunelem Pawlikowskiego,Tatry
+Szczelina w Osmętnicy,Tatry
+Jaskinia Kuźnica,Wyżyna Śląsko-Krakowska
+Schron ze Świeczką,Tatry
+Wąska Szczelina,Tatry
+Schron przy Naciekowej,Tatry
+Dziura w Organach VI,Tatry
+Jaskinia pod Murem,Tatry
+Bardzo Niska Nyża,Tatry
+Zamczysko Niżnie,Tatry
+Zamczysko Wyżnie,Tatry
+Okno w Zamczysku,Tatry
+Nyża z Dzięglem,Tatry
+Schronisko w Kalwarii,Tatry
+Szczelina z Mostkiem,Tatry
+Jaskinia Zakopiańska,Tatry
+Jaskinia przy Sikawce,Tatry
+Żwirowa Dziura Wyżnia,Tatry
+Żwirowa Dziura Niżnia,Tatry
+Szczelina w Dudzińcu,Tatry
+Schronisko przy Jaskini w Dudzińcu,Tatry
+Dziura w Organach II,Tatry
+Schron pomiędzy Żwirowymi Dziurami,Tatry
+Jaskinia w Dudzińcu,Tatry
+Dziura w Organach IV,Tatry
+Szczelina nad Jaskinią w Dudzińcu,Tatry
+Dziura w Organach III,Tatry
+Dziura w Organach I,Tatry
+Dziura w Organach V,Tatry
+Szpaciarnia I na Górze Zelce,Wyżyna Śląsko-Krakowska
+Jaskinia Miętusia Wyżnia,Tatry
+Schron w Piecu,Tatry
+Jaskinia Niedźwiedzia Niżnia,Tatry
+Jaskinia Niedźwiedzia Średnia,Tatry
+Jaskinia w Małej Świstówce,Tatry
+Dziura nad Wantulami I,Tatry
+Dziura nad Wantulami II,Tatry
+Dziura nad Wantulami III,Tatry
+Podwójna Szczelina,Tatry
+Szczelina w Wołowym Żlebie,Tatry
+Jaskinia Miętusia,Tatry
+Nyża przy Schodkach,Tatry
+Szczelina w Niedźwiedziu,Tatry
+Kozia Grota,Tatry
+Dziura w Szczerbie II,Tatry
+Dziura w Szczerbie I,Tatry
+Jaskinia Śpiących Rycerzy,Tatry
+Szczelina w Żlebie Kirkora,Tatry
+Nyża pod Brzózką,Tatry
+Nyża w Siodłowej Turni,Tatry
+Siwarowa Dziura,Tatry
+Nyża przy Starym Szlaku,Tatry
+Nyża nad Siodłem,Tatry
+Schron Partyzantów,Tatry
+Tunel pod Siwarową Dziurą,Tatry
+Jaskinia Juhaska,Tatry
+Jaskinia Błotna,Tatry
+Ruda Nyża,Tatry
+Jaskinia Zawaliskowa w Długim Giewoncie,Tatry
+Nisza przy Zagonie,Tatry
+Szczelina w Giewoncie I,Tatry
+Szczelina w Giewoncie II,Tatry
+Szczelina pod Głazem,Tatry
+Studnia w Giewoncie,Tatry
+Kozi Korytarz,Tatry
+Jaskinia nad Zagonem,Tatry
+Szczelina w Iglicy,Tatry
+Jaskinia pod Iglicą,Tatry
+Jaskinia Goryczkowa,Tatry
+Myślenicka Dziura,Tatry
+Jaskinia Kasprowa Niżnia,Tatry
+Jaskinia Bystrej,Tatry
+Jaskinia nad Korytem,Tatry
+Dziura nad Korytem,Tatry
+Jaskinia Dudnica,Tatry
+Tunel Małołącki,Tatry
+Myślenicka Szczelina,Tatry
+Nyża pod Myślenicką Szczeliną,Tatry
+Grota u podnóża Myślenickich Turni,Tatry
+Myślenicka Nyża,Tatry
+Schron z Nietoperzami,Tatry
+Myślenicki Korytarzyk,Tatry
+Jaskinia nad Wyżniem,Tatry
+Szczelina w Myślenickich Turniach Dolna,Tatry
+Szczelina w Myślenickich Turniach Górna,Tatry
+Szczelina nad Wyżniem,Tatry
+Jaskinia Zwolińskiego,Tatry
+Szczelina pod Zagonną Turnią,Tatry
+Jaskinia Kasprowa Wyżnia,Tatry
+Nyża z Kozicami,Tatry
+Jaskinia Kasprowa Średnia,Tatry
+Schron Partyzantów II,Tatry
+Szczelina nad Zagonem,Tatry
+Szczelina w Zawraciku Kasprowym I,Tatry
+Kasprowe Schronisko,Tatry
+Szczelina w Zawraciku Kasprowym II,Tatry
+Jaskinia pod Limbą,Tatry
+Jaskinia Śpiących Rycerzy Wyżnia,Tatry
+Jaskinia Partyzancka I,Tatry
+Dziura nad Jaskinią Śpiących Rycerzy I,Tatry
+Szczelina nad Partyzancką,Tatry
+Dziura nad Jaskinią Śpiących Rycerzy II,Tatry
+Dziura nad Jaskinią Śpiących Rycerzy III,Tatry
+Szczelina przy Nyży z Kozicami,Tatry
+Schronisko Jasne w Czubie Jaworzyńskiej,Tatry
+Jaskinia w Czubie Jaworzyńskiej,Tatry
+Jaskinia Partyzancka II,Tatry
+Nyża pod Zawracikiem,Tatry
+Sztolnia w Węglówce II,Karpaty
+Schronisko w Skale Jaś i Małgosia,Wyżyna Śląsko-Krakowska
+Dziura pod Kamieniem,Tatry
+Nisza w Zawraciku Kasprowym,Tatry
+Szczelina w Zawraciku Kasprowym III,Tatry
+Szczelina w Zawraciku Kasprowym IV,Tatry
+Jaworzyńska Nyża pod Iglicą,Tatry
+Szpara w Zagonnej Turni,Tatry
+Schron nad Przełączką,Tatry
+Jaskinia Magurska,Tatry
+Nyża pod Jaskinią Magurską I,Tatry
+Nyża pod Jaskinią Magurską II,Tatry
+Nyża pod Jaskinią Magurską III,Tatry
+Dziura pod Jaskinią Magurską,Tatry
+Nyża pod Jaskinią Magurską IV,Tatry
+Dziura z Gawrą,Tatry
+Szczelina nad Jaskinią Magurską,Tatry
+Dziura w Zawiesistej,Tatry
+Jaskinia Dwuotworowa w Iwanówce,Tatry
+Awen Odpękniętych Nacieków,Tatry
+Suchy Biwak,Tatry
+Schronisko pod Dziobem I,Tatry
+Jaskinia Mechata,Tatry
+Schronisko pod Dziobem II,Tatry
+Jaskinia Lejowa Wyżnia,Tatry
+Schronisko pod Dziobem III,Tatry
+Tylkowa Szczelina,Tatry
+Schron za Smrekiem,Tatry
+Schron z Płytą,Tatry
+Szczelina w Iwanówce,Tatry
+Schron Zachodni w Iwanówce,Tatry
+Jaskinia pod Głazem,Tatry
+Jaskinia Skośna,Tatry
+Jaskinia w Kosówkach,Tatry
+Jaskinia Bańdzioch Kominiarski,Tatry
+Jaskinia Troista,Tatry
+Schron przy Suchym Biwaku,Tatry
+Jaskinia Rura Kominiarska,Tatry
+Szczelina w Smytniej,Tatry
+Jaskinia Samsonowicza,Wyżyna Śląsko-Krakowska
+Schron nad Żlebem,Tatry
+Schron nad Lejową,Tatry
+Jaskinia pod Kapliczką,Tatry
+Jaskinia Ślimacza,Tatry
+Jaskinia Smytnia,Tatry
+Jaskinia nad Smytnią,Tatry
+Szczelina przy Zawieszonej Skale I,Tatry
+Szczelina przy Zawieszonej Skale II,Tatry
+Nisza Zachodnia,Tatry
+Nisza Wschodnia,Tatry
+Jaskinia Nowa nad Raptawicką Granią,Tatry
+Dziura pod Nową,Tatry
+Koliba w Smytniej,Tatry
+Schron przy Troistej I,Tatry
+Tunel Wiatru,Tatry
+Schron przy Troistej II,Tatry
+Jaskinia nad Prożkiem w Żlebie Na Spady,Tatry
+Sarni Schron,Tatry
+Jaskinia pod Wiśniakową Jamą,Tatry
+Wiśniakowa Jama,Tatry
+Lejowa Szczelina,Tatry
+Schronisko nad Wiśniakową Jamą,Tatry
+Nyża nad Prożkiem w Żlebie Na Spady,Tatry
+Schron w Ścianie pod Szczytem,Tatry
+Schron z Kołem,Tatry
+Komórka nad Smytnią,Tatry
+Jaskinia z Mułem,Tatry
+Szczelina pod Skośną,Tatry
+Szczelina w Grani I,Tatry
+Szczelina ze Śniegiem,Tatry
+Korytarzyk w Czarnych Turniach,Tatry
+Nyża przy Perci,Tatry
+Dziurka od Klucza,Tatry
+Nisza nad Jelenią Percią,Tatry
+Nyża nad Bramką,Tatry
+Schronisko nad Bramką,Tatry
+Schronisko przy Jeleniej Perci,Tatry
+Schronisko nad Trawersem w Żeleźniaku I,Tatry
+Schronisko nad Trawersem w Żeleźniaku II,Tatry
+Szczelina w Grani II,Tatry
+Szczelina przed Bańdziochem,Tatry
+Kominek przy Bańdziochu,Tatry
+Trzyotworowy Kominek przy Bańdziochu,Tatry
+Jaskinia Mylna,Tatry
+Szczelina przy Bańdziochu,Tatry
+Jaskinia Obłazkowa,Tatry
+Nyża pod Bańdziochem,Tatry
+Dziura pod Smoczą Jamą,Tatry
+Jaskinia w Kociołku pod Bańdziochem,Tatry
+Dziura pod Raptawicą,Tatry
+Szczelina przy Gładkim Żlebie,Tatry
+Szczelina w Uwozisku,Tatry
+Jaskinia Mysia,Tatry
+Schronisko nad Bramą,Tatry
+Jaskinia pod Zamkiem,Tatry
+Jaskinia Mała pod Zamkiem,Tatry
+Szczelina pod Niżnią Zbójnicką Turnią,Tatry
+Jaskinia Ziobrowa,Tatry
+Jaskinia pod Niżnią Zbójnicką Turnią,Tatry
+Mała Szczelina,Tatry
+Sokole Okno,Tatry
+Jaskinia Wodna pod Raptawicką Turnią,Tatry
+Jaskinia Wodna przy Pisanej,Tatry
+Jaskinia za Smrekiem,Tatry
+Jaskinia Raptawicka,Tatry
+Dziura pod Mylną,Tatry
+Jaskinia przy Żlebie,Tatry
+Dziura nad Mylną,Tatry
+Szczelina nad Mylną,Tatry
+Dziura nad Jaskinią Raptawicką I,Tatry
+Dziura nad Jaskinią Raptawicką II,Tatry
+Dzwonnica,Tatry
+Groby,Tatry
+Jaskinia Poszukiwaczy Skarbów,Tatry
+Dziura ze Znakami,Tatry
+Jaskinia Wodna pod Pisaną,Tatry
+Zamulona Dziura,Tatry
+Wyzior,Tatry
+Jaskinia pod Jaworem,Tatry
+Schron przy Smoczej Jamie,Tatry
+Dziura w Ścianie,Tatry
+Korytarzyk pod Zamkiem,Tatry
+Szczelina nad Żlebem,Tatry
+Raptawicki Tunelik,Tatry
+Zbójnicki Korytarzyk,Tatry
+Gawra,Tatry
+Zbójnicka Szczelina,Tatry
+Szczelina przy Mostku,Tatry
+Dziura nad Głazem,Tatry
+Jaskinia Jagnięca,Tatry
+Nyża nad Ziobrową,Tatry
+Nyża za Załomem,Tatry
+Szczelina nad Ponorem,Tatry
+Jaskinia Skoruszowa,Tatry
+Szczelina pod Smoczą Jamą,Tatry
+Radkowa Dziura I,Tatry
+Jaskinia przy Perci,Tatry
+Radkowa Dziura II,Tatry
+Jaskinia nad Arkadą,Tatry
+Szczelina przy Arkadzie,Tatry
+Arkada,Tatry
+Żeleźniakowa Brama,Tatry
+Szczelina w Głębowcu,Tatry
+Jaskinia Owcza,Tatry
+Zasłonięta Szczelina,Tatry
+Omszała Szczelina w Żeleźniaku,Tatry
+Płaska Komórka w Żeleźniaku,Tatry
+Szczelina na Grzędzie,Tatry
+Wnęka na Grzędzie,Tatry
+Szczelina w Żlebie z Bramką II,Tatry
+Schron pod Tunelem,Tatry
+Tunel w Żlebie z Bramką,Tatry
+Jaskinia pod Bramką,Tatry
+Szczelina w Żlebie z Bramką I,Tatry
+Meanderek nad Mylną,Tatry
+Nyża przed Bramą,Tatry
+Nyża w Smytniej,Tatry
+Krakowskie Okno,Tatry
+Jaskinia pod Oknem,Tatry
+Jaskinia z Konkrecjami Niżnia,Tatry
+Dziura z Konkrecjami Wyżnia,Tatry
+Korytarzyk pod Jagnięcą,Tatry
+Jaskinia Czarna,Tatry
+Świstowa Szczelina,Tatry
+Dziura pod Arkadą,Tatry
+Studnia w Małej Świstówce,Tatry
+Żółta Dziura,Tatry
+Dziura nad Studnią,Tatry
+Piwniczka,Tatry
+Dziura nad Zachodem,Tatry
+Ciasna Szczelina,Tatry
+Mała Komora,Tatry
+Dziura nad Zachodem Wyżnia,Tatry
+Dziura na Półce,Tatry
+Schron pod Owczą I,Tatry
+Schron pod Owczą II,Tatry
+Piwnica Miętusia,Tatry
+Dudzia Dziura,Tatry
+Ukryty Schron,Tatry
+Jaskinia Pajęcza,Tatry
+Schron z Napisami,Tatry
+Schron przy Arkadzie,Tatry
+Dziura w Ździarach,Tatry
+Nyża w Ździarach,Tatry
+Szczelina w Ratuszu,Tatry
+Jaworowa Szczelina,Tatry
+Studnia w Dziurawem,Tatry
+Komin w Ratuszu,Tatry
+Jaskinia w Szerokiem,Tatry
+Jaskinia Marmurowa,Tatry
+Ptasia Studnia,Tatry
+Jaskinia nad Dachem,Tatry
+Jaskinia Lodowa Litworowa,Tatry
+Jaskinia nad Piargiem,Tatry
+Jaskinia pod Dachem,Tatry
+Jaskinia Kozia,Tatry
+Dziura nad Żlebem,Tatry
+Studnia w Kazalnicy,Tatry
+Żółty Schron,Tatry
+Studnia za Murem,Tatry
+Nisza nad Żółtą Dziurą,Tatry
+Zielone Kominy,Tatry
+Spękana Szczelina,Tatry
+Dwuotworowa Szczelina,Tatry
+Jaskinia pod Wierchem,Tatry
+Schron w Upłazkowej Turni,Tatry
+Jaskinia Lodowa Mułowa,Tatry
+Korytarz nad Dziurawem,Tatry
+Studnia w Progu Mułowym,Tatry
+Omszała Szczelina,Tatry
+Korytarz nad Piargiem,Tatry
+Jaskinia przy Progu Mułowym,Tatry
+Jaskinia Mała w Mułowej,Tatry
+Schron nad Kominami,Tatry
+Jaskinia Barania,Tatry
+Schron z Balkonem,Tatry
+Dziura w Progu Litworowym,Tatry
+Schrony nad Okapami,Tatry
+Szczelina w Ratuszu Miętusim,Tatry
+Jaskinia za Płytą,Tatry
+Dziura w Kominie,Tatry
+Jaskinia przy Grzędzie,Tatry
+Zawaliskowy Korytarz,Tatry
+Jasiowa Dziura,Tatry
+Jaskinia Lodowa w Twardych Spadach,Tatry
+Dziura nad Szlakiem,Tatry
+Jaskinia za Zaciskiem,Tatry
+Jaskinia za Ratuszem Śnieżna,Tatry
+Jaskinia Lejbusiowa,Tatry
+Jaskinia za Ratuszem Szeroka,Tatry
+Jaskinia za Ratuszem Owalna,Tatry
+Zimny Aven,Tatry
+Harnasiowa Szczelina,Tatry
+Krucha Szczelina,Tatry
+Szczelina na Drodze Steckiego,Tatry
+Górne Kominy,Tatry
+Szczelina w Progu Mułowym,Tatry
+Schron przy Studni,Tatry
+Jaskinia Lodowa Miętusia,Tatry
+Jaskinia Turoniowa,Tatry
+Śnieżny Awen,Tatry
+Kobylarzowa Szczelina,Tatry
+Komin w Kazalnicy Miętusiej,Tatry
+Schron w Progu Mułowym,Tatry
+Dziura pod Ratuszem,Tatry
+Bliźniaczy Komin,Tatry
+Schron pod Twardymi Spadami,Tatry
+Nisza w Kobylarzowej Turni,Tatry
+Wciągająca Szczelina,Tatry
+Schron w Dolinie Litworowej,Tatry
+Niebieska Studnia,Tatry
+Nyża pod Schronem w Dolinie Litworowej,Tatry
+Jaskinia pod Wantą,Tatry
+Dziura Małołącka Mała,Tatry
+Jaskinia Małołącka,Tatry
+Jaskinia Śnieżna Studnia,Tatry
+Jaskinia nad Lodową Litworową,Tatry
+Dolny Lej,Tatry
+Szczelina za Płytą,Tatry
+Jaskinia z Dolomitami,Tatry
+Studzienka za Ratuszem,Tatry
+Jaskinia pod Śnieżną Studnią,Tatry
+Szczelina nad Ptasią,Tatry
+Dziurka w Trawce,Tatry
+Jaskinia Wyżnia Litworowa,Tatry
+Dziura w Grzędzie II,Tatry
+Dziura w Grzędzie I,Tatry
+Jaskinia Omszała,Tatry
+Jaskinia Ciasna w Groniu,Tatry
+Kominek obok Ciasnej w Groniu,Tatry
+Nyża pod Ratuszem,Tatry
+Dziura pod Żródłem Ratusz,Tatry
+Szczelina nad Strzelistą,Tatry
+Dziura w Wantach,Tatry
+Jaskinia Mała Zaruskiego,Tatry
+Jaskinia Trójkątna,Tatry
+Awen w Ratuszu,Tatry
+Ukryta Dziura,Tatry
+Studnia z Kosówką,Tatry
+Królicza Jama,Tatry
+Średni Lej,Tatry
+Świstowa Studnia,Tatry
+Awen z Korkiem Śnieżnym,Tatry
+Jaskinia pod Strzelistą,Tatry
+Jaskinia Strzelista,Tatry
+Komora Gwiaździsta,Tatry
+Jaskinia w Wielkiej Turni,Tatry
+Dziura pod Świstową Studnią,Tatry
+Wilczy Schron,Tatry
+Górny Lej,Tatry
+Jaskinia przy Przechodzie,Tatry
+Mnichowa Studnia Wyżnia,Tatry
+Studnia przy Przechodzie,Tatry
+Dziura w Litworowej,Tatry
+Zaspałkowa Szczelina,Tatry
+Jaskinia w Trawie,Tatry
+Jaskinia przy Ryglu,Tatry
+Jaskinia Pomarańczarnia,Tatry
+Jędrusiowa Dziura,Tatry
+Jaskinia przy Jędrusiowej Dziurze,Tatry
+Schron pod Jędrusiową Dziurą,Tatry
+Chuda Mnichowa Studnia,Tatry
+Szczelina nad Wielką Litworową,Tatry
+Mała Mnichowa Studzienka,Tatry
+Studnia na Szlaku,Tatry
+Szczelina w Litworowej,Tatry
+Jaskinia w Kobylarzowym Żlebie,Tatry
+Koprowa Studnia,Tatry
+Szara Studnia,Tatry
+Bliźniacza Studnia,Tatry
+Szczelina w Pośredniej Turni,Tatry
+Szuflada Dolna,Tatry
+Mnichowa Studnia,Tatry
+Szuflada Górna,Tatry
+Jaskinia pod Progiem,Tatry
+Jaskinia w Trawniczku,Tatry
+Dziura pod Siodełkiem,Tatry
+Dziurka nad Piargiem,Tatry
+Dziura w Czerwonym Grzbiecie,Tatry
+Mokry Schron,Tatry
+Jaskinia Zośka,Tatry
+Zagonna Studnia,Tatry
+Jaskinia za Mnichem,Tatry
+Duży Schron,Tatry
+Zawalony Schron,Tatry
+Szczelina nad Dziurą w Wantach I,Tatry
+Szczelina nad Dziurą w Wantach II,Tatry
+Maćkowa Dziura,Tatry
+Nyża pod Wielką Turnią,Tatry
+Nyża w Baranich Schodkach I,Tatry
+Nyża w Baranich Schodkach II,Tatry
+Komórka przy Średnim Leju,Tatry
+Czerwona Studzienka,Tatry
+Łamana Dziura,Tatry
+Dziura przy Lodowej Małołąckiej I,Tatry
+Szczelina Mnichowa,Tatry
+Szczelina w Mnichowych Turniach II,Tatry
+Szczelina w Mnichowych Turniach I,Tatry
+Dziura Mnichowa Mała,Tatry
+Dziura przy Lodowej Małołąckiej II,Tatry
+Dziura przy Lodowej Małołąckiej III,Tatry
+Dziura pod Lodową Małołącką I,Tatry
+Zaspałkowa Szpara,Tatry
+Jaskinia w Piekle,Tatry
+Jaskinia Lodowa Małołącka,Tatry
+Jaskinia Kondracka,Tatry
+Dziura pod Lodową Małołącką II,Tatry
+Dziura przy Piargu,Tatry
+Szczelina w Kopie,Tatry
+Kominki w Panienkach Smytniańskich,Tatry
+Szczelina w Panienkach Smytniańskich,Tatry
+Jaskinia Przeziorowa,Tatry
+Szczelina w Ścianie,Tatry
+Jaskinia w Żarze,Tatry
+Dziura za Modrzewiami,Tatry
+Jaskinia Psia,Tatry
+Krakowska Piwnica,Tatry
+Jaskinia Piarżysta,Tatry
+Jaskinia Zakosista,Tatry
+Dziura pod Smrekiem,Tatry
+Jaskinia Ciasna,Tatry
+Jaskinia Dwuotworowa Krakowska,Tatry
+Trójkątny Schron,Tatry
+Koliby,Tatry
+Dziura pod Wantą,Tatry
+Jaskinia Wołoszyńska Wyżnia,Tatry
+Jaskinia pod Okapem,Tatry
+Jaskinia Wołoszyńska Niżnia,Tatry
+Jaskinia Wysoka,Tatry
+Studzienka w Ciemniaku,Tatry
+Jaskinia za Siedmiu Progami,Tatry
+Jaskinia Pośrednia,Tatry
+Dziura w Krzesanicy I,Tatry
+Schron przy Zakosistej,Tatry
+Szczelina w Krzesanicy I,Tatry
+Szczelina w Krzesanicy II,Tatry
+Szczelina w Krzesanicy III,Tatry
+Dziura w Krzesanicy II,Tatry
+Schron z Watrą,Tatry
+Szczelina w Ciemniaku,Tatry
+Dziura w Ciemniaku,Tatry
+Ósemka,Tatry
+Jaskinia z Mostami,Tatry
+Litworowa Studnia,Tatry
+Wyżnia Szczelina w Zadnim Kościelcu,Tatry
+Jaskinia Hakowa,Tatry
+Dziura nad Trawiastym Progiem,Tatry
+Jaskinia Gankowa,Tatry
+Krasowa Nisza,Tatry
+Gruzowa Dziura,Tatry
+Ptasi Schron,Tatry
+Mokra Szczelina,Tatry
+Korytarzyk w Żlebie Niedźwiedź,Tatry
+Dziura w Wielkiej Turni,Tatry
+Szczelina pod Gankową I,Tatry
+Szczelina pod Gankową II,Tatry
+Szczelina pod Gankową III,Tatry
+Szczelina w Zadnim Kościelcu,Tatry
+Schron w Zadnim Kościelcu,Tatry
+Schron przy Źródle,Tatry
+Dziura nad Nową Roztoką,Tatry
+Dziura nad Roztoką,Tatry
+Świnicka Koleba,Tatry
+Świnicka Koleba Niżnia,Tatry
+Jaskinia Lodowa w Ciemniaku,Tatry
+Dziura w Miedzianym Kosturze I,Tatry
+Cubryńska Dziura II,Tatry
+Dziura w Miedzianym Kosturze II,Tatry
+Szczelina nad Lodową,Tatry
+Jaskinia Lodowa Krakowska,Tatry
+Śnieżna Szczelina,Tatry
+Lustrzana Szczelina,Tatry
+Kozi Schron,Tatry
+Studnia Kuturniańska,Tatry
+Schron przy Studni Kuturniańskiej,Tatry
+Jaskinia Zawaliskowa w Szerokiem,Tatry
+Kamienista Szczelina,Tatry
+Dziura w Żabiem,Tatry
+Szczelina pod Lodową,Tatry
+Jaskinia Żabia Lodowa,Tatry
+Szczelina w Tomanowym Grzbiecie I,Tatry
+Wielka Żabia Szpara,Tatry
+Szczelina w Tomanowym Grzbiecie II,Tatry
+Szczelina w Tomanowym Grzbiecie III,Tatry
+Mała Żabia Szpara,Tatry
+Szczelina w Tomanowym Grzbiecie IV,Tatry
+Studnia w Dziurawej Czubie,Tatry
+Szczelina w Tomanowym Grzbiecie V,Tatry
+Szczelina w Tomanowym Grzbiecie VI,Tatry
+Mnichowy Komin,Tatry
+Dziura nad Zawaliskiem,Tatry
+Studnia przy Mnichowym Kominie,Tatry
+Dziura pod Zawaliskiem,Tatry
+Dziura w Wysokim Grzbiecie,Tatry
+Jaskinia przy Studni w Mnichu,Tatry
+Studnia w Mnichu,Tatry
+Cubryńska Dziura I,Tatry
+Grota Świętej Genowefy,Wyżyna Śląsko-Krakowska
+Cubryńska Dziura III,Tatry
+Szpara pod Rysami,Tatry
+Jaskinia Jaszczurowska Wodna,Tatry
+Jaskinia w Kamieniołomie Daneckich Zachodnia,Wyżyna Śląsko-Krakowska
+Jaskinia w Kamieniołomie Daneckich Wschodnia,Wyżyna Śląsko-Krakowska
+Jaskinia za Kratą,Wyżyna Śląsko-Krakowska
+Jaskinia Mała,Wyżyna Śląsko-Krakowska
+Jaskinia Draba,Wyżyna Śląsko-Krakowska
+Jaskinia Niespodzianka,Wyżyna Śląsko-Krakowska
+Jaskinia Zanokcica,Wyżyna Śląsko-Krakowska
+Jaskinia Stalagmitowa,Wyżyna Śląsko-Krakowska
+Jaskinia Dwuwylotowa,Wyżyna Śląsko-Krakowska
+Szpaciarnia II na Górze Zelce,Wyżyna Śląsko-Krakowska
+Szpaciarnia III na Górze Zelce,Wyżyna Śląsko-Krakowska
+Jaskinia w Lisowicach,Wyżyna Śląsko-Krakowska
+Jaskinia Marcina,Wyżyna Śląsko-Krakowska
+Jaskinia na Górze Kaplicznej Zachodnia,Wyżyna Śląsko-Krakowska
+Jaskinia na Górze Kaplicznej Wschodnia,Wyżyna Śląsko-Krakowska
+Jaskinia Mariusza II,Wyżyna Śląsko-Krakowska
+Jaskinia Mariusza I,Wyżyna Śląsko-Krakowska
+Jaskinia Ewy,Wyżyna Śląsko-Krakowska
+Jaskinia na Górze Draby,Wyżyna Śląsko-Krakowska
+Jaskinia Szachownica II,Wyżyna Śląsko-Krakowska
+Jaskinia Szachownica I,Wyżyna Śląsko-Krakowska
+Jaskinia Szachownica IV,Wyżyna Śląsko-Krakowska
+Jaskinia Szachownica III,Wyżyna Śląsko-Krakowska
+Jaskinia Szachownica VI,Wyżyna Śląsko-Krakowska
+Jaskinia Kitajka,Wyżyna Śląsko-Krakowska
+Szczelina z Uskokiem,Wyżyna Śląsko-Krakowska
+Jaskinia w Kamieniołomie w Rębielskiej Górze,Wyżyna Śląsko-Krakowska
+Jaskinia Krucha Sala,Wyżyna Śląsko-Krakowska
+Jaskinia Północna na Rębielskiej Górze,Wyżyna Śląsko-Krakowska
+Jaskinia za Wantami w Rębielskiej Górze,Wyżyna Śląsko-Krakowska
+Jaskinia w Wilkowiecku Zachodnia,Wyżyna Śląsko-Krakowska
+Jaskinia w Wilkowiecku Wschodnia,Wyżyna Śląsko-Krakowska
+Jaskinia pod Skipirzepą,Wyżyna Śląsko-Krakowska
+Jaskinia Katarowa,Wyżyna Śląsko-Krakowska
+Jaskinia Szeptunów,Wyżyna Śląsko-Krakowska
+Jaskinia w Kamieniu,Wyżyna Śląsko-Krakowska
+Jaskinia w Balikowej Skale,Wyżyna Śląsko-Krakowska
+"Jaskinie ""A"", ""B"", ""C""",Wyżyna Śląsko-Krakowska
+Jaskinia Rudnickiego,Wyżyna Śląsko-Krakowska
+Jaskinia w Zalesiakach 1,Wyżyna Śląsko-Krakowska
+Jaskinia w Zalesiakach 2,Wyżyna Śląsko-Krakowska
+Jaskinia w Zalesiakach 3,Wyżyna Śląsko-Krakowska
+Jaskinia w Zalesiakach 4,Wyżyna Śląsko-Krakowska
+Jaskinia w Zalesiakach 5,Wyżyna Śląsko-Krakowska
+Jaskinia w Zalesiakach 6,Wyżyna Śląsko-Krakowska
+Jaskinia Blokowisko,Wyżyna Śląsko-Krakowska
+"Jaskinia w kamieniołomie ""Trawertyn""",Wyżyna Śląsko-Krakowska
+Jaskinia Buki,Wyżyna Śląsko-Krakowska
+Jaskinia Młynki,Wyżyna Śląsko-Krakowska
+Jaskinia Szachownica V,Wyżyna Śląsko-Krakowska
+Jaskinia nad Kamieniołomem,Wyżyna Śląsko-Krakowska
+Schronisko na Górze Rębielskiej,Wyżyna Śląsko-Krakowska
+"Jaskinia ""A""",Wyżyna Śląsko-Krakowska
+"Jaskinia ""B""",Wyżyna Śląsko-Krakowska
+Jaskinia Opatowska,Wyżyna Śląsko-Krakowska
+Jaskinia w Kurzelowie,Wyżyna Śląsko-Krakowska
+Jaskinia w Kłobucku,Wyżyna Śląsko-Krakowska
+Arkada za Matką Boską,Wyżyna Śląsko-Krakowska
+Jaskinia Ukryta,Wyżyna Śląsko-Krakowska
+Okap pod Ukrytą,Wyżyna Śląsko-Krakowska
+Korytarzyk w górze Doliny Kobylańskiej,Wyżyna Śląsko-Krakowska
+Schronisko nad Odrą,Wyżyna Śląsko-Krakowska
+Schronisko w Tarnowie VI,Wyżyna Śląsko-Krakowska
+Schronisko Otmickie I,Wyżyna Śląsko-Krakowska
+Schronisko Otmickie II,Wyżyna Śląsko-Krakowska
+Schronisko Otmickie III,Wyżyna Śląsko-Krakowska
+Schronisko Otmickie IV,Wyżyna Śląsko-Krakowska
+Jaskinia Chełmska,Wyżyna Śląsko-Krakowska
+Schronisko w Rezerwacie,Wyżyna Śląsko-Krakowska
+Schronisko Kościste,Wyżyna Śląsko-Krakowska
+Schronisko Strzelce I,Wyżyna Śląsko-Krakowska
+Jaskinia Strzelecka,Wyżyna Śląsko-Krakowska
+Schronisko Strzelce V,Wyżyna Śląsko-Krakowska
+Schronisko w Szczepanku I,Wyżyna Śląsko-Krakowska
+Schronisko w Szczepanku II,Wyżyna Śląsko-Krakowska
+Schronisko w Szczepanku III,Wyżyna Śląsko-Krakowska
+Schronisko w Szczepanku IV,Wyżyna Śląsko-Krakowska
+Szczelina z Różą,Wyżyna Śląsko-Krakowska
+Jaskinia w Szczepanku V,Wyżyna Śląsko-Krakowska
+Grotka w Kominie,Wyżyna Śląsko-Krakowska
+Schronisko w Szczepanku VI,Wyżyna Śląsko-Krakowska
+Schronisko w Szczepanku VII,Wyżyna Śląsko-Krakowska
+Jaskinia Kowalskiego,Wyżyna Śląsko-Krakowska
+Schronisko w Szczepanku VIII,Wyżyna Śląsko-Krakowska
+Komórka w Pochyłej Turni,Wyżyna Śląsko-Krakowska
+Okap w Przerwanym Kominie,Wyżyna Śląsko-Krakowska
+Schronisko nad Źródłem I,Wyżyna Śląsko-Krakowska
+Schronisko w Szczepanku IX,Wyżyna Śląsko-Krakowska
+Okap z Ośmiornicą,Wyżyna Śląsko-Krakowska
+Schronisko w Szczepanku X,Wyżyna Śląsko-Krakowska
+Komórka z Liśćmi,Wyżyna Śląsko-Krakowska
+Jaskinia Lisia,Wyżyna Śląsko-Krakowska
+Schronisko w Napłatkach I,Wyżyna Śląsko-Krakowska
+Jaskinia w górze Doliny Kobylańskiej,Wyżyna Śląsko-Krakowska
+Schronisko w Napłatkach II,Wyżyna Śląsko-Krakowska
+Schronisko Środkowe,Wyżyna Śląsko-Krakowska
+Szczelina w górze Doliny Kobylańskiej,Wyżyna Śląsko-Krakowska
+Schronisko Wysokie,Wyżyna Śląsko-Krakowska
+Schronisko Krótkie,Wyżyna Śląsko-Krakowska
+Tunel Blachowicki,Wyżyna Śląsko-Krakowska
+Jaskinia na Blachówce,Wyżyna Śląsko-Krakowska
+Lisi Korytarzyk,Wyżyna Śląsko-Krakowska
+Schronisko w Bobrownikach,Wyżyna Śląsko-Krakowska
+Pojedyncza Koliba,Wyżyna Śląsko-Krakowska
+Schronisko Triasowe I,Wyżyna Śląsko-Krakowska
+Szczelina z Korzeniem,Wyżyna Śląsko-Krakowska
+Schronisko Triasowe II,Wyżyna Śląsko-Krakowska
+Koleba pod Jastrzębią,Wyżyna Śląsko-Krakowska
+Jaskinia Skora,Wyżyna Śląsko-Krakowska
+Ząbkowicki Kominek,Wyżyna Śląsko-Krakowska
+Koleba w Szerokiej Turni,Wyżyna Śląsko-Krakowska
+Szczelina za Szerokim Murem,Wyżyna Śląsko-Krakowska
+Jaskinia w Triasowej Górze,Wyżyna Śląsko-Krakowska
+Nyża w Szerokim Murze,Wyżyna Śląsko-Krakowska
+Zakos przez Sępią Basztą,Wyżyna Śląsko-Krakowska
+Schronisko przy Jaskini w Triasowej Górze,Wyżyna Śląsko-Krakowska
+Zakos w Jastrzębiej,Wyżyna Śląsko-Krakowska
+Księżycowa Dziura,Wyżyna Śląsko-Krakowska
+Łuk Skalny,Wyżyna Śląsko-Krakowska
+Schron z Niespodzianką,Wyżyna Śląsko-Krakowska
+Szczelina w Kobylańskiej I,Wyżyna Śląsko-Krakowska
+Kobylańska Koleba,Wyżyna Śląsko-Krakowska
+Schronisko w Sławkowie I,Wyżyna Śląsko-Krakowska
+Schronisko w Sławkowie II,Wyżyna Śląsko-Krakowska
+Schronisko w Sławkowie III,Wyżyna Śląsko-Krakowska
+Schronisko w Laskach,Wyżyna Śląsko-Krakowska
+Schronisko w Ujkowie Starym I,Wyżyna Śląsko-Krakowska
+Schronisko w Ujkowie Starym II,Wyżyna Śląsko-Krakowska
+Jaskinia w Diablej Górze,Wyżyna Śląsko-Krakowska
+Szczelina w Kobylańskiej II,Wyżyna Śląsko-Krakowska
+Schron pod Kominem,Wyżyna Śląsko-Krakowska
+Schron na Rogu I,Wyżyna Śląsko-Krakowska
+Schron na Rogu II,Wyżyna Śląsko-Krakowska
+Schronisko na Kawcu,Wyżyna Śląsko-Krakowska
+Korytarzyk za Wronią,Wyżyna Śląsko-Krakowska
+Rura za Wronią,Wyżyna Śląsko-Krakowska
+Szczelina za Wronią,Wyżyna Śląsko-Krakowska
+Jaskinia Moherowych Beretów,Wyżyna Śląsko-Krakowska
+Jaskinia Naciekowa na Kijowej Górze,Wyżyna Śląsko-Krakowska
+Schronisko Geotermalne,Wyżyna Śląsko-Krakowska
+Schronisko Sauna,Wyżyna Śląsko-Krakowska
+Schronisko Myte,Wyżyna Śląsko-Krakowska
+Szczelina we Wroniej,Wyżyna Śląsko-Krakowska
+Tunelik Kijowski,Wyżyna Śląsko-Krakowska
+Schronisko w Dolinie Kobylańskiej,Wyżyna Śląsko-Krakowska
+Schronisko pod Ścieżką,Wyżyna Śląsko-Krakowska
+Schronisko Ostatnie,Wyżyna Śląsko-Krakowska
+Korytarz pod Wronią,Wyżyna Śląsko-Krakowska
+Koleba za Wronią,Wyżyna Śląsko-Krakowska
+Ponura Szczelina,Wyżyna Śląsko-Krakowska
+Schronisko w Dąbiu I,Wyżyna Śląsko-Krakowska
+Szczelina za Architektami,Wyżyna Śląsko-Krakowska
+Schronisko w Dąbiu II,Wyżyna Śląsko-Krakowska
+Schronisko w Dąbiu III,Wyżyna Śląsko-Krakowska
+Piwnica w Pieninkach,Wyżyna Śląsko-Krakowska
+Schronisko Mysie,Wyżyna Śląsko-Krakowska
+Komin w środku Doliny,Wyżyna Śląsko-Krakowska
+Korytarzyk obok Komina w Środku Doliny,Wyżyna Śląsko-Krakowska
+Meanderek,Wyżyna Śląsko-Krakowska
+Rura w Środku Doliny,Wyżyna Śląsko-Krakowska
+Schronisko w Glinnej I,Wyżyna Śląsko-Krakowska
+Okap w Środku Doliny,Wyżyna Śląsko-Krakowska
+Schronisko w Glinnej II,Wyżyna Śląsko-Krakowska
+Schronisko w Glinnej III,Wyżyna Śląsko-Krakowska
+Szczelina w Środku Doliny,Wyżyna Śląsko-Krakowska
+Schronisko w Czyżówce I,Wyżyna Śląsko-Krakowska
+Schron za Tarasową Turnią,Wyżyna Śląsko-Krakowska
+Schronisko w Czyżówce II,Wyżyna Śląsko-Krakowska
+Schron w Wąwozie do Karniowic,Wyżyna Śląsko-Krakowska
+Schronisko w Kamieniołomie w Pogorzycach,Wyżyna Śląsko-Krakowska
+Schronisko w Skałce w Bolęcinie I,Wyżyna Śląsko-Krakowska
+Schron z Filarkiem,Wyżyna Śląsko-Krakowska
+Schronisko w Skałce w Bolęcinie II,Wyżyna Śląsko-Krakowska
+Okap za Kruchą Turnią,Wyżyna Śląsko-Krakowska
+Szczelina w Kruchej Turni,Wyżyna Śląsko-Krakowska
+Okrętowe Okno I,Wyżyna Śląsko-Krakowska
+Okrętowe Okno II,Wyżyna Śląsko-Krakowska
+Dziura w Rufie,Wyżyna Śląsko-Krakowska
+Okap pod Okrętem,Wyżyna Śląsko-Krakowska
+Jaskinia w Żyrowej,Wyżyna Śląsko-Krakowska
+Schronisko w Tarnowie I,Wyżyna Śląsko-Krakowska
+Schronisko w Tarnowie II,Wyżyna Śląsko-Krakowska
+Schronisko w Tarnowie III,Wyżyna Śląsko-Krakowska
+Schronisko w Tarnowie IV,Wyżyna Śląsko-Krakowska
+Schronisko w Tarnowie V,Wyżyna Śląsko-Krakowska
+Studnia Tarnowie VII,Wyżyna Śląsko-Krakowska
+Schronisko Strzelce II,Wyżyna Śląsko-Krakowska
+Schronisko Strzelce III,Wyżyna Śląsko-Krakowska
+Schronisko w Pogorzycach,Wyżyna Śląsko-Krakowska
+Schronisko w Łączkach I,Wyżyna Śląsko-Krakowska
+Schronisko w Łączkach II,Wyżyna Śląsko-Krakowska
+Schronisko w Łączkach III,Wyżyna Śląsko-Krakowska
+Jaskinia na Łączkach,Wyżyna Śląsko-Krakowska
+Schronisko nad Jaskinią na Łączkach,Wyżyna Śląsko-Krakowska
+Lej na Łączkach,Wyżyna Śląsko-Krakowska
+Jaskinia na Łączkach Górna,Wyżyna Śląsko-Krakowska
+Korytarz nad Stawami,Wyżyna Śląsko-Krakowska
+Jaskinia nad Stawami,Wyżyna Śląsko-Krakowska
+Krucha Szczelina,Wyżyna Śląsko-Krakowska
+Jaskinia w Leju,Wyżyna Śląsko-Krakowska
+Jaskinia Bojowa,Wyżyna Śląsko-Krakowska
+Jaskinia nad Szańcem,Wyżyna Śląsko-Krakowska
+Schronisko powyżej Jaskini nad Szańcem,Wyżyna Śląsko-Krakowska
+Tunel nad Bramą Będkowską,Wyżyna Śląsko-Krakowska
+Tunel za Iglicą w Wąwozie za Bramą Będkowską,Wyżyna Śląsko-Krakowska
+Schronisko nad Bramą Będkowską,Wyżyna Śląsko-Krakowska
+Schronisko w Bramie Będkowskiej,Wyżyna Śląsko-Krakowska
+Schronisko poniżej Sokolej Skały,Wyżyna Śląsko-Krakowska
+Jaskinia w Sokolicy,Wyżyna Śląsko-Krakowska
+Schronisko w Łazach,Wyżyna Śląsko-Krakowska
+Schronisko w Diablej Bramie,Wyżyna Śląsko-Krakowska
+Jaskinia nad Diablą Bramą,Wyżyna Śląsko-Krakowska
+Schronisko Dolne nad Źródłem,Wyżyna Śląsko-Krakowska
+Schronisko Górne nad Żródłem,Wyżyna Śląsko-Krakowska
+Jaskinia Dziewicza,Wyżyna Śląsko-Krakowska
+Korytarz pod Okrętem,Wyżyna Śląsko-Krakowska
+Jaskinia Małotowa,Wyżyna Śląsko-Krakowska
+Szczelina w Żłobistej Turni,Wyżyna Śląsko-Krakowska
+Jaskinia w Żłobistej Turni,Wyżyna Śląsko-Krakowska
+Szczelina nad Jaskinią w Żłobistej,Wyżyna Śląsko-Krakowska
+Schronisko Wielka Strąka,Wyżyna Śląsko-Krakowska
+Jaskinia Wielka Strąka,Wyżyna Śląsko-Krakowska
+Okap w Rozwalistej Turni,Wyżyna Śląsko-Krakowska
+Dziupla w Rozwalistej Turni,Wyżyna Śląsko-Krakowska
+Szczelina w Rozwalistej Turni,Wyżyna Śląsko-Krakowska
+Jaskinia Duża Sowa,Wyżyna Śląsko-Krakowska
+Studnia w Leju,Wyżyna Śląsko-Krakowska
+Jaskinia nad Źródłem I,Wyżyna Śląsko-Krakowska
+Jaskinia nad Żródłem II,Wyżyna Śląsko-Krakowska
+Jaskinia nad Żródłem III,Wyżyna Śląsko-Krakowska
+Dziupla w Postrzępionej Turni,Wyżyna Śląsko-Krakowska
+Jaskinia nad Żródłem V,Wyżyna Śląsko-Krakowska
+Postrzępiony Okap,Wyżyna Śląsko-Krakowska
+Jaskinia Rocznicowa,Wyżyna Śląsko-Krakowska
+Schron z Czterema Otworami,Wyżyna Śląsko-Krakowska
+Niska Koleba,Wyżyna Śląsko-Krakowska
+Schronisko Przechodnie,Wyżyna Śląsko-Krakowska
+Schronisko przy Przechodnim,Wyżyna Śląsko-Krakowska
+Schron obok Dzwonu,Wyżyna Śląsko-Krakowska
+Okap z Krzakiem,Wyżyna Śląsko-Krakowska
+Okap pod Dzwonem,Wyżyna Śląsko-Krakowska
+Korytarz pod Dzwonem,Wyżyna Śląsko-Krakowska
+Okap poniżej Dzwonu,Wyżyna Śląsko-Krakowska
+Tunelik przy Schronisku z Obrazem,Wyżyna Śląsko-Krakowska
+Okap za Żabim Koniem,Wyżyna Śląsko-Krakowska
+Korytarz w Okapie,Wyżyna Śląsko-Krakowska
+Szczelina obok Żabiego,Wyżyna Śląsko-Krakowska
+Okap z Rurami,Wyżyna Śląsko-Krakowska
+Schronisko z Obrazem,Wyżyna Śląsko-Krakowska
+Grotka w Mnichu,Wyżyna Śląsko-Krakowska
+Schronisko Puste,Wyżyna Śląsko-Krakowska
+Jaskinia w Bramie Kobylańskiej,Wyżyna Śląsko-Krakowska
+Szczelina w Bramie Kobylańskiej,Wyżyna Śląsko-Krakowska
+Schron w Kuli,Wyżyna Śląsko-Krakowska
+Szczelina pod Kulą,Wyżyna Śląsko-Krakowska
+Korytarz w Kuli,Wyżyna Śląsko-Krakowska
+Jaskinia Dolna pod Kawiorami,Wyżyna Śląsko-Krakowska
+Jaskinia Górna pod Kawiorami,Wyżyna Śląsko-Krakowska
+Jaskinia Głęboka,Wyżyna Śląsko-Krakowska
+Śmietnik pod Jaskinią Głęboką,Wyżyna Śląsko-Krakowska
+Komin w Wielkiej Skale,Wyżyna Śląsko-Krakowska
+Tunelik obok Szczeliny w Wielkiej Skale,Wyżyna Śląsko-Krakowska
+Szczelina w Wielkiej Skale,Wyżyna Śląsko-Krakowska
+Tunel Wysoki w Wielkiej Skale,Wyżyna Śląsko-Krakowska
+Tunel pośredni w Wielkiej Skale,Wyżyna Śląsko-Krakowska
+Tunel Niski w Wielkiej Skale,Wyżyna Śląsko-Krakowska
+Jaskinia Główna w Wielkiej Skale,Wyżyna Śląsko-Krakowska
+Schronisko Małe w Wielkiej Skale,Wyżyna Śląsko-Krakowska
+Jaskinia Łabajowa,Wyżyna Śląsko-Krakowska
+Jaskinia Nietoperzowa,Wyżyna Śląsko-Krakowska
+Jaskinia Zygmunta,Wyżyna Śląsko-Krakowska
+Jaskinia Psia Klatka,Wyżyna Śląsko-Krakowska
+Jaskinia powyżej Łabajowej,Wyżyna Śląsko-Krakowska
+Jaskinia w Łysej Skale,Wyżyna Śląsko-Krakowska
+Jaskinia w Dupnej Górze,Wyżyna Śląsko-Krakowska
+Tunel Ciasny na Tomaszówkach Dolnych,Wyżyna Śląsko-Krakowska
+Jaskinia na Tomaszówkach Dolnych II,Wyżyna Śląsko-Krakowska
+Schronisko na Tomaszówkach Dolnych I,Wyżyna Śląsko-Krakowska
+Jaskinia na Tomaszówkach Dolnych IV,Wyżyna Śląsko-Krakowska
+Szczelina pod Płytą,Wyżyna Śląsko-Krakowska
+Dziurawiec na Tomaszówkach Dolnych,Wyżyna Śląsko-Krakowska
+Koleba w II Wąwozie,Wyżyna Śląsko-Krakowska
+Tunel Stromy na Tomaszówkach Dolnych,Wyżyna Śląsko-Krakowska
+Schronisko pod Słupami,Wyżyna Śląsko-Krakowska
+Szczelina w Kominie,Wyżyna Śląsko-Krakowska
+Rura za Zjazdową Turnią,Wyżyna Śląsko-Krakowska
+Jaskinia na Tomaszówkach Dolnych,Wyżyna Śląsko-Krakowska
+Szczelina z Dachem,Wyżyna Śląsko-Krakowska
+Jaskinia na Tomaszówkach Górnych,Wyżyna Śląsko-Krakowska
+Koleba w Skałach za Długoszem,Wyżyna Śląsko-Krakowska
+Jaskinia Mała na Tomaszówkach Górnych,Wyżyna Śląsko-Krakowska
+Dziupla w Skałach za Długoszem,Wyżyna Śląsko-Krakowska
+Szeroki Okap,Wyżyna Śląsko-Krakowska
+Schron pod Wantą,Wyżyna Śląsko-Krakowska
+Okap w Skałce za Cycówką,Wyżyna Śląsko-Krakowska
+Jaskinia w Polniku I,Wyżyna Śląsko-Krakowska
+Jaskinia w Polniku II,Wyżyna Śląsko-Krakowska
+Korytarz obok Jaskini w Polniku II,Wyżyna Śląsko-Krakowska
+Jaskinia w Polniku III,Wyżyna Śląsko-Krakowska
+Jaskinia w Lejku,Wyżyna Śląsko-Krakowska
+Jaskinia nad Źródłem IV,Wyżyna Śląsko-Krakowska
+Schronisko pod Jaskinią Głęboką,Wyżyna Śląsko-Krakowska
+Jaskinia Balowa,Wyżyna Śląsko-Krakowska
+Smocza Jama,Wyżyna Śląsko-Krakowska
+Jaskinia w Anastomozach,Wyżyna Śląsko-Krakowska
+Schronisko obok Anastomozów,Wyżyna Śląsko-Krakowska
+Rurka,Wyżyna Śląsko-Krakowska
+Kawerna Magazyn,Wyżyna Śląsko-Krakowska
+"Schronisko nad ""Sadystówką""",Wyżyna Śląsko-Krakowska
+Jaskinia przed „Problemówką”,Wyżyna Śląsko-Krakowska
+Jaskinia Musza,Wyżyna Śląsko-Krakowska
+Jaskinia Koguta,Wyżyna Śląsko-Krakowska
+Okienko Zbójnickie,Wyżyna Śląsko-Krakowska
+Jaskinia Twardowskiego,Wyżyna Śląsko-Krakowska
+Jaskinia Niska,Wyżyna Śląsko-Krakowska
+Jaskinia pod Nyżą,Wyżyna Śląsko-Krakowska
+Jaskinia z Kulkami,Wyżyna Śląsko-Krakowska
+Jaskinia Wywiew,Wyżyna Śląsko-Krakowska
+Jaskinia Jasna,Wyżyna Śląsko-Krakowska
+Tunel w Pychowicach,Wyżyna Śląsko-Krakowska
+Jaskinia Pychowicka,Wyżyna Śląsko-Krakowska
+Kawerna w Pychowicach I,Wyżyna Śląsko-Krakowska
+Kawerna w Pychowicach II,Wyżyna Śląsko-Krakowska
+Kawerna w Pychowicach III,Wyżyna Śląsko-Krakowska
+Jaskinia pod Fortem,Wyżyna Śląsko-Krakowska
+Kawerna w Bodzowie,Wyżyna Śląsko-Krakowska
+Kawerna Kostrze,Wyżyna Śląsko-Krakowska
+Kawerna w Kostrzu,Wyżyna Śląsko-Krakowska
+Kawerna w Wielkanocy,Wyżyna Śląsko-Krakowska
+Kawerna Winnica I,Wyżyna Śląsko-Krakowska
+Kawerna Winnica II,Wyżyna Śląsko-Krakowska
+Schronisko w Skałach Winnicy,Wyżyna Śląsko-Krakowska
+Schronisko w Winnicy I,Wyżyna Śląsko-Krakowska
+Schronisko w Winnicy II,Wyżyna Śląsko-Krakowska
+Tunel nad Okapem I,Wyżyna Śląsko-Krakowska
+Tunel nad Okapem II,Wyżyna Śląsko-Krakowska
+Tunel nad Okapem III,Wyżyna Śląsko-Krakowska
+Jaskinia w Górze Winnicy w Tyńcu,Wyżyna Śląsko-Krakowska
+Szczelina nad Wisłą,Wyżyna Śląsko-Krakowska
+Szczelina pod Klasztorem,Wyżyna Śląsko-Krakowska
+Jaskinia pod Grodziskiem,Wyżyna Śląsko-Krakowska
+Schronisko w Wielogórze,Wyżyna Śląsko-Krakowska
+Studzienka w Stepicy,Wyżyna Śląsko-Krakowska
+Schronisko w Biedzinie,Wyżyna Śląsko-Krakowska
+Schronisko pod Klasztorem Norbertanek,Wyżyna Śląsko-Krakowska
+Kawerna pod Fortem Kościuszko,Wyżyna Śląsko-Krakowska
+Nyża nad Strzelnicą,Wyżyna Śląsko-Krakowska
+Tunelik w Panieńskich Skałach,Wyżyna Śląsko-Krakowska
+Szczelina w Panieńskich Skałach,Wyżyna Śląsko-Krakowska
+Wnęka w Panieńskich Skałach,Wyżyna Śląsko-Krakowska
+Kominek w Panieńskich Skałach,Wyżyna Śląsko-Krakowska
+Schronisko Kręte w Panieńskich Skałach,Wyżyna Śląsko-Krakowska
+Schronisko za Filarkiem w Panieńskich Skałach,Wyżyna Śląsko-Krakowska
+Schronisko w Skałach Panieńskich Górne,Wyżyna Śląsko-Krakowska
+Szczelina przed Gajówką,Wyżyna Śląsko-Krakowska
+Szczelina pod Gajówką,Wyżyna Śląsko-Krakowska
+Jaskinia w Zielonym Dole,Wyżyna Śląsko-Krakowska
+Schronisko w Zielonym Dole,Wyżyna Śląsko-Krakowska
+Schroniska w Liboradzu,Wyżyna Śląsko-Krakowska
+Jaskinia za Kaflarnią,Wyżyna Śląsko-Krakowska
+Jaskinia pod Fundamentem,Wyżyna Śląsko-Krakowska
+Jaskinia w Lesie Wolskim,Wyżyna Śląsko-Krakowska
+Schronisko w Prędziszowie,Wyżyna Śląsko-Krakowska
+Tradytor w Olszanicy,Wyżyna Śląsko-Krakowska
+Jaskinia w Prędziszowie,Wyżyna Śląsko-Krakowska
+Kawerna Bielany,Wyżyna Śląsko-Krakowska
+Schronisko pod wsią Bielany,Wyżyna Śląsko-Krakowska
+Jaskinia Mysia,Wyżyna Śląsko-Krakowska
+Szczelina w Prędziszowie,Wyżyna Śląsko-Krakowska
+Schronisko w Srocku,Wyżyna Śląsko-Krakowska
+System Jaskiń Srockich,Wyżyna Śląsko-Krakowska
+Schronisko w Zielonej Górze,Wyżyna Śląsko-Krakowska
+Jaskinia w Zielonej Górze,Wyżyna Śląsko-Krakowska
+Schronisko w Dębowej Górze,Wyżyna Śląsko-Krakowska
+Jaskinia w Łomiku,Wyżyna Śląsko-Krakowska
+Schronisko w Rachowcu,Wyżyna Śląsko-Krakowska
+Jaskinia w kamieniołomie przy St.Kol. Olsztyn,Wyżyna Śląsko-Krakowska
+Okap w Rachowcu,Wyżyna Śląsko-Krakowska
+Schronisko IV w Przymiłowicach,Wyżyna Śląsko-Krakowska
+Schronisko V w Przymiłowicach,Wyżyna Śląsko-Krakowska
+Koleba w Rachowcu,Wyżyna Śląsko-Krakowska
+Schronisko w Górze Sowiej,Wyżyna Śląsko-Krakowska
+Jaskinia Kryspinowska,Wyżyna Śląsko-Krakowska
+Jaskinia Amonitów,Wyżyna Śląsko-Krakowska
+Schronisko przy Jaskini Kryspinowskiej,Wyżyna Śląsko-Krakowska
+Szczelina przy Jaskini Kryspinowskiej,Wyżyna Śląsko-Krakowska
+System Jaskiń Towarnich,Wyżyna Śląsko-Krakowska
+Kawerna w Piekarach,Wyżyna Śląsko-Krakowska
+Schronisko w Okrążku,Wyżyna Śląsko-Krakowska
+Schronisko Poznaniaków,Wyżyna Śląsko-Krakowska
+Schronisko w Starym Łomie,Wyżyna Śląsko-Krakowska
+Jaskinia Cabanowa,Wyżyna Śląsko-Krakowska
+Studnia Wołoszyna,Wyżyna Śląsko-Krakowska
+Schronisko przy Jaskiniach Wiślanych,Wyżyna Śląsko-Krakowska
+Schronisko w Górze Towarniej Dużej,Wyżyna Śląsko-Krakowska
+Jaskinia Kopana,Wyżyna Śląsko-Krakowska
+Schronisko w Górze Towarniej Małej,Wyżyna Śląsko-Krakowska
+Schronisko w Górze Zajęczej,Wyżyna Śląsko-Krakowska
+Jaskinia w Skałkach Dużych,Wyżyna Śląsko-Krakowska
+Schronisko pod Zamkiem,Wyżyna Śląsko-Krakowska
+Jaskinia Wiślana Wschodnia,Wyżyna Śląsko-Krakowska
+Jaskinia Zamkowa Dolna,Wyżyna Śląsko-Krakowska
+Jaskinia Wiślana Zachodnia,Wyżyna Śląsko-Krakowska
+Schronisko nad Jaskiniami Wiślanymi,Wyżyna Śląsko-Krakowska
+Schronisko Zamkowe Średnie,Wyżyna Śląsko-Krakowska
+Jaskinia Zamkowa Górna,Wyżyna Śląsko-Krakowska
+Jaskinia nad Galoską,Wyżyna Śląsko-Krakowska
+Schronisko w Ganku Ewy,Wyżyna Śląsko-Krakowska
+Schronisko w Czarnym Kominie,Wyżyna Śląsko-Krakowska
+Jaskinia w Kielnikach,Wyżyna Śląsko-Krakowska
+Jaskinia Na Gołąbcu,Wyżyna Śląsko-Krakowska
+Jaskinia w Słonecznych Skałkach,Wyżyna Śląsko-Krakowska
+Jaskinia Na Gołąbcu Dolna,Wyżyna Śląsko-Krakowska
+Schronisko pod Basztą w Górze Zamkowej,Wyżyna Śląsko-Krakowska
+Schronisko Bliźniacze,Wyżyna Śląsko-Krakowska
+Schronisko z Oknem w Górze Zamkowej,Wyżyna Śląsko-Krakowska
+Szczeliniec w Ściejowicach,Wyżyna Śląsko-Krakowska
+Schroniska pod Dziewicą,Wyżyna Śląsko-Krakowska
+Rura w Ściejowicach,Wyżyna Śląsko-Krakowska
+Jaskinia w Kajasówce,Wyżyna Śląsko-Krakowska
+Jaskinia Magazyn,Wyżyna Śląsko-Krakowska
+Jaskinia w Lipówce,Wyżyna Śląsko-Krakowska
+Schronisko w Podciętej Turni na Lipówce,Wyżyna Śląsko-Krakowska
+Schronisko w Przymiłowicach I,Wyżyna Śląsko-Krakowska
+Schronisko w Przymiłowicach II,Wyżyna Śląsko-Krakowska
+Schronisko w Przymiłowicach III,Wyżyna Śląsko-Krakowska
+Schronisko Św. Idziego,Wyżyna Śląsko-Krakowska
+Jaskinia w Zrębicach,Wyżyna Śląsko-Krakowska
+Jaskinia w Mydlnikach,Wyżyna Śląsko-Krakowska
+Schronisko w Skale Kmity,Wyżyna Śląsko-Krakowska
+Tunel przy Skale Kmity,Wyżyna Śląsko-Krakowska
+Jaskinia w Dolinie Grzybowskiej,Wyżyna Śląsko-Krakowska
+Schronisko na Gaiku I,Wyżyna Śląsko-Krakowska
+Schronisko na Gaiku II,Wyżyna Śląsko-Krakowska
+Tunel przy Jaskini Zawalonej,Wyżyna Śląsko-Krakowska
+Jaskinia Zawalona,Wyżyna Śląsko-Krakowska
+Schronisko w Skałce przy Kładce,Wyżyna Śląsko-Krakowska
+Schronisko w Łomie przy Kładce,Wyżyna Śląsko-Krakowska
+Jaskinia pod Kochanką,Wyżyna Śląsko-Krakowska
+Chlebowy Piec,Wyżyna Śląsko-Krakowska
+Jaskinia Niska,Wyżyna Śląsko-Krakowska
+Jaskinia nad Miłaszówką,Wyżyna Śląsko-Krakowska
+Schronisko w Amfiteatrze,Wyżyna Śląsko-Krakowska
+Studnia w Amfiteatrze,Wyżyna Śląsko-Krakowska
+Schronisko przed Amfiteatrem,Wyżyna Śląsko-Krakowska
+Jaskinia na Miłaszówce,Wyżyna Śląsko-Krakowska
+Schronisko obok Studniska,Wyżyna Śląsko-Krakowska
+Schronisko na lewym brzegu Doliny Sanki,Wyżyna Śląsko-Krakowska
+Schronisko w Ścianie,Wyżyna Śląsko-Krakowska
+Jędrusiowa Jama,Wyżyna Śląsko-Krakowska
+Schronisko w Skale Bonifacego,Wyżyna Śląsko-Krakowska
+Jaskinia przy Matce Boskiej,Wyżyna Śląsko-Krakowska
+Jaskinia pod Sokolą,Wyżyna Śląsko-Krakowska
+Jaskinia nad Matką Boską,Wyżyna Śląsko-Krakowska
+Studnisko,Wyżyna Śląsko-Krakowska
+Jaskinia za Matką Boską,Wyżyna Śląsko-Krakowska
+Schronisko w Sokolicy I,Wyżyna Śląsko-Krakowska
+Jaskinia Stroma,Wyżyna Śląsko-Krakowska
+Schronisko w Sokolicy II,Wyżyna Śląsko-Krakowska
+Jaskinia Leśnika,Wyżyna Śląsko-Krakowska
+Schronisko w Sokolicy III,Wyżyna Śląsko-Krakowska
+Jaskinia na Półce w Sokolicy,Wyżyna Śląsko-Krakowska
+Schronisko Borsucze w Sokolicy,Wyżyna Śląsko-Krakowska
+Schronisko przy Źródle,Wyżyna Śląsko-Krakowska
+Rura na Łopiankach,Wyżyna Śląsko-Krakowska
+Schronisko Pogorzelskiego,Wyżyna Śląsko-Krakowska
+Schronisko pod Półką w Sokolicy,Wyżyna Śląsko-Krakowska
+Jaskinia na Łopiankach I,Wyżyna Śląsko-Krakowska
+Studnia Zygmunta,Wyżyna Śląsko-Krakowska
+Schronisko nad Jaskinią Koralową,Wyżyna Śląsko-Krakowska
+Jaskinia na Łopiankach II,Wyżyna Śląsko-Krakowska
+Schronisko w Turni Simonda na Pustelnicy,Wyżyna Śląsko-Krakowska
+Jaskinia Księżycowa,Wyżyna Śląsko-Krakowska
+Ukośna Szczelina Dolna,Wyżyna Śląsko-Krakowska
+Schronisko Zachodnie w Pustelnicy,Wyżyna Śląsko-Krakowska
+Ukośna Szczelina Górna,Wyżyna Śląsko-Krakowska
+Jaskinia Koralowa,Wyżyna Śląsko-Krakowska
+Meander w Wąwozie Półrzeczki,Wyżyna Śląsko-Krakowska
+Schronisko Pośrednie Dolne,Wyżyna Śląsko-Krakowska
+Schronisko nad Potoczkiem,Wyżyna Śląsko-Krakowska
+Schronisko Pośrednie Górne,Wyżyna Śląsko-Krakowska
+Jaskinia Murek,Wyżyna Śląsko-Krakowska
+System Jaskini Olsztyńskiej,Wyżyna Śląsko-Krakowska
+Schronisko w Pustelnicy I,Wyżyna Śląsko-Krakowska
+Jaskinia Basieta,Wyżyna Śląsko-Krakowska
+Schronisko w Pustelnicy II,Wyżyna Śląsko-Krakowska
+Schronisko Podwójne w Pustelnicy,Wyżyna Śląsko-Krakowska
+"Szczelina Frakcji ""N""",Wyżyna Śląsko-Krakowska
+Schronisko Pimponiówka,Wyżyna Śląsko-Krakowska
+Schronisko pod Wantą w Pustelnicy,Wyżyna Śląsko-Krakowska
+Schronisko w Pustelnicy III,Wyżyna Śląsko-Krakowska
+Szpaciarnia w Pustelnicy,Wyżyna Śląsko-Krakowska
+Szpaciarnia nad Urwistą,Wyżyna Śląsko-Krakowska
+Jaskinia Urwista,Wyżyna Śląsko-Krakowska
+Schroniska w Pustelnicy IV,Wyżyna Śląsko-Krakowska
+Schronisko w Pustelnicy V,Wyżyna Śląsko-Krakowska
+Schronisko Owalne w Pustelnicy,Wyżyna Śląsko-Krakowska
+Schronisko VI w Pustelnicy,Wyżyna Śląsko-Krakowska
+Schronisko w Uliczkach,Wyżyna Śląsko-Krakowska
+Schronisko w Górze Setki,Wyżyna Śląsko-Krakowska
+Jaskinia w Uliczkach,Wyżyna Śląsko-Krakowska
+Schronisko w Skałce w Puchaczu,Wyżyna Śląsko-Krakowska
+Schronisko w Skale Byczyn,Wyżyna Śląsko-Krakowska
+Schronisko pod Nyżą w Puchaczu,Wyżyna Śląsko-Krakowska
+Tunel w Sance,Wyżyna Śląsko-Krakowska
+Schronisko za Wantą w Puchaczu,Wyżyna Śląsko-Krakowska
+Schronisko Niskie w Puchaczu,Wyżyna Śląsko-Krakowska
+Pajęczy Schron,Wyżyna Śląsko-Krakowska
+Okienko,Wyżyna Śląsko-Krakowska
+Schronisko za Trawersem w Puchaczu,Wyżyna Śląsko-Krakowska
+Schronisko Boczne,Wyżyna Śląsko-Krakowska
+Jaskinia w Dziedzińcu,Wyżyna Śląsko-Krakowska
+Jaskinia nad Samcowym Polem,Wyżyna Śląsko-Krakowska
+Schronisko Królicze,Wyżyna Śląsko-Krakowska
+Schronisko Wysokie,Wyżyna Śląsko-Krakowska
+Niedostępny Okap,Wyżyna Śląsko-Krakowska
+Jaskinia w Wysokiej Turni,Wyżyna Śląsko-Krakowska
+Schronisko Małe w Zimnym Dole,Wyżyna Śląsko-Krakowska
+Schronisko pod Kamieniem,Wyżyna Śląsko-Krakowska
+Jaskinia Komarowa,Wyżyna Śląsko-Krakowska
+Źródło w Zimnym Dole,Wyżyna Śląsko-Krakowska
+Okap za Zerwą Pierwszy,Wyżyna Śląsko-Krakowska
+Jaskinia Fikuśna,Wyżyna Śląsko-Krakowska
+Schronisko między Okapami,Wyżyna Śląsko-Krakowska
+Jaskinia Maurycego,Wyżyna Śląsko-Krakowska
+Schronisko w Donicy III,Wyżyna Śląsko-Krakowska
+Okap za Zerwą Drugi,Wyżyna Śląsko-Krakowska
+Schronisko koło Jaskini Maurycego I,Wyżyna Śląsko-Krakowska
+Schronisko koło Jaskini Maurycego II,Wyżyna Śląsko-Krakowska
+Tunel w Uliczkach,Wyżyna Śląsko-Krakowska
+Schronisko w Donicy I,Wyżyna Śląsko-Krakowska
+Jaskinia w Donicy,Wyżyna Śląsko-Krakowska
+Schronisko w Donicy II,Wyżyna Śląsko-Krakowska
+Okap na Półce z Meandrem,Wyżyna Śląsko-Krakowska
+Okap z Oknem,Wyżyna Śląsko-Krakowska
+Długi Okap,Wyżyna Śląsko-Krakowska
+Niski Okap,Wyżyna Śląsko-Krakowska
+Jaskinia za Źródłem I,Wyżyna Śląsko-Krakowska
+Jaskinia za Źródłem II,Wyżyna Śląsko-Krakowska
+Jaskinia w Wąwozie Aleksandrowickim I,Wyżyna Śląsko-Krakowska
+Jaskinia w Wąwozie Aleksandrowickim II,Wyżyna Śląsko-Krakowska
+Jaskinia w Wąwozie Aleksandrowickim III,Wyżyna Śląsko-Krakowska
+Schronisko w Donicy V,Wyżyna Śląsko-Krakowska
+Jaskinia Leśnych Skrzatów,Wyżyna Śląsko-Krakowska
+Schronisko w Donicy IV,Wyżyna Śląsko-Krakowska
+Jaskinia nad Skrzatami,Wyżyna Śląsko-Krakowska
+Schronisko w Donicy VI,Wyżyna Śląsko-Krakowska
+Jaskinia Szpatowców w Donicy,Wyżyna Śląsko-Krakowska
+Jaskinia ze Szlifami,Wyżyna Śląsko-Krakowska
+Schronisko w Donicy VII,Wyżyna Śląsko-Krakowska
+Schronisko w Dziurawej Skale,Wyżyna Śląsko-Krakowska
+Schronisko za Ulami,Wyżyna Śląsko-Krakowska
+Schronisko w Karzełku I,Wyżyna Śląsko-Krakowska
+Schronisko w Karzełku II,Wyżyna Śląsko-Krakowska
+Schronisko w Karzełku III,Wyżyna Śląsko-Krakowska
+Schronisko pod Kazalnicą,Wyżyna Śląsko-Krakowska
+Okap w Karzełku,Wyżyna Śląsko-Krakowska
+Wielki Okap,Wyżyna Śląsko-Krakowska
+Jaskinia Siedlecka,Wyżyna Śląsko-Krakowska
+Schronisko Kadzielniańskie w Siedlcu I,Wyżyna Śląsko-Krakowska
+Schronisko Kuny,Wyżyna Śląsko-Krakowska
+Schronisko obok Jaskini Siedleckiej,Wyżyna Śląsko-Krakowska
+Schronisko w Pabianicach I,Wyżyna Śląsko-Krakowska
+Jaskinia Pabianicka,Wyżyna Śląsko-Krakowska
+Jaskinia Bezimienna,Wyżyna Śląsko-Krakowska
+Schronisko nad Jaskinią Pabianicką,Wyżyna Śląsko-Krakowska
+Schronisko w Pabianicach II,Wyżyna Śląsko-Krakowska
+Jaskinia Kadzielniańska w Siedlcu,Wyżyna Śląsko-Krakowska
+Schronisko w Kadzielni I,Wyżyna Śląsko-Krakowska
+Schronisko w Kadzielni II,Wyżyna Śląsko-Krakowska
+Schronisko w Kadzielni III,Wyżyna Śląsko-Krakowska
+Schronisko w Uroczysku Bogdaniec I,Wyżyna Śląsko-Krakowska
+Schronisko w Uroczysku Bogdaniec II,Wyżyna Śląsko-Krakowska
+Schronisko w Uroczysku Bogdaniec III,Wyżyna Śląsko-Krakowska
+Koleba w Uroczysku Bogdaniec,Wyżyna Śląsko-Krakowska
+Meander w Mysiurze,Wyżyna Śląsko-Krakowska
+Brzuszna Szczelina,Wyżyna Śląsko-Krakowska
+Jaskinia pod Zajęczą,Wyżyna Śląsko-Krakowska
+Jaskinia nad Zajęczą,Wyżyna Śląsko-Krakowska
+Jaskinia Ducha Gór,Wyżyna Śląsko-Krakowska
+Schronisko w Uroczysku Bogdaniec IV,Wyżyna Śląsko-Krakowska
+Schronisko w Uroczysku Bogdaniec V,Wyżyna Śląsko-Krakowska
+Schronisko w Uroczysku Bogdaniec VI,Wyżyna Śląsko-Krakowska
+Studnia w Uroczysku Bogdaniec,Wyżyna Śląsko-Krakowska
+Schronisko w Uroczysku Bogdaniec VII,Wyżyna Śląsko-Krakowska
+Schronisko w Uroczysku Bogdaniec VIII,Wyżyna Śląsko-Krakowska
+Schronisko w Uroczysku Bogdaniec IX,Wyżyna Śląsko-Krakowska
+Brama w Uroczysku Bogdaniec,Wyżyna Śląsko-Krakowska
+Schronisko koło Bramy w Uroczysku Bogdaniec,Wyżyna Śląsko-Krakowska
+Schronisko w Uroczysku Bogdaniec X,Wyżyna Śląsko-Krakowska
+Jaskinia w Uroczysku Bogdaniec,Wyżyna Śląsko-Krakowska
+Schronisko na Cisowym I,Wyżyna Śląsko-Krakowska
+Schronisko w Trzeciej Górze,Wyżyna Śląsko-Krakowska
+Schronisko na Cisowym II,Wyżyna Śląsko-Krakowska
+Schronisko na Cisowym III,Wyżyna Śląsko-Krakowska
+Schronisko Dolne na Przydatkach,Wyżyna Śląsko-Krakowska
+Schronisko Górne na Przydatkach,Wyżyna Śląsko-Krakowska
+Schronisko w Górze przy Alei Klonowej,Wyżyna Śląsko-Krakowska
+Studnia w Górze przy Alei Klonowej,Wyżyna Śląsko-Krakowska
+Schronisko w Górze Laski,Wyżyna Śląsko-Krakowska
+Schronisko w Skale nad Potokiem,Wyżyna Śląsko-Krakowska
+Schronisko Małe w Skale nad Potokiem,Wyżyna Śląsko-Krakowska
+Schronisko nad Potokiem,Wyżyna Śląsko-Krakowska
+Studnia Szalonego Chłopa,Wyżyna Śląsko-Krakowska
+Źródło w Brzoskwini,Wyżyna Śląsko-Krakowska
+Jaskinia przy Kamyku,Wyżyna Śląsko-Krakowska
+Jaskinia w Trzech Turniach,Wyżyna Śląsko-Krakowska
+Jaskinia w Dolinie Borowca,Wyżyna Śląsko-Krakowska
+Jaskinia w Ciepłym Dole,Wyżyna Śląsko-Krakowska
+Jaskinia Sobotnia,Wyżyna Śląsko-Krakowska
+Jaskinia Dzikiej Świni,Wyżyna Śląsko-Krakowska
+Wywierzysko w Rybnej,Wyżyna Śląsko-Krakowska
+Jaskinia w Ponorze,Wyżyna Śląsko-Krakowska
+Jaskinia przy Wsi Rybnej,Wyżyna Śląsko-Krakowska
+Jaskinia przy Kapliczce w Rybnej,Wyżyna Śląsko-Krakowska
+Jaskinia w Kamieniołomie w Rybnej,Wyżyna Śląsko-Krakowska
+Tunel nad Kamieniołomem w Rybnej,Wyżyna Śląsko-Krakowska
+Jaskinia na Wrzosach Południowa,Wyżyna Śląsko-Krakowska
+Jaskinia na Wrzosach Północna,Wyżyna Śląsko-Krakowska
+Jaskinia Mała na Wrzosach,Wyżyna Śląsko-Krakowska
+Schronisko Porębskie,Wyżyna Śląsko-Krakowska
+Schronisko za Bramą,Wyżyna Śląsko-Krakowska
+Schronisko pod Dębami,Wyżyna Śląsko-Krakowska
+Schronisko nad Doliną,Wyżyna Śląsko-Krakowska
+Szczelina za Igłą,Wyżyna Śląsko-Krakowska
+Mała Szczelina za Igłą,Wyżyna Śląsko-Krakowska
+Schronisko na Półce w Igle,Wyżyna Śląsko-Krakowska
+Studnia za Igłą,Wyżyna Śląsko-Krakowska
+Schronisko Małe w Gaudynowskich Skałach,Wyżyna Śląsko-Krakowska
+Szczelina nad Małą,Wyżyna Śląsko-Krakowska
+Jaskinia Gaudynowska,Wyżyna Śląsko-Krakowska
+Schronisko obok Jaskini Gaudynowskiej,Wyżyna Śląsko-Krakowska
+Jaskinia Gruzowa,Wyżyna Śląsko-Krakowska
+Schronisko w Żydowskiej Górze,Wyżyna Śląsko-Krakowska
+Schronisko w Niegowonicach,Wyżyna Śląsko-Krakowska
+Szczelina Niegowonicka,Wyżyna Śląsko-Krakowska
+Schronisko z Półką,Wyżyna Śląsko-Krakowska
+Okap w Kamieniołomie,Wyżyna Śląsko-Krakowska
+Schroniska pod Płytami,Wyżyna Śląsko-Krakowska
+Schronisko Lisie,Wyżyna Śląsko-Krakowska
+Schronisko Krecie,Wyżyna Śląsko-Krakowska
+Schronisko po Zawale,Wyżyna Śląsko-Krakowska
+Jaskinia Zawaliskowa,Wyżyna Śląsko-Krakowska
+Mały Meander,Wyżyna Śląsko-Krakowska
+Schronisko bez Mostów,Wyżyna Śląsko-Krakowska
+Schronisko w Dużym Leju,Wyżyna Śląsko-Krakowska
+Schronisko w Piechowej Górze,Wyżyna Śląsko-Krakowska
+Półrura,Wyżyna Śląsko-Krakowska
+Szczelina Nieprzechodnia,Wyżyna Śląsko-Krakowska
+Jaskinia na Świniuszce,Wyżyna Śląsko-Krakowska
+Schronisko w Ostańcu I,Wyżyna Śląsko-Krakowska
+Schronisko w Ostańcu II,Wyżyna Śląsko-Krakowska
+Jaskinia Niska w Świniuszce,Wyżyna Śląsko-Krakowska
+Jaskinia w Rodakach,Wyżyna Śląsko-Krakowska
+Schronisko na Świniuszce,Wyżyna Śląsko-Krakowska
+Schronisko w Ryczówku I,Wyżyna Śląsko-Krakowska
+Schronisko w Ryczówku II,Wyżyna Śląsko-Krakowska
+Jaskinia na Szczelinach,Wyżyna Śląsko-Krakowska
+Jaskinia na Iwianie,Wyżyna Śląsko-Krakowska
+Schronisko na Iwianie,Wyżyna Śląsko-Krakowska
+Schronisko pod Iwianą I,Wyżyna Śląsko-Krakowska
+Okap pod Iwianą,Wyżyna Śląsko-Krakowska
+Schronisko pod Iwianą II,Wyżyna Śląsko-Krakowska
+Dwoista Szczelina,Wyżyna Śląsko-Krakowska
+Niedźwiedzia Grota,Wyżyna Śląsko-Krakowska
+Schronisko w Hucisku I,Wyżyna Śląsko-Krakowska
+Schronisko obok Groty Niedźwiedziej,Wyżyna Śląsko-Krakowska
+Schronisko w Filarku,Wyżyna Śląsko-Krakowska
+Jaskinia z Oknem,Wyżyna Śląsko-Krakowska
+Schronisko nad Grotą Niedźwiedzią,Wyżyna Śląsko-Krakowska
+Schronisko w Hucisku II,Wyżyna Śląsko-Krakowska
+Jaskinia Ciesenć,Wyżyna Śląsko-Krakowska
+Jaskinia Poszukiwaczy,Wyżyna Śląsko-Krakowska
+Schronisko nad Zielonym Stawem I,Wyżyna Śląsko-Krakowska
+Schronisko nad Zielonym Stawem II,Wyżyna Śląsko-Krakowska
+Schronisko z Kominkiem,Wyżyna Śląsko-Krakowska
+Jaskinia w Wąwozie,Wyżyna Śląsko-Krakowska
+Schronisko naprzeciw Kmicica I,Wyżyna Śląsko-Krakowska
+Jaskinia w Gorzkowie,Wyżyna Śląsko-Krakowska
+Schronisko naprzeciw Kmicica II,Wyżyna Śląsko-Krakowska
+Schronisko naprzeciw Kmicica III,Wyżyna Śląsko-Krakowska
+Schronisko nad Młynem I,Wyżyna Śląsko-Krakowska
+Schronisko nad Młynem II,Wyżyna Śląsko-Krakowska
+Schronisko nad Młynem III,Wyżyna Śląsko-Krakowska
+Schronisko nad Mostkiem I,Wyżyna Śląsko-Krakowska
+Schronisko nad Mostkiem II,Wyżyna Śląsko-Krakowska
+Studnia z Traszkami,Wyżyna Śląsko-Krakowska
+Studnia w Osiedlu Wały,Wyżyna Śląsko-Krakowska
+Schronisko pod Studnią,Wyżyna Śląsko-Krakowska
+Schronisko za Studnią,Wyżyna Śląsko-Krakowska
+Schronisko nad Progiem,Wyżyna Śląsko-Krakowska
+Schronisko Niedostępne pod Osiedlem Wały,Wyżyna Śląsko-Krakowska
+Schronisko nad Pstrągarnią,Wyżyna Śląsko-Krakowska
+Jaskinia w Hucisku,Wyżyna Śląsko-Krakowska
+Prosta Jaskinia,Wyżyna Śląsko-Krakowska
+Okap na Kamyku,Wyżyna Śląsko-Krakowska
+Schronisko w Godawicy I,Wyżyna Śląsko-Krakowska
+Schronisko w Godawicy II,Wyżyna Śląsko-Krakowska
+Schronisko w Kwiecynku,Wyżyna Śląsko-Krakowska
+Schronisko przed Pstrągarnią I,Wyżyna Śląsko-Krakowska
+Schronisko przed Pstrągarnią II,Wyżyna Śląsko-Krakowska
+Schronisko przed Pstrągarnią III,Wyżyna Śląsko-Krakowska
+Szpaciarnia Archeologów,Wyżyna Śląsko-Krakowska
+Brama Twardowskiego,Wyżyna Śląsko-Krakowska
+Schronisko przed Bramą Twardowskiego I,Wyżyna Śląsko-Krakowska
+Schronisko przed Bramą Twardowskiego II,Wyżyna Śląsko-Krakowska
+Schronisko za Bramą I,Wyżyna Śląsko-Krakowska
+Schronisko za Bramą II,Wyżyna Śląsko-Krakowska
+Schronisko za Bramą III,Wyżyna Śląsko-Krakowska
+Schronisko za Bramą IV,Wyżyna Śląsko-Krakowska
+Schronisko nad Bramą,Wyżyna Śląsko-Krakowska
+Jaskinia Przelotowa,Wyżyna Śląsko-Krakowska
+Schronisko pod Jaskinią Przelotową I,Wyżyna Śląsko-Krakowska
+Schronisko pod Jaskinią Przelotową II,Wyżyna Śląsko-Krakowska
+Schronisko na Fudze,Wyżyna Śląsko-Krakowska
+Schronisko Mokre,Wyżyna Śląsko-Krakowska
+Schronisko z Podkowcem,Wyżyna Śląsko-Krakowska
+Schronisko pod Skośną Płytą,Wyżyna Śląsko-Krakowska
+Schronisko pod Lipami,Wyżyna Śląsko-Krakowska
+Schronisko w Grzędzie I,Wyżyna Śląsko-Krakowska
+Schronisko w Grzędzie II,Wyżyna Śląsko-Krakowska
+Schronisko Jeżowe,Wyżyna Śląsko-Krakowska
+Schronisko w Diabelskich Mostach,Wyżyna Śląsko-Krakowska
+Schronisko nad Diabelskimi Mostami,Wyżyna Śląsko-Krakowska
+Jaskinia Jagodowa,Wyżyna Śląsko-Krakowska
+Schronisko nad Jaskinią Jagodową,Wyżyna Śląsko-Krakowska
+Jaskinia za Złamaną Lipą,Wyżyna Śląsko-Krakowska
+Jaskinia Wierna,Wyżyna Śląsko-Krakowska
+Wiercica,Wyżyna Śląsko-Krakowska
+Schronisko przy Wiercicy,Wyżyna Śląsko-Krakowska
+Schronisko obok Wiercicy,Wyżyna Śląsko-Krakowska
+Schronisko pod Wiercicą,Wyżyna Śląsko-Krakowska
+Awen Szpatowców koło Jaskini Wiercicy,Wyżyna Śląsko-Krakowska
+Schronisko nad Cmentarzem,Wyżyna Śląsko-Krakowska
+Schronisko pod Głazem,Wyżyna Śląsko-Krakowska
+Jaskinia pod Kamykiem,Wyżyna Śląsko-Krakowska
+Okap na Wzgórzu Żary I,Wyżyna Śląsko-Krakowska
+Szuflada,Wyżyna Śląsko-Krakowska
+Okap na Wzgórzu Żary II,Wyżyna Śląsko-Krakowska
+Schronisko na Wzgórzu Żary,Wyżyna Śląsko-Krakowska
+Wielki Okap,Wyżyna Śląsko-Krakowska
+Okap pod Głazem,Wyżyna Śląsko-Krakowska
+Schronisko koło Ryczowa III,Wyżyna Śląsko-Krakowska
+Schronisko koło Ryczowa IV,Wyżyna Śląsko-Krakowska
+Schronisko w Firkowej Skale,Wyżyna Śląsko-Krakowska
+Jaskinia w Straszykowej Górze,Wyżyna Śląsko-Krakowska
+Zespół Schronisk pod Sosenką,Wyżyna Śląsko-Krakowska
+Okap w Straszykowej,Wyżyna Śląsko-Krakowska
+Szczelina pod Głazami,Wyżyna Śląsko-Krakowska
+Schronisko w Dziurawej Skale I,Wyżyna Śląsko-Krakowska
+Schronisko w Dziurawej Skale II,Wyżyna Śląsko-Krakowska
+Schronisko pod Kapliczką,Wyżyna Śląsko-Krakowska
+Okap za Leśnictwem,Wyżyna Śląsko-Krakowska
+Schronisko Północne,Wyżyna Śląsko-Krakowska
+Zespół Schronisk pod Basztą,Wyżyna Śląsko-Krakowska
+Rura we Wzgórzu Zamkowym,Wyżyna Śląsko-Krakowska
+Schronisko Śmietnik,Wyżyna Śląsko-Krakowska
+Schronisko w Pociejówce I,Wyżyna Śląsko-Krakowska
+Schronisko w Pociejówce II,Wyżyna Śląsko-Krakowska
+Schronisko w Pociejówce III,Wyżyna Śląsko-Krakowska
+Jaskinia pod Szczytem,Wyżyna Śląsko-Krakowska
+Schronisko za Wantą,Wyżyna Śląsko-Krakowska
+Jaskinia z Kotłem,Wyżyna Śląsko-Krakowska
+Schronisko z Balkonem,Wyżyna Śląsko-Krakowska
+Połamany Meander,Wyżyna Śląsko-Krakowska
+Kreci Korytarz,Wyżyna Śląsko-Krakowska
+Okap na Szczelinie,Wyżyna Śląsko-Krakowska
+Schronisko w Opolanicy I,Wyżyna Śląsko-Krakowska
+Schronisko w Opolanicy II,Wyżyna Śląsko-Krakowska
+Schronisko między Ściany,Wyżyna Śląsko-Krakowska
+Wiewiórczy Magazyn,Wyżyna Śląsko-Krakowska
+Bramka w Kyciowej Skale,Wyżyna Śląsko-Krakowska
+Schronisko Zaciszne,Wyżyna Śląsko-Krakowska
+Schronisko w Sikorowej Skale I,Wyżyna Śląsko-Krakowska
+Schronisko w Sikorowej Skale II,Wyżyna Śląsko-Krakowska
+Schronisko w Sikorowej Skale III,Wyżyna Śląsko-Krakowska
+Schronisko w Sołtysikowej Skale I,Wyżyna Śląsko-Krakowska
+Schronisko w Sołtysikowej Skale II,Wyżyna Śląsko-Krakowska
+Schronisko nad Dołkami I,Wyżyna Śląsko-Krakowska
+Krecia Rura,Wyżyna Śląsko-Krakowska
+Skalna Dziupla,Wyżyna Śląsko-Krakowska
+Schronisko nad Dołkami II,Wyżyna Śląsko-Krakowska
+Okap ze Schowkiem,Wyżyna Śląsko-Krakowska
+Szczelina w Zdolnicy,Wyżyna Śląsko-Krakowska
+Schronisko z Pięterkiem,Wyżyna Śląsko-Krakowska
+Schronisko ze Zdechłym Psem,Wyżyna Śląsko-Krakowska
+Schronisko w Zdolnicy I,Wyżyna Śląsko-Krakowska
+Przelotowa Szczelina,Wyżyna Śląsko-Krakowska
+Schronisko Niedostępne,Wyżyna Śląsko-Krakowska
+Schronisko z Krzemieniami,Wyżyna Śląsko-Krakowska
+Szczelina w Dolinie Udorki,Wyżyna Śląsko-Krakowska
+Schronisko Sowie,Wyżyna Śląsko-Krakowska
+Schronisko na Półce,Wyżyna Śląsko-Krakowska
+Schronisko Perspektywiczne,Wyżyna Śląsko-Krakowska
+Schronisko w Dolinie Udorki I,Wyżyna Śląsko-Krakowska
+Schronisko na Skraju Lasu,Wyżyna Śląsko-Krakowska
+Okap na Uskoku,Wyżyna Śląsko-Krakowska
+Schronisko przy Wielkim Grochowcu,Wyżyna Śląsko-Krakowska
+Schronisko koło Ryczowa I,Wyżyna Śląsko-Krakowska
+Schronisko koło Ryczowa II,Wyżyna Śląsko-Krakowska
+Schronisko Ciasne w Podcisowiu,Wyżyna Śląsko-Krakowska
+Schronisko w Podcisowiu I,Wyżyna Śląsko-Krakowska
+Meander Apsika,Wyżyna Śląsko-Krakowska
+Schronisko w Podcisowiu II,Wyżyna Śląsko-Krakowska
+Schronisko Piętrowe w Podcisowiu,Wyżyna Śląsko-Krakowska
+Wędzarnia w Podcisowiu,Wyżyna Śląsko-Krakowska
+Schronisko w Skale Gaj I,Wyżyna Śląsko-Krakowska
+Schronisko w Skale Gaj II,Wyżyna Śląsko-Krakowska
+Kieszeń na Fudze,Wyżyna Śląsko-Krakowska
+Szczelina I,Wyżyna Śląsko-Krakowska
+Szczelina II,Wyżyna Śląsko-Krakowska
+Dziurka od Klucza,Wyżyna Śląsko-Krakowska
+Równoległa Szczelina,Wyżyna Śląsko-Krakowska
+Schronisko Dolne na Biśniku,Wyżyna Śląsko-Krakowska
+Schronisko Kopane,Wyżyna Śląsko-Krakowska
+Jaskinia Psia,Wyżyna Śląsko-Krakowska
+Schronisko w Grodzisku Chłopskim I,Wyżyna Śląsko-Krakowska
+Schronisko w Grodzisku Chłopskim II,Wyżyna Śląsko-Krakowska
+Schronisko w Grodzisku Chłopskim III,Wyżyna Śląsko-Krakowska
+Tunel z Oknem,Wyżyna Śląsko-Krakowska
+Schronisko Fałszerzy,Wyżyna Śląsko-Krakowska
+Okap z Odnogą,Wyżyna Śląsko-Krakowska
+Schronisko nad Progiem,Wyżyna Śląsko-Krakowska
+Schronisko w Skale Goncerzyca I,Wyżyna Śląsko-Krakowska
+Schronisko w Skale Goncerzyca II,Wyżyna Śląsko-Krakowska
+Pochyły Tunelik,Wyżyna Śląsko-Krakowska
+Okno nad Urwiskiem,Wyżyna Śląsko-Krakowska
+Schronisko w Górze Smoleń I,Wyżyna Śląsko-Krakowska
+Tunel w Górze Smoleń,Wyżyna Śląsko-Krakowska
+Schronisko w Górze Smoleń II,Wyżyna Śląsko-Krakowska
+Rura nad Tunelem,Wyżyna Śląsko-Krakowska
+Schronisko w Górze Smoleń III,Wyżyna Śląsko-Krakowska
+Schronisko w Górze Smoleń IV,Wyżyna Śląsko-Krakowska
+Schronisko w Górze Smoleń V,Wyżyna Śląsko-Krakowska
+Schronisko przy Ziemi,Wyżyna Śląsko-Krakowska
+Rura w Skale Oczko,Wyżyna Śląsko-Krakowska
+Schronisko w Górze Smoleń VI,Wyżyna Śląsko-Krakowska
+Skalna Ambona,Wyżyna Śląsko-Krakowska
+Oczko,Wyżyna Śląsko-Krakowska
+Schronisko w Smoleniu I,Wyżyna Śląsko-Krakowska
+Schronisko w Smoleniu II,Wyżyna Śląsko-Krakowska
+Schronisko w Smoleniu III,Wyżyna Śląsko-Krakowska
+Piarżyste Schronisko,Wyżyna Śląsko-Krakowska
+Jaskinia Zegar,Wyżyna Śląsko-Krakowska
+Szczelina w Smoleniu,Wyżyna Śląsko-Krakowska
+Jaskinia Jasna koło Smolenia,Wyżyna Śląsko-Krakowska
+Schronisko Południowe,Wyżyna Śląsko-Krakowska
+Niepozorne Schronisko,Wyżyna Śląsko-Krakowska
+Dziura w Ścianie,Wyżyna Śląsko-Krakowska
+Schronisko w Zegarowych Skałach I,Wyżyna Śląsko-Krakowska
+Schronisko w Cysternie,Wyżyna Śląsko-Krakowska
+Schronisko za Majdanem,Wyżyna Śląsko-Krakowska
+Schronisko w Zegarowych Skałach II,Wyżyna Śląsko-Krakowska
+Tunel nad Progiem,Wyżyna Śląsko-Krakowska
+Schronisko w Skale Krzywość I,Wyżyna Śląsko-Krakowska
+Schronisko w Pośrednicy I,Wyżyna Śląsko-Krakowska
+Ciasny Meander,Wyżyna Śląsko-Krakowska
+Schronisko w Pośrednicy II,Wyżyna Śląsko-Krakowska
+Jaskinia Mroczna,Wyżyna Śląsko-Krakowska
+Dziura za Kamieniem,Wyżyna Śląsko-Krakowska
+Mikroschronisko,Wyżyna Śląsko-Krakowska
+Schronisko w Pośrednicy III,Wyżyna Śląsko-Krakowska
+Schronisko w Pośrednicy IV,Wyżyna Śląsko-Krakowska
+Jaskinia Jasna w Strzegowej,Wyżyna Śląsko-Krakowska
+Schronisko Wschodnie,Wyżyna Śląsko-Krakowska
+Schronisko pod Pustkowiem,Wyżyna Śląsko-Krakowska
+Schronisko w Zarolu,Wyżyna Śląsko-Krakowska
+Schronisko w Górach Bydlińskich I,Wyżyna Śląsko-Krakowska
+Schronisko w Górach Bydlińskich II,Wyżyna Śląsko-Krakowska
+Schronisko w Górach Bydlińskich III,Wyżyna Śląsko-Krakowska
+Szczelina w Górach Bydlińskich,Wyżyna Śląsko-Krakowska
+Schronisko z Obudową,Wyżyna Śląsko-Krakowska
+Okap w Krzywopłotach,Wyżyna Śląsko-Krakowska
+Szczelina w Krzywopłotach,Wyżyna Śląsko-Krakowska
+Schronisko w Dłużcu,Wyżyna Śląsko-Krakowska
+Schronisko na Straszykowej Górze IV,Wyżyna Śląsko-Krakowska
+Schronisko na Straszykowej Górze IX,Wyżyna Śląsko-Krakowska
+Schronisko na Straszykowej Górze XII,Wyżyna Śląsko-Krakowska
+Schronisko na Straszykowej Górze XIV,Wyżyna Śląsko-Krakowska
+Jaskinia z Kominem,Wyżyna Śląsko-Krakowska
+Jaskinia Ładna,Wyżyna Śląsko-Krakowska
+Jaskinia w Ścianie,Wyżyna Śląsko-Krakowska
+Jaskinia Wyryta,Wyżyna Śląsko-Krakowska
+Schronisko pod Liściami,Wyżyna Śląsko-Krakowska
+Schronisko Trójkątne,Wyżyna Śląsko-Krakowska
+Schronisko przy Drodze,Wyżyna Śląsko-Krakowska
+Jaskinia z Liśćmi,Wyżyna Śląsko-Krakowska
+Schronisko Dziurki w Serze,Wyżyna Śląsko-Krakowska
+Schronisko na Pięciu Zakrętach,Wyżyna Śląsko-Krakowska
+Schronisko Hokejka,Wyżyna Śląsko-Krakowska
+Schronisko Nasze,Wyżyna Śląsko-Krakowska
+Schronisko przy Gajówce I,Wyżyna Śląsko-Krakowska
+Schronisko przy Gajówce II,Wyżyna Śląsko-Krakowska
+Jaskinia z Drzewem,Wyżyna Śląsko-Krakowska
+Jaskinia Mała Mamutowa,Wyżyna Śląsko-Krakowska
+Schronisko pod Okapem,Wyżyna Śląsko-Krakowska
+Schronisko na Fudze,Wyżyna Śląsko-Krakowska
+Schronisko Zimne,Wyżyna Śląsko-Krakowska
+Schronisko nad Zimnym,Wyżyna Śląsko-Krakowska
+Schronisko pod Okapem z Dziurami,Wyżyna Śląsko-Krakowska
+Schronisko Schowek,Wyżyna Śląsko-Krakowska
+Schronisko Zachodzącego Słońca,Wyżyna Śląsko-Krakowska
+Schronisko Skrzat,Wyżyna Śląsko-Krakowska
+Jaskinia ze Studzienką,Wyżyna Śląsko-Krakowska
+Schronisko Tunelik,Wyżyna Śląsko-Krakowska
+Schronisko w Ryczowie I,Wyżyna Śląsko-Krakowska
+Schronisko w Ryczowie II,Wyżyna Śląsko-Krakowska
+Schronisko Dolne w Kosiej Górze,Wyżyna Śląsko-Krakowska
+Schronisko Górne w Kosiej Górze,Wyżyna Śląsko-Krakowska
+Jaskinia w Zamczysku,Wyżyna Śląsko-Krakowska
+Rura w Zamczysku,Wyżyna Śląsko-Krakowska
+Schronisko w Zamczysku I,Wyżyna Śląsko-Krakowska
+Schronisko w Zamczysku II,Wyżyna Śląsko-Krakowska
+Schronisko w Zamczysku III,Wyżyna Śląsko-Krakowska
+Schronisko w Zamczysku IV,Wyżyna Śląsko-Krakowska
+Schronisko w Zamczysku V,Wyżyna Śląsko-Krakowska
+Schronisko w Zamczysku VI,Wyżyna Śląsko-Krakowska
+Schronisko Skalna Półka,Wyżyna Śląsko-Krakowska
+Okap pod Skalną Półką,Wyżyna Śląsko-Krakowska
+Schronisko na Długiej Górze,Wyżyna Śląsko-Krakowska
+Schronisko w Górze Ruskiej I,Wyżyna Śląsko-Krakowska
+Schronisko w Górze Ruskiej II,Wyżyna Śląsko-Krakowska
+Tunel w Dupnicy,Wyżyna Śląsko-Krakowska
+Schronisko w Dupnicy I,Wyżyna Śląsko-Krakowska
+Schronisko w Dupnicy II,Wyżyna Śląsko-Krakowska
+Pochyła Szczelina,Wyżyna Śląsko-Krakowska
+Komin w Dupnicy,Wyżyna Śląsko-Krakowska
+Niski Tunel,Wyżyna Śląsko-Krakowska
+Schronisko przy Siustrach,Wyżyna Śląsko-Krakowska
+Schronisko w Górze Ruskiej III,Wyżyna Śląsko-Krakowska
+Schronisko Wielootworowe w Górze Ruskiej,Wyżyna Śląsko-Krakowska
+Schronisko pod Płytą,Wyżyna Śląsko-Krakowska
+Schronisko pod Bukiem,Wyżyna Śląsko-Krakowska
+Schronisko koło Drogi I,Wyżyna Śląsko-Krakowska
+Schronisko koło Drogi II,Wyżyna Śląsko-Krakowska
+Schronisko w Złożeńcu I,Wyżyna Śląsko-Krakowska
+Schronisko w Złożeńcu II,Wyżyna Śląsko-Krakowska
+Schronisko Padalca,Wyżyna Śląsko-Krakowska
+Okap na Długiej Górze,Wyżyna Śląsko-Krakowska
+Schronisko w Złożeńcu III,Wyżyna Śląsko-Krakowska
+Niskie Okienko,Wyżyna Śląsko-Krakowska
+Lisia Buda,Wyżyna Śląsko-Krakowska
+Schronisko w Ruskowej Skale I,Wyżyna Śląsko-Krakowska
+Schronisko w Ruskowej Skale II,Wyżyna Śląsko-Krakowska
+Schronisko w Ruskowej Skale III,Wyżyna Śląsko-Krakowska
+Schronisko w Ruskowej Skale IV,Wyżyna Śląsko-Krakowska
+Schronisko w Ruskowej Skale V,Wyżyna Śląsko-Krakowska
+Jaskinia na Biśniku,Wyżyna Śląsko-Krakowska
+Schronisko w Marklowicach,Karpaty
+Jaskinia na Górze,Karpaty
+Szpara w Kobylej,Karpaty
+Jaskinia pod Baranią Górą I,Karpaty
+Jaskinia Odkopana II,Karpaty
+Jaskinia w Gańczorce,Karpaty
+Jaskinia w Gańczorce II,Karpaty
+Schronisko w Gańczorce III,Karpaty
+Szczelina w Skale II,Karpaty
+Jaskinia w Grzybie,Karpaty
+Jaskinia Medyków,Karpaty
+Jaskinia Mokra,Karpaty
+Jaskinia pod Świerkiem,Karpaty
+Schronisko w Cienkowie II,Karpaty
+Schronisko w Cienkowie I,Karpaty
+Schronisko w Cienkowie III,Karpaty
+Jaskinia w Magurce Wiślańskiej,Karpaty
+Jaskinia Chłodna,Karpaty
+Jaskinia pod Balkonem,Karpaty
+Jaskinia Niska,Karpaty
+Jaskinia w Trzech Kamieniach,Karpaty
+Schronisko w Muronce II,Karpaty
+Jaskinia Siekiera,Karpaty
+Jaskinia w Muronce I,Karpaty
+Schronisko w Muronce III,Karpaty
+Schronisko w Muronce IV,Karpaty
+Schronisko w Muronce V,Karpaty
+Schronisko w Muronce VI,Karpaty
+Schronisko w Muronce VII,Karpaty
+Schronisko w Muronce VIII,Karpaty
+Schronisko w Muronce IX,Karpaty
+Schronisko w Muronce X,Karpaty
+Schronisko w Muronce XII,Karpaty
+Jaskinia Odkopana,Karpaty
+Jaskinia Odgruzowana,Karpaty
+Szczelina,Karpaty
+Schronisko Zwietrzałe,Karpaty
+Nora z Progiem,Karpaty
+Schronisko Liściaste,Karpaty
+Mały Schron,Karpaty
+Bardzo Mały Schron,Karpaty
+Schronisko Zimne,Karpaty
+Jednoosobowy Schron,Karpaty
+Dziura w Ziemi,Karpaty
+Jaskinia Szeleszcząca,Karpaty
+Schronisko Ciepłe,Karpaty
+Dziurawa Studnia,Karpaty
+Ciasna Nora,Karpaty
+Jaskinia w Skrzycznem I,Karpaty
+Dwuosobowy Schron,Karpaty
+Schron Michała,Karpaty
+Jama Skrzatów,Karpaty
+Zaciskowy Schron,Karpaty
+Schronisko pod Płytą,Karpaty
+Schron pod Płytą,Karpaty
+Schronisko Górne,Karpaty
+Wietrzna Dziura,Karpaty
+Schronisko za Trójkątną Skałą,Karpaty
+Schronisko między Dwoma Płytami,Karpaty
+Jaskinia pod Amboną,Karpaty
+Okap,Karpaty
+Jaskinia Jasna,Karpaty
+Jaskinia w Jaworzynce I,Karpaty
+Jaskinia w Jaworzynce II,Karpaty
+Jaskinia w Jaworzynce III,Karpaty
+Zawarta Studnia,Karpaty
+Schronisko w Jaworzynce IV,Karpaty
+Schronisko w Jaworzynce V,Karpaty
+Wdżarska Studnia,Karpaty
+Schronisko w Węgierskiej Górce,Karpaty
+Przeziorowa Jama,Karpaty
+Kocurkowa Jama,Karpaty
+Dudłowy Tunel,Karpaty
+Jaskinia w Skrzycznem III,Karpaty
+Jaskinia Roztoczańska,Karpaty
+Jaskinia gdzie wpadły czołgi,Karpaty
+Wściekła Szczelina,Karpaty
+Schronisko w Muronce XI,Karpaty
+Borsucza Dziura,Karpaty
+Dziura pod Kamieniem,Karpaty
+Jaskinia w Jaworzynie,Karpaty
+Jaskinia w Skrzycznem II,Karpaty
+Jaskinia w Skrzycznem IV,Karpaty
+Jaskinia w Skrzycznem V,Karpaty
+Bania w Radziejowej,Karpaty
+Jaskinia Pajęcza,Karpaty
+Jaworznicki Dzwon,Karpaty
+Jaskinia Dziadka Buczka,Karpaty
+Dziura pod Kiczorą,Karpaty
+Studnia w Baniskach,Karpaty
+Sucha Szczelina,Karpaty
+Lisia Jama,Karpaty
+Schronisko w Skrzycznem XIV,Karpaty
+Jama Brudasów,Karpaty
+Dziura przy Grobli,Karpaty
+Jama pod Cyrlą,Karpaty
+Jaskinia w Skrzycznem XI,Karpaty
+Zadnia Dziura,Karpaty
+Schronisko w Skrzycznem XII,Karpaty
+Jaskinia w Skrzycznem VI,Karpaty
+Jaskinia Sucha,Karpaty
+Jaskinia w Skrzycznem VIII,Karpaty
+"Szczelina przy ""8""",Karpaty
+Jaskinia w Skrzycznem VII,Karpaty
+Schronisko pod Głazem,Karpaty
+Buczynowa Jama,Karpaty
+Jaskinia w Skrzycznem XIII,Karpaty
+Jaskinia w Skrzycznem IX,Karpaty
+Dziura za Zaciskiem,Karpaty
+Dziura pod Korzeniem,Karpaty
+Szczelina pod Klinem,Karpaty
+Szczelina w Urwisku,Karpaty
+Schronisko w Skrzycznem X,Karpaty
+Stusowa Dziura,Karpaty
+Szczelina przy Drodze,Karpaty
+Szczelina K. G.,Karpaty
+Jama Poszukiwaczy,Karpaty
+Jaskinia Lisia,Karpaty
+Jaskinia w Kościelcu I,Karpaty
+Jaskinia w Kościelcu II,Karpaty
+Jaskinia w Kościelcu III,Karpaty
+Schronisko w Kościelcu IV,Karpaty
+Schronisko w Kościelcu V,Karpaty
+Schronisko w Kościelcu VI,Karpaty
+Brama,Karpaty
+Dzianglowa Jama,Karpaty
+Jaskinia Malinowska,Karpaty
+Jaskinia Złotniańska,Karpaty
+Jaskinia Malinka,Karpaty
+Wiedźmia Szczelina,Karpaty
+Jama pod Wantą,Karpaty
+Omszała Jama,Karpaty
+Dziura Narciarzy,Karpaty
+Jaskinia Ciężkiej Roboty,Karpaty
+Jaskinia Kamiennej Rzeźby,Karpaty
+Jaskinia w Malinowie III,Karpaty
+Studnia Skalnej Ciasnoty,Karpaty
+Jaskinia w Malinowie IV,Karpaty
+Studnia w Malinowie,Karpaty
+Jaskinia w Pękniętej Kopie,Karpaty
+Schronisko w Klimczoku I,Karpaty
+Jaskinia Ali Baby w Klimczoku,Karpaty
+Szczelina w Klimczoku,Karpaty
+Jaskinia w Klimczoku II,Karpaty
+Jaskinia w Klimczoku III,Karpaty
+Jaskinia u Jakubca,Karpaty
+Jaskinia w Biłej I,Karpaty
+Schronisko w Biłej II,Karpaty
+Jaskinia w Biłej III,Karpaty
+Jaskinia Świętego Szczepana,Karpaty
+Jaskinia w Trzech Kopcach,Karpaty
+Szczelina w Labiryncie,Karpaty
+Jama w Labiryncie,Karpaty
+Rysia Jama,Karpaty
+Jaskinia w Trzech Kopcach II,Karpaty
+Jaskinia w Trzech Kopcach III,Karpaty
+Jaskinia Mała Niedźwiedzia,Karpaty
+Jaskinia w Stołowie,Karpaty
+Jaskinia w Stołowie II,Karpaty
+Dziura w Stołowie,Karpaty
+Jaskinia Niedźwiedzia,Karpaty
+Jaskinia w Szyndzielni I,Karpaty
+Dziadzia Nora,Karpaty
+Schronisko w Szyndzielni II,Karpaty
+Bezdziadzia Nora,Karpaty
+Schronisko Sahara II,Karpaty
+Jaskinia Lodowa w Szczyrku,Karpaty
+Jaskinia Lisia Jama,Karpaty
+Feleczyńska Studnia,Karpaty
+Dziura w Kobylarzu,Karpaty
+Studnia Grzybiarzy,Karpaty
+Jaskinia Brodata,Karpaty
+Jaskinia Salmopolska,Karpaty
+Szpara pod Głazem,Karpaty
+Schronisko w Zboczu,Karpaty
+Jaskinia w Przybędzy,Karpaty
+Jaskinia w Grojcu,Karpaty
+Schronisko w Rycerzowej I,Karpaty
+Dziura nad Młacznym,Karpaty
+Dziura nad Lembarskim,Karpaty
+Schronisko w Rycerzowej II,Karpaty
+Schronisko w Rycerzowej III,Karpaty
+Grota pod Pustą Wielką,Karpaty
+Jaskinia w Rycerzowej,Karpaty
+Smerczynowa Dziura,Karpaty
+Jaskinia Zbójnicka,Karpaty
+Jaskinia w Boraczej,Karpaty
+Schron w Rowie,Karpaty
+Szczelina w Diablim Zamku,Karpaty
+Schronisko pod Romanką I,Karpaty
+Schronisko pod Romanką II,Karpaty
+Łosiańska Dziura,Karpaty
+Jaskinia w Sopotni Wielkiej,Karpaty
+Jaskinia w Żabnicy,Karpaty
+Jaskinia Czarnopotocka,Karpaty
+Jama Borsucza,Karpaty
+Jaskinia przed Rozdrożem,Karpaty
+Zbójecka Dziura,Karpaty
+Jaskinia pod Halą Miziową,Karpaty
+Zbójnicka Grota w Babiej Górze,Karpaty
+Kruchy Schron,Karpaty
+Schronisko pod Morskim Okiem,Karpaty
+Schronisko w Okrąglicy,Karpaty
+Dziura w Rowie,Karpaty
+Jaskinia Dolne Bębny,Karpaty
+Melsztyńska Dziura,Karpaty
+Wietrzna Dziura w Magurce,Karpaty
+Jaskinia Zamkowa,Karpaty
+Schron nad Kozami,Karpaty
+Jaskinia Koziańska,Karpaty
+Grota w Paprotnej,Karpaty
+Jaskinia w Grunwaldzkiej Skale,Karpaty
+Jaskinia Skamieniała,Karpaty
+Jaskinia w Ciężkowicach I,Karpaty
+Jaskinia w Ciężkowicach II,Karpaty
+Schronisko w Ciężkowicach III,Karpaty
+Schronisko w Ciężkowicach IV,Karpaty
+Kominek w Skale z Krzyżem,Karpaty
+Schronisko w Ciężkowicach V,Karpaty
+Schronisko w Ostruszy I,Karpaty
+Schronisko w Wielkim Cisowniku,Karpaty
+Jaskinia Strzelista,Karpaty
+Szczelina pod Wantą,Karpaty
+Nora w Wantach,Karpaty
+Jaskinia Czarne Działy I,Karpaty
+Jaskinia Czarne Działy II,Karpaty
+Dziura pod Bukiem,Karpaty
+Jaskinia Czarne Działy III,Karpaty
+Schronisko Czarne Działy IV,Karpaty
+Jaskinia Lodowa w Czarnych Działach,Karpaty
+Mały Okap w Czarnych Działach,Karpaty
+Duży Okap w Czarnych Działach,Karpaty
+Schronisko pod Głazem,Karpaty
+Schronisko w Ostruszy II,Karpaty
+Jaskinia Komonieckiego,Karpaty
+Schronisko w Ostruszy III,Karpaty
+Schronisko w Ostruszy IV,Karpaty
+Schronisko w Żurawicy,Karpaty
+Mysiorowa Jama w Zagórzu,Karpaty
+Jaskinia Lisia,Karpaty
+Jaskinia w Czartaku,Karpaty
+Mokra Dziura,Karpaty
+Partyzancka Jama,Karpaty
+Schronisko w Żurowej I,Karpaty
+Jaskinia nad Kamieniołomem,Karpaty
+Jaskinia Złomista,Karpaty
+Schronisko w Żurowej II,Karpaty
+Pieczara pod Liwoczem,Karpaty
+Jaskinia Grabowa,Karpaty
+Grota Os,Karpaty
+Jaskinia Szkieletowa,Karpaty
+Jaskinia Wronia,Karpaty
+Jaskinia Tunelowa,Karpaty
+Schronisko koło Daczy,Karpaty
+Schronisko w Ostrym Wierchu,Karpaty
+Zbójecka Nora,Karpaty
+Zbójecka Sypialnia,Karpaty
+Schronisko Małe,Karpaty
+Schronisko pod Wielkim Blokiem,Karpaty
+Niska Dziura,Karpaty
+Jasna Szpara,Karpaty
+Pochyły Korytarz,Karpaty
+Żabia Szczelina,Karpaty
+Mokra Studzienka,Karpaty
+Schronisko Podwójne,Karpaty
+Jaskinia Ciasna,Karpaty
+Schronisko w Rożnowie I,Karpaty
+Jaskinia Spalona,Karpaty
+Schronisko w Rożnowie II,Karpaty
+Jaskinia za Filarem,Karpaty
+Jaskinia Nowa,Karpaty
+Jaskinia Wietrzna,Karpaty
+Jaskinia Mroczna,Karpaty
+Schronisko w Kornutach I,Karpaty
+Schronisko w Rożnowie III,Karpaty
+Schronisko w Kornutach II,Karpaty
+Jaskinia w Kornutach III,Karpaty
+Schronisko w Kornutach IV,Karpaty
+Jaskinia w Kornutach V,Karpaty
+Schronisko w Kornutach VI,Karpaty
+Schronisko w Kornutach VII,Karpaty
+Schronisko w Kornutach VIII,Karpaty
+Schronisko w Diablim Kamieniu I,Karpaty
+Schronisko w Tropiu I,Karpaty
+Jaskinia w Diablim Kamieniu II,Karpaty
+Schronisko w Tropiu II,Karpaty
+Schronisko w Diablim Kamieniu III,Karpaty
+Jaskinia przy Wodospadzie,Karpaty
+Jaskinia Świętego Justa,Karpaty
+Jaskinia Wysoka,Karpaty
+Jaskinia Gościnna,Karpaty
+Jaskinia Zaciskowa,Karpaty
+Jaskinia Rysia,Karpaty
+Jaskinia w Zamkowej Górze I,Karpaty
+Schronisko w Zamkowej Górze II,Karpaty
+Schronisko w Zamkowej Górze III,Karpaty
+Schronisko w Zamkowej Górze IV,Karpaty
+Jaskinia w Zamkowej Górze V,Karpaty
+Schronisko w Zamkowej Górze VI,Karpaty
+Schronisko w Zamkowej Górze VII,Karpaty
+Schronisko w Zamkowej Górze VIII,Karpaty
+Leśna Studnia,Karpaty
+Schronisko w Zamkowej Górze IX,Karpaty
+Schronisko w Zamkowej Górze X,Karpaty
+Nora nad Potokiem,Karpaty
+Schronisko Majowe,Karpaty
+Ryglicka Dziura,Karpaty
+Schronisko w Hałbowie I,Karpaty
+Schronisko w Hałbowie II,Karpaty
+Schronisko w Hałbowie III,Karpaty
+Dziura z Czaszkami,Karpaty
+Jaskinia Bodzioch Wielki,Karpaty
+Studnia Lotników,Karpaty
+Szczelina Lipowicka,Karpaty
+Gangusiowa Jama,Karpaty
+Jaskinia w Lipiu I,Karpaty
+Jaskinia Pokornego,Karpaty
+Schronisko Gangusiowe I,Karpaty
+Schronisko w Lipiu II,Karpaty
+Schronisko Gangusiowe II,Karpaty
+Schronisko Gangusiowe III,Karpaty
+Schronisko L-11,Karpaty
+Jaskinia Stalaktytowa,Karpaty
+Mała Studnia Lotników,Karpaty
+Jaskinia Ekologów,Karpaty
+Lodowa Szczelina,Karpaty
+Jaskinia Zmarzła,Karpaty
+Diabla Dziura w Bukowcu,Karpaty
+Schronisko w Omszałej Skale,Karpaty
+Jaskinia pod Okapem,Karpaty
+Schronisko pod Piecem I,Karpaty
+Jaskinia Salamander,Karpaty
+Schronisko w Siekierczynie,Karpaty
+Jaskinia Kruchy Komin,Karpaty
+Schronisko Złoty Komin,Karpaty
+Schron Diable Boisko,Karpaty
+Schronisko Diabli Most,Karpaty
+Schronisko w Podolu,Karpaty
+Schronisko pod Piecem II,Karpaty
+Jama pod Lucyferem I,Karpaty
+Jaskinia Ukryta,Karpaty
+Schronisko w Starym Osuwisku I,Karpaty
+Schronisko w Starym Osuwisku II,Karpaty
+Jama pod Lucyferem II,Karpaty
+Schronisko w Starym Osuwisku III,Karpaty
+Schronisko w Starym Osuwisku IV,Karpaty
+Schronisko w Grzędzie I,Karpaty
+Schronisko w Grzędzie II,Karpaty
+Schronisko Filipa,Karpaty
+Nowa Dziura,Karpaty
+Schronisko L-8,Karpaty
+Schronisko Tymoteusza,Karpaty
+Sucha Dziura,Karpaty
+Schronisko w Polichtach I,Karpaty
+Schronisko w Polichtach II,Karpaty
+Jaskinia L-22,Karpaty
+Jaskinia L-24,Karpaty
+Schronisko w Polichtach III,Karpaty
+Schron Gubałówka,Karpaty
+Koleba Baniorzy,Karpaty
+Jaskinia Kilanowska,Karpaty
+Marszałkowa Dziura,Karpaty
+Schronisko Szparowe I,Karpaty
+Schronisko Szparowe II,Karpaty
+Schronisko Szparowe III,Karpaty
+Gerlachowa Jama,Karpaty
+Schronisko Szparowe IV,Karpaty
+Jaskinia Beskidników,Karpaty
+Studnia Goprowców,Karpaty
+Zimna Dziura w Strzeblu,Karpaty
+Jaskinia św. Jana,Karpaty
+Jaskinia Kacza,Karpaty
+Jaskinia w Luboniu Wielkim I,Karpaty
+Jaskinia Wilgotna,Karpaty
+Mała Diabla Dziura,Karpaty
+Schronisko Humusowe I,Karpaty
+Schronisko Humusowe II,Karpaty
+Schronisko Humusowe III,Karpaty
+Dębicka Studnia I,Karpaty
+Jasna Studnia,Karpaty
+Ciemna Studnia,Karpaty
+Schronisko Karawanowe,Karpaty
+Bawołowa Piwnica,Karpaty
+Jaskinia w Luboniu Wielkim II,Karpaty
+Jaskinia Górna,Karpaty
+Schronisko w Luboniu Wielkim III,Karpaty
+Schronisko w Luboniu Wielkim IV,Karpaty
+Szczelina Podkowca,Karpaty
+Wolnikowa Jama,Karpaty
+Jaskinia Krzanowskiego,Karpaty
+Schronisko Szparowe V,Karpaty
+Schronisko Szparowe VI,Karpaty
+Jaskinia pod Lasem I,Karpaty
+Jaskinia pod Lasem II,Karpaty
+Jaskinia na Wierzchowinie I,Karpaty
+Jaskinia na Wierzchowinie II,Karpaty
+Schronisko w Luboniu Wielkim V,Karpaty
+Jaskinia przy Szkółce,Karpaty
+Schronisko w Luboniu Wielkim VI,Karpaty
+Jaskinia pod Bukiem,Karpaty
+Jaskinia u Wróbla,Karpaty
+Schronisko Cergowskie I,Karpaty
+Schronisko Cergowskie II,Karpaty
+Jaskina Czarci Dół,Karpaty
+Jaskinia gdzie samolot spadł,Karpaty
+Podwójna Studnia,Karpaty
+Schronisko z Oknem,Karpaty
+Schronisko z Kominem,Karpaty
+Schronisko pod Kamieniem,Karpaty
+Wietrzna Studnia,Karpaty
+Górnickie Wrota,Karpaty
+Dziura nad Sinym Wyrem,Karpaty
+Złotopieńska Dziura,Karpaty
+Lisia Jama,Karpaty
+Schronisko Omszałe,Karpaty
+Schronisko pod Jedynką,Karpaty
+Górnicka Koleba I,Karpaty
+Górnicka Koleba II,Karpaty
+Schronisko pod Grzybem,Karpaty
+Zbójecka Piwnica,Karpaty
+Trójkątna Studnia,Karpaty
+Jaskinia w Kamieniołomie,Karpaty
+Jaskinia z Dwoma Otworami,Karpaty
+Jaskinia na Kocurach,Karpaty
+Zbójecka Dziura,Karpaty
+Jaskinie w Kamieniu nad Jaśliskami,Karpaty
+Jaskinia Zbójecka w Łopieniu,Karpaty
+Grota pod Okapem,Karpaty
+Schronisko pod Płytą,Karpaty
+Szczelina w Kudłoniu,Karpaty
+Jama nad Rowem,Karpaty
+Jaskinia w Gorcu,Karpaty
+Jaskinia w Jaworzynie w Gorcach,Karpaty
+Kudłońska Koleba,Karpaty
+Jaskinia Rozkuta,Karpaty
+Schronisko w Paproci,Karpaty
+Grota nad Polaną Pyzówka,Karpaty
+Juhaska Szczelina,Karpaty
+Jaskinia w Jaworzu,Karpaty
+Jaskinia Zbójecka,Karpaty
+Schronisko w Łysej Górze,Karpaty
+Schronisko w Półkuli,Karpaty
+Sztolnia w Rabem,Karpaty
+Schronisko Orzechowe,Karpaty
+Jaskinia w Nasicznem I,Karpaty
+Jaskinia w Nasicznem II,Karpaty
+Schronisko pod Amantem,Karpaty
+Schronisko w Herszcie,Karpaty
+Schronisko w Madeju,Karpaty
+Garaż,Karpaty
+Smocza Jama,Karpaty
+Sztolnia Jasna,Karpaty
+Sztolnia Pustelnia,Karpaty
+Sztolnia w Węglówce I,Karpaty
+Sztolnia Wesoła,Karpaty
+Sztolnia w Węglówce III,Karpaty
+Sztolnia w Węglówce IV,Karpaty
+Sztolnia w Węglówce V,Karpaty
+Schronisko w Nasicznem III,Karpaty
+Sztolnia w Węglówce VI,Karpaty
+Sztolnia Nelsona,Karpaty
+Schronisko w Smereku,Karpaty
+Piwnica,Karpaty
+Sztolnia Zawaliskowa,Karpaty
+Sztolnia w Suchej Górze I,Karpaty
+Jaskinie w Ćwilinie,Karpaty
+Sztolnia w Suchej Górze II,Karpaty
+Jaskinia w Mogielicy,Karpaty
+Schronisko w Leśnej Turniczce,Karpaty
+Szczelina za Płytą,Karpaty
+Szczelina za Brzytwą,Karpaty
+Szczelina w Ścianie,Karpaty
+Jaskinia w Myczkowcach,Karpaty
+Jaskinia w Rosolinie I,Karpaty
+Schronisko w Rosolinie II,Karpaty
+Borsucza Nora,Niż Polski
+Nisza pod Okapem na Zarębskiej Górze,Niż Polski
+Schronisko w Czerwonej Skale,Pieniny
+Jaskinia Mydlnicka,Wyżyna Śląsko-Krakowska
+Schronisko przy Jaskini Mydlnickiej I,Wyżyna Śląsko-Krakowska
+Schronisko przy Jaskini Mydlnickiej II,Wyżyna Śląsko-Krakowska
+Schronisko obok Kochanowa I,Wyżyna Śląsko-Krakowska
+Schronisko obok Kochanowa II,Wyżyna Śląsko-Krakowska
+Schronisko w Górze Widziń,Wyżyna Śląsko-Krakowska
+Schronisko w Górach Gorzkowskich,Wyżyna Śląsko-Krakowska
+Schronisko nad Kapliczką,Wyżyna Śląsko-Krakowska
+Schronisko w Bukowej Kępie I,Wyżyna Śląsko-Krakowska
+Schronisko w Bukowej Kępie II,Wyżyna Śląsko-Krakowska
+Schronisko w Bukowej Kępie III,Wyżyna Śląsko-Krakowska
+Jaskinia Obora,Wyżyna Śląsko-Krakowska
+Szczelina w Bukowej Kępie,Wyżyna Śląsko-Krakowska
+Studnia w Górze Widziń,Wyżyna Śląsko-Krakowska
+Jaskinia w Sokolnikach,Wyżyna Śląsko-Krakowska
+Jaskinia Stajnia,Wyżyna Śląsko-Krakowska
+Jaskinia na Plebanii,Wyżyna Śląsko-Krakowska
+Studnia Mostowa,Wyżyna Śląsko-Krakowska
+Jaskinia u Misztala w Sokolnikach,Wyżyna Śląsko-Krakowska
+Dupicka Pochylnia,Wyżyna Śląsko-Krakowska
+Studnia w Zagórzu,Wyżyna Śląsko-Krakowska
+Schronisko w Skale Koci Łeb,Wyżyna Śląsko-Krakowska
+Piętrowa Szczelina,Wyżyna Śląsko-Krakowska
+Schronisko nad Kocim Łbem,Wyżyna Śląsko-Krakowska
+Jaskinia Kamiennego Gradu,Wyżyna Śląsko-Krakowska
+Kocia Szczelina,Wyżyna Śląsko-Krakowska
+Schronisko w Górze Damiak,Wyżyna Śląsko-Krakowska
+Schronisko w Zaborzu,Wyżyna Śląsko-Krakowska
+Studnia w Tankowcu,Wyżyna Śląsko-Krakowska
+Schronisko w Czarnym Kamieniu,Wyżyna Śląsko-Krakowska
+Schronisko pod Strażnicą,Wyżyna Śląsko-Krakowska
+Schronisko w Boculi,Wyżyna Śląsko-Krakowska
+Jaskinia za Ofiarę,Wyżyna Śląsko-Krakowska
+Schronisko w Serze,Wyżyna Śląsko-Krakowska
+Rozpadlina w Serze,Wyżyna Śląsko-Krakowska
+Jaskinia za Krzyżem,Wyżyna Śląsko-Krakowska
+Schronisko w Dymarce,Wyżyna Śląsko-Krakowska
+Jaskinia Lisia w Hajduczce,Wyżyna Śląsko-Krakowska
+Schronisko w Srogiej Skale,Wyżyna Śląsko-Krakowska
+Studnia w Skałach Rajcy,Wyżyna Śląsko-Krakowska
+Schronisko w Skałach Rajcy,Wyżyna Śląsko-Krakowska
+Schronisko w Mrowiance,Wyżyna Śląsko-Krakowska
+Schronisko w Biedruniowej Skale,Wyżyna Śląsko-Krakowska
+Schronisko w Kamieniu koło Przybynowa,Wyżyna Śląsko-Krakowska
+Studnia w Kamieniu koło Przybynowa,Wyżyna Śląsko-Krakowska
+Schron w Okienniku Wielkim,Wyżyna Śląsko-Krakowska
+Okno w Okienniku Wielkim,Wyżyna Śląsko-Krakowska
+Jaskinia Piaskowa,Wyżyna Śląsko-Krakowska
+Jaskinia Wielkanocna,Wyżyna Śląsko-Krakowska
+Studnia Zagłoby w Skarżycach,Wyżyna Śląsko-Krakowska
+Jaskinia na Śmigówkach,Wyżyna Śląsko-Krakowska
+Schronisko w Górze Wowodnik,Wyżyna Śląsko-Krakowska
+Komin w Okienniku Wielkim,Wyżyna Śląsko-Krakowska
+Szczelina w Okienniku Wielkim,Wyżyna Śląsko-Krakowska
+Jaskinia w Jamniczych Skałach,Wyżyna Śląsko-Krakowska
+Schronisko w Jamniczych Skałach,Wyżyna Śląsko-Krakowska
+Schronisko Podwójne w Sowim Murze Lewym,Wyżyna Śląsko-Krakowska
+Okap w Małej Sowiej Baszcie,Wyżyna Śląsko-Krakowska
+Schronisko w Sowim Murze Prawym I,Wyżyna Śląsko-Krakowska
+Schronisko w Sowim Murze Prawym II,Wyżyna Śląsko-Krakowska
+Schronisko pod Jaskinią Wielkanocną,Wyżyna Śląsko-Krakowska
+Okno w Okienniku Morskim,Wyżyna Śląsko-Krakowska
+Schronisko w Górze Remby,Wyżyna Śląsko-Krakowska
+Jaskinia w Dziadowej Skale,Wyżyna Śląsko-Krakowska
+Jaskinia Księdza Borka,Wyżyna Śląsko-Krakowska
+Stefanowa Dziura,Wyżyna Śląsko-Krakowska
+Schronisko w Dziadowej Skale,Wyżyna Śląsko-Krakowska
+Szpaciarnia w Skałach Kalcytowych I,Wyżyna Śląsko-Krakowska
+Jaskinia Sucha,Wyżyna Śląsko-Krakowska
+Szpaciarnia w Skałach Kalcytowych II,Wyżyna Śląsko-Krakowska
+Schronisko w Skałach Kalcytowych,Wyżyna Śląsko-Krakowska
+Schronisko w Murze Łężeckim I,Wyżyna Śląsko-Krakowska
+Gliwicka Studnia,Wyżyna Śląsko-Krakowska
+Jaskinia Bobolicka,Wyżyna Śląsko-Krakowska
+Schronisko w Murze Łężeckim II,Wyżyna Śląsko-Krakowska
+Schronisko w Gipsie I,Wyżyna Śląsko-Krakowska
+Brama Bobolicka,Wyżyna Śląsko-Krakowska
+Schronisko w Gipsie II,Wyżyna Śląsko-Krakowska
+Schronisko przy DK 78,Wyżyna Śląsko-Krakowska
+Schronisko pod Kamieniami,Wyżyna Śląsko-Krakowska
+Schronisko w Skale Żerkowickiej,Wyżyna Śląsko-Krakowska
+Okap w Skale Żerkowickiej,Wyżyna Śląsko-Krakowska
+Szczelina z Okapem,Wyżyna Śląsko-Krakowska
+Schronisko z Bukami,Wyżyna Śląsko-Krakowska
+Szczelina pod Szczytem,Wyżyna Śląsko-Krakowska
+Koleba na S od Żerkowic,Wyżyna Śląsko-Krakowska
+Jaskinia z Pionowymi Mostami,Wyżyna Śląsko-Krakowska
+Schronisko pod Ścianą,Wyżyna Śląsko-Krakowska
+Schronisko po Wschodniej Stronie,Wyżyna Śląsko-Krakowska
+Schronisko Lisia Komora,Wyżyna Śląsko-Krakowska
+Studnia w Studnisku przy Zamku,Wyżyna Śląsko-Krakowska
+Okapowa Skała,Wyżyna Śląsko-Krakowska
+Skalna Dziura,Wyżyna Śląsko-Krakowska
+Schronisko pod Górkę,Wyżyna Śląsko-Krakowska
+Studnia koło Trzech Sióstr,Wyżyna Śląsko-Krakowska
+Schronisko koło wsi Karlin,Wyżyna Śląsko-Krakowska
+Szczelina koło Okna,Wyżyna Śląsko-Krakowska
+Schronisko pod Skoczkiem,Wyżyna Śląsko-Krakowska
+Jaskinia w Rzędowej Skale,Wyżyna Śląsko-Krakowska
+Schronisko koło Bzowa III,Wyżyna Śląsko-Krakowska
+Schronisko pod Czwartą Grzędą,Wyżyna Śląsko-Krakowska
+Schronisko koło Bzowa I,Wyżyna Śląsko-Krakowska
+Komin w Studnisku Mirowskim,Wyżyna Śląsko-Krakowska
+Jaskinia Wacia w Łutowcu,Wyżyna Śląsko-Krakowska
+Schronisko koło Bzowa II,Wyżyna Śląsko-Krakowska
+Komin w Rzędowej Skale,Wyżyna Śląsko-Krakowska
+Schronisko w Lisiej Górze koło Podzamcza II,Wyżyna Śląsko-Krakowska
+Schronisko w Lisiej Górze koło Podzamcza III,Wyżyna Śląsko-Krakowska
+Schronisko w Lisiej Górze koło Podzamcza I,Wyżyna Śląsko-Krakowska
+Jaskinia pod Knurem w Łutowcu,Wyżyna Śląsko-Krakowska
+Schronisko w Górze Birów koło Podzamcza Północne,Wyżyna Śląsko-Krakowska
+Schronisko Okno Skalne w Górze Birów,Wyżyna Śląsko-Krakowska
+Zapadlisko w Wielkim Bukowcu,Wyżyna Śląsko-Krakowska
+Schronisko w Górze Birów koło Podzamcza Zachodnie,Wyżyna Śląsko-Krakowska
+Szpaciarnia w Górze Gawrońce,Wyżyna Śląsko-Krakowska
+Schronisko w Górze Birów koło Podzamcza Wschodnie,Wyżyna Śląsko-Krakowska
+Okap na Zuzance,Wyżyna Śląsko-Krakowska
+Schronisko obok ruin Zamku w Ogrodzieńcu II,Wyżyna Śląsko-Krakowska
+Schronisko obok ruin Zamku w Ogrodzieńcu I,Wyżyna Śląsko-Krakowska
+Schronisko Górne obok ruin Zamku w Ogrodzieńcu,Wyżyna Śląsko-Krakowska
+Schronisko obok ruin Zamku w Ogrodzieńcu IV,Wyżyna Śląsko-Krakowska
+Schronisko na Fudze i Szczelinie,Wyżyna Śląsko-Krakowska
+Koleba pod Hotelem,Wyżyna Śląsko-Krakowska
+Schronisko obok ruin Zamku w Ogrodzieńcu III,Wyżyna Śląsko-Krakowska
+Schronisko z Grabiami,Wyżyna Śląsko-Krakowska
+Jaskinia pod Kołowrotem,Wyżyna Śląsko-Krakowska
+Jaskinia w Laskach na S od Trzebniowa,Wyżyna Śląsko-Krakowska
+Schronisko z Norką,Wyżyna Śląsko-Krakowska
+Studnia Szpatowców,Wyżyna Śląsko-Krakowska
+Schronisko w Smoku,Wyżyna Śląsko-Krakowska
+Jaskinia Majowa,Wyżyna Śląsko-Krakowska
+Jaskinia Zawał,Wyżyna Śląsko-Krakowska
+Jaskinia Niska w Berkowej Górze,Wyżyna Śląsko-Krakowska
+Schronisko Okopcone,Wyżyna Śląsko-Krakowska
+Schronisko w Skałach Kroczyckich V,Wyżyna Śląsko-Krakowska
+Jaskinia w Dudniku,Wyżyna Śląsko-Krakowska
+Schronisko Kazamar w Bibliotece,Wyżyna Śląsko-Krakowska
+Szczelina w Aptece,Wyżyna Śląsko-Krakowska
+Schroniska pod Filarem Apteki,Wyżyna Śląsko-Krakowska
+Jaskinia Pastuchów,Wyżyna Śląsko-Krakowska
+Jaskinia Żabia,Wyżyna Śląsko-Krakowska
+Jaskinia Sulmowa,Wyżyna Śląsko-Krakowska
+Mała Studnia Szpatowców,Wyżyna Śląsko-Krakowska
+Jaskinia między Studniami,Wyżyna Śląsko-Krakowska
+Komin Prawej Nogi Baby,Wyżyna Śląsko-Krakowska
+Pochylnia Lewej Nogi Baby,Wyżyna Śląsko-Krakowska
+Schronisko Bliźniacze w Ruskiej Skale,Wyżyna Śląsko-Krakowska
+Kopalnia Kalcytu w Ruskich Skałach,Wyżyna Śląsko-Krakowska
+Szczelina pod Wiszącymi Ogrodami,Wyżyna Śląsko-Krakowska
+Dereniowy Przechód w Górze,Wyżyna Śląsko-Krakowska
+Okno Rzędkowickie,Wyżyna Śląsko-Krakowska
+Garaż,Wyżyna Śląsko-Krakowska
+Jaskinia Sopli Lodu,Wyżyna Śląsko-Krakowska
+Komin w Studnisku Rzędkowickim,Wyżyna Śląsko-Krakowska
+Schronisko pod Studniskiem Rzędkowickim,Wyżyna Śląsko-Krakowska
+Małe Okno Rzędkowickie,Wyżyna Śląsko-Krakowska
+Schronisko w Skałce z Jaskiniami,Wyżyna Śląsko-Krakowska
+Okno w Leśnej Turni,Wyżyna Śląsko-Krakowska
+Schronisko Kazamar w Cyrku,Wyżyna Śląsko-Krakowska
+Jaskinia Głęboka,Wyżyna Śląsko-Krakowska
+Schronisko Sadek,Wyżyna Śląsko-Krakowska
+Jaskinia pod Hokejką,Wyżyna Śląsko-Krakowska
+Jaskinia Berkowa,Wyżyna Śląsko-Krakowska
+Lej Szpatowców,Wyżyna Śląsko-Krakowska
+Schronisko Skośne,Wyżyna Śląsko-Krakowska
+Kozi Dół,Wyżyna Śląsko-Krakowska
+Schronisko w Skale Gąsieckiego,Wyżyna Śląsko-Krakowska
+Schronisko za Kciukiem,Wyżyna Śląsko-Krakowska
+Schronisko pod Białą Basztą,Wyżyna Śląsko-Krakowska
+Schronisko Podszczytowe,Wyżyna Śląsko-Krakowska
+Wielki Kanion,Wyżyna Śląsko-Krakowska
+Schroniska pod Ryglem,Wyżyna Śląsko-Krakowska
+Szczelina w Ryglu,Wyżyna Śląsko-Krakowska
+Awen między Babą a Ptakiem,Wyżyna Śląsko-Krakowska
+Schronisko w Leśnym Cyrku,Wyżyna Śląsko-Krakowska
+Fazowa Dziura,Wyżyna Śląsko-Krakowska
+Schronisko w Lewych Kaskadach,Wyżyna Śląsko-Krakowska
+Schronisko w Pierwszej Córce,Wyżyna Śląsko-Krakowska
+Szczelina w Dziewicy,Wyżyna Śląsko-Krakowska
+Jaskinia Złodziejska w Skałach Kroczyckich,Wyżyna Śląsko-Krakowska
+Jaskinia Kroczycka,Wyżyna Śląsko-Krakowska
+Jaskinia Deszczowa,Wyżyna Śląsko-Krakowska
+Jaskinia w Kruczej Skale,Wyżyna Śląsko-Krakowska
+Schronisko bez Stropu,Wyżyna Śląsko-Krakowska
+Schronisko w Krużganku,Wyżyna Śląsko-Krakowska
+Szczelina w Popielowej Górze,Wyżyna Śląsko-Krakowska
+Kopalnia Kalcytu w Popielowej Górze I,Wyżyna Śląsko-Krakowska
+Kopalnia Kalcytu w Popielowej Górze II,Wyżyna Śląsko-Krakowska
+Schronisko Troglobiontów,Wyżyna Śląsko-Krakowska
+Schronisko Przelotowe w Popielowej Górze,Wyżyna Śląsko-Krakowska
+Schronisko na Terasie Popielowej Góry I,Wyżyna Śląsko-Krakowska
+Szczelina w Łysaku I,Wyżyna Śląsko-Krakowska
+Piętrowy Schron w Łysaku,Wyżyna Śląsko-Krakowska
+Młyńskie Okna w Łysaku,Wyżyna Śląsko-Krakowska
+Schronisko w Łysaku I,Wyżyna Śląsko-Krakowska
+Schronisko w Łysaku II,Wyżyna Śląsko-Krakowska
+Schronisko w Łysaku III,Wyżyna Śląsko-Krakowska
+Szczelina w Łysaku II,Wyżyna Śląsko-Krakowska
+Studnia Tarnogórska,Wyżyna Śląsko-Krakowska
+Jaskinia Mrowia w Łysaku,Wyżyna Śląsko-Krakowska
+Jaskinia pod Bramą w Jastrzębniku,Wyżyna Śląsko-Krakowska
+Krzemienny Okap w Słupsku,Wyżyna Śląsko-Krakowska
+Schronisko Górne w Słupsku,Wyżyna Śląsko-Krakowska
+Schronisko Dolne w Słupsku I,Wyżyna Śląsko-Krakowska
+Schronisko Dolne w Słupsku II,Wyżyna Śląsko-Krakowska
+Jaskinia Suliszowicka,Wyżyna Śląsko-Krakowska
+Jaskinia nad Kapliczką,Wyżyna Śląsko-Krakowska
+Schronisko obok Jaskini nad Kapliczką,Wyżyna Śląsko-Krakowska
+Brama Suliszowicka,Wyżyna Śląsko-Krakowska
+Schronisko w Kapuśnej Skale,Wyżyna Śląsko-Krakowska
+Schronisko Kunie,Wyżyna Śląsko-Krakowska
+Schronisko pod Wysokim Napięciem I,Wyżyna Śląsko-Krakowska
+Schronisko pod Wysokim Napięciem II,Wyżyna Śląsko-Krakowska
+Schronisko pod Wysokim Napięciem III,Wyżyna Śląsko-Krakowska
+Palenisko,Wyżyna Śląsko-Krakowska
+Okap z Kominkiem,Wyżyna Śląsko-Krakowska
+Schronisko za Różą,Wyżyna Śląsko-Krakowska
+Schronisko nad Zastudniem I,Wyżyna Śląsko-Krakowska
+Wielki Okap nad Zastudniem,Wyżyna Śląsko-Krakowska
+Schronisko nad Zastudniem II,Wyżyna Śląsko-Krakowska
+Schronisko nad Zastudniem III,Wyżyna Śląsko-Krakowska
+Schronisko w Płetwie,Wyżyna Śląsko-Krakowska
+Schronisko nad Zastudniem IV,Wyżyna Śląsko-Krakowska
+Schronisko nad Zastudniem V,Wyżyna Śląsko-Krakowska
+Schronisko nad Zastudniem VI,Wyżyna Śląsko-Krakowska
+Schronisko nad Zastudniem VII,Wyżyna Śląsko-Krakowska
+Schronisko na Słupkach,Wyżyna Śląsko-Krakowska
+Prosty Okap,Wyżyna Śląsko-Krakowska
+Schronisko nad Paśnikiem I,Wyżyna Śląsko-Krakowska
+Schronisko nad Paśnikiem II,Wyżyna Śląsko-Krakowska
+Schronisko za Trzema Bukami,Wyżyna Śląsko-Krakowska
+Tunelik nad Zastudniem,Wyżyna Śląsko-Krakowska
+Schronisko pod Ostrogą,Wyżyna Śląsko-Krakowska
+Schronisko z Dzikiem,Wyżyna Śląsko-Krakowska
+Meanderek w Borsuczych Skałach,Wyżyna Śląsko-Krakowska
+Schronisko w Borsuczej Skale I,Wyżyna Śląsko-Krakowska
+Schronisko w Borsuczej Skale II,Wyżyna Śląsko-Krakowska
+Szczelina w Borsuczych Skałach,Wyżyna Śląsko-Krakowska
+Okap z Rurką,Wyżyna Śląsko-Krakowska
+Jaskinia pod Fałką,Wyżyna Śląsko-Krakowska
+Dziura w Serze,Wyżyna Śląsko-Krakowska
+Koleba,Wyżyna Śląsko-Krakowska
+Jaskinia z Makaronem,Wyżyna Śląsko-Krakowska
+Schronisko na Kaczmarce I,Wyżyna Śląsko-Krakowska
+Wielki Okap na Kaczmarce,Wyżyna Śląsko-Krakowska
+Schronisko obok Jaskini z Makaronem I,Wyżyna Śląsko-Krakowska
+Schronisko na Kaczmarce II,Wyżyna Śląsko-Krakowska
+Schronisko obok Jaskini z Makaronem II,Wyżyna Śląsko-Krakowska
+Mały Okap na Kaczmarce I,Wyżyna Śląsko-Krakowska
+Mały Okap na Kaczmarce II,Wyżyna Śląsko-Krakowska
+Schronisko obok Jaskini z Makaronem III,Wyżyna Śląsko-Krakowska
+Mały Okap na Kaczmarce III,Wyżyna Śląsko-Krakowska
+Jaskinia Pozioma,Wyżyna Śląsko-Krakowska
+Schronisko na Krawędzi,Wyżyna Śląsko-Krakowska
+Schronisko na Kaczmarce III,Wyżyna Śląsko-Krakowska
+Tuneliczek,Wyżyna Śląsko-Krakowska
+Schronisko na Kaczmarce IV,Wyżyna Śląsko-Krakowska
+Schronisko na Kaczmarce V,Wyżyna Śląsko-Krakowska
+Schronisko za Leszczyną,Wyżyna Śląsko-Krakowska
+Szczelina między Leszczynami,Wyżyna Śląsko-Krakowska
+Schronisko na Kaczmarce VI,Wyżyna Śląsko-Krakowska
+Jaskinia Dwupiętrowa,Wyżyna Śląsko-Krakowska
+Schronisko na Kaczmarce VII,Wyżyna Śląsko-Krakowska
+Stary Komin,Wyżyna Śląsko-Krakowska
+Schronisko na Kaczmarce VIII,Wyżyna Śląsko-Krakowska
+Schronisko obok Starego Komina,Wyżyna Śląsko-Krakowska
+Schronisko pod Dolnym Okapem I,Wyżyna Śląsko-Krakowska
+Schronisko Klasyczne,Wyżyna Śląsko-Krakowska
+Schronisko pod Dolnym Okapem II,Wyżyna Śląsko-Krakowska
+Schronisko obok Klasycznego,Wyżyna Śląsko-Krakowska
+Okap biwakowy Dolny,Wyżyna Śląsko-Krakowska
+Schronisko nad Starym Kominem,Wyżyna Śląsko-Krakowska
+Schronisko nad okapem Biwakowym Dolnym,Wyżyna Śląsko-Krakowska
+Okap biwakowy Górny,Wyżyna Śląsko-Krakowska
+Problemik,Wyżyna Śląsko-Krakowska
+Okap Zachodni w Czatachowej,Wyżyna Śląsko-Krakowska
+Schronisko za Pniakiem,Wyżyna Śląsko-Krakowska
+Schronisko Zagubionych Okularów,Wyżyna Śląsko-Krakowska
+Schronisko przy Drodze,Wyżyna Śląsko-Krakowska
+Niska Fuga,Wyżyna Śląsko-Krakowska
+Schronisko Niskie w Kopciówkach,Wyżyna Śląsko-Krakowska
+Dwie Studzienki,Wyżyna Śląsko-Krakowska
+Schronisko w Lisich Jamkach I,Wyżyna Śląsko-Krakowska
+Schronisko w Lisich Jamkach II,Wyżyna Śląsko-Krakowska
+Schronisko Pochyłe Dolne,Wyżyna Śląsko-Krakowska
+Schronisko w Lisich Jamkach III,Wyżyna Śląsko-Krakowska
+Schronisko Pochyłe Górne,Wyżyna Śląsko-Krakowska
+Jaskinia Płaska,Wyżyna Śląsko-Krakowska
+Schronisko obok Starej Baby,Wyżyna Śląsko-Krakowska
+Schronisko Wschodnie w Kopciówkach,Wyżyna Śląsko-Krakowska
+Schronisko z Grzędą,Wyżyna Śląsko-Krakowska
+Jaskinia na Szczelinach,Wyżyna Śląsko-Krakowska
+Okap przy Jaskini na Szczelinach,Wyżyna Śląsko-Krakowska
+Schronisko w Dziurawej Skałce,Wyżyna Śląsko-Krakowska
+Schronisko z Okienkiem,Wyżyna Śląsko-Krakowska
+Jaskinia Narożna,Wyżyna Śląsko-Krakowska
+Jaskinia pod Wielką Wantą,Wyżyna Śląsko-Krakowska
+Okiennik w Kopciówkach,Wyżyna Śląsko-Krakowska
+Schronisko pod Okiennikiem w Kopciówkach,Wyżyna Śląsko-Krakowska
+Jaskinia Buczynowa,Wyżyna Śląsko-Krakowska
+Jaskinia Ostrężnicka,Wyżyna Śląsko-Krakowska
+Schronisko Większe w Ostrężniku,Wyżyna Śląsko-Krakowska
+Schronisko Mniejsze w Ostrężniku,Wyżyna Śląsko-Krakowska
+Schronisko Wielkie w Górze,Wyżyna Śląsko-Krakowska
+Schronisko naprzeciw Jaskini Ostrężnickiej I,Wyżyna Śląsko-Krakowska
+Schronisko naprzeciw Jaskini Ostrężnickiej II,Wyżyna Śląsko-Krakowska
+Schronisko Małe w Górze I,Wyżyna Śląsko-Krakowska
+Szczelina w Ostrężniku I,Wyżyna Śląsko-Krakowska
+Schronisko Małe w Górze II,Wyżyna Śląsko-Krakowska
+Szczelina w Ostrężniku II,Wyżyna Śląsko-Krakowska
+Schronisko za Fosą,Wyżyna Śląsko-Krakowska
+Schronisko przy Jaskini Narożnej,Wyżyna Śląsko-Krakowska
+Schronisko za Jaskinią Ostrężnicką I,Wyżyna Śląsko-Krakowska
+Schronisko za Jaskinią Ostrężnicką II,Wyżyna Śląsko-Krakowska
+Schronisko za Jaskinią Ostrężnicką III,Wyżyna Śląsko-Krakowska
+Schronisko w Ostańczyku,Wyżyna Śląsko-Krakowska
+Schronisko w Czyżówkach I,Wyżyna Śląsko-Krakowska
+Schronisko pod Ostańczykiem I,Wyżyna Śląsko-Krakowska
+Schronisko w Czyżówkach II,Wyżyna Śląsko-Krakowska
+Schronisko w Ludwinowie I,Wyżyna Śląsko-Krakowska
+Schronisko pod Ostańczykiem II,Wyżyna Śląsko-Krakowska
+Schronisko Dolne w Górze I,Wyżyna Śląsko-Krakowska
+Jaskinia Ludwinowska,Wyżyna Śląsko-Krakowska
+Schronisko Dolne w Górze II,Wyżyna Śląsko-Krakowska
+Schronisko nad Jaskinią Ludwinowską,Wyżyna Śląsko-Krakowska
+Schronisko Dolne w Górze III,Wyżyna Śląsko-Krakowska
+Schronisko w Wysuckiej Górze,Wyżyna Śląsko-Krakowska
+Schronisko w Cyplu Góry,Wyżyna Śląsko-Krakowska
+Jaskinia Kryształowa,Wyżyna Śląsko-Krakowska
+Jaskinia Brzozowa,Wyżyna Śląsko-Krakowska
+Jaskinia Trzebniowska,Wyżyna Śląsko-Krakowska
+Schronisko obok Jaskini Trzebniowskiej,Wyżyna Śląsko-Krakowska
+Schronisko na Półce pod Jaskinią Trzebniowską,Wyżyna Śląsko-Krakowska
+Koleba pod Jaskinią Trzebniowską,Wyżyna Śląsko-Krakowska
+Jaskinia pod Stropem,Wyżyna Śląsko-Krakowska
+Schronisko Potrójne pod Jaskinią Trzebniowską,Wyżyna Śląsko-Krakowska
+Jaskinia między Oknami,Wyżyna Śląsko-Krakowska
+Jaskinia pod Chrustem,Wyżyna Śląsko-Krakowska
+Okno pod Jaskinią Trzebniowską,Wyżyna Śląsko-Krakowska
+Jaskinia Magierowa,Wyżyna Śląsko-Krakowska
+Schronisko naprzeciw Jaskini Trzebniowskiej,Wyżyna Śląsko-Krakowska
+Schronisko Magierowe,Wyżyna Śląsko-Krakowska
+Schronisko pod Krzyżem w Bukowiu,Wyżyna Śląsko-Krakowska
+Schronisko nad Jaskinią pod Chrustem,Wyżyna Śląsko-Krakowska
+Schronisko Płaskie w Bukowiu,Wyżyna Śląsko-Krakowska
+Schronisko z Kominkiem w Bukowiu,Wyżyna Śląsko-Krakowska
+Rozpadlina w Bukowiu I,Wyżyna Śląsko-Krakowska
+Rozpadlina w Bukowiu II,Wyżyna Śląsko-Krakowska
+Okap w Bukowiu I,Wyżyna Śląsko-Krakowska
+Okap w Bukowiu II,Wyżyna Śląsko-Krakowska
+Schronisko Podparte w Bukowiu,Wyżyna Śląsko-Krakowska
+Schronisko między Wantami w Bukowiu,Wyżyna Śląsko-Krakowska
+Schronisko w Walasówce I,Wyżyna Śląsko-Krakowska
+Schronisko w Walasówce II,Wyżyna Śląsko-Krakowska
+Schronisko w Baszcie pod Bukowiem I,Wyżyna Śląsko-Krakowska
+Jaskinia w Wysuckiej Górze,Wyżyna Śląsko-Krakowska
+Schronisko nad Boiskiem,Wyżyna Śląsko-Krakowska
+Schronisko w Ludwinowie II,Wyżyna Śląsko-Krakowska
+Schronisko w Baszcie pod Bukowiem II,Wyżyna Śląsko-Krakowska
+Schroniska obok Jaskini Ludwinowskiej,Wyżyna Śląsko-Krakowska
+Tunel w Ludwinowie,Wyżyna Śląsko-Krakowska
+Jaskinia Chuda,Wyżyna Śląsko-Krakowska
+Schronisko obok Jaskini Brzozowej,Wyżyna Śląsko-Krakowska
+Schronisko pod Jaskinią Brzozową I,Wyżyna Śląsko-Krakowska
+Schronisko pod Jaskinią Brzozową II,Wyżyna Śląsko-Krakowska
+Szczelina w Maszczykowych Skałach I,Wyżyna Śląsko-Krakowska
+Szczelina w Maszczykowych Skałach II,Wyżyna Śląsko-Krakowska
+Jaskinia Potrzask,Wyżyna Śląsko-Krakowska
+Schronisko w Maszczykowych Skałach I,Wyżyna Śląsko-Krakowska
+Schronisko w Maszczykowych Skałach II,Wyżyna Śląsko-Krakowska
+Schronisko w Maszczykowych Skałach III,Wyżyna Śląsko-Krakowska
+Schronisko pod Bukiem w Ludwinowie,Wyżyna Śląsko-Krakowska
+Schronisko nad Jaskinią Trzebniowską,Wyżyna Śląsko-Krakowska
+Jaskinia Deszczowa w Kozubcu,Wyżyna Śląsko-Krakowska
+Schronisko Górne w Kozubcu,Wyżyna Śląsko-Krakowska
+Tunelik w Kozubcu,Wyżyna Śląsko-Krakowska
+Jaskinia w Wilczej Górze,Wyżyna Śląsko-Krakowska
+Jaskinia Witkowa,Wyżyna Śląsko-Krakowska
+Jaskinia w Rysiej Górze,Wyżyna Śląsko-Krakowska
+Schronisko pod Jaskinią Chudą,Wyżyna Śląsko-Krakowska
+Schronisko w Dębinnej Górze I,Wyżyna Śląsko-Krakowska
+Schronisko w Dębinnej Górze II,Wyżyna Śląsko-Krakowska
+Schron pod Studniami (N-2.76),Niecka Nidziańska
+Jaskinia na Ścianie (S-1.1),Sudety
+Jaskinia w Wapniarce (S-1.2),Sudety
+Jaskinia w Rogóżce (S-1.3 ex),Sudety
+Romanowska Studnia (S-1.4 ex),Sudety
+Jaskinia w Kletnie (S-1.5ex),Sudety
+Jaskinia Biała Marianna w Krzyżniku (S-1.6 ex),Sudety
+Jaskinia Kozłowskiego (S-1.7 ex),Sudety
+Jaskinia pod Torami (S-1.8),Sudety
+Jaskinia Kontaktowa (S-1.9),Sudety
+Jaskinia Warszawiaków (S-1.10),Sudety
+Jaskinia Biały Kamień (S-1.11),Sudety
+Miniaturka (S-1.12),Sudety
+Jaskinia Niedźwiedzia (S-1.13),Sudety
+Sądejowa Szczelina (S-1.14),Sudety
+Jaskinia Wodna w Kletnie (S-1. 15),Sudety
+Jaskinia przy Rzece (S-1.16),Sudety
+Jaskinia Górna w Miłku (S-5.4 ex),Sudety
+Schronisko w Ścianie (S-1.18),Sudety
+Zwietrzałe Schronisko I (S-1.19),Sudety
+Zwietrzałe Schronisko II (S-1.20),Sudety
+Solna Jama (S-2.1),Sudety
+Jaskinia w Różance (S-2.2 ex),Sudety
+Jaskinia w Granicznej (S-2.3 ex),Sudety
+Złota Sztolnia (S-2.4),Sudety
+Kozi Schron (S - 2.5),Sudety
+Jaskinia Radochowska (S-3.1),Sudety
+Jaskinia w Podzamku (S-4.1),Sudety
+Jaskinia w Bielcu (S-5.1 ex),Sudety
+Aven w Miłku (S-5.2),Sudety
+Jaskinia Dolna w Miłku (S-5.3 ex),Sudety
+Schronisko Miłek II (S-5.5),Sudety
+Schronisko Miłek I (S-5.6),Sudety
+Aven w Połomie (S-5.7),Sudety
+Jaskinia Głęboka (S-5.8 ex),Sudety
+Jaskinia Kominowa (S-5.9 ex),Sudety
+Jaskinia Naciekowa (S-5.10 ex),Sudety
+Jaskina Nowa (S-5.11),Sudety
+Jaskinia obok Wschodniej (S - 5.12 ex),Sudety
+Jaskinia Pajęcza (S-5.13),Sudety
+Studnia pod Nową (S-5.14),Sudety
+Jaskinia nad Potokiem (S-5.15),Sudety
+Jaskinia Mała Szczelina Kalcytowa (S-5.16),Sudety
+Jaskinia Ostrych Kantów (S-5.17),Sudety
+Jaskinia Zaciskowa (S-5.18),Sudety
+Schron Frankowy (S-5.19),Sudety
+Jaskinia Komarowa (S-5.20),Sudety
+Schron Sierpniowy (S-5.21),Sudety
+Jaskinia Pluszowych Nacieków (S-5.22 ex),Sudety
+Jaskinia Błotna (S-5.23),Sudety
+Jaskinia Południowa (S-5.24 ex),Sudety
+Jaskinia Północna Duża (S-5.25),Sudety
+Jaskinia Północna Mała (S-5.26),Sudety
+Jaskinia Wschodnia (S-5.27 ex),Sudety
+Jaskinia Wysoka (S-5.28 ex),Sudety
+Jaskinia Silesia (S-5.29),Sudety
+Jaskinia Śmiertelna (S-5.30),Sudety
+Jaskinia w Podgórkach (S-5.31),Sudety
+Jaskinia Gwiaździsta (S-5.32),Sudety
+Jaskinia Jasna (S-5.33),Sudety
+Jaskinia nad Skrajnią (S-5.34),Sudety
+Jaskinia Środkowa (S-5.36),Sudety
+Szczelina Wojcieszowska (S-5.35),Sudety
+Jaskinia Wałbrzyska (S-5.37),Sudety
+Jaskinia za Sztolnią (S-5.38),Sudety
+Jaskinia Porcelanowa (S-5.39),Sudety
+Dziura w Brzezinach (S-5.40),Sudety
+Jaskinia Ukośna (S-5.41),Sudety
+Meanderek (S-5.42),Sudety
+Niedźwiedzia Jama (S-6.1),Sudety
+Wilcza Jama (S-6.2),Sudety
+Jaskinia Pandurów (S-6.3),Sudety
+Schronisko I (S-6.4),Sudety
+Schronisko Potrójne (S-6.5),Sudety
+Jaskinia Przechodnia (S-6.6),Sudety
+Zimna Dziura (S-6.7),Sudety
+Sztolnia w Osiecznicy (S - 6.8),Niż Polski
+Pieczara nad Zalewem (S-6.9),Sudety
+Wielisławka (S-6.10),Sudety
+Jaskinia Lisia (S-7.1),Sudety
+Jaskinia Czerwona (S-7.2),Sudety
+Oaza (S-7.3),Sudety
+Schronisko Krótkie (S-7.4),Sudety
+Schronisko w Chojniku (S-8.1),Sudety
+Pustelnia (S-8.2),Sudety
+Jaskinia Dziurawy Kamień w Chojniku (S-8.3),Sudety
+Ucho Igielne (S-8.4),Sudety
+Skalna Komora (S-8.5),Sudety
+Schron pod Okapem (S-8.6),Sudety
+Schronisko w Krzyżnej Skale (S-8.7),Sudety
+Okno (S-8.8),Sudety
+Schronisko w Stolcu (S-8.11),Sudety
+Jaskinia w Stolcu (S-8.12),Sudety
+Sztolnia w Krzyżnej (S-8.13),Sudety
+Schron w Żlebie Jaroniec,Tatry
+Siwiańska Nyża,Tatry
+Szczelina w Małych Koryciskach,Tatry
+Wilcza Nora,Tatry
+Skośna Szpara,Tatry
+Nyża w Wielkich Koryciskach,Tatry
+Schron w Wielkich Koryciskach II,Tatry
+Szczelina w Wielkich Koryciskach,Tatry
+Schron nad Szczeliną w Wielkich Koryciskach,Tatry
+Schron w Małym Reglu,Tatry
+Dziura w Czerwonym Groniku,Tatry
+Szczelina w Czerwonym Groniku,Tatry
+Dziura w Jatkach,Tatry
+Schron w Żlebie Goryckiego,Tatry
+Schronisko w Dolinie za Bramką,Tatry
+Dziurka w Organach,Tatry
+Schron nad Progiem,Tatry
+Schron nad Doliną,Tatry
+Jaskinia pod Żebrem,Tatry
+Korytarz nad Zagonem,Tatry
+Siwa Nyża,Tatry
+Gawra pod Granią,Tatry
+Gawra nad Jaworzynką,Tatry
+Gawra między Gawrami,Tatry
+Gawra nad Suchą Wodą,Tatry
+Schron w Piecach,Tatry
+Nyża pod Jaskinią w Kosówkach,Tatry
+Schron z Kijem,Tatry
+Nasza Dziura,Tatry
+Krowi Tunel,Tatry
+Nyża za Półką,Tatry
+Schron nad Dziurą Wyżnią,Tatry
+Ziobrowy Schron,Tatry
+Grotka przy Huciskach,Tatry
+Jaskinia Zapylna,Tatry
+"Schronisko w Międzyścianach ""nad II""",Tatry
+Dziura w Czarnej Turni I,Tatry
+Dziura w Czarnej Turni II,Tatry
+Dziura w Czarnej Turni III,Tatry
+Kalacki Korytarzyk,Tatry
+Dmuchająca Szczelina,Tatry
+Okap przed Bramą,Tatry
+Zbójnicka Rura,Tatry
+Serowa Dziura,Tatry
+Jaskinia w Zbójnickiej Turni,Tatry
+Korytarzyk w Szczelinie,Tatry
+Schron za Smoczą Jamą,Tatry
+Zbójnicka Piwnica,Tatry
+Nyża ze Znakami,Tatry
+Paszcza Rekina,Tatry
+Szczelina na Zakręcie I,Tatry
+Szczelina na Zakręcie II,Tatry
+Rura przy Oknie,Tatry
+Jaskinia nad Percią,Tatry
+Mała Gawra,Tatry
+Szczelina za Ptakową Turnią,Tatry
+Upłazkowa Koleba,Tatry
+Upłazkowa Szczelina,Tatry
+Lustrzany Korytarz,Tatry
+Tunel pod Upłazkowym Przechodem,Tatry
+Pasterski Schron,Tatry
+Okap nad Kościołem,Tatry
+Dziura w Ździarach Wyżnia,Tatry
+Okap w Ździarach,Tatry
+Komin w Ździarach,Tatry
+Schron w Organach,Tatry
+Dmuchawa,Tatry
+Szczelina Miętusia,Tatry
+Dudowy Okap,Tatry
+Jaskinia Ciepła,Tatry
+Schron przy Wielkiej Turni,Tatry
+Jaskinia za Ratuszem Zimna,Tatry
+Znana Studnia,Tatry
+Schron nad Zakosistą,Tatry
+Jaskinia Siwy Kocioł,Tatry
+Krakowska Szczelina,Tatry
+Schron pod Przeziorową,Tatry
+Szczelina za Siedmiu Progami,Tatry
+Jaskinia Zawaliskowa Tomanowa,Tatry
+Mała Szczelina w Tomanowym Grzbiecie,Tatry
+Krakowski Okap,Tatry
+Drugi Krakowski Okap,Tatry
+Druga Krakowska Szczelina,Tatry
+Mały Krakowski Schron,Tatry
+Tomanowy Okap,Tatry
+Szczelina przy Tomanowym Okapie,Tatry
+Schron nad Tomanową,Tatry
+Okno nad Tomanową,Tatry
+Rzędowa Szczelina,Tatry
+Grota w Rzędach,Tatry
+Niski Schron nad Tomanową,Tatry
+Niżni Okap nad Tomanową,Tatry
+Wyżni Okap nad Tomanową,Tatry
+Grota nad Małą Przełączką,Tatry
+Tomanowa Szczelina I,Tatry
+Tomanowa Szczelina II,Tatry
+Szczelina nad Tomanową I,Tatry
+Szczelina nad Tomanową II,Tatry
+Dziura w Stole,Tatry
+Głowoniowa Nyża,Tatry
+Jaskinia Maleńka w Smreczyńskim Wierchu,Tatry
+Jaskinia w Smreczyńskim Wierchu,Tatry
+Staszkowa Studnia,Tatry
+Okap z Kurtyną,Tatry
+Nisza w Organach,Tatry
+Nisza w Organach II,Tatry
+Krakowski Schron,Tatry
+Komin w Niskiej Turni,Tatry
+Szczelina nad Korytem,Tatry
+Grota nad Korytem,Tatry
+Jaskinia nad Beczką,Tatry
+Dziura nad Zabijakiem I,Tatry
+Dziura nad Zabijakiem II,Tatry
+Schronisko w Wietrznych Dziurach I,Karpaty
+Schronisko w Wietrznych Dziurach II,Karpaty
+Jama pod Wietrznymi Dziurami I,Karpaty
+Jama pod Wietrznymi Dziurami II,Karpaty
+Mała Wietrzna Dziura,Karpaty
+Bucynowa Nora,Karpaty
+Mała Kocurkowa Jama,Karpaty
+Piwnica nad Długoszówką,Karpaty
+Piwnica Parchowatka,Karpaty
+Piwnica Połymia I,Karpaty
+Piwnica Połymia II,Karpaty
+Schronisko w Połymi,Karpaty
+Szczelina przed Sową,Tatry
+Szczelinka w Głębowcu,Tatry
+Kościół,Tatry
+Schronisko pod Juchówką,Karpaty
+Piwnica Izworyki,Karpaty
+Piwnica na Polanie Betlejowej,Karpaty
+Piwnica w Dolinie Młacznej,Karpaty
+Schronisko w Cisowych Wierchach,Karpaty
+Piwnica Jasieniówka,Karpaty
+Dziura nad Jaworczykiem,Karpaty
+Jaskinia Bliźniacza,Wyżyna Śląsko-Krakowska
+Jaskinia Krzywa,Wyżyna Śląsko-Krakowska
+Jaskinia Bezimienna,Wyżyna Śląsko-Krakowska
+Okno Sokole I,Wyżyna Śląsko-Krakowska
+Okno Sokole II,Wyżyna Śląsko-Krakowska
+Okno Sokole III,Wyżyna Śląsko-Krakowska
+Okno Sokole IV,Wyżyna Śląsko-Krakowska
+Rura nad Sokolimi Oknami,Wyżyna Śląsko-Krakowska
+Schronisko obok Jaskini na Skałce,Wyżyna Śląsko-Krakowska
+Jaskinia na Skałce,Wyżyna Śląsko-Krakowska
+Skalna Szczelina (S-8.9),Sudety
+Schronisko w Witoszy (S-8.10),Sudety
+Schronisko z Płytami I,Karpaty
+Schronisko z Płytami II,Karpaty
+Łabowszczańska Szczelina,Karpaty
+Schronisko Skrzynia,Karpaty
+Łosiański Schron,Karpaty
+Dziura pod Chrustem,Karpaty
+Dziura pod Dwoma Skałami,Karpaty
+Podziurawiona Nora,Karpaty
+Dziura w Głazowisku I,Karpaty
+Dziura w Głazowisku II,Karpaty
+Piwnica w Czerszli,Karpaty
+Dziura w Kobylarce,Karpaty
+Koszowa Dziura,Tatry
+Jaskinia Koszowa,Tatry
+Szczelina nad Lejem,Tatry
+Wyżnia Koszowa Dziura,Tatry
+Dziurawa Studnia II,Karpaty
+Wojtkowy Schron,Karpaty
+Dwoista Jama,Karpaty
+Szczelina z Wiekiem,Karpaty
+Jamka Skrzatów,Karpaty
+Schron nad Chodnikiem I,Karpaty
+Schron nad Chodnikiem II,Karpaty
+Dziura KTN,Karpaty
+Schronisko koło Niedźwiedziej,Karpaty
+Meander w Małołąckim Siodle,Tatry
+Jaskinia pod Płytą,Tatry
+Jaskinia Niespodzianka,Tatry
+Szczelina za Drągowiną,Karpaty
+Schronisko w Rytrze,Karpaty
+Jama bez Smoka,Karpaty
+Schronisko pod Basztą,Karpaty
+Schron Muszynianka,Karpaty
+Dziura w Makowicy,Karpaty
+Schronisko nad Wojkową,Karpaty
+Zbójecka Jaskinia w Kopańcu,Karpaty
+Zbójeckie Schronisko w Kopańcu,Karpaty
+Zbójecka Studnia w Kopańcu,Karpaty
+Jaskinia Świstacza,Tatry
+Capkowa Szczelina,Tatry
+Jaskinia Harda,Tatry
+Szczelina za Ratuszem,Tatry
+Dziura nad Lajpcykiem,Karpaty
+Jaskinia Skalska,Karpaty
+Schronisko w Pietraszonce V,Karpaty
+Szczelina w Kamieniołomie w Bóbrce,Karpaty
+Schronisko Kwietniowe w Myczkowcach,Karpaty
+Schron w Niedźwiedziej Skale,Karpaty
+Schronisko w Jaworze,Karpaty
+Schron Szopka,Karpaty
+Schron w Baszcie,Karpaty
+Schron w Jasieniowej,Karpaty
+Jaskinia w Cisownicy,Karpaty
+Jaskinia Witowicka,Karpaty
+Schronisko Baciara,Karpaty
+Tunel z Przewężeniem,Karpaty
+Schronisko Niepełne,Karpaty
+Niski Tunel,Karpaty
+Schronisko Zakręcone,Karpaty
+Schronisko Niskie,Karpaty
+Podcięty Okap,Karpaty
+Ciasna Szczelina,Karpaty
+Schronisko Wodne w Chronowie,Karpaty
+Schronisko pod Grzybem,Karpaty
+Schron pod Głazem w Wąwozie na Grojcu,Karpaty
+Schronisko w Podlesiu koło Rabsztyna,Wyżyna Śląsko-Krakowska
+Schronisko przy stacji kolejowej Rabsztyn,Wyżyna Śląsko-Krakowska
+Jaskinia przy Wielkim Okapie,Wyżyna Śląsko-Krakowska
+Schronisko z Kościami,Wyżyna Śląsko-Krakowska
+Szczelina nad Kanionem,Wyżyna Śląsko-Krakowska
+Omszała Studnia,Wyżyna Śląsko-Krakowska
+Szczelina w Cisowej Skale,Wyżyna Śląsko-Krakowska
+Schronisko pod Wielką Wantą,Wyżyna Śląsko-Krakowska
+Schronisko przy wejściu do Kanionu,Wyżyna Śląsko-Krakowska
+Schronisko w Kanionie I,Wyżyna Śląsko-Krakowska
+Schronisko w Kanionie II,Wyżyna Śląsko-Krakowska
+Schronisko w Kanionie III,Wyżyna Śląsko-Krakowska
+Schronisko z Grzybkami,Wyżyna Śląsko-Krakowska
+Schronisko Zielone,Wyżyna Śląsko-Krakowska
+Komarowa Szczelina,Wyżyna Śląsko-Krakowska
+Schronisko przy wierzchołku Cisowej Skały,Wyżyna Śląsko-Krakowska
+Jaskinia Zamkowa,Wyżyna Śląsko-Krakowska
+Januszkowa Szczelina,Wyżyna Śląsko-Krakowska
+Schronisko nad Januszkową Szczeliną,Wyżyna Śląsko-Krakowska
+Schronisko na Januszkowej Górze,Wyżyna Śląsko-Krakowska
+Schronisko w Podlesiu koło Rabsztyna I,Wyżyna Śląsko-Krakowska
+Schronisko ze Żwirem,Wyżyna Śląsko-Krakowska
+Jaskinia Potrójna,Wyżyna Śląsko-Krakowska
+Schronisko ze Szpatem,Wyżyna Śląsko-Krakowska
+Schronisko pod szczytem Januszkowej Góry,Wyżyna Śląsko-Krakowska
+Szpaciarnia w Januszkowej Górze,Wyżyna Śląsko-Krakowska
+Schronisko z Piętrami,Wyżyna Śląsko-Krakowska
+Jaskinia Podwójna,Wyżyna Śląsko-Krakowska
+Jaskinia Lodowa w Jaroszowcu,Wyżyna Śląsko-Krakowska
+Okap z Półką na Pomorskich Skałach,Wyżyna Śląsko-Krakowska
+Okap koło Wapiennika,Wyżyna Śląsko-Krakowska
+Schronisko w Starym Łomiku,Wyżyna Śląsko-Krakowska
+Schronisko pod Szczytem Pomorskiej Skały,Wyżyna Śląsko-Krakowska
+Schronisko nad Zamkiem w Rabsztynie,Wyżyna Śląsko-Krakowska
+Schronisko nad Zamkiem w Rabsztynie II,Wyżyna Śląsko-Krakowska
+Schronisko nad Zamkiem w Rabsztynie III,Wyżyna Śląsko-Krakowska
+Schronisko nad Zamkiem w Rabsztynie IV,Wyżyna Śląsko-Krakowska
+Schronisko koło Jaskini Lodowej,Wyżyna Śląsko-Krakowska
+Jaskinia Błotna,Wyżyna Śląsko-Krakowska
+Jaskinia Konfesjonał,Wyżyna Śląsko-Krakowska
+Schronisko nad Błotną,Wyżyna Śląsko-Krakowska
+Jaskinia w Zielonym Kopcu I,Karpaty
+Jaskinia w Zielonym Kopcu II,Karpaty
+Schronisko Głazowisko,Karpaty
+Jaskinia w Cieńkowie,Karpaty
+Szczelina pod Zielonym Kopcem,Karpaty
+Schronisko Dziurawiec,Karpaty
+Jaskinia na Wyrąbanicy,Karpaty
+Studnia w Romance,Karpaty
+Schronisko Dwupiętrowe na Romance,Karpaty
+Tunel na Romance,Karpaty
+Nora przed Jaskinią w Boraczej,Karpaty
+Okap w Odpękanej Skale,Karpaty
+Mała Jaskinia w Skałce,Karpaty
+Jaskinia Szóstego Pazura,Karpaty
+Okap nad Potokiem Cebulowym,Karpaty
+Dziura w Przysłopie,Karpaty
+Okap z Płytą nad Potokiem Cebulowym,Karpaty
+Jaskinia na Sałaszu,Karpaty
+Okap z Ziemią nad Potokiem Cebulowym,Karpaty
+Szpara pod Głazem przed Rozdrożem,Karpaty
+Schron Oświetlony,Karpaty
+Schron między Ścianami,Karpaty
+Schron pod Okapem,Karpaty
+Dziura w Kosówce I,Karpaty
+Dziura w Kosówce II,Karpaty
+Szczelina na Sałaszu,Karpaty
+Jaskinia w Rastocznym II,Karpaty
+Schron pod Rastoczne,Karpaty
+Schron nad Piłką,Karpaty
+Jaskinia Dzikiej Grupy z Malinki,Karpaty
+Jaskinia w Malinowie VI,Karpaty
+Malinowska Studnia,Karpaty
+Jaskinia Miecharska,Karpaty
+Jaskinia w Miecharskiej II,Karpaty
+Jaskinia pod Trzecim Rajsztakiem,Karpaty
+Jaskinia w Miecharskiej I,Karpaty
+Jaskinia w Miecharskiej III,Karpaty
+Jaskinia w Miecharskiej IV,Karpaty
+Jaskinia w Miecharskiej V,Karpaty
+Schronisko w Miecharskiej,Karpaty
+Szczelina w Miecharskiej,Karpaty
+Szczelina w Miecharskiej II,Karpaty
+Szczelina w Miecharskiej III,Karpaty
+Miecharska Koliba,Karpaty
+Jaskinia Wiślanka,Karpaty
+Jaskinia Wiślanka II,Karpaty
+Jaskinia pod Trzecim Rajsztakiem II,Karpaty
+Studnia w Izdebczyskach,Karpaty
+Jaskinia w Górnym Zapadlisku,Karpaty
+Jaskinia Kaj Cap Wpod,Karpaty
+Schron pod Krzyżem Maltańskim,Karpaty
+Jaskinia Kaj Kóń Wpod,Karpaty
+Jaskinia Rodżery,Karpaty
+Schron Rozkopany,Karpaty
+Jaskinia Dolny Waserszlog,Karpaty
+Dymiąca Piwnica,Karpaty
+Pietraszkowy Schron,Karpaty
+Hrómsko Jama,Karpaty
+Jaskinia nad Sadowe,Karpaty
+Jaskinia Kopiste,Karpaty
+Pietraszkowa Szczelina Górna,Karpaty
+Szczelina nad Pierwszym Rajsztakiem,Karpaty
+Szczelina w Bukowinach,Karpaty
+Dziura u Madziów,Karpaty
+Jaskinia Złomanego Krómpocza,Karpaty
+Studzienka R II w Okrąglicy,Karpaty
+System R I w Okrąglicy,Karpaty
+Studzienka R III w Okrąglicy,Karpaty
+Schron w Rowie na Okrąglicy,Karpaty
+KŻ 1 w Okrąlicy,Karpaty
+Studnia w Łysinie I,Karpaty
+Studnia w Łysinie II,Karpaty
+Schronisko w Łysinie,Karpaty
+Schronisko w Dolinie Skawiczanki I,Karpaty
+Schronisko w Dolinie Skawiczanki II,Karpaty
+Studnia w Policy,Karpaty
+Schronisko w Lesie Suwarki,Karpaty
+Schronisko w Paluchówce,Karpaty
+Jaskinia w Złotej Grapie,Karpaty
+Śnieżny Schron,Karpaty
+Kruche Schronisko w Okrąglicy,Karpaty
+Zalewowy Schron,Karpaty
+Schronisko w Łysinie II,Karpaty
+Jaskinia Lodowych Stalaktytów,Karpaty
+Jaskinia Hieroglifowa w Łysinie,Karpaty
+Jaskinia w Okrąglicy,Karpaty
+System w Łysinie,Karpaty
+Jaskinia Mechowa,Karpaty
+Schronisko w Łysinie III,Karpaty
+Schronisko w Łysinie IV,Karpaty
+Ciepłe Schronisko w Okrąglicy,Karpaty
+Jaskinia między Świerkami w Okrąglicy,Karpaty
+Ucho Igielne,Karpaty
+Jaskinia Krupowa na Okrąglicy,Karpaty
+Grota Baczyńskiego,Karpaty
+Schronisko nad Grotką,Karpaty
+Szczelina koło Wiślanki,Karpaty
+Dwupiętrowa Koleba,Karpaty
+Jaskinia Lodowa Pietraszkowa,Karpaty
+Sidziński Schron,Karpaty
+Rozpadlinowe Schronisko,Karpaty
+Szczelina nad Waserszlogiem,Karpaty
+Suchogórska Jaskinia,Karpaty
+Pietraszkowa Szczelina Dolna,Karpaty
+Szczelina pod Trzecim Rajsztakiem,Karpaty
+Schronisko pod Górnym Rajsztakiem,Karpaty
+Szczelina za Upłazkiem,Karpaty
+Walasowa Jama,Karpaty
+Szczelina w Miecharskiej IV,Karpaty
+Schronisko pod Skałą na Okrąglicy,Karpaty
+Jaskinia za Upłazkiem,Karpaty
+Jasny Schron na Okrąglicy,Karpaty
+Jaskinia w Gościejowie,Karpaty
+Schron w Amfitearze,Karpaty
+Pietraszkowa Studnia,Karpaty
+Jaskinia pod Rolą Flakową,Karpaty
+Szkieletowe Schronisko,Karpaty
+Szkatuła,Karpaty
+Lisia Jama nad Jastrzębim I,Karpaty
+Szczelina pod Pierwszym Rajsztakiem,Karpaty
+Jaskinia na Malinowskiej Skale,Karpaty
+Jaskinia za Białym Krzyżem,Karpaty
+Jaskinia kole Naciekowej,Karpaty
+Schronisko nad Jastrzębim II,Karpaty
+Dziura kaj Kóń Wpod II,Karpaty
+Schronisko nad Jastrzębim III,Karpaty
+Dziura kaj Kóń Wpod III,Karpaty
+Schronisko nad Jastrzębim IV,Karpaty
+Schronisko nad Jastrzębim V,Karpaty
+Jaskinia w Okrąlicy Dolna,Karpaty
+Dziura kaj Kóń Wpod,Karpaty
+Jaskinia na Harapuciu,Karpaty
+Sejb-owe Schronisko,Karpaty
+Nora pod Wykrotem,Karpaty
+Jaskinia nad Hutą,Karpaty
+Schron w Gościejowie,Karpaty
+Dziuroki,Karpaty
+Schronisko Wielkanocne w Łysinie,Karpaty
+Schron w Stołowie,Karpaty
+Szczelina w Stołowie,Karpaty
+Tunel w Rowie w Okrąglicy,Karpaty
+Grota Poszukiwaczy Kruszców w Okrąglicy,Karpaty
+Jaskinia Głęboka w Stołowie,Karpaty
+Schronisko na Wale w Łysinie,Karpaty
+Studnia ORG,Karpaty
+Schronisko pod Blokiem Skalnym w Łysinie,Karpaty
+Awen Lisa,Karpaty
+Studnia na Wale w Łysinie,Karpaty
+Kamienna Studnia pod Złotą Grapą,Karpaty
+Jaskinia w Broskach,Karpaty
+Schronisko przy Dziurze,Karpaty
+Szczelina w Broskach,Karpaty
+Studnia za Rowem,Karpaty
+Dziura pod Bukiem,Karpaty
+Jaskinia Odgruzowana Szczelina,Karpaty
+Szczelina w Laskowej Skale,Karpaty
+Szczelina w Skale,Karpaty
+Jaskinia Ciasna w Stołowie,Karpaty
+Jaskinia w Grabowej I,Karpaty
+Szczelina w Grabowej,Karpaty
+Jaskinia w Grabowej II,Karpaty
+Zbójska Dziura,Karpaty
+Jaskinia w Grabowej III,Karpaty
+Jaskinia w Grabowej IV,Karpaty
+Lisia Jama,Karpaty
+Schronisko w Przełomie Skawicy,Karpaty
+Jaskinia Piętrowa w Klimczoku,Karpaty
+Jaskinia w Surmiaków Groniu,Karpaty
+Szczelina w Surmiaków Groniu,Karpaty
+Jaskinia Zbója Klimczaka,Karpaty
+Jaskinia Wiślańska,Karpaty
+Grota w Rowie na Surmiaków Groniu,Karpaty
+Studnia przed Jaskinią w Surmiaków Groniu,Karpaty
+Harnasiowa Szczelina,Karpaty
+Grabowa Studnia,Karpaty
+Grabowa Koleba,Karpaty
+Grabowy Schron I,Karpaty
+Grabowy Schron II,Karpaty
+Grabowy Schron III,Karpaty
+Grabowy Schron IV,Karpaty
+Szczelina w Grabowej II,Karpaty
+Szczelina w Grabowej IV,Karpaty
+Szczelina w Grabowej V,Karpaty
+Szczelina w Grabowej VI,Karpaty
+Okap w Grabowej,Karpaty
+Grabowa Koleba II,Karpaty
+Salmopolska Szczelina,Karpaty
+Salmopolski Schron I,Karpaty
+Schronisko pod Płytą w Surmiaków Groniu,Karpaty
+Salmopolski Schron II,Karpaty
+Zaśmiecony Schron w Surmiaków Groniu,Karpaty
+Salmopolski Schron III,Karpaty
+Salmopolski Schron IV,Karpaty
+Szczelina nad Skałą,Karpaty
+Salmopolski Schron V,Karpaty
+Salmopolski Schron VII,Karpaty
+Lisia Jama w Malikowskim Groniu,Karpaty
+Agresywna Szczelina,Karpaty
+Schronisko w Klimczoku II,Karpaty
+Schronisko pod Uporowym Wodospadem,Karpaty
+Szczelina w Grabowej VII,Karpaty
+Grabowa Koleba III,Karpaty
+Grabowa Koleba IV,Karpaty
+Grabowa Koleba V,Karpaty
+Jaskinia w Grabowym Wąwozie I,Karpaty
+Jaskinia w Grabowym Wąwozie II,Karpaty
+Jaskinia w Grabowym Wąwozie III,Karpaty
+Grabowa Koleba VI,Karpaty
+Grabowy Schron V,Karpaty
+Grabowy Schron VI,Karpaty
+Szczelina nad Wywierzyskiem,Karpaty
+Schron w Głazach,Karpaty
+Szczelina z Grzybami,Karpaty
+Nora pod Korzeniem II,Karpaty
+Nora nad Iksem,Karpaty
+Dziura w Stołowie II,Karpaty
+Jaskinia w Grabowej V,Karpaty
+Schron Tajny Śmietnik,Karpaty
+Jaskinia pod Rastoczne,Karpaty
+Nora w Kamieniołomie,Karpaty
+Schronisko w Skale Czarownic,Karpaty
+Okap nad Zaporą,Karpaty
+Schronisko w Międzybrodziu,Karpaty
+Schron nad Wilkowicami I,Karpaty
+Schron nad Wilkowicami II,Karpaty
+Schron Maćkowy,Karpaty
+Schron nad Wilkowicami III,Karpaty
+Nora w Kiczorze,Karpaty
+Szczelina Wojtka w Świnnej Porębie,Karpaty
+Koleba na Małym Gibasowym Groniu,Karpaty
+Cisowy Schron,Karpaty
+Diabla Koleba,Karpaty
+Grota w Dobczycach,Karpaty
+Niska Szczelina,Karpaty
+Lisia Dziura w Pindelówce,Karpaty
+Jaskinia w Zamczysku,Karpaty
+Jaskinia Lodowa w Zamczysku,Karpaty
+Schron w Turniach,Karpaty
+Jaskinia Dziurawa,Karpaty
+Pieczara w Rowie II,Karpaty
+Schron nad Wantami III,Karpaty
+Schron nad Wantami II,Karpaty
+Schron nad Wantami I,Karpaty
+Lepka Studnia,Karpaty
+Jama Ogra,Karpaty
+Niski Okap,Karpaty
+Pieczara w Rowie,Karpaty
+Jaskinia przy Kopcu,Karpaty
+Jaskinia Siekiereczka,Karpaty
+Wietrzna Dziura w Skałce I,Karpaty
+Wietrzna Dziura w Skałce II,Karpaty
+Wietrzna Dziura w Skałce III,Karpaty
+Wietrzne Schronisko w Skałce,Karpaty
+Wietrzna Studzienka w Skałce,Karpaty
+Wietrzna Studnia w Skałce,Karpaty
+Wietrzna Grota w Skałce,Karpaty
+Jaskinia Rysia,Karpaty
+Schron w Lubniu I,Karpaty
+Okap nad Jaskinią Komonieckiego,Karpaty
+Schronisko Pukusia,Karpaty
+Nora w Zbójnickim Oknie,Karpaty
+Schron w Lubniu II,Karpaty
+Okap w Oczkowie,Karpaty
+Schronisko pod Płytą w Luboniu Wielkim,Karpaty
+Norka w Wędrujących Kamieniach,Karpaty
+Nora pod Beskidem,Karpaty
+Dziurka w Wędrujących Kamieniach,Karpaty
+Schron w Strażnicy,Karpaty
+Okap w Strażnicy,Karpaty
+Okap Łaski,Karpaty
+Okap w Małym Gibasowym Groniu,Karpaty
+Jaskinia Oblica,Karpaty
+Schronisko Sympozjalne,Karpaty
+Mokra Izdebka II,Karpaty
+Schronisko pod Jarzębinami,Karpaty
+Jaskinia Trim,Karpaty
+Jaskinia Magdy,Karpaty
+Schronisko w Kościelcu I,Karpaty
+Okap nad Potokiem w Kościelcu I,Karpaty
+Okap nad Potokiem w Kościelcu II,Karpaty
+Głaz pod Kościelcem,Karpaty
+Jama pod Płytą,Karpaty
+Szczelinka,Karpaty
+Diabli Okap,Karpaty
+Tymkowy Okap,Karpaty
+Lisia Nora,Karpaty
+Szczelina pod Okapem,Karpaty
+Okap bez Szczeliny,Karpaty
+Szczelina bez Okapu,Karpaty
+Suska Dziura,Karpaty
+Wilcza Studzienka,Karpaty
+Jopkowa Szczelina,Karpaty
+Koleba pod Głazem,Karpaty
+Żarski Tunel,Karpaty
+Studnia Ogrodników,Karpaty
+Jaskinia w Kleninie,Karpaty
+Pajęczy Schron,Karpaty
+Jaskinia w Bukowinie,Karpaty
+Zasypana Szczelina nad Holiną,Karpaty
+Piwnica Partyzancka na Upłazie,Karpaty
+Jaskinia nad Jeziorami,Karpaty
+Studnia na Upłazie,Karpaty
+Schronisko Dendroprzerwa,Karpaty
+Okno w Kamieniu,Karpaty
+Dziura koło Zakopianki,Karpaty
+Szczelina z Mostkiem Skalnym,Karpaty
+Jaskinia Kiczorska,Karpaty
+Przepastna Jama,Karpaty
+Szczelina z Miskami,Karpaty
+Jaskinia Łopuszańska,Karpaty
+Dolny Tunelik,Karpaty
+Górny Tunelik,Karpaty
+Dziura w Leju,Karpaty
+Szczelina za Płytą,Karpaty
+Jaskinia Goszczyńskiego,Karpaty
+Schronisko pod Wantą,Karpaty
+Schronisko za Wantą,Karpaty
+Tęczowa Jama,Karpaty
+Schronisko w Chryszczatej,Karpaty
+Szczelina nad Brzegiem Osławicy,Karpaty
+Krucha Szczelina,Karpaty
+Grota Teodora,Karpaty
+Schron Gawra,Karpaty
+Jaskinia Wilcza,Karpaty
+Dorocia Jama,Karpaty
+Dziura w Dąbrowie,Wyżyna Śląsko-Krakowska
+Schronisko z Widokiem,Wyżyna Śląsko-Krakowska
+Schronisko dla Dwóch,Wyżyna Śląsko-Krakowska
+Jaskinia Siedmiu Smoków,Wyżyna Śląsko-Krakowska
+Dziura Omszała,Wyżyna Śląsko-Krakowska
+Jaskinia w cyrku na Stołowej Górze,Wyżyna Śląsko-Krakowska
+Jaskinia poniżej Lodowej,Wyżyna Śląsko-Krakowska
+Schronisko ku Wieży,Wyżyna Śląsko-Krakowska
+Schronisko Hieroglifowe,Karpaty
+Jaskinia pod Porzeczką,Wyżyna Śląsko-Krakowska
+Schron gdzie Klopsika Nie Było,Karpaty
+Jaskinia Dobosza,Karpaty
+Schronisko na Ostrej Górze,Wyżyna Śląsko-Krakowska
+Szczelina z Mostami,Wyżyna Śląsko-Krakowska
+Dydiowska Jama,Karpaty
+Szczelina Jaroszowska,Wyżyna Śląsko-Krakowska
+Jaskinia Jaroszowska,Wyżyna Śląsko-Krakowska
+Schronisko nad Kamieniołomem,Wyżyna Śląsko-Krakowska
+Schronisko na Zapleczu,Wyżyna Śląsko-Krakowska
+Szczelina Dżdżownic,Wyżyna Śląsko-Krakowska
+Schronisko pod Wysoką Skałą,Wyżyna Śląsko-Krakowska
+Okap z Kotłami,Wyżyna Śląsko-Krakowska
+Schronisko w Dupnicy I,Wyżyna Śląsko-Krakowska
+Schronisko Kosynierów w Dupnicy,Wyżyna Śląsko-Krakowska
+Schronisko w Maśnicy,Wyżyna Śląsko-Krakowska
+Schronisko przy Chałupach,Wyżyna Śląsko-Krakowska
+Studnia Leśników,Karpaty
+Jaskinia w Tarnicy,Karpaty
+Jaskinia Jawornicka,Karpaty
+Schron Wołosaty,Karpaty
+Schronisko Kostywskie,Karpaty
+Jaskinia Mąciwody,Wyżyna Śląsko-Krakowska
+Schronisko w Berdzie I,Karpaty
+Schronisko w Berdzie II,Karpaty
+Okap z Półką na Pożogach,Wyżyna Śląsko-Krakowska
+Okap na Pożogach II,Wyżyna Śląsko-Krakowska
+Schronisko w Holicy,Karpaty
+Schronisko na Rudnicy,Wyżyna Śląsko-Krakowska
+Jaskinia na Rudnicy,Wyżyna Śląsko-Krakowska
+Sztolnia na Rudnicy,Wyżyna Śląsko-Krakowska
+Jaskinia Twarda,Wyżyna Śląsko-Krakowska
+Szczelina przy Ulicy Zdrojowej,Karpaty
+Szczelina przy Ulicy Zdrojowej II,Karpaty
+Ostra Bramka z Dziurką obok,Wyżyna Śląsko-Krakowska
+Jama w Budziszu,Karpaty
+Schronisko Śpiących Kartografów,Wyżyna Śląsko-Krakowska
+Schronisko w Dudniarzu I,Karpaty
+Schronisko w Dudniarzu II,Karpaty
+Szczelina nad Wisłoką I,Karpaty
+Szczelina nad Wisłoką II,Karpaty
+Jaskinia w Skarpie,Karpaty
+Latoszyńska Dziura,Karpaty
+Szczelina nad Wisłoką III,Karpaty
+Schron Piec,Karpaty
+Szczelina w Harkowej Skale,Karpaty
+Dusiowa Jama,Karpaty
+Schronisko w Kamieniołomie w Stępinie,Karpaty
+Pańska Jama,Karpaty
+Schron nad Wisłoką,Karpaty
+Jaskinia Żabia,Karpaty
+Bogdanowy Okap,Karpaty
+Mokra Izdebka I,Karpaty
+Schronisko Ewy,Karpaty
+Schron pod Strażnicą I,Karpaty
+Schron pod Strażnicą II,Karpaty
+Komarowa Szczelina,Karpaty
+Komin w Diabelskiej Przepaści,Karpaty
+Pieczara Świętego Świerada,Karpaty
+Jaskinia Czchowska,Karpaty
+Nora pod Sporym Kamieniem,Karpaty
+Kocia Szczelina,Karpaty
+Jama Zaskrońca,Karpaty
+Jama Zimorodka,Karpaty
+Jaskinia Rybia,Karpaty
+Bardzo Ciasna Szczelina,Karpaty
+Studzienka pod Sosną,Karpaty
+Nyża pod Głazem,Karpaty
+Jaszczurcza Szczelina,Karpaty
+Kamienny Schron,Karpaty
+Jaskinia nad Kościołem,Karpaty
+Schronisko w Grzybku,Karpaty
+Piwny Schron,Karpaty
+Okap pod Wodospadem w Jamnej,Karpaty
+Kapi Okap,Karpaty
+Schronisko Kwietniowe,Karpaty
+Niski Okap,Karpaty
+Bardzo Niski Okap,Karpaty
+Jama Kowalika,Karpaty
+Schron pod Kowadłem,Karpaty
+Okap przy Znaku z Zielonym Liściem,Karpaty
+Szczelina z Okienkiem,Karpaty
+Schronisko Deszczowe,Karpaty
+Schronisko Borsucze,Karpaty
+Schronisko Nowe,Karpaty
+Schronisko Nowsze,Karpaty
+Jaskinia w Buchcicach,Karpaty
+Korytarz do Studni,Karpaty
+Świńskie Okno,Karpaty
+Mohutna Szczelina,Karpaty
+Okap pod Gwiazdami,Karpaty
+Schronisko Trybuna,Karpaty
+Obły Korytarz,Karpaty
+Sztolnia nad Czarnym Potokiem I,Karpaty
+Sztolnia nad Czarnym Potokiem II,Karpaty
+Sztolnia nad Czają I,Karpaty
+Sztolnia nad Czają II,Karpaty
+Łupany Okap,Karpaty
+Schron Konfederatka,Karpaty
+Okap w Owcy,Karpaty
+Jama w Dzwonie,Karpaty
+Nora Cyklistów,Karpaty
+Koleba Biwakowa,Karpaty
+Czarna Szczelina,Karpaty
+Jaskinia Sokola,Karpaty
+Szorstka Studnia,Karpaty
+Zaginiony Okap,Karpaty
+Schronisko Zlepieńcowe,Karpaty
+Dziura w Obelisku,Karpaty
+Sarnia Szczelina,Karpaty
+Krowi Komin,Karpaty
+Szczelina Wilkołaka,Karpaty
+Schronisko z Muchomorkiem,Karpaty
+Dziura w Ostruszy,Karpaty
+Wężowa Jama,Karpaty
+Nisza w Warowni,Karpaty
+Koleba pod Borsukiem,Karpaty
+Schronisko w Zborowicach,Karpaty
+Grota Czyżyka,Karpaty
+Sucha Dziura,Karpaty
+Schronisko za Grunwaldem I,Karpaty
+Schronisko za Grunwaldem II,Karpaty
+Schronisko w Warowni Dolnej,Karpaty
+Nisza nad Wodospadem Czarownic,Karpaty
+Schronisko Czarownic,Karpaty
+Studnia Czarownic,Karpaty
+Okap nad Wodospadem Czarownic,Karpaty
+Schronisko w Czarownicy,Karpaty
+Schronisko Milenijne,Karpaty
+Schron Staw,Karpaty
+Piwnica w Bieczu,Karpaty
+Czarcia Izdebka,Karpaty
+Wiszar Quasi-Jaskiniowy,Karpaty
+Schronisko nad Okapem,Karpaty
+Schronisko koło Kapliczki I,Karpaty
+Schronisko koło Kapliczki II,Karpaty
+Schronisko w Luboniu Wielkim VII,Karpaty
+Piętrowa Koleba,Karpaty
+Szpara w Kamieniołomie,Karpaty
+Schron pod Stożkiem,Karpaty
+Schronisko w Pietraszonce VI,Karpaty
+Schron pod Stożkiem II,Karpaty
+Okap nad Rzeką,Karpaty
+Mały Okap na Kiczorach,Karpaty
+Jaskinia w Kamiennym,Karpaty
+Schron w Kamiennym,Karpaty
+Schron w Rastocznym,Karpaty
+Jaskinia w Rastocznym,Karpaty
+Kamienne Studzienki,Karpaty
+Schronisko w Pietraszonce I,Karpaty
+Schronisko w Pietraszonce II,Karpaty
+Schronisko w Pietraszonce III,Karpaty
+Mały Okap koło Grzyba w Wiśle Czarne,Karpaty
+Duży Okap koło Grzyba w Wiśle Czarne,Karpaty
+Okap Wschodni koło Grzyba w Wiśle Czarne,Karpaty
+Schron za Grzybem Wyżni w Wiśle Czarne,Karpaty
+Jaskinia nad Urwiskiem w Wiśle Czarne,Karpaty
+Okap w Urwisku w Wiśle Czarne,Karpaty
+Szczelina Żeglarzy,Karpaty
+Schron nad Puszyńskim,Karpaty
+Ciasny Schron pod Rastoczne,Karpaty
+Schronisko w Pietraszonce IV,Karpaty
+Jaskinia Przechodnia,Karpaty
+Dolny Schron,Karpaty
+Górny Schron,Karpaty
+Okap w Malince,Karpaty
+Jaskinia Krucha w Kościelcu,Karpaty
+Schron nad Wyrchmalinkami,Karpaty
+Schron nad Wyrchmalinkami II,Karpaty
+Jaskinia w Stołowie III,Karpaty
+Schronisko w Biłej IV,Karpaty
+Okap na Kotarzu,Karpaty
+Schron pod Płytą na Kotarzu,Karpaty
+Tunelik na Kotarzu,Karpaty
+Schron pod Omszałą Płytą,Karpaty
+Okap pod Szczeblem,Karpaty
+Przegrodzony Schron,Karpaty
+Lubońska Koleba,Karpaty
+Schron Fortepian,Karpaty
+Skrytka w Rowie,Karpaty
+Dziura w Błatniej,Karpaty
+Schron z Czaszką,Karpaty
+Schron pod Fortepianem,Karpaty
+Schronisko Niewypał,Karpaty
+Jaskinia Expresowa,Karpaty
+Jaskinia Ostra-Rolling Stones,Karpaty
+Jaskinia Szyderców,Karpaty
+Lisie Nory,Karpaty
+Szczelina nad EM5,Karpaty
+Zapadlisko pod Bukiem,Karpaty
+Zielona Szpara,Karpaty
+Parchaty Schron I,Karpaty
+Parchaty Schron II,Karpaty
+Parchaty Schron III,Karpaty
+Zielona Studzienka,Karpaty
+Szczelina przy Drodze,Karpaty
+Studnia między Drogami,Karpaty
+Schron między Drogami,Karpaty
+Podłużna Koleba,Karpaty
+Nora ze Szczeliną,Karpaty
+Nora Klasska,Karpaty
+Szczelina z Jeziorkiem,Karpaty
+Jaskinia przy Ondraszku,Karpaty
+Schronisko Aresa,Karpaty
+Schronisko Długie,Karpaty
+Jaskinia Delty,Karpaty
+Schron przy Ondraszku,Karpaty
+Dziura koło Zbójeckiej,Karpaty
+Schronisko nad Wąwozem,Karpaty
+Schronisko w Ambonie,Karpaty
+Łopieńska Koleba,Karpaty
+Jaskinia w Głazach,Karpaty
+Lisia Nora,Karpaty
+Schronisko nad Ścieżką,Karpaty
+Zbójecka Skrytka,Karpaty
+Schronisko w Grzebieniu,Karpaty
+Dziura nad Grzebieniem,Karpaty
+Szczelina Skalna,Karpaty
+Schronisko Płaskie,Karpaty
+Jaskinia w Modyni,Karpaty
+Schron pod Uschłym Drzewem,Karpaty
+Schron pod Grzebieniem,Karpaty
+Schronisko w Tabacorzu,Karpaty
+Schron w Skolońcu I,Karpaty
+Schron w Skolońcu II,Karpaty
+Schron pod Drogą,Karpaty
+Trójkątny Schron,Karpaty
+Płaski Schron,Karpaty
+Schronisko z Kudłami,Karpaty
+Szczelina na Jaworzynce,Karpaty
+Schron dla Dwóch Osób,Karpaty
+Schron Ondraszek III,Karpaty
+Krypta,Karpaty
+Schron pod Stropem,Karpaty
+Schron Pukowskiego,Karpaty
+Schronisko z Lisem,Karpaty
+Jaskinia Modyńska,Karpaty
+Wyśna Studzienka,Karpaty
+Borsucza Dziura,Karpaty
+Szczelina w Borsuczej Ścianie,Karpaty
+Schron w Wilgotnym Okapie,Karpaty
+Mały Okap na Srzycznem,Karpaty
+Okap Czarnego Motyla,Karpaty
+Borsucza Studnia,Karpaty
+Rysia Dziura,Karpaty
+Schron Niestabilny na Skrzycznem,Karpaty
+Schronisko Poszukiwaczy Skarbów,Karpaty
+Dziura w Wyżce,Karpaty
+Duży Dziadowski Schron I,Karpaty
+Schron Podwyżniakówka,Karpaty
+Schronisko w Skałach Diabelskich,Karpaty
+Dziura w Polu,Karpaty
+Okap w Diablim Kamieniu,Karpaty
+Duży Dziadowski Schron II,Karpaty
+Dziadowska Szczelina,Karpaty
+Dziadowski Schron I,Karpaty
+Dziadowski Schron II,Karpaty
+Okap w Śnieżnicy,Karpaty
+Śnieżnicka Koliba,Karpaty
+Schronisko w Drapie,Karpaty
+Studnia Salamander,Karpaty
+Dziadowski Schron III,Karpaty
+Schronisko Pajęcze,Karpaty
+Dziadowski Schron IV,Karpaty
+Dziadowski Schron V,Karpaty
+Grota Rusałki,Karpaty
+Schronisko Dwóch Ślimaków,Karpaty
+Dziadowski Schron VI,Karpaty
+Schronisko w Chaszczach,Karpaty
+Jaskinia Latających Kamieni,Karpaty
+Dziadowski Schron VII,Karpaty
+Dziadowski Schron VIII,Karpaty
+Dziadowski Schron IX,Karpaty
+Dziadowski Schron X,Karpaty
+Dziadowski Schron XI,Karpaty
+Dziadowski Schron XII,Karpaty
+Dziadowski Schron XIII,Karpaty
+Dziadowski Schron XIV,Karpaty
+Dziadowski Schron XV,Karpaty
+Mały Dziadowski Schron,Karpaty
+Podwójny Dziadowski Schron,Karpaty
+Schron pod Odpękniętą Płytą,Karpaty
+Jaskinia Dująca,Karpaty
+Szczelina i Okap z Widokiem na Kobylą,Karpaty
+Okap Zbigniewa Mastalskiego,Karpaty
+Schron Jerzego,Karpaty
+Nora Kuby,Karpaty
+Dolna Kaskada Rodła,Karpaty
+Okap Grebla na Muronce,Karpaty
+Schronisko Północne na Muronce,Karpaty
+Wielki Okap na Muronce,Karpaty
+Pionowa Szpara na Muronce,Karpaty
+Mała Nora na Muronce,Karpaty
+Schronisko pod Głazem,Karpaty
+Schronisko Muronka „B”,Karpaty
+Jaskinia nad Szlakiem,Karpaty
+Jaskinia H.K.,Karpaty
+Schron za Grzybem,Karpaty
+Jaskinia w Glinnem,Karpaty
+Schron pod Dwoma Płytami na Muronce,Karpaty
+Klatka z Okienkiem na Muronce,Karpaty
+Szalony Zawał na Muronce,Karpaty
+Dwa Kamienie na Muronce,Karpaty
+Okap z Kokonem na Muronce,Karpaty
+Jaskinia Pajęcza na Muronce,Karpaty
+Jaskinia Karolki,Karpaty
+Obiekt Korzenny w Kamesznicy,Karpaty
+Okap przy Moście w Kamesznicy,Karpaty
+Okap Południowy w Kamesznicy,Karpaty
+Okap z Filarkiem w Kamesznicy,Karpaty
+Okap Górny w Kamesznicy,Karpaty
+Okap koło Leśniczówki w Kamesznicy,Karpaty
+Schron Zamieszkały nad Kamesznicą,Karpaty
+Schron Północny nad Kamesznicą,Karpaty
+Schron Medyków II,Karpaty
+Stary Skład,Karpaty
+Jaskinia Stary Skład Kruchy,Karpaty
+Schronisko Małe pod Baranią Górą,Karpaty
+Okno w Kościelcu,Karpaty
+Schronisko Mikołaja na Baraniej Górze,Karpaty
+Kruchy Schron,Karpaty
+Jaskinia Srebrna,Karpaty
+Jaskinia przy Trasie Fis,Karpaty
+Jaskinia pod Ukośną Płytą,Karpaty
+Jaskinia Wężowa,Karpaty
+Szczelina Rzeczna w Szczyrku,Karpaty
+Szczelina przy Szlaku,Karpaty
+Szczelina w Ostrym Wierchu,Karpaty
+Jaskinia Regetowska,Karpaty
+Schronisko w Bodakach I,Karpaty
+Schronisko w Bodakach II,Karpaty
+Schronisko w Bodakach III,Karpaty
+Okap pod Butanem,Karpaty
+Schronisko w Bodakach IV,Karpaty
+Gorlicka Koleba I,Karpaty
+Gorlicka Koleba II,Karpaty
+Schronisko w Bodakach V,Karpaty
+Schronisko w Bodakach VI,Karpaty
+Schronisko w Bodakach VII,Karpaty
+Schronisko w Ostrej Górze I,Karpaty
+Schronisko w Ostrej Górze II,Karpaty
+Studnia Rufia,Karpaty
+Schronisko koło Okapu pod Butanem,Karpaty
+Schronisko w Diablim Kamieniu IV,Karpaty
+Szczelina w Diablim Kamieniu,Karpaty
+Okap przy Wodospadzie,Karpaty
+Schronisko Kosmy,Karpaty
+Jaskinia w Skałce,Karpaty
+Schronisko z Podgrzybkiem,Karpaty
+Schronisko pod Granią,Karpaty
+Schronisko Dżdżu,Karpaty
+Jaskinia Kotuli,Karpaty
+Koleba Siedmiu Os,Karpaty
+Sarnia Koleba,Karpaty
+Wyżnia Koleba,Karpaty
+Niżnia Koleba,Karpaty
+Szczelina między Wantami,Karpaty
+Schron nad Szczeliną między Wantami,Karpaty
+Szczelina Jeżynowa,Karpaty
+Schron w Kominie,Karpaty
+Schronisko z Przełazem,Karpaty
+Okap z Trzema Szczelinami,Karpaty
+Schronisko Przeziorowe,Karpaty
+Szczelina pod Dziurawym Bukiem,Karpaty
+Ruska Koleba,Karpaty
+Lisia Koleba,Karpaty
+Schronisko na Grani,Karpaty
+Schronisko Listopadowe,Karpaty
+Schronisko Wrześniowe,Karpaty
+Ptasi Schron,Karpaty
+Schronisko Dany,Karpaty
+Schronisko pod Masztem,Karpaty
+Schronisko Jamy,Karpaty
+Jaskinia Geografów,Karpaty
+Schronisko w Rozpadlinie,Karpaty
+Schronisko Czubajkowe,Karpaty
+Schronisko Załom,Karpaty
+Beretowa Koleba,Karpaty
+Schronisko Gangusiowe IV,Karpaty
+Schronisko Adolfa,Karpaty
+Schronisko w Rowie,Karpaty
+Okap z Filarkiem,Karpaty
+Długi Okap,Karpaty
+Schronisko w Trzcianie I,Karpaty
+Schronisko w Trzcianie II,Karpaty
+Schronisko w Trzcianie III,Karpaty
+Schronisko w Trzcianie IV,Karpaty
+Schronisko w Trzcianie V,Karpaty
+Schronisko w Trzcianie VI,Karpaty
+Schronisko w Trzcianie VII,Karpaty
+Dębicka Studnia II,Karpaty
+Pajęcza Szczelina,Karpaty
+Jaskinia Maksymiliana,Karpaty
+Bodzioch Mały,Karpaty
+Schron w Rozpadlinie za Suchą Dziurą,Karpaty
+Gangusiowa Koleba Górna,Karpaty
+Gangusiowa Koleba Dolna,Karpaty
+Schronisko za Zasłonami,Karpaty
+Schronisko Wielkiego Wtorku,Karpaty
+Jaskinia gdzie wpadł grotołaz,Karpaty
+Studnia w Piotrusiu,Karpaty
+Jaskinia Wodna w Piotrusiu,Karpaty
+Szczelina w Piotrusiu,Karpaty
+Okap w Spalonej Górze I,Karpaty
+Okap w Spalonej Górze II,Karpaty
+Okap Aldowina,Karpaty
+Schronisko Habsburskie,Karpaty
+Schronisko Rzepedzkie,Karpaty
+Schronisko z Klepsydrami,Karpaty
+Grota Szwejka,Karpaty
+Mała Koleba,Karpaty
+Schronisko nad Szkieletem,Karpaty
+Schronisko nad Kamieniołomem II,Karpaty
+Schronisko na Magierce,Karpaty
+Zbójnicka Spiżarnia,Karpaty
+Szczelina Jaworzyńska,Karpaty
+Schronisko Wodne w Bodakach,Karpaty
+Schronisko w Ostrej Górze III,Karpaty
+Holska Dziura,Karpaty
+Schronisko Wodne II,Karpaty
+Schronisko na Wątkowej II,Karpaty
+Schronisko na Wątkowej III,Karpaty
+Schronisko na Wątkowej IV,Karpaty
+Schronisko na Wątkowej V,Karpaty
+Schronisko na Wątkowej VI,Karpaty
+Schronisko w Czerwonej Górze II,Karpaty
+Jaskinia w Czerwonej Górze I,Karpaty
+Schronisko na Wątkowej VII,Karpaty
+Okap na Wątkowej,Karpaty
+Schronisko w Kornutach IX,Karpaty
+Schronisko w Kornutach X,Karpaty
+Jaskinia w Kornutach XI,Karpaty
+Schronisko w Kornutach XII,Karpaty
+Schronisko w Kornutach XIII,Karpaty
+Schronisko w Kornutach XIV,Karpaty
+Schronisko w Kornutach XV,Karpaty
+Schronisko w Kornutach XVI,Karpaty
+Schronisko w Kornutach XVII,Karpaty
+Schronisko w Kornutach XVIII,Karpaty
+Schronisko w Kornutach XIX,Karpaty
+Schronisko na Wątkowej VIII,Karpaty
+Schronisko Salamandry,Karpaty
+Schronisko z Grzybem,Karpaty
+Schronisko Serowe,Karpaty
+Schronisko w Kornutach XX,Karpaty
+Jaskinia Słowiańska-Drwali,Karpaty
+Jaskinia Klubowa,Karpaty
+Gangusiowe Schronisko V,Karpaty
+Schronisko Miodowe,Karpaty
+Dziura przy Drodze,Karpaty
+Schronisko Cergowskie III,Karpaty
+Schronisko Cergowskie IV,Karpaty
+Okap w Cergowej,Karpaty
+Schronisko Cergowskie V,Karpaty
+Schronisko Cergowskie VI,Karpaty
+Schronisko Cergowskie VII,Karpaty
+Schronisko Cergowskie VIII,Karpaty
+Jaskinia Księżycowa,Karpaty
+Okap w Cergowej II,Karpaty
+Jaskinia Nasza,Karpaty
+Schronisko w Trzcianie VIII,Karpaty
+Studnia Zgody,Karpaty
+Jaskinia Kokonowa,Tatry
+Schronisko na Progu,Wyżyna Śląsko-Krakowska
+Okap przed Progiem,Wyżyna Śląsko-Krakowska
+Schronisko ze Skarbem,Wyżyna Śląsko-Krakowska
+Wielki Okap pod Matką Boską,Wyżyna Śląsko-Krakowska
+Schronisko pod Matką Boską Środkowe,Wyżyna Śląsko-Krakowska
+Schronisko z Matką Boską,Wyżyna Śląsko-Krakowska
+Nisza przed Skałami,Wyżyna Śląsko-Krakowska
+Schronisko przed Skałami,Wyżyna Śląsko-Krakowska
+Jaskinia Gorenicka,Wyżyna Śląsko-Krakowska
+Schronisko przy Jaskini Gorenickiej,Wyżyna Śląsko-Krakowska
+Okap pod Gorenicką,Wyżyna Śląsko-Krakowska
+Schronisko na Zakręcie,Wyżyna Śląsko-Krakowska
+Schronisko pod Winniczkiem,Wyżyna Śląsko-Krakowska
+Schronisko przy drodze do Uliny prawe i lewe,Wyżyna Śląsko-Krakowska
+Schronisko na Skraju Jury,Wyżyna Śląsko-Krakowska
+Schronisko na Półce,Wyżyna Śląsko-Krakowska
+Tunel z Progami,Wyżyna Śląsko-Krakowska
+Schronisko Pionowe w Ostryszni,Wyżyna Śląsko-Krakowska
+Jaskinia w Ostryszni,Wyżyna Śląsko-Krakowska
+Ślepe Okno,Wyżyna Śląsko-Krakowska
+Okap za Pniakiem,Wyżyna Śląsko-Krakowska
+Okap za Sosną,Wyżyna Śląsko-Krakowska
+Okap bez Nazwy,Wyżyna Śląsko-Krakowska
+Schronisko za Płytą z Oknem,Wyżyna Śląsko-Krakowska
+Okap po Prawej Stronie,Wyżyna Śląsko-Krakowska
+Okno nad Parapetem,Wyżyna Śląsko-Krakowska
+Szczelina z Kamieniami,Wyżyna Śląsko-Krakowska
+Okap Główny,Wyżyna Śląsko-Krakowska
+Płytkie Okno,Wyżyna Śląsko-Krakowska
+Schronisko w Kominie,Wyżyna Śląsko-Krakowska
+Schronisko Pierwsze,Wyżyna Śląsko-Krakowska
+Schronisko Skruszałe,Wyżyna Śląsko-Krakowska
+Schronisko pod Psią Skałą,Wyżyna Śląsko-Krakowska
+Schronisko z Różą w Zębach,Wyżyna Śląsko-Krakowska
+Okap na Uboczu,Wyżyna Śląsko-Krakowska
+Schronisko w Imbramowicach I,Wyżyna Śląsko-Krakowska
+Schronisko w Imbramowicach II,Wyżyna Śląsko-Krakowska
+Koleba w Imbramowicach,Wyżyna Śląsko-Krakowska
+Schronisko w Imbramowicach III,Wyżyna Śląsko-Krakowska
+Schronisko w Imbramowicach IV,Wyżyna Śląsko-Krakowska
+Szczelina w Imbramowicach,Wyżyna Śląsko-Krakowska
+Rura nad Szlakiem,Wyżyna Śląsko-Krakowska
+Okap w Martwej Jaskini,Wyżyna Śląsko-Krakowska
+Skalny Most w Gołyszynie,Wyżyna Śląsko-Krakowska
+Schronisko Północne,Wyżyna Śląsko-Krakowska
+Jaskinia w Laskach Dworskich,Wyżyna Śląsko-Krakowska
+Jaskinia ze Świetlikiem,Wyżyna Śląsko-Krakowska
+Schronisko Południowe,Wyżyna Śląsko-Krakowska
+Schronisko Paczółtowickie Dolne I,Wyżyna Śląsko-Krakowska
+Szuflada nad Źródłem,Wyżyna Śląsko-Krakowska
+Schronisko Paczółtowickie Dolne II,Wyżyna Śląsko-Krakowska
+Schronisko Paczółtowickie Górne,Wyżyna Śląsko-Krakowska
+Fuga nad Rozlewiskiem,Wyżyna Śląsko-Krakowska
+Schronisko przu wsi Przegini,Wyżyna Śląsko-Krakowska
+Schronisko nad Źródłem w Kształcie Serca,Wyżyna Śląsko-Krakowska
+Schronisko w Wąwozie Kulenda,Wyżyna Śląsko-Krakowska
+Koleba w Wąwozie Kulenda,Wyżyna Śląsko-Krakowska
+Jaskinia za Siedmioma Progami,Wyżyna Śląsko-Krakowska
+Grota Świętego Onufrego,Wyżyna Śląsko-Krakowska
+Schronisko nad Grotą Świętego Onufrego,Wyżyna Śląsko-Krakowska
+Grota Świętego Hilariona,Wyżyna Śląsko-Krakowska
+Okap pod Grotą Świętego Hilariona,Wyżyna Śląsko-Krakowska
+Schronisko przy Grocie Świętego Hilariona,Wyżyna Śląsko-Krakowska
+Jaskinia pod Łysicą,Wyżyna Śląsko-Krakowska
+Jaskinia pod Bukami,Wyżyna Śląsko-Krakowska
+Sztolnia Galmanowa,Wyżyna Śląsko-Krakowska
+Schronisko w Miękini,Wyżyna Śląsko-Krakowska
+Miękińska Studnia,Wyżyna Śląsko-Krakowska
+Schronisko w Olistolicie,Wyżyna Śląsko-Krakowska
+Jaskinie Pawlikowskiego,Tatry
+Okap Debrytowy Południowy,Wyżyna Śląsko-Krakowska
+Okap Debrytowy Północny,Wyżyna Śląsko-Krakowska
+Schronisko przy Koszarach,Wyżyna Śląsko-Krakowska
+Jaskinia przy Krawusiówce,Wyżyna Śląsko-Krakowska
+Schronisko w Gackowej Baszcie,Wyżyna Śląsko-Krakowska
+Jaskinia w Gackowej Baszcie,Wyżyna Śląsko-Krakowska
+Schronisko nad Gackami I,Wyżyna Śląsko-Krakowska
+Schronisko nad Gackami II,Wyżyna Śląsko-Krakowska
+Schronisko nad Gackami III,Wyżyna Śląsko-Krakowska
+Jaskinia Borsuczych Szlifów,Wyżyna Śląsko-Krakowska
+Schronisko pod Dziurami,Wyżyna Śląsko-Krakowska
+Schronisko przy Wielkowiejskiej,Wyżyna Śląsko-Krakowska
+Jaskinia Wielkowiejska,Wyżyna Śląsko-Krakowska
+Tunelik przy Wielkowiejskiej,Wyżyna Śląsko-Krakowska
+Schronisko przed Leśną Basztą,Wyżyna Śląsko-Krakowska
+Nyża w Leśnej Baszcie,Wyżyna Śląsko-Krakowska
+Meander w Leśnej Baszcie,Wyżyna Śląsko-Krakowska
+Schronisko za Turnią Potockiego Dolne,Wyżyna Śląsko-Krakowska
+Schronisko za Turnią Potockiego Górne,Wyżyna Śląsko-Krakowska
+Szczelina na Podmłyniu,Wyżyna Śląsko-Krakowska
+Schronisko na Podmłyniu,Wyżyna Śląsko-Krakowska
+Schronisko nad Podmłyniem,Wyżyna Śląsko-Krakowska
+Schronisko Osunięte na Podmłyniu,Wyżyna Śląsko-Krakowska
+Okap naprzeciw Szerokiej,Wyżyna Śląsko-Krakowska
+Jaskinia na Kozłowcu,Wyżyna Śląsko-Krakowska
+Dziura między Wantami na Kozłowcu,Wyżyna Śląsko-Krakowska
+Szczelina nad Potokiem w Przeciętej Skałce,Wyżyna Śląsko-Krakowska
+Szczelina w Przeciętej Skałce Górna,Wyżyna Śląsko-Krakowska
+Szczelina w Przeciętej Skałce Dolna,Wyżyna Śląsko-Krakowska
+Schronisko Zachodnie w Szerokiej,Wyżyna Śląsko-Krakowska
+Szczelina w Szerokiej,Wyżyna Śląsko-Krakowska
+Schronisko Niskie w Szerokiej,Wyżyna Śląsko-Krakowska
+Schronisko Dolne,Wyżyna Śląsko-Krakowska
+Schronisko Południowe w Szerokiej,Wyżyna Śląsko-Krakowska
+Schronisko nad Dolnym,Wyżyna Śląsko-Krakowska
+Szczelina w Rogatej Turniczce,Wyżyna Śląsko-Krakowska
+Szczelina w Turni Rzęcha,Wyżyna Śląsko-Krakowska
+Koleba nad Młynówką,Wyżyna Śląsko-Krakowska
+Jaskinia Narożna,Wyżyna Śląsko-Krakowska
+Nyża przed Zakrętem,Wyżyna Śląsko-Krakowska
+Schronisko przed Zakrętem I,Wyżyna Śląsko-Krakowska
+Schronisko przed Zakrętem II,Wyżyna Śląsko-Krakowska
+Schronisko przed Zakrętem III,Wyżyna Śląsko-Krakowska
+Schronisko Ukryte,Wyżyna Śląsko-Krakowska
+Schronisko w Zamkowej Strażnicy,Wyżyna Śląsko-Krakowska
+Schronisko w Mącznej Skale,Wyżyna Śląsko-Krakowska
+Szczelina za Płytą w Mącznej Skale,Wyżyna Śląsko-Krakowska
+Schronisko nad Mostkiem w Mącznej Skale,Wyżyna Śląsko-Krakowska
+Tunelik w Mącznej Skale,Wyżyna Śląsko-Krakowska
+Jaskinia w Mącznej Skale Mała,Wyżyna Śląsko-Krakowska
+Nyża pod Zelkowską,Wyżyna Śląsko-Krakowska
+Schronisko obok Dalekiego I,Wyżyna Śląsko-Krakowska
+Schronisko Dalekie,Wyżyna Śląsko-Krakowska
+Schronisko obok Dalekiego II,Wyżyna Śląsko-Krakowska
+Okap pod Wantą,Wyżyna Śląsko-Krakowska
+Komora nad Półką w Pozornicy,Wyżyna Śląsko-Krakowska
+Komora pod Półką w Pozornicy,Wyżyna Śląsko-Krakowska
+Szczelina nad Półką w Pozornicy,Wyżyna Śląsko-Krakowska
+Jaskinia Borsuka,Wyżyna Śląsko-Krakowska
+Okap z Dziurką,Wyżyna Śląsko-Krakowska
+Nyża bez Dziurki,Wyżyna Śląsko-Krakowska
+Koleba z Oknem,Wyżyna Śląsko-Krakowska
+Grota w Konopówce,Wyżyna Śląsko-Krakowska
+Szczelina w Dalnicy I,Wyżyna Śląsko-Krakowska
+Komórka w Dalnicy,Wyżyna Śląsko-Krakowska
+Szczelina w Dalnicy II,Wyżyna Śląsko-Krakowska
+Dziurawy Okap w Witkowych Skałach,Wyżyna Śląsko-Krakowska
+Komórka w Witkowych Skałach,Wyżyna Śląsko-Krakowska
+Szczelina w Witkowych Skałach,Wyżyna Śląsko-Krakowska
+Okap przy Drodze do Kolonii Zachodniej,Wyżyna Śląsko-Krakowska
+Szczelina Smoka,Wyżyna Śląsko-Krakowska
+Szczelina w Smokówce,Wyżyna Śląsko-Krakowska
+Okap w Wąwozie do Smokówki,Wyżyna Śląsko-Krakowska
+Szczelina przy Okapie w Wąwozie do Smokówki,Wyżyna Śląsko-Krakowska
+Tunel Maszynownia,Wyżyna Śląsko-Krakowska
+Szczelina przy Maszynowni,Wyżyna Śląsko-Krakowska
+Okap nad Drogą,Wyżyna Śląsko-Krakowska
+Nisza przy Okapie nad Drogą,Wyżyna Śląsko-Krakowska
+Jama Borsuka,Wyżyna Śląsko-Krakowska
+Rura Borsuka,Wyżyna Śląsko-Krakowska
+Szczelina Borsuka,Wyżyna Śląsko-Krakowska
+Szczelina nad Cmentarzem,Wyżyna Śląsko-Krakowska
+Schron w Pisarskim Lesie,Wyżyna Śląsko-Krakowska
+Okap za Dębową Górą,Wyżyna Śląsko-Krakowska
+Szczelina za Dębową Górą,Wyżyna Śląsko-Krakowska
+Szczelina w Dębowej Górze,Wyżyna Śląsko-Krakowska
+Schronisko we Wzgórzu,Wyżyna Śląsko-Krakowska
+Nyża nad Ruiną,Wyżyna Śląsko-Krakowska
+Szklarska Szczelina I,Wyżyna Śląsko-Krakowska
+Nyża przy Szczelinie w Dębowej Górze,Wyżyna Śląsko-Krakowska
+Schron Lisa,Wyżyna Śląsko-Krakowska
+Szczelina pod Schronem Lisa,Wyżyna Śląsko-Krakowska
+Wisząca Koleba,Wyżyna Śląsko-Krakowska
+Szczelina pod Przełączką,Wyżyna Śląsko-Krakowska
+Szklarska Szczelina II,Wyżyna Śląsko-Krakowska
+Okap z Rurą,Wyżyna Śląsko-Krakowska
+Schronisko Drugie,Wyżyna Śląsko-Krakowska
+Schronisko pod Kamieniami w Szczelinie,Wyżyna Śląsko-Krakowska
+Schronisko Wilczy Skok,Wyżyna Śląsko-Krakowska
+Jaskinia Borsucza,Wyżyna Śląsko-Krakowska
+Lisia Jama,Wyżyna Śląsko-Krakowska
+Filipczańskie Okno,Tatry
+Szczelina za Paśnikiem,Tatry
+Schron w Żlebie za Skałką,Tatry
+Jaworzyński Schron,Tatry
+Łężna Dziura,Tatry
+Nyża nad Grotą w Jaworzyńskim Żlebie,Tatry
+Zbójnicka Kapliczka,Tatry
+Schron przy Grocie w Jaworzyńskim Żlebie,Tatry
+Okienko w Jaworzyńskim Żlebie,Tatry
+Siwiańskie Okno,Tatry
+Siwiański Schron,Tatry
+Schron pod Siwiańskim Oknem,Tatry
+Dziura za Porzeczkami,Tatry
+Koziarska Dziura,Tatry
+Jasiowa Nyża,Tatry
+Dziura w Czarnej Turni IV,Tatry
+Koleba nad Doliną Białego,Tatry
+TEST2 - obiekt do testów CBDG,Karpaty
+Dziura nad Śnieżną Studnią,Tatry
+Trzeszcząca Szczelina,Tatry
+Świstowy Worek,Tatry
+Mnichowy Korytarz,Tatry
+Schron pod Mnichem,Tatry
+Schronisko za Piłą,Wyżyna Śląsko-Krakowska
+Schronisko Żarskie IV,Wyżyna Śląsko-Krakowska
+Jaskinia Żarska Górna,Wyżyna Śląsko-Krakowska
+Schronisko Żarskie III,Wyżyna Śląsko-Krakowska
+Schronisko Żarskie II,Wyżyna Śląsko-Krakowska
+Schroniski Żarskie Małe,Wyżyna Śląsko-Krakowska
+Schronisko Żarskie I,Wyżyna Śląsko-Krakowska
+Jaskinia Żarska,Wyżyna Śląsko-Krakowska
+Jaskinia bez Nazwy,Wyżyna Śląsko-Krakowska
+Jaskinie bez Nawy Górna,Wyżyna Śląsko-Krakowska
+Schronisko w Żarach V,Wyżyna Śląsko-Krakowska
+Schronisko w Żarach IV,Wyżyna Śląsko-Krakowska
+Rura w Żarach,Wyżyna Śląsko-Krakowska
+Tunelik na Grzbiecie,Wyżyna Śląsko-Krakowska
+Nyża nad Racławką,Wyżyna Śląsko-Krakowska
+Schronisko pod Kamieniami,Wyżyna Śląsko-Krakowska
+Schronisko w Dubiu,Wyżyna Śląsko-Krakowska
+Okap nad Żarami,Wyżyna Śląsko-Krakowska
+Schronisko nad Żarami III,Wyżyna Śląsko-Krakowska
+Schronisko nad Żarami II,Wyżyna Śląsko-Krakowska
+Schronisko w Żarach I,Wyżyna Śląsko-Krakowska
+Schronisko nad Racławką,Wyżyna Śląsko-Krakowska
+Schronisko w Kamieniołomie Dębnik II,Wyżyna Śląsko-Krakowska
+Schronisko w Kamieniołomie Dębnik I,Wyżyna Śląsko-Krakowska
+Jaskinia Beczkowa,Wyżyna Śląsko-Krakowska
+Schronisko obok Jaskini Beczkowej,Wyżyna Śląsko-Krakowska
+Schronisko z Oknem,Wyżyna Śląsko-Krakowska
+Schronisko nad Nyżą,Wyżyna Śląsko-Krakowska
+Nyża pod Skałką,Wyżyna Śląsko-Krakowska
+Schronisko Zawieszone,Wyżyna Śląsko-Krakowska
+Schronisko w Dolinie Racławki,Wyżyna Śląsko-Krakowska
+Schronisko za Grabem,Wyżyna Śląsko-Krakowska
+Schronisko Kwadratowe,Wyżyna Śląsko-Krakowska
+Jaskinia w Kamieniu Żarskim,Wyżyna Śląsko-Krakowska
+Schronisko nad Wodą II,Wyżyna Śląsko-Krakowska
+Schronisko nad Wodą I,Wyżyna Śląsko-Krakowska
+Studnia,Wyżyna Śląsko-Krakowska
+Jaskinia z Kominkiem,Wyżyna Śląsko-Krakowska
+Jaskinia Racławicka,Wyżyna Śląsko-Krakowska
+Schronisko na Grani,Wyżyna Śląsko-Krakowska
+Schronisko Małej Skały Powroźnikowej,Wyżyna Śląsko-Krakowska
+Schronisko z Wersalką w Powroźnikowej Skale,Wyżyna Śląsko-Krakowska
+Schronisko z Cegłami w Powroźnikowej,Wyżyna Śląsko-Krakowska
+Schronisko Podwórka Czubrowic Prawe,Wyżyna Śląsko-Krakowska
+Schronisko Podwórka zCzubrowic Lewe,Wyżyna Śląsko-Krakowska
+Schronisko Podwórka z Czubrowic Górne,Wyżyna Śląsko-Krakowska
+Schronisko Maryni z Czubrowic,Wyżyna Śląsko-Krakowska
+Schronisko w Grani Srokowej Skały,Wyżyna Śląsko-Krakowska
+Jaskinia Drwala,Wyżyna Śląsko-Krakowska
+Okap w Dziurze,Wyżyna Śląsko-Krakowska
+Schronisko na Wylot,Wyżyna Śląsko-Krakowska
+Tunel nad Wywierzyskiem,Wyżyna Śląsko-Krakowska
+Schronisko w Przegini Północne,Wyżyna Śląsko-Krakowska
+Szczelina w Urwisku,Wyżyna Śląsko-Krakowska
+Schronisko w Rogożowej Grani Dolne,Wyżyna Śląsko-Krakowska
+Schronisko w Rogożowej Grani Górne,Wyżyna Śląsko-Krakowska
+Schronisko w Iglicy,Wyżyna Śląsko-Krakowska
+Schronisko Trójkątne,Wyżyna Śląsko-Krakowska
+Jaskinia Przyjemnego Chłodu,Wyżyna Śląsko-Krakowska
+Schronisko za Płytami,Wyżyna Śląsko-Krakowska
+Schronisko Prawe,Wyżyna Śląsko-Krakowska
+Schronisko Środkowe,Wyżyna Śląsko-Krakowska
+Schronisko Lewe,Wyżyna Śląsko-Krakowska
+Schronisko pod Wiszącą Wantą,Wyżyna Śląsko-Krakowska
+Szczelina w Wietrzniku,Wyżyna Śląsko-Krakowska
+Schronisko Klasy Lux,Wyżyna Śląsko-Krakowska
+Górny Okap w Wietrzniku,Wyżyna Śląsko-Krakowska
+Schronisko z Małym Stropem,Wyżyna Śląsko-Krakowska
+Jaskinia między Schronami,Wyżyna Śląsko-Krakowska
+Schron w Małym Wietrzniku,Wyżyna Śląsko-Krakowska
+Bojowa Szczelina,Wyżyna Śląsko-Krakowska
+Jaskinia Martwicowa,Wyżyna Śląsko-Krakowska
+Lisia Jama w Zawalisku,Wyżyna Śląsko-Krakowska
+Jaskinia w Dubiu,Wyżyna Śląsko-Krakowska
+Jaskinia Okopowa,Wyżyna Śląsko-Krakowska
+Piarżysty Komin,Wyżyna Śląsko-Krakowska
+Komin Będkowicki,Wyżyna Śląsko-Krakowska
+Schronisko nad Rotundą,Wyżyna Śląsko-Krakowska
+Jaskinia Będkowska,Wyżyna Śląsko-Krakowska
+Tunel Będkowicki,Wyżyna Śląsko-Krakowska
+Okap Będkowicki,Wyżyna Śląsko-Krakowska
+Grota Będkowicka,Wyżyna Śląsko-Krakowska
+Komórka za Lajkonikiem,Wyżyna Śląsko-Krakowska
+Rurka za Wysoką,Wyżyna Śląsko-Krakowska
+Okap z Dziurką,Wyżyna Śląsko-Krakowska
+Studzienka za Wysoką,Wyżyna Śląsko-Krakowska
+Szczelina za Wysoką,Wyżyna Śląsko-Krakowska
+Szczelina w Wysokiej,Wyżyna Śląsko-Krakowska
+Szczelina z Gzymsem,Wyżyna Śląsko-Krakowska
+Brandysowa Szczelina,Wyżyna Śląsko-Krakowska
+Komin w Sokolicy,Wyżyna Śląsko-Krakowska
+Rura w Przecówce,Wyżyna Śląsko-Krakowska
+Okap w Przecówce,Wyżyna Śląsko-Krakowska
+Grota z Drzewem,Wyżyna Śląsko-Krakowska
+Schron w Okienniku,Wyżyna Śląsko-Krakowska
+Niski Okap za Szumami,Wyżyna Śląsko-Krakowska
+Szczelina naprzeciw Słonia,Wyżyna Śląsko-Krakowska
+Tunel nad Będkówką,Wyżyna Śląsko-Krakowska
+Czarci Schron,Wyżyna Śląsko-Krakowska
+Czarci Komin,Wyżyna Śląsko-Krakowska
+Szczelina w Gęsiarni,Wyżyna Śląsko-Krakowska
+Szczelina nad Źródłem,Wyżyna Śląsko-Krakowska
+Szczelina w Zbędowych Skałach I,Wyżyna Śląsko-Krakowska
+Szczelina w Zbędowych Skałach II,Wyżyna Śląsko-Krakowska
+Schronisko pod Kawiorami,Wyżyna Śląsko-Krakowska
+Trójkątny Tunelik,Wyżyna Śląsko-Krakowska
+Zaklęta Jama,Wyżyna Śląsko-Krakowska
+Zaklęty Komin,Wyżyna Śląsko-Krakowska
+Zaklęty Balkon,Wyżyna Śląsko-Krakowska
+Zaklęta Szczelina,Wyżyna Śląsko-Krakowska
+Zaklęty Korytarzyk,Wyżyna Śląsko-Krakowska
+Szczelina przy Wielkiej Turni,Wyżyna Śląsko-Krakowska
+Szczelina w Łabajowej,Wyżyna Śląsko-Krakowska
+Korytarzyk w Dupnej Górze,Wyżyna Śląsko-Krakowska
+Jaworowa Szczelina,Wyżyna Śląsko-Krakowska
+Rurka w Brodle I,Wyżyna Śląsko-Krakowska
+Rurka w Brodle II,Wyżyna Śląsko-Krakowska
+Rurka nad Potokiem,Wyżyna Śląsko-Krakowska
+Nyża nad Potokiem I,Wyżyna Śląsko-Krakowska
+Szczelina nad Potokiem,Wyżyna Śląsko-Krakowska
+Nieprzechodnia Szczelina I,Wyżyna Śląsko-Krakowska
+Nieprzechodnia Szczelina II,Wyżyna Śląsko-Krakowska
+Schron z Matką Boską w Brodle,Wyżyna Śląsko-Krakowska
+Szklarska Koleba,Wyżyna Śląsko-Krakowska
+Jaskinia pod Okapem w Brodle,Wyżyna Śląsko-Krakowska
+Szczelina w Brodle I,Wyżyna Śląsko-Krakowska
+Meander,Wyżyna Śląsko-Krakowska
+Schron w Willisowych Skałach,Wyżyna Śląsko-Krakowska
+Szczelina w Brodle II,Wyżyna Śląsko-Krakowska
+Nyża przy Krętych Skałach,Wyżyna Śląsko-Krakowska
+Szczelina nad Dwoistą Dziurą,Wyżyna Śląsko-Krakowska
+Dziura nad Dwoistą Dziurą,Wyżyna Śląsko-Krakowska
+Szczelina z Kominem,Wyżyna Śląsko-Krakowska
+Szczelina za Dwoistą Dziurą,Wyżyna Śląsko-Krakowska
+Nyża za Dwoistą Dziurą,Wyżyna Śląsko-Krakowska
+Nyża w Brodle,Wyżyna Śląsko-Krakowska
+Wylotna Szczelina,Wyżyna Śląsko-Krakowska
+Szczelina w Łysych Skałach I,Wyżyna Śląsko-Krakowska
+Szczelina w Łysych Skałach II,Wyżyna Śląsko-Krakowska
+Szczelina w Łysych Skałach III,Wyżyna Śląsko-Krakowska
+Przechód pod Płytą,Wyżyna Śląsko-Krakowska
+Wantulowy Przechód,Wyżyna Śląsko-Krakowska
+Nisza z Fotelami,Wyżyna Śląsko-Krakowska
+Szczelina nad Jaskinią Szklaną,Wyżyna Śląsko-Krakowska
+Szczelina przy Żurowskiej Górze,Wyżyna Śląsko-Krakowska
+Szczelina naprzeciw Okna,Wyżyna Śląsko-Krakowska
+Korytarz w Krętych Skałach,Wyżyna Śląsko-Krakowska
+Schron pod Jaskinią Krętą,Wyżyna Śląsko-Krakowska
+Szczelina w Krętych Skałach II,Wyżyna Śląsko-Krakowska
+Szczelina w Krętych Skałach I,Wyżyna Śląsko-Krakowska
+Okap w Krętych Skałach,Wyżyna Śląsko-Krakowska
+Jaskinia Kręta,Wyżyna Śląsko-Krakowska
+Szczelina przy Jaskini Krętej,Wyżyna Śląsko-Krakowska
+Przechód pod Ciasnym Awenem,Wyżyna Śląsko-Krakowska
+Okap obok Przechodu pod Ciasnym Awenem,Wyżyna Śląsko-Krakowska
+Schron pod Ciasnym Awenem,Wyżyna Śląsko-Krakowska
+Ciasny Awen,Wyżyna Śląsko-Krakowska
+Okap pod Ciasnym Awenem,Wyżyna Śląsko-Krakowska
+Korytarzyk pod Awenikiem,Wyżyna Śląsko-Krakowska
+Awenik,Wyżyna Śląsko-Krakowska
+Pośredni Awen,Wyżyna Śląsko-Krakowska
+Szeroki Awen,Wyżyna Śląsko-Krakowska
+Jaskinia pod Awenami,Wyżyna Śląsko-Krakowska
+Szczelina w Dubiu,Wyżyna Śląsko-Krakowska
+Przechód nad Szczeliną,Wyżyna Śląsko-Krakowska
+Jaskinia Szklana,Wyżyna Śląsko-Krakowska
+Jaskinia Szklarska,Wyżyna Śląsko-Krakowska
+Nyża nad Potokiem II,Wyżyna Śląsko-Krakowska
+Grotka w Brodle,Wyżyna Śląsko-Krakowska
+Widna Grota w Dubiu,Wyżyna Śląsko-Krakowska
+Okap pod Płytą,Wyżyna Śląsko-Krakowska
+Komora na Półce w Pozornicy,Wyżyna Śląsko-Krakowska
+Szczelina w Słonecznych Skałach I,Wyżyna Śląsko-Krakowska
+Szczelina w Słonecznych Skałach II,Wyżyna Śląsko-Krakowska
+Korytarz w Słonecznych Skałach,Wyżyna Śląsko-Krakowska
+Szczelina w Słonecznych Skałach III,Wyżyna Śląsko-Krakowska
+Szczelina w Słonecznych Skałach IV,Wyżyna Śląsko-Krakowska
+Szczelina w Słonecznych Skałach V,Wyżyna Śląsko-Krakowska
+Komórka w Słonecznych Skałach,Wyżyna Śląsko-Krakowska
+Szczelina w Żurowskiej Górze,Wyżyna Śląsko-Krakowska
+Szczelina w Chochołowych Skałach I,Wyżyna Śląsko-Krakowska
+Szczelina w Chochołowych Skałach II,Wyżyna Śląsko-Krakowska
+Rura nad Szklarską Szczeliną,Wyżyna Śląsko-Krakowska
+Dwoista Dziura,Wyżyna Śląsko-Krakowska
+Korytarzyk pod Awenami,Wyżyna Śląsko-Krakowska
+Szczelina pod Awenami I,Wyżyna Śląsko-Krakowska
+Schron pod Awenami,Wyżyna Śląsko-Krakowska
+Szczelina pod Meandrem,Wyżyna Śląsko-Krakowska
+Jaskinia Zapomniana,Wyżyna Śląsko-Krakowska
+Jaskinia za Leszczyną,Wyżyna Śląsko-Krakowska
+Jaskinia w Mącznej Skale Duża,Wyżyna Śląsko-Krakowska
+Jaskinia Zelkowska,Wyżyna Śląsko-Krakowska
+Schronisko naprzeciw Wąwozu Zelkowskiego,Wyżyna Śląsko-Krakowska
+Schronisko w Wierzchowiu,Wyżyna Śląsko-Krakowska
+Jaskinia nad Wywierzyskiem,Wyżyna Śląsko-Krakowska
+Schronisko nad Wierzchowiem,Wyżyna Śląsko-Krakowska
+Okap pod Mamutową,Wyżyna Śląsko-Krakowska
+Schronisko w Czarnej Skałce,Wyżyna Śląsko-Krakowska
+Schronisko przy Jaskini Mamutowej I,Wyżyna Śląsko-Krakowska
+Jaskinia w Wierzchowskiej Grani,Wyżyna Śląsko-Krakowska
+Schroniski przy Jaskini Mamutowej II,Wyżyna Śląsko-Krakowska
+Schronisko przy Jaskini Mamutowej III,Wyżyna Śląsko-Krakowska
+Koleba w Wilczankach,Wyżyna Śląsko-Krakowska
+Schronisko w Wilczankach I,Wyżyna Śląsko-Krakowska
+Schronisko w Wilczankach II,Wyżyna Śląsko-Krakowska
+Schronisko w Wilczankach III,Wyżyna Śląsko-Krakowska
+Schronisko przy Jaskini Dzikiej,Wyżyna Śląsko-Krakowska
+Jaskinia Krecia,Wyżyna Śląsko-Krakowska
+Schronisko przy Wierzchowskiej Górnej I,Wyżyna Śląsko-Krakowska
+Schronisko przy Wierzchowskiej Górnej II,Wyżyna Śląsko-Krakowska
+Schronisko przy Wierzchowskiej Górnej III,Wyżyna Śląsko-Krakowska
+Schronisko w Kamieniołomie,Wyżyna Śląsko-Krakowska
+Schronisko przed Tunelem I,Wyżyna Śląsko-Krakowska
+Schronisko przed Tunelem II,Wyżyna Śląsko-Krakowska
+Jaskinia Tunel,Wyżyna Śląsko-Krakowska
+Schronisko za Stodołą w Żytniej Skale,Wyżyna Śląsko-Krakowska
+Schronisko Dolne w Żytniej Skale,Wyżyna Śląsko-Krakowska
+Schronisko nad Dolnym w Żytniej Skale,Wyżyna Śląsko-Krakowska
+Jaskinia w Żytniej Skale Górna,Wyżyna Śląsko-Krakowska
+Schronisko Przechodnie w Żytniej Skale,Wyżyna Śląsko-Krakowska
+Schronisko Małe w Żytniej Skale,Wyżyna Śląsko-Krakowska
+Schronisko Wysokie w Żytniej Skale,Wyżyna Śląsko-Krakowska
+Jaskinia pod Agrestem,Wyżyna Śląsko-Krakowska
+Schronisko Bębłowskie Górne,Wyżyna Śląsko-Krakowska
+Schronisko Bębłowskie Dolne,Wyżyna Śląsko-Krakowska
+Schronisko Małe,Wyżyna Śląsko-Krakowska
+Tunelik,Wyżyna Śląsko-Krakowska
+Szczelina do Bębłowskiego Dolnego,Wyżyna Śląsko-Krakowska
+Jaskinia Mamutowa,Wyżyna Śląsko-Krakowska
+Jaskinia Dzika,Wyżyna Śląsko-Krakowska
+Jaskinia Wierzchowska Górna,Wyżyna Śląsko-Krakowska
+Kozie Okna,Tatry
+Nyża przy Kozich Oknach,Tatry
+Jaskinia Rysia,Wyżyna Śląsko-Krakowska
