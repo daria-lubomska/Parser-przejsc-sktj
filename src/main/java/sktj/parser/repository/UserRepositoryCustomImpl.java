@@ -13,7 +13,9 @@ public class UserRepositoryCustomImpl implements UserRepositoryCustom {
   @Override
   public User findByEmail(String email) {
     Query query = entityManager
-        .createQuery("select u from User u where u.email like :email", User.class);
-    return (User) query.getResultList().get(0);
+        .createQuery("select u from User u where u.email like :email", User.class)
+        .setParameter("email", email);
+    return (User) query.getResultList()
+        .stream().findFirst().orElse(null);
   }
 }

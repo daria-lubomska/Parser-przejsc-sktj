@@ -29,7 +29,7 @@ public class User {
   @Column
   private Long id;
 
-  @Column
+  @Column(name = "card_number")
   @NotNull
   private int cardNumber;
 

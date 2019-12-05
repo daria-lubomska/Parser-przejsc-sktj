@@ -77,12 +77,12 @@ public class CaveAchievementsProcessor {
       cave.setExitTimestamp(compareTime(entryTimestamp, exitTimestamp));
       String caveName = line[3].trim();
       String region = line[7].trim();
-      if (caveRepository.findByName(caveName) == null){
+      if (caveRepository.findByNameAndRegion(caveName, region)==null){
         Cave newCave = new Cave(caveName,region);
         caveRepository.save(newCave);
         cave.setCaveName(caveName);
       }else {
-        cave.setCaveName(caveRepository.findByName(caveName).getName());
+        cave.setCaveName(caveRepository.findByNameAndRegion(caveName, region).getName());
       }
       cave.setReachedParts(line[4].trim());
       cave.setCaveOvercomeStyle(CaveOvercomeStyle.valueOf(line[5].trim().toUpperCase()).getType());
@@ -99,7 +99,7 @@ public class CaveAchievementsProcessor {
             cave.getAuthors().add(user);
           }
       }
-      cave.setCountry(countryRepository.findByNameAndRegion(country, region));
+      cave.setCountry(countryRepository.findByName(country));
       cave.setAuthorsFromAnotherClubs(line[9].trim());
       cave.setComment(line[10].trim());
       String email = line[11].trim();
