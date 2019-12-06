@@ -9,7 +9,6 @@ import java.io.InputStreamReader;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Pattern;
 import lombok.extern.slf4j.Slf4j;
@@ -21,10 +20,12 @@ import org.springframework.transaction.annotation.Transactional;
 import sktj.parser.entity.Cave;
 import sktj.parser.entity.CaveAchievements;
 import sktj.parser.entity.User;
+import sktj.parser.entity.UsersUnregistered;
 import sktj.parser.enums.CaveOvercomeStyle;
 import sktj.parser.repository.CaveAchievementsRepository;
 import sktj.parser.repository.CaveRepository;
 import sktj.parser.repository.CountryRepository;
+import sktj.parser.repository.UnregisteredUsersRepository;
 import sktj.parser.repository.UserRepository;
 
 @Slf4j
@@ -35,14 +36,18 @@ public class CaveAchievementsProcessor {
   private CaveAchievementsRepository caveAchievementsRepository;
   private CountryRepository countryRepository;
   private CaveRepository caveRepository;
+  private UnregisteredUsersRepository unregisteredUsersRepository;
 
   @Autowired
-  public CaveAchievementsProcessor(UserRepository userRepository, CaveAchievementsRepository caveAchievementsRepository,
-      CountryRepository countryRepository, CaveRepository caveRepository) {
+  public CaveAchievementsProcessor(UserRepository userRepository,
+      CaveAchievementsRepository caveAchievementsRepository,
+      CountryRepository countryRepository, CaveRepository caveRepository,
+      UnregisteredUsersRepository unregisteredUsersRepository) {
     this.userRepository = userRepository;
     this.caveAchievementsRepository = caveAchievementsRepository;
     this.countryRepository = countryRepository;
     this.caveRepository = caveRepository;
+    this.unregisteredUsersRepository = unregisteredUsersRepository;
   }
 
   @Value("classpath:caveAchiev.csv")
@@ -67,6 +72,7 @@ public class CaveAchievementsProcessor {
   @Transactional
   public void saveDataToDB() throws IOException, CsvValidationException {
     List<String[]> caveRecords = readFile();
+    List<String> unregisteredAuthors = new ArrayList<>();
     for (String[] line : caveRecords) {
       LocalDateTime notificationTimestamp = LocalDateTime.parse(line[0].trim(), formatter);
       LocalDateTime entryTimestamp = parse(line[1].trim());
@@ -77,28 +83,34 @@ public class CaveAchievementsProcessor {
       cave.setExitTimestamp(compareTime(entryTimestamp, exitTimestamp));
       String caveName = line[3].trim();
       String region = line[7].trim();
-      if (caveRepository.findByNameAndRegion(caveName, region)==null){
-        Cave newCave = new Cave(caveName,region);
+      if (caveRepository.findByNameAndRegion(caveName, region) == null) {
+        Cave newCave = new Cave(caveName, region);
         caveRepository.save(newCave);
         cave.setCaveName(caveName);
-      }else {
+      } else {
         cave.setCaveName(caveRepository.findByNameAndRegion(caveName, region).getName());
       }
       cave.setReachedParts(line[4].trim());
       cave.setCaveOvercomeStyle(CaveOvercomeStyle.valueOf(line[5].trim().toUpperCase()).getType());
       String country = line[6].trim();
       List<User> userBatchList = userRepository.findAll();
-      String authors = line[8].trim();
-      //todo tutaj może być czytana na koncu i poczatku "";
-      String[] users = authors.split(",");
-      log.info("authors - raw from file: " + Arrays.toString(users));
-      for (String s : users) {
-        for (User user : userBatchList)
-          if (s.toUpperCase().contains(user.getSurname().toUpperCase())) {
-            log.info("authors from db:" + user.getEmail());
-            cave.getAuthors().add(user);
-          }
+      String authors = line[8];
+      for (User user : userBatchList) {
+        if (authors.toUpperCase().contains(user.getSurname().toUpperCase())) {
+          cave.getAuthors().add(user);
+        }
       }
+      List<String> usersSurname = new ArrayList<>();
+      for (User user : userBatchList) {
+        usersSurname.add(user.getSurname());
+      }
+
+      for (String surname : usersSurname) {
+        if (authors.toUpperCase().contains(surname.toUpperCase())) {
+          authors = authors.replace(surname, "");
+        }
+      }
+      unregisteredAuthors.add(authors);
       cave.setCountry(countryRepository.findByName(country));
       cave.setAuthorsFromAnotherClubs(line[9].trim());
       cave.setComment(line[10].trim());
@@ -106,6 +118,10 @@ public class CaveAchievementsProcessor {
       cave.setNotificationAuthor(userRepository.findByEmail(email));
       log.info("cave {} achievement on {}", caveName, notificationTimestamp.toString());
       caveAchievementsRepository.save(cave);
+    }
+    for (String author : unregisteredAuthors) {
+      UsersUnregistered usersUnregistered = new UsersUnregistered(author);
+      unregisteredUsersRepository.save(usersUnregistered);
     }
   }
 

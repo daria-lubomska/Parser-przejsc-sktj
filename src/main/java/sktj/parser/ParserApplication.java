@@ -9,7 +9,6 @@ import sktj.parser.service.CaveAchievementsProcessor;
 import sktj.parser.service.DataProcessor;
 
 @SpringBootApplication
-@EnableJpaRepositories
 public class ParserApplication implements CommandLineRunner {
 
   private final CaveAchievementsProcessor caveAchievementsProcessor;
