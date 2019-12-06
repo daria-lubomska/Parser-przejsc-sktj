@@ -1,5 +1,8 @@
 package sktj.parser.repository;
 
-public interface CountryRepository extends CountryRepositoryBasic, CountryRepositoryCustom {
+import org.springframework.data.jpa.repository.JpaRepository;
+import sktj.parser.entity.Country;
+
+public interface CountryRepository extends JpaRepository<Country, Long>, CountryRepositoryCustom {
 
 }

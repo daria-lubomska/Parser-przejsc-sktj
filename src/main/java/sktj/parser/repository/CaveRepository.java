@@ -1,4 +1,7 @@
 package sktj.parser.repository;
 
-public interface CaveRepository extends CaveRepositoryBasic, CaveRepositoryCustom {
+import org.springframework.data.jpa.repository.JpaRepository;
+import sktj.parser.entity.Cave;
+
+public interface CaveRepository extends JpaRepository<Cave, Long>, CaveRepositoryCustom {
 }
