@@ -1,4 +1,4 @@
-package sktj.parser.service;
+package sktj.parser.service.parser;
 
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvValidationException;
@@ -17,11 +17,11 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
-import sktj.parser.entity.Cave;
+import sktj.parser.entity.CaveOvercomeStyle;
 import sktj.parser.entity.CaveAchievements;
+import sktj.parser.entity.Cave;
 import sktj.parser.entity.User;
 import sktj.parser.entity.UsersUnregistered;
-import sktj.parser.enums.CaveOvercomeStyle;
 import sktj.parser.repository.CaveAchievementsRepository;
 import sktj.parser.repository.CaveRepository;
 import sktj.parser.repository.CountryRepository;
@@ -111,11 +111,11 @@ public class CaveAchievementsProcessor {
         }
       }
       unregisteredAuthors.add(authors);
-      cave.setCountry(countryRepository.findByName(country));
+      cave.setCountry(countryRepository.findCountryByName(country));
       cave.setAuthorsFromAnotherClubs(line[9].trim());
       cave.setComment(line[10].trim());
       String email = line[11].trim();
-      cave.setNotificationAuthor(userRepository.findByEmail(email));
+      cave.setNotificationAuthor(userRepository.findUserByEmail(email));
       log.info("cave {} achievement on {}", caveName, notificationTimestamp.toString());
       caveAchievementsRepository.save(cave);
     }

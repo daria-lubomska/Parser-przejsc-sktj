@@ -12,6 +12,8 @@ import javax.persistence.Index;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
@@ -22,6 +24,18 @@ import lombok.Setter;
 @Setter
 @Entity
 @Table(name = "users", indexes = {@Index(name = "user_email", columnList = "email")})
+@NamedQueries({
+    @NamedQuery(
+        name = "User.findUserByEmail",
+        query = "SELECT u FROM User u WHERE u.email LIKE :email"),
+    @NamedQuery(
+        name = "User.findByNameAndSurname",
+        query = "SELECT u FROM User u WHERE u.name LIKE :name AND u.surname LIKE :surname"),
+    @NamedQuery(
+        name = "User.findUserForLiveSearch",
+        query = "SELECT u FROM User u WHERE u.name LIKE CONCAT('%',:someChars,'%') or u.surname "
+            + "LIKE CONCAT('%',:someChars,'%')")
+})
 public class User {
 
   @Id
@@ -29,7 +43,11 @@ public class User {
   @Column
   private Long id;
 
-  @Column(name = "card_number")
+  @Column
+  @NotNull
+  private String role;
+
+  @Column
   @NotNull
   private int cardNumber;
 

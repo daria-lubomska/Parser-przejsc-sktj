@@ -8,6 +8,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Index;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
@@ -15,6 +17,16 @@ import lombok.Getter;
 
 @Getter
 @Entity
+@NamedQueries({
+    @NamedQuery(
+    name = "Country.findCountryByName",
+    query = "SELECT c FROM Country c WHERE c.name LIKE :name"),
+    @NamedQuery(
+    name = "Country.findCountryForLiveSearch",
+    query = "SELECT c FROM Country c WHERE c.name LIKE CONCAT('%',:someChars,'%')"),
+})
+
+
 @Table(name = "country", indexes = {@Index(name = "country_name", columnList = "name")})
 public class Country {
 

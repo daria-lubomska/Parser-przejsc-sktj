@@ -19,6 +19,8 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
+import sktj.parser.entity.Country;
+import sktj.parser.entity.User;
 
 @Getter
 @Setter
