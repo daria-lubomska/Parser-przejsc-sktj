@@ -1,6 +1,5 @@
 package sktj.parser.repository.impl;
 
-import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
@@ -19,13 +18,5 @@ public class CountryRepositoryCustomImpl implements CountryRepositoryCustom {
         .setParameter("name", name);
     return (Country) query.getResultList()
         .stream().findFirst().orElse(null);
-  }
-
-  @Override
-  public List<Country> findCountryForLiveSearch(String someChars) {
-    Query query = entityManager
-        .createNamedQuery("Country.findCountryForLiveSearch")
-        .setParameter("someChars", someChars);
-    return query.getResultList();
   }
 }

@@ -7,6 +7,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
+import javax.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -50,6 +51,7 @@ public class DataProcessor {
     return reader.lines().collect(Collectors.toList());
   }
 
+  @PostConstruct
   public void saveDataToDB() throws IOException {
     List<String> userRecords = readFile(userResource);
     for (String record : userRecords) {

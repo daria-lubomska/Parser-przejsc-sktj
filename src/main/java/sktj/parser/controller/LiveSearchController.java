@@ -1,13 +1,13 @@
 package sktj.parser.controller;
 
 import java.util.List;
-import org.apache.catalina.mapper.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import sktj.parser.controller.specification.CaveSpecification;
 import sktj.parser.controller.specification.UserSpecification;
+import sktj.parser.mapper.Mapper;
 import sktj.parser.model.Cave;
 import sktj.parser.model.User;
 import sktj.parser.repository.CaveRepository;

@@ -19,15 +19,11 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
-import sktj.parser.entity.Country;
-import sktj.parser.entity.User;
 
 @Getter
 @Setter
 @Entity
 @Table(name = "cave")
-/*If an entity instance is to be passed by value as a detached object
-    (e.g., through a remote interface), the entity class must implement the Serializable interface.*/
 public class CaveAchievements implements Serializable {
 
   @Id
@@ -48,12 +44,12 @@ public class CaveAchievements implements Serializable {
   private LocalDateTime exitTimestamp;
 
   @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-  @JoinColumn(name = "caves")
+  @JoinColumn(name = "cavesOfCountry")
   private Country country;
 
-  @Column
-  @NotNull
-  private String caveName;
+  @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+  @JoinColumn(name = "caves")
+  private Cave caveName;
 
   @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
   @JoinColumn(name = "notification_author")

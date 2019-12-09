@@ -80,9 +80,9 @@ public class CaveAchievementsProcessor {
       if (caveRepository.findByNameAndRegion(caveName, region) == null) {
         Cave newCave = new Cave(caveName, region);
         caveRepository.save(newCave);
-        cave.setCaveName(caveName);
+        cave.setCaveName(newCave);
       } else {
-        cave.setCaveName(caveRepository.findByNameAndRegion(caveName, region).getName());
+        cave.setCaveName(caveRepository.findByNameAndRegion(caveName, region));
       }
       cave.setReachedParts(line[4].trim());
       cave.setCaveOvercomeStyle(CaveOvercomeStyle.valueOf(line[5].trim().toUpperCase()).getType());

@@ -23,19 +23,14 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table(name = "users", indexes = {@Index(name = "user_email", columnList = "email")})
 @NamedQueries({
     @NamedQuery(
         name = "User.findUserByEmail",
         query = "SELECT u FROM User u WHERE u.email LIKE :email"),
     @NamedQuery(
         name = "User.findByNameAndSurname",
-        query = "SELECT u FROM User u WHERE u.name LIKE :name AND u.surname LIKE :surname"),
-    @NamedQuery(
-        name = "User.findUserForLiveSearch",
-        query = "SELECT u FROM User u WHERE u.name LIKE CONCAT('%',:someChars,'%') or u.surname "
-            + "LIKE CONCAT('%',:someChars,'%')")
-})
+        query = "SELECT u FROM User u WHERE u.name LIKE :name AND u.surname LIKE :surname")})
+@Table(name = "users", indexes = {@Index(name = "user_email", columnList = "email")})
 public class User {
 
   @Id
@@ -92,3 +87,4 @@ public class User {
   public User() {
   }
 }
+

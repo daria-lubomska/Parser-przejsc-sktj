@@ -1,24 +1,32 @@
 package sktj.parser;
 
+import java.util.List;
+import net.kaczmarzyk.spring.data.jpa.web.SpecificationArgumentResolver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.web.PageableHandlerMethodArgumentResolver;
+import org.springframework.web.method.support.HandlerMethodArgumentResolver;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import sktj.parser.service.parser.CaveAchievementsProcessor;
-import sktj.parser.service.parser.DataProcessor;
 
 @SpringBootApplication
-public class ParserApplication implements CommandLineRunner {
+public class ParserApplication implements CommandLineRunner, WebMvcConfigurer {
 
   private final CaveAchievementsProcessor caveAchievementsProcessor;
-  private final DataProcessor dataProcessor;
 
   @Autowired
-  public ParserApplication(CaveAchievementsProcessor caveAchievementsProcessor,
-      DataProcessor dataProcessor) {
+  public ParserApplication(CaveAchievementsProcessor caveAchievementsProcessor) {
     this.caveAchievementsProcessor = caveAchievementsProcessor;
-    this.dataProcessor = dataProcessor;
   }
+
+  @Override
+  public void addArgumentResolvers(List<HandlerMethodArgumentResolver> argumentResolvers) {
+    argumentResolvers.add(new SpecificationArgumentResolver());
+    argumentResolvers.add(new PageableHandlerMethodArgumentResolver());
+  }
+
 
   public static void main(String[] args) {
     SpringApplication.run(ParserApplication.class, args);
@@ -26,7 +34,6 @@ public class ParserApplication implements CommandLineRunner {
 
   @Override
   public void run(String... args) throws Exception {
-    dataProcessor.saveDataToDB();
     caveAchievementsProcessor.saveDataToDB();
   }
 }

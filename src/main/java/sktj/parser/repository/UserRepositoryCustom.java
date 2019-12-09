@@ -8,5 +8,4 @@ import sktj.parser.entity.User;
 public interface UserRepositoryCustom {
   User findUserByEmail(String email);
   User findUserByNameAndSurname(String name, String surname);
-  List<User> findUserForLiveSearch(String someChars);
 }
