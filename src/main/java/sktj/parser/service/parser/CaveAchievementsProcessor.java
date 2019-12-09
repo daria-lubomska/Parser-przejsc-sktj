@@ -17,15 +17,13 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
-import sktj.parser.entity.CaveOvercomeStyle;
-import sktj.parser.entity.CaveAchievements;
 import sktj.parser.entity.Cave;
+import sktj.parser.entity.CaveAchievements;
+import sktj.parser.entity.CaveOvercomeStyle;
 import sktj.parser.entity.User;
-import sktj.parser.entity.UsersUnregistered;
 import sktj.parser.repository.CaveAchievementsRepository;
 import sktj.parser.repository.CaveRepository;
 import sktj.parser.repository.CountryRepository;
-import sktj.parser.repository.UnregisteredUsersRepository;
 import sktj.parser.repository.UserRepository;
 
 @Slf4j
@@ -36,18 +34,15 @@ public class CaveAchievementsProcessor {
   private CaveAchievementsRepository caveAchievementsRepository;
   private CountryRepository countryRepository;
   private CaveRepository caveRepository;
-  private UnregisteredUsersRepository unregisteredUsersRepository;
 
   @Autowired
   public CaveAchievementsProcessor(UserRepository userRepository,
       CaveAchievementsRepository caveAchievementsRepository,
-      CountryRepository countryRepository, CaveRepository caveRepository,
-      UnregisteredUsersRepository unregisteredUsersRepository) {
+      CountryRepository countryRepository, CaveRepository caveRepository) {
     this.userRepository = userRepository;
     this.caveAchievementsRepository = caveAchievementsRepository;
     this.countryRepository = countryRepository;
     this.caveRepository = caveRepository;
-    this.unregisteredUsersRepository = unregisteredUsersRepository;
   }
 
   @Value("classpath:caveAchiev.csv")
@@ -72,7 +67,6 @@ public class CaveAchievementsProcessor {
   @Transactional
   public void saveDataToDB() throws IOException, CsvValidationException {
     List<String[]> caveRecords = readFile();
-    List<String> unregisteredAuthors = new ArrayList<>();
     for (String[] line : caveRecords) {
       LocalDateTime notificationTimestamp = LocalDateTime.parse(line[0].trim(), formatter);
       LocalDateTime entryTimestamp = parse(line[1].trim());
@@ -110,7 +104,6 @@ public class CaveAchievementsProcessor {
           authors = authors.replace(surname, "");
         }
       }
-      unregisteredAuthors.add(authors);
       cave.setCountry(countryRepository.findCountryByName(country));
       cave.setAuthorsFromAnotherClubs(line[9].trim());
       cave.setComment(line[10].trim());
@@ -118,10 +111,6 @@ public class CaveAchievementsProcessor {
       cave.setNotificationAuthor(userRepository.findUserByEmail(email));
       log.info("cave {} achievement on {}", caveName, notificationTimestamp.toString());
       caveAchievementsRepository.save(cave);
-    }
-    for (String author : unregisteredAuthors) {
-      UsersUnregistered usersUnregistered = new UsersUnregistered(author);
-      unregisteredUsersRepository.save(usersUnregistered);
     }
   }
 
