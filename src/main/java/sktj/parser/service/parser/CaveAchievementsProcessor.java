@@ -66,17 +66,20 @@ public class CaveAchievementsProcessor {
 
   @Transactional
   public void saveDataToDB() throws IOException, CsvValidationException {
+
     List<String[]> caveRecords = readFile();
     for (String[] line : caveRecords) {
-      LocalDateTime notificationTimestamp = LocalDateTime.parse(line[0].trim(), formatter);
-      LocalDateTime entryTimestamp = parse(line[1].trim());
-      LocalDateTime exitTimestamp = parse(line[2].trim());
+      LocalDateTime notificationTimestamp = LocalDateTime
+          .parse(line[CaveAchievAttributes.NOTIFICATION_TIME.getCode()].trim(), formatter);
+      LocalDateTime entryTimestamp = parse(line[CaveAchievAttributes.ENTRY_TIME.getCode()].trim());
+      LocalDateTime exitTimestamp = parse(line[CaveAchievAttributes.EXIT_TIME.getCode()].trim());
       CaveAchievements cave = new CaveAchievements();
       cave.setNotificationTimestamp(notificationTimestamp);
       cave.setEntryTimestamp(entryTimestamp);
       cave.setExitTimestamp(compareTime(entryTimestamp, exitTimestamp));
-      String caveName = line[3].trim();
+      String caveName = line[CaveAchievAttributes.CAVE_NAME.getCode()].trim();
       String region = line[7].trim();
+
       if (caveRepository.findByNameAndRegion(caveName, region) == null) {
         Cave newCave = new Cave(caveName, region);
         caveRepository.save(newCave);
@@ -84,30 +87,25 @@ public class CaveAchievementsProcessor {
       } else {
         cave.setCaveName(caveRepository.findByNameAndRegion(caveName, region));
       }
-      cave.setReachedParts(line[4].trim());
-      cave.setCaveOvercomeStyle(CaveOvercomeStyle.valueOf(line[5].trim().toUpperCase()).getType());
-      String country = line[6].trim();
+
+      cave.setReachedParts(line[CaveAchievAttributes.REACHED_PARTS.getCode()].trim());
+      cave.setCaveOvercomeStyle(CaveOvercomeStyle
+          .valueOf(line[CaveAchievAttributes.CAVE_OVERCOME_STYLE.getCode()]
+              .trim().toUpperCase()).getType());
+      String country = line[CaveAchievAttributes.COUNTRY.getCode()].trim();
       List<User> userBatchList = userRepository.findAll();
-      String authors = line[8];
+      String authors = line[CaveAchievAttributes.AUTHORS.getCode()];
+
       for (User user : userBatchList) {
         if (authors.toUpperCase().contains(user.getSurname().toUpperCase())) {
           cave.getAuthors().add(user);
         }
       }
-      List<String> usersSurname = new ArrayList<>();
-      for (User user : userBatchList) {
-        usersSurname.add(user.getSurname());
-      }
 
-      for (String surname : usersSurname) {
-        if (authors.toUpperCase().contains(surname.toUpperCase())) {
-          authors = authors.replace(surname, "");
-        }
-      }
       cave.setCountry(countryRepository.findCountryByName(country));
-      cave.setAuthorsFromAnotherClubs(line[9].trim());
-      cave.setComment(line[10].trim());
-      String email = line[11].trim();
+      cave.setAuthorsFromAnotherClubs(line[CaveAchievAttributes.ANOTHER_AUTHORS.getCode()].trim());
+      cave.setComment(line[CaveAchievAttributes.COMMENT.getCode()].trim());
+      String email = line[CaveAchievAttributes.NOTIFICATION_AUTHOR.getCode()].trim();
       cave.setNotificationAuthor(userRepository.findUserByEmail(email));
       log.info("cave {} achievement on {}", caveName, notificationTimestamp.toString());
       caveAchievementsRepository.save(cave);

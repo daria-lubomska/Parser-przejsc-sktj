@@ -13,7 +13,7 @@ import sktj.parser.repository.CaveAchievementsRepository;
 
 
 @RestController
-@RequestMapping("/caves")
+@RequestMapping("/caves") //TODO mapping required
 public class CaveAchievsController {
 
   private final CaveAchievementsRepository caveAchievementsRepository;
