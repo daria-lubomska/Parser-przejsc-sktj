@@ -12,15 +12,13 @@ public class Mapper {
 
   public List<User> mapUserEntityToModel(List<sktj.parser.entity.User> users){
     List<User> usersModel = new ArrayList<>();
-    users.forEach(i->
-      usersModel.add(new User(i.getName(),i.getSurname(),i.getEmail())));
+    users.forEach(i-> usersModel.add(new User(i.getName(),i.getSurname(),i.getEmail())));
     return usersModel;
   }
 
   public List<Cave> mapCaveEntityToModel(List<sktj.parser.entity.Cave> caves){
     List<Cave> cavesModel = new ArrayList<>();
-    caves.forEach(i->
-        cavesModel.add(new Cave(i.getName(),i.getRegion())));
+    caves.forEach(i-> cavesModel.add(new Cave(i.getName(),i.getRegion())));
     return cavesModel;
   }
 }

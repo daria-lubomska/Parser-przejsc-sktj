@@ -1,5 +1,6 @@
 package sktj.parser.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -12,11 +13,16 @@ import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
+import lombok.AccessLevel;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.experimental.FieldDefaults;
 
 @Getter
 @Setter
+@NoArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE)
 @Entity
 @NamedQuery(
     name = "Country.findCountryByName",
@@ -27,17 +33,15 @@ public class Country {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column
-  private Long id;
+  Long id;
 
   @Column
   @NotNull
-  private String name;
+  String name;
 
+  @JsonIgnore
   @OneToMany(mappedBy = "country", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-  private List<CaveAchievements> caves;
-
-  public Country() {
-  }
+  List<CaveAchievements> caves;
 
   public Country(@NotNull String name) {
     this.name = name;

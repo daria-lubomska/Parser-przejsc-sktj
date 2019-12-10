@@ -12,15 +12,18 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter
 @Setter
+@NoArgsConstructor
 @Entity
 @Table(name = "climbing")
 public class ClimbingAchievements implements Serializable {
@@ -62,8 +65,12 @@ public class ClimbingAchievements implements Serializable {
   @JoinColumn(name = "notification_author")
   private User notificationAuthor;
 
-  @ManyToMany(mappedBy = "climbs")
-  private List<User> authors = new ArrayList<>();
+  @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+  @JoinTable(
+      name = "user_climb",
+      joinColumns = @JoinColumn(name = "climb_id"),
+      inverseJoinColumns = @JoinColumn(name = "user_id"))
+  List<User> authors = new ArrayList<>();
 
   @Column(name = "authors_from_another_clubs")
   private String anotherAuthors;
@@ -71,6 +78,4 @@ public class ClimbingAchievements implements Serializable {
   @Column(length = 1000)
   private String comment;
 
-  public ClimbingAchievements() {
-  }
 }

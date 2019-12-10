@@ -7,7 +7,8 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import sktj.parser.controller.specification.CaveAchievSpecification;
+import sktj.parser.controller.specification.CaveAchievFiltersSpecification;
+import sktj.parser.controller.specification.CaveAchievSearchSpecification;
 import sktj.parser.entity.CaveAchievements;
 import sktj.parser.repository.CaveAchievementsRepository;
 
@@ -25,7 +26,14 @@ public class CaveAchievsController {
   }
 
   @GetMapping(value = "/filter")
-  public Iterable<CaveAchievements> getCaveAchiev(CaveAchievSpecification spec,
+  public Iterable<CaveAchievements> getCaveAchievByFilters(CaveAchievFiltersSpecification spec,
+      @PageableDefault(size = 20, sort = "entryTimestamp",
+          direction = Direction.DESC) Pageable pageable) {
+    return caveAchievementsRepository.findAll(spec,pageable);
+  }
+
+  @GetMapping(value = "/search")
+  public Iterable<CaveAchievements> getCaveAchievBySearch(CaveAchievSearchSpecification spec,
       @PageableDefault(size = 20, sort = "entryTimestamp",
           direction = Direction.DESC) Pageable pageable) {
     return caveAchievementsRepository.findAll(spec,pageable);
