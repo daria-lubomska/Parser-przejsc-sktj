@@ -1,8 +1,7 @@
 package sktj.parser.entity;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.CascadeType;
@@ -37,7 +36,7 @@ import lombok.experimental.FieldDefaults;
         name = "User.findByNameAndSurname",
         query = "SELECT u FROM User u WHERE u.name LIKE :name AND u.surname LIKE :surname")})
 @Table(name = "users", indexes = {@Index(name = "user_email", columnList = "email")})
-public class User {
+public class User implements Serializable {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)

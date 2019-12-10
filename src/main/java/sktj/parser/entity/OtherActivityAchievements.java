@@ -60,11 +60,11 @@ public class OtherActivityAchievements implements Serializable {
   @NotNull
   String category; //TODO enum?
 
-  @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+  @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
   @JoinColumn(name = "notification_author")
   User notificationAuthor;
 
-  @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+  @ManyToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
   @JoinTable(
       name = "user_other",
       joinColumns = @JoinColumn(name = "other_id"),

@@ -1,6 +1,7 @@
 package sktj.parser.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import java.io.Serializable;
 import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -28,7 +29,7 @@ import lombok.experimental.FieldDefaults;
     name = "Country.findCountryByName",
     query = "SELECT c FROM Country c WHERE c.name LIKE :name")
 @Table(name = "country", indexes = {@Index(name = "country_name", columnList = "name")})
-public class Country {
+public class Country implements Serializable {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)

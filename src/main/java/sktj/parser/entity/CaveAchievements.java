@@ -1,10 +1,6 @@
 package sktj.parser.entity;
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -55,6 +51,7 @@ public class CaveAchievements implements Serializable {
   @NotNull
   LocalDateTime exitTimestamp;
 
+  //TODO Have to change fetchType to Lazy!!!
   @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
   @JoinColumn(name = "cavesOfCountry")
   Country country;
@@ -67,7 +64,7 @@ public class CaveAchievements implements Serializable {
   @JoinColumn(name = "notification_author")
   User notificationAuthor;
 
-  @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+  @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
   @JoinTable(
       name = "user_cave",
       joinColumns = @JoinColumn(name = "cave_id"),
