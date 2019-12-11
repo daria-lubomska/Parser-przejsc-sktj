@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.web.PageableHandlerMethodArgumentResolver;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-import sktj.parser.service.parser.CaveAchievementsProcessor;
+import sktj.parser.service.CaveAchievementsProcessor;
 
 @SpringBootApplication
 public class ParserApplication implements CommandLineRunner, WebMvcConfigurer {

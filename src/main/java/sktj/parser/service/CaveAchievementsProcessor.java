@@ -1,4 +1,4 @@
-package sktj.parser.service.parser;
+package sktj.parser.service;
 
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvValidationException;
@@ -8,7 +8,6 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Pattern;
@@ -80,7 +79,7 @@ public class CaveAchievementsProcessor {
       cave.setExitTimestamp(compareTime(entryTimestamp, exitTimestamp));
       String caveName = line[CaveAchievAttributes.CAVE_NAME.ordinal()].trim();
       String region = line[CaveAchievAttributes.REGION.ordinal()].trim();
-
+      
       if (caveRepository.findByNameAndRegion(caveName, region) == null) {
         Cave newCave = new Cave(caveName, region);
         caveRepository.save(newCave);

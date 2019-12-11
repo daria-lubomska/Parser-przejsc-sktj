@@ -41,5 +41,4 @@ public class CaveAchievsController {
           direction = Direction.DESC) Pageable pageable) {
     return caveAchievementsRepository.findAll(spec,pageable);
   }
-
 }

@@ -1,4 +1,4 @@
-package sktj.parser.service.parser;
+package sktj.parser.service;
 
 import java.io.BufferedReader;
 import java.io.IOException;

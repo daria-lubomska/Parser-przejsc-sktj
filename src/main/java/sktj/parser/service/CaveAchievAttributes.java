@@ -1,4 +1,4 @@
-package sktj.parser.service.parser;
+package sktj.parser.service;
 
 public enum CaveAchievAttributes {
   NOTIFICATION_TIME,
