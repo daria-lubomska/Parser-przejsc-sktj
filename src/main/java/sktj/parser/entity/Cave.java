@@ -2,7 +2,7 @@ package sktj.parser.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.io.Serializable;
-import java.util.List;
+import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -47,8 +47,9 @@ public class Cave implements Serializable {
   String region;
 
   @JsonIgnore
-  @OneToMany(mappedBy = "caveName", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-  List<CaveAchievements> caves;
+  @OneToMany(mappedBy = "caveName", cascade = {CascadeType.PERSIST, CascadeType.MERGE},
+      orphanRemoval = true)
+  Set<CaveAchievements> caves;
 
   public Cave(@NotNull String name, @NotNull String region) {
     this.name = name;

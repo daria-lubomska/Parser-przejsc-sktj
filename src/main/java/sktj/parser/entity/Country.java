@@ -2,7 +2,7 @@ package sktj.parser.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.io.Serializable;
-import java.util.List;
+import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -27,7 +27,7 @@ import lombok.experimental.FieldDefaults;
 @Entity
 @NamedQuery(
     name = "Country.findCountryByName",
-    query = "SELECT c FROM Country c WHERE c.name LIKE :name")
+    query = "SELECT c FROM Country c WHERE c.name = :name")
 @Table(name = "country", indexes = {@Index(name = "country_name", columnList = "name")})
 public class Country implements Serializable {
 
@@ -41,8 +41,9 @@ public class Country implements Serializable {
   String name;
 
   @JsonIgnore
-  @OneToMany(mappedBy = "country", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-  List<CaveAchievements> caves;
+  @OneToMany(mappedBy = "country", cascade = {CascadeType.PERSIST, CascadeType.MERGE},
+      orphanRemoval = true)
+  Set<CaveAchievements> caves;
 
   public Country(@NotNull String name) {
     this.name = name;

@@ -1,5 +1,7 @@
 package sktj.parser.entity;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -17,13 +19,17 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
+import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.experimental.FieldDefaults;
 
 @Getter
 @Setter
 @NoArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE)
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 @Entity
 @Table(name = "climbing")
 public class ClimbingAchievements implements Serializable {
@@ -31,41 +37,41 @@ public class ClimbingAchievements implements Serializable {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column
-  private Long id;
+  Long id;
 
   @Column(name = "notification_timestamp")
   @NotNull
-  private LocalDateTime notificationTimestamp;
+  LocalDateTime notificationTimestamp;
 
   @Column(name = "entry_timestamp")
   @NotNull
-  private LocalDateTime entryTimestamp;
+  LocalDateTime entryTimestamp;
 
   @Column(name = "exit_timestamp")
   @NotNull
-  private LocalDateTime exitTimestamp;
+  LocalDateTime exitTimestamp;
 
   @Column
   @NotNull
-  private String region;
+  String region;
 
   @Column(name = "climbing_route_name")
   @NotNull
-  private String climbingRouteName;
+  String climbingRouteName;
 
   @Column(name = "difficulty_grade")
   @NotNull
-  private String difficultyGrade;
+  String difficultyGrade;
 
   @Column
   @NotNull
-  private String wall;
+  String wall;
 
   @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
   @JoinColumn(name = "notification_author")
-  private User notificationAuthor;
+  User notificationAuthor;
 
-  @ManyToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+  @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
   @JoinTable(
       name = "user_climb",
       joinColumns = @JoinColumn(name = "climb_id"),
@@ -73,9 +79,9 @@ public class ClimbingAchievements implements Serializable {
   List<User> authors = new ArrayList<>();
 
   @Column(name = "authors_from_another_clubs")
-  private String anotherAuthors;
+  String anotherAuthors;
 
   @Column(length = 1000)
-  private String comment;
+  String comment;
 
 }

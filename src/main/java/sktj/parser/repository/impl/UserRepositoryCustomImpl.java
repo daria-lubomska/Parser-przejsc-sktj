@@ -17,13 +17,4 @@ public class UserRepositoryCustomImpl implements UserRepositoryCustom {
         .setParameter("email", email);
     return (User) query.getResultList().stream().findFirst().orElse(null);
   }
-
-  @Override
-  public User findUserByNameAndSurname(String name, String surname) { //TODO co jak imię i nazwisko nie bedzie unikalne?
-    Query query = entityManager.createNamedQuery("User.findByNameAndSurname")
-        .setParameter("name", name)
-        .setParameter("surname",surname);
-    return (User) query.getResultList()
-        .stream().findFirst().orElse(null);
-  }
 }

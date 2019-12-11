@@ -2,8 +2,8 @@ package sktj.parser.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -12,7 +12,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Index;
 import javax.persistence.ManyToMany;
-import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -28,14 +27,11 @@ import lombok.experimental.FieldDefaults;
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Entity
-@NamedQueries({
-    @NamedQuery(
-        name = "User.findUserByEmail",
-        query = "SELECT u FROM User u WHERE u.email LIKE :email"),
-    @NamedQuery(
-        name = "User.findByNameAndSurname",
-        query = "SELECT u FROM User u WHERE u.name LIKE :name AND u.surname LIKE :surname")})
-@Table(name = "users", indexes = {@Index(name = "user_email", columnList = "email")})
+@NamedQuery(
+    name = "User.findUserByEmail",
+    query = "SELECT u FROM User u WHERE u.email = :email")
+@Table(name = "users", indexes = {
+    @Index(name = "user_email", columnList = "email")})
 public class User implements Serializable {
 
   @Id
@@ -64,28 +60,32 @@ public class User implements Serializable {
   String email;
 
   @JsonIgnore
-  @OneToMany(mappedBy = "notificationAuthor", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-  List<CaveAchievements> caveNotifications = new ArrayList<>();
+  @OneToMany(mappedBy = "notificationAuthor", cascade = {CascadeType.PERSIST, CascadeType.MERGE},
+      orphanRemoval = true)
+  Set<CaveAchievements> caveNotifications = new HashSet<>();
 
   @JsonIgnore
-  @OneToMany(mappedBy = "notificationAuthor", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-  List<ClimbingAchievements> climbingNotifications = new ArrayList<>();
+  @OneToMany(mappedBy = "notificationAuthor", cascade = {CascadeType.PERSIST, CascadeType.MERGE},
+      orphanRemoval = true)
+  Set<ClimbingAchievements> climbingNotifications = new HashSet<>();
+  ;
 
   @JsonIgnore
-  @OneToMany(mappedBy = "notificationAuthor", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-  List<OtherActivityAchievements> otherNotifications = new ArrayList<>();
-
-  @JsonIgnore
-  @ManyToMany(mappedBy = "authors", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-  List<CaveAchievements> caves = new ArrayList<>();
-
-  @JsonIgnore
-  @ManyToMany(mappedBy = "authors", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-  List<ClimbingAchievements> climbs = new ArrayList<>();
+  @OneToMany(mappedBy = "notificationAuthor", cascade = {CascadeType.PERSIST, CascadeType.MERGE},
+      orphanRemoval = true)
+  Set<OtherActivityAchievements> otherNotifications = new HashSet<>();
 
   @JsonIgnore
   @ManyToMany(mappedBy = "authors", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-  List<OtherActivityAchievements> others = new ArrayList<>();
+  Set<CaveAchievements> caves = new HashSet<>();
+
+  @JsonIgnore
+  @ManyToMany(mappedBy = "authors", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+  Set<ClimbingAchievements> climbs = new HashSet<>();
+
+  @JsonIgnore
+  @ManyToMany(mappedBy = "authors", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+  Set<OtherActivityAchievements> others = new HashSet<>();
 
 }
 

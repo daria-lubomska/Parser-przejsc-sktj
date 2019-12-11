@@ -1,5 +1,6 @@
 package sktj.parser.controller;
 
+import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort.Direction;
@@ -14,7 +15,7 @@ import sktj.parser.repository.CaveAchievementsRepository;
 
 
 @RestController
-@RequestMapping("/caves") //TODO mapping required
+@RequestMapping("/caves")
 public class CaveAchievsController {
 
   private final CaveAchievementsRepository caveAchievementsRepository;
@@ -25,6 +26,7 @@ public class CaveAchievsController {
     this.caveAchievementsRepository = caveAchievementsRepository;
   }
 
+  @Transactional
   @GetMapping(value = "/filter")
   public Iterable<CaveAchievements> getCaveAchievByFilters(CaveAchievFiltersSpecification spec,
       @PageableDefault(size = 20, sort = "entryTimestamp",
@@ -32,6 +34,7 @@ public class CaveAchievsController {
     return caveAchievementsRepository.findAll(spec,pageable);
   }
 
+  @Transactional
   @GetMapping(value = "/search")
   public Iterable<CaveAchievements> getCaveAchievBySearch(CaveAchievSearchSpecification spec,
       @PageableDefault(size = 20, sort = "entryTimestamp",

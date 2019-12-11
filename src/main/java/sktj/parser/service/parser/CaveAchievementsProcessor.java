@@ -8,6 +8,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Pattern;
@@ -19,7 +20,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 import sktj.parser.entity.Cave;
 import sktj.parser.entity.CaveAchievements;
-import sktj.parser.entity.CaveOvercomeStyle;
 import sktj.parser.entity.User;
 import sktj.parser.repository.CaveAchievementsRepository;
 import sktj.parser.repository.CaveRepository;
@@ -51,6 +51,7 @@ public class CaveAchievementsProcessor {
   private final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
   private List<String[]> readFile() throws IOException, CsvValidationException {
+
     InputStream in = caveResource.getInputStream();
     BufferedReader reader = new BufferedReader(new InputStreamReader(in));
     CSVReader csvReader = new CSVReader(reader);
@@ -70,15 +71,15 @@ public class CaveAchievementsProcessor {
     List<String[]> caveRecords = readFile();
     for (String[] line : caveRecords) {
       LocalDateTime notificationTimestamp = LocalDateTime
-          .parse(line[CaveAchievAttributes.NOTIFICATION_TIME.getCode()].trim(), formatter);
-      LocalDateTime entryTimestamp = parse(line[CaveAchievAttributes.ENTRY_TIME.getCode()].trim());
-      LocalDateTime exitTimestamp = parse(line[CaveAchievAttributes.EXIT_TIME.getCode()].trim());
+          .parse(line[CaveAchievAttributes.NOTIFICATION_TIME.ordinal()].trim(), formatter);
+      LocalDateTime entryTimestamp = parse(line[CaveAchievAttributes.ENTRY_TIME.ordinal()].trim());
+      LocalDateTime exitTimestamp = parse(line[CaveAchievAttributes.EXIT_TIME.ordinal()].trim());
       CaveAchievements cave = new CaveAchievements();
       cave.setNotificationTimestamp(notificationTimestamp);
       cave.setEntryTimestamp(entryTimestamp);
       cave.setExitTimestamp(compareTime(entryTimestamp, exitTimestamp));
-      String caveName = line[CaveAchievAttributes.CAVE_NAME.getCode()].trim();
-      String region = line[7].trim();
+      String caveName = line[CaveAchievAttributes.CAVE_NAME.ordinal()].trim();
+      String region = line[CaveAchievAttributes.REGION.ordinal()].trim();
 
       if (caveRepository.findByNameAndRegion(caveName, region) == null) {
         Cave newCave = new Cave(caveName, region);
@@ -88,24 +89,22 @@ public class CaveAchievementsProcessor {
         cave.setCaveName(caveRepository.findByNameAndRegion(caveName, region));
       }
 
-      cave.setReachedParts(line[CaveAchievAttributes.REACHED_PARTS.getCode()].trim());
-      cave.setCaveOvercomeStyle(CaveOvercomeStyle
-          .valueOf(line[CaveAchievAttributes.CAVE_OVERCOME_STYLE.getCode()]
-              .trim().toUpperCase()).getType());
-      String country = line[CaveAchievAttributes.COUNTRY.getCode()].trim();
+      cave.setReachedParts(line[CaveAchievAttributes.REACHED_PARTS.ordinal()].trim());
+      cave.setCaveOvercomeStyle(line[CaveAchievAttributes.CAVE_OVERCOME_STYLE.ordinal()]
+          .trim().toUpperCase());
+      String country = line[CaveAchievAttributes.COUNTRY.ordinal()].trim();
       List<User> userBatchList = userRepository.findAll();
-      String authors = line[CaveAchievAttributes.AUTHORS.getCode()];
+      String authors = line[CaveAchievAttributes.AUTHORS.ordinal()];
 
       for (User user : userBatchList) {
         if (authors.toUpperCase().contains(user.getSurname().toUpperCase())) {
           cave.getAuthors().add(user);
         }
       }
-
       cave.setCountry(countryRepository.findCountryByName(country));
-      cave.setAuthorsFromAnotherClubs(line[CaveAchievAttributes.ANOTHER_AUTHORS.getCode()].trim());
-      cave.setComment(line[CaveAchievAttributes.COMMENT.getCode()].trim());
-      String email = line[CaveAchievAttributes.NOTIFICATION_AUTHOR.getCode()].trim();
+      cave.setAuthorsFromAnotherClubs(line[CaveAchievAttributes.ANOTHER_AUTHORS.ordinal()].trim());
+      cave.setComment(line[CaveAchievAttributes.COMMENT.ordinal()].trim());
+      String email = line[CaveAchievAttributes.NOTIFICATION_AUTHOR.ordinal()].trim();
       cave.setNotificationAuthor(userRepository.findUserByEmail(email));
       log.info("cave {} achievement on {}", caveName, notificationTimestamp.toString());
       caveAchievementsRepository.save(cave);
@@ -113,11 +112,8 @@ public class CaveAchievementsProcessor {
   }
 
   private LocalDateTime parse(String timestamp) {
-    String trimmedTimestamp = timestamp.trim();
 
-    if ((trimmedTimestamp.charAt(0) == '\'')) {
-      trimmedTimestamp = trimmedTimestamp.substring(1);
-    }
+    String trimmedTimestamp = timestamp.trim();
     Pattern datePattern = Pattern.compile("\\d{4}-\\d{2}-\\d{2}");
     if (datePattern.matcher(trimmedTimestamp).matches()) {
       trimmedTimestamp = trimmedTimestamp + " 00:00:00";
@@ -130,6 +126,7 @@ public class CaveAchievementsProcessor {
   }
 
   private LocalDateTime compareTime(LocalDateTime enter, LocalDateTime exit) {
+
     LocalDateTime processedExit = exit;
     if (enter.equals(exit)) {
       processedExit = exit.plusHours(1);

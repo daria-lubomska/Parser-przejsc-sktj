@@ -1,11 +1,12 @@
 package sktj.parser.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import java.io.Serializable;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -24,6 +25,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.FieldDefaults;
+import org.springframework.format.annotation.DateTimeFormat;
 
 @Getter
 @Setter
@@ -41,35 +43,38 @@ public class CaveAchievements implements Serializable {
 
   @Column(name = "notification_timestamp")
   @NotNull
+  @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
   LocalDateTime notificationTimestamp;
 
   @Column(name = "entry_timestamp")
   @NotNull
+  @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
   LocalDateTime entryTimestamp;
 
   @Column(name = "exit_timestamp")
   @NotNull
+  @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
   LocalDateTime exitTimestamp;
 
   //TODO Have to change fetchType to Lazy!!!
-  @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+  @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
   @JoinColumn(name = "cavesOfCountry")
   Country country;
 
-  @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+  @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
   @JoinColumn(name = "caves")
   Cave caveName;
 
-  @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+  @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
   @JoinColumn(name = "notification_author")
   User notificationAuthor;
 
-  @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+  @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
   @JoinTable(
       name = "user_cave",
       joinColumns = @JoinColumn(name = "cave_id"),
       inverseJoinColumns = @JoinColumn(name = "user_id"))
-  List<User> authors = new ArrayList<>();
+  Set<User> authors = new HashSet<>();
 
   @Column(name = "reached_parts")
   @NotNull
@@ -77,7 +82,7 @@ public class CaveAchievements implements Serializable {
 
   @Column(name = "cave_overcome_style")
   @NotNull
-  int caveOvercomeStyle;
+  String caveOvercomeStyle;
 
   @Column(name = "authors_from_another_clubs")
   String authorsFromAnotherClubs;
