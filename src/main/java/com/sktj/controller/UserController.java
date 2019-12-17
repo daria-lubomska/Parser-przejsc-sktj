@@ -1,5 +1,6 @@
 package com.sktj.controller;
 
+import com.sktj.configuration.AppProperties;
 import com.sktj.entity.CaveAchievements;
 import com.sktj.entity.ClimbingAchievements;
 import com.sktj.entity.OtherActivityAchievements;
@@ -19,10 +20,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
 
   private final UserRepository userRepository;
+  private final AppProperties appProperties;
 
   @Autowired
-  public UserController(UserRepository userRepository) {
+  public UserController(UserRepository userRepository, AppProperties appProperties) {
     this.userRepository = userRepository;
+    this.appProperties = appProperties;
   }
 
   @GetMapping
@@ -55,13 +58,13 @@ public class UserController {
     achievementsAndNotifications.addAll(user.getOtherNotifications());
     return achievementsAndNotifications;
   }
-
-
+  
   @DeleteMapping("/{userId}")
   public String deleteUser(@PathVariable("userId") Long userId) {
     User user = userRepository.findById(userId)
         .orElseThrow(() -> new IllegalArgumentException("This user does not exist!"));
-    userRepository.delete(user);
+    if (!user.getEmail().equals(appProperties.getSuperAdminEmail()))
+      userRepository.delete(user);
     return "redirect:/users";
   }
 }
