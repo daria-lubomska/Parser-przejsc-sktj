@@ -1,0 +1,16 @@
+package com.sktj.service;
+
+public enum CaveAchievAttributes {
+  NOTIFICATION_TIME,
+  ENTRY_TIME,
+  EXIT_TIME,
+  CAVE_NAME,
+  REACHED_PARTS,
+  CAVE_OVERCOME_STYLE,
+  COUNTRY,
+  REGION,
+  AUTHORS,
+  ANOTHER_AUTHORS,
+  COMMENT,
+  NOTIFICATION_AUTHOR;
+}

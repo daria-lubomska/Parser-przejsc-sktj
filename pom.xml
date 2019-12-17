@@ -10,10 +10,10 @@
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
   <groupId>sktj</groupId>
-  <artifactId>parser</artifactId>
+  <artifactId>com.sktj</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>parser</name>
-  <description>Application for parsing old data</description>
+  <name>przejscia</name>
+  <description>Achievements of SKTJ members - management App </description>
 
   <properties>
     <java.version>11</java.version>
