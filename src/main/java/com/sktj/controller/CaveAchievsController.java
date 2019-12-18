@@ -4,7 +4,7 @@ import com.sktj.controller.specification.CaveAchievFiltersSpecification;
 import com.sktj.controller.specification.CaveAchievSearchSpecification;
 import com.sktj.entity.CaveAchievements;
 import com.sktj.repository.CaveAchievementsRepository;
-import javax.transaction.Transactional;
+import com.sktj.util.Mappings;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort.Direction;
@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@RequestMapping("/caves")
+@RequestMapping(Mappings.LIVE_CAVES_AND_CAVE_ACHIEV)
 public class CaveAchievsController {
 
   private final CaveAchievementsRepository caveAchievementsRepository;
@@ -34,7 +34,7 @@ public class CaveAchievsController {
     return caveAchievementsRepository.findAll(pageable);
   }
 
-  @DeleteMapping("/{caveAchievId}")
+  @DeleteMapping(Mappings.CAVE_ACHIEV_ID)
   public String deleteCaveAchiev(@PathVariable("caveAchievId") Long caveAchievId) {
     CaveAchievements caveAchiev = caveAchievementsRepository.findById(caveAchievId)
         .orElseThrow(() -> new IllegalArgumentException("This cave achievement does not exist!"));
@@ -43,7 +43,7 @@ public class CaveAchievsController {
   }
 
 //  @Transactional
-  @GetMapping(value = "/filter")
+@GetMapping(Mappings.CAVE_ACHIEV_FILTER)
   public Iterable<CaveAchievements> getCaveAchievByFilters(CaveAchievFiltersSpecification spec,
       @PageableDefault(size = 20, sort = "entryTimestamp",
           direction = Direction.DESC) Pageable pageable) {
@@ -51,7 +51,7 @@ public class CaveAchievsController {
   }
 
 //  @Transactional
-  @GetMapping(value = "/search")
+@GetMapping(Mappings.CAVE_ACHIEV_SEARCH)
   public Iterable<CaveAchievements> getCaveAchievBySearch(CaveAchievSearchSpecification spec,
       @PageableDefault(size = 20, sort = "entryTimestamp",
           direction = Direction.DESC) Pageable pageable) {

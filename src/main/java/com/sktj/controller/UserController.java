@@ -7,6 +7,8 @@ import com.sktj.entity.OtherActivityAchievements;
 import com.sktj.entity.User;
 import com.sktj.exception.ResourceNotFoundExeption;
 import com.sktj.repository.UserRepository;
+import com.sktj.util.Mappings;
+import java.util.Map;
 import java.util.Set;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
@@ -26,7 +28,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @Slf4j
 @RestController
-@RequestMapping("/users")
+@RequestMapping(Mappings.LIVE_USERS)
 public class UserController {
 
   private final UserRepository userRepository;
@@ -43,8 +45,8 @@ public class UserController {
     return userRepository.findAll();
   }
 
-  @GetMapping("/{id}")
-  public ResponseEntity<User> getUsersById(@PathVariable(value = "id") Long userId)
+  @GetMapping(Mappings.USER_ID)
+  public ResponseEntity<User> getUsersById(@PathVariable(value = "userId") Long userId)
       throws ResourceNotFoundExeption {
     User user = userRepository.findById(userId)
         .orElseThrow(() -> new ResourceNotFoundExeption("Unable to delete. User with id "
@@ -54,7 +56,7 @@ public class UserController {
 
   //TODO integration with Ghost - HttpSession attributes (name, surname, email) currently logged user?
   // now this method is not working -FIX after integration
-  @GetMapping("/cavesAndNotific")
+  @GetMapping(Mappings.CAVES_AND_NOTIF)
   public ResponseEntity<Set<CaveAchievements>> getUserCaveAchievementsAndNotifications(HttpSession session) {
     User user = userRepository.findUserByEmail(session.getAttribute("email").toString());
     Set<CaveAchievements> achievementsAndNotifications = user.getCaves();
@@ -62,7 +64,7 @@ public class UserController {
     return ResponseEntity.ok().body(achievementsAndNotifications);
   }
 
-  @GetMapping("/climbingAndNotific")
+  @GetMapping(Mappings.CLIMBING_AND_NOTIF)
   public ResponseEntity<Set<ClimbingAchievements>> getUserClimbingAchievementsAndNotifications(HttpSession session) {
     User user = userRepository.findUserByEmail(session.getAttribute("email").toString());
     Set<ClimbingAchievements> achievementsAndNotifications = user.getClimbing();
@@ -70,7 +72,7 @@ public class UserController {
     return ResponseEntity.ok().body(achievementsAndNotifications);
   }
 
-  @GetMapping("/otherAndNotific")
+  @GetMapping(Mappings.OTHERS_AND_NOTIF)
   public ResponseEntity<Set<OtherActivityAchievements>> getUserOtherAchievementsAndNotifications(HttpSession session) {
     User user = userRepository.findUserByEmail(session.getAttribute("email").toString());
     Set<OtherActivityAchievements> achievementsAndNotifications = user.getOthers();
@@ -78,7 +80,7 @@ public class UserController {
     return ResponseEntity.ok().body(achievementsAndNotifications);
   }
 
-  @PostMapping("/addUser")
+  @PostMapping(Mappings.ADD_USER)
   public String createUser(@Valid @RequestBody User user) throws ResourceNotFoundExeption {
     if(!user.getRole().equals("user")){
       throw new ResourceNotFoundExeption("Validation exeption" + HttpStatus.FORBIDDEN);
@@ -88,7 +90,7 @@ public class UserController {
     return "redirect:/users";
   }
 
-  @PutMapping("/editUser/{userID}")
+  @PutMapping(Mappings.EDIT_USER)
   public String updateUser(@PathVariable("userId") long userId, @RequestBody User user)
       throws ResourceNotFoundExeption {
     log.info("Updating User with id {}", userId);
@@ -113,7 +115,7 @@ public class UserController {
     }
     return "redirect:/users";
   }
-  @PatchMapping("/grantAdminPermissions/{userId}")
+  @PatchMapping(Mappings.GRANT_ADMIN)
   public String grantAdminPermissions(@PathVariable("userId") long userId)
       throws ResourceNotFoundExeption {
     log.info("Updating (grantAdminPermissions) User with id {}", userId);
@@ -128,7 +130,7 @@ public class UserController {
   }
 
 
-  @DeleteMapping("/deleteUser/{userId}")
+  @DeleteMapping(Mappings.DELETE_USER)
   public String deleteUser(@PathVariable("userId") Long userId) throws ResourceNotFoundExeption {
     User user = userRepository.findById(userId)
         .orElseThrow(() -> new ResourceNotFoundExeption("Unable to delete. User with id "
