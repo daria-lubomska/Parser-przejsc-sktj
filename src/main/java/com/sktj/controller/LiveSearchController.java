@@ -41,7 +41,7 @@ public class LiveSearchController {
     return mapper.mapCaveEntityToModel(caveRepository.findAll(caveSpecification));
   }
 
-  @GetMapping(Mappings.ADD_USER)
+  @GetMapping(Mappings.LIVE_USERS)
   public List<User> getUsersForLiveSearch(UserSpecification userSpecification){
     return mapper.mapUserEntityToModel(userRepository.findAll(userSpecification));
   }

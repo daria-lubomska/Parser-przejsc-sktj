@@ -5,10 +5,10 @@ import com.sktj.entity.CaveAchievements;
 import com.sktj.entity.ClimbingAchievements;
 import com.sktj.entity.OtherActivityAchievements;
 import com.sktj.entity.User;
+import com.sktj.exception.ForbiddenActionExeption;
 import com.sktj.exception.ResourceNotFoundExeption;
 import com.sktj.repository.UserRepository;
 import com.sktj.util.Mappings;
-import java.util.Map;
 import java.util.Set;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
@@ -49,13 +49,77 @@ public class UserController {
   public ResponseEntity<User> getUsersById(@PathVariable(value = "userId") Long userId)
       throws ResourceNotFoundExeption {
     User user = userRepository.findById(userId)
+        .orElseThrow(() -> new ResourceNotFoundExeption("User with id "
+            + userId + " not found" + HttpStatus.NOT_FOUND));
+    log.info("User with id {} fetched", userId);
+    return ResponseEntity.ok(user);
+  }
+
+  @PostMapping(Mappings.ADD_USER)
+  public ResponseEntity<?> createUser(@Valid @RequestBody User user)
+      throws ForbiddenActionExeption {
+    if(!user.getRole().equals("user")){
+      throw new ForbiddenActionExeption("Validation exeption" + HttpStatus.FORBIDDEN);
+    }
+    userRepository.save(user);
+    log.info("User {} created successfully", user.getSurname());
+    return new ResponseEntity<User>(HttpStatus.CREATED);
+  }
+
+  @PutMapping(Mappings.EDIT_USER)
+  public ResponseEntity<User> updateUser(@PathVariable("userId") long userId,
+      @Valid @RequestBody User user) throws ResourceNotFoundExeption {
+
+    User userToEdit = userRepository.findById(userId)
         .orElseThrow(() -> new ResourceNotFoundExeption("Unable to delete. User with id "
             + userId + " not found" + HttpStatus.NOT_FOUND));
-    return ResponseEntity.ok().body(user);
+
+    if (!userToEdit.getEmail().equals(appProperties.getSuperAdminEmail())){
+      userToEdit.setName(user.getName());
+      userToEdit.setSurname(user.getSurname());
+      userToEdit.setCardNumber(userToEdit.getCardNumber());
+      userToEdit.setEmail(user.getEmail());
+      userToEdit.setCaveNotifications(user.getCaveNotifications());
+      userToEdit.setCaves(user.getCaves());
+      userToEdit.setClimbing(user.getClimbing());
+      userToEdit.setClimbingNotifications(user.getClimbingNotifications());
+      userToEdit.setOthers(user.getOthers());
+      userToEdit.setOtherNotifications(user.getOtherNotifications());
+      userRepository.save(userToEdit);
+      log.info("User with id {} updated successfully", userId);
+    }
+    return ResponseEntity.ok(userToEdit);
+  }
+  @PatchMapping(Mappings.GRANT_ADMIN)
+  public ResponseEntity<User> grantAdminPermissions(@PathVariable("userId") long userId)
+      throws ResourceNotFoundExeption {
+    User user = userRepository.findById(userId)
+        .orElseThrow(() -> new ResourceNotFoundExeption("Unable to edit. User with id "
+            + userId + " not found" + HttpStatus.NOT_FOUND));
+    if (!user.getEmail().equals(appProperties.getSuperAdminEmail())){
+      user.setRole("admin");
+      userRepository.save(user);
+      log.info("Admin permissions granted for User with id {} ", userId);
+    }
+    return ResponseEntity.ok(user);
+  }
+
+
+  @DeleteMapping(Mappings.DELETE_USER)
+  public ResponseEntity<?> deleteUser(@PathVariable("userId") Long userId) throws ResourceNotFoundExeption {
+    User user = userRepository.findById(userId)
+        .orElseThrow(() -> new ResourceNotFoundExeption("Unable to delete. User with id "
+            + userId + " not found" + HttpStatus.NOT_FOUND));
+    if (!user.getEmail().equals(appProperties.getSuperAdminEmail())){
+      userRepository.delete(user);
+      log.info("User with id {} removed successfully", userId);
+    }
+    return new ResponseEntity<User>(HttpStatus.NO_CONTENT);
   }
 
   //TODO integration with Ghost - HttpSession attributes (name, surname, email) currently logged user?
   // now this method is not working -FIX after integration
+
   @GetMapping(Mappings.CAVES_AND_NOTIF)
   public ResponseEntity<Set<CaveAchievements>> getUserCaveAchievementsAndNotifications(HttpSession session) {
     User user = userRepository.findUserByEmail(session.getAttribute("email").toString());
@@ -77,66 +141,6 @@ public class UserController {
     User user = userRepository.findUserByEmail(session.getAttribute("email").toString());
     Set<OtherActivityAchievements> achievementsAndNotifications = user.getOthers();
     achievementsAndNotifications.addAll(user.getOtherNotifications());
-    return ResponseEntity.ok().body(achievementsAndNotifications);
-  }
-
-  @PostMapping(Mappings.ADD_USER)
-  public String createUser(@Valid @RequestBody User user) throws ResourceNotFoundExeption {
-    if(!user.getRole().equals("user")){
-      throw new ResourceNotFoundExeption("Validation exeption" + HttpStatus.FORBIDDEN);
-    }
-    userRepository.save(user);
-    log.info("User {} created successfully", user.getSurname());
-    return "redirect:/users";
-  }
-
-  @PutMapping(Mappings.EDIT_USER)
-  public String updateUser(@PathVariable("userId") long userId, @RequestBody User user)
-      throws ResourceNotFoundExeption {
-    log.info("Updating User with id {}", userId);
-
-    User userToEdit = userRepository.findById(userId)
-        .orElseThrow(() -> new ResourceNotFoundExeption("Unable to delete. User with id "
-            + userId + " not found" + HttpStatus.NOT_FOUND));
-
-    if (!userToEdit.getEmail().equals(appProperties.getSuperAdminEmail())){
-      userToEdit.setName(user.getName());
-      userToEdit.setSurname(user.getSurname());
-      userToEdit.setCardNumber(userToEdit.getCardNumber());
-      userToEdit.setEmail(user.getEmail());
-      userToEdit.setCaveNotifications(user.getCaveNotifications());
-      userToEdit.setCaves(user.getCaves());
-      userToEdit.setClimbing(user.getClimbing());
-      userToEdit.setClimbingNotifications(user.getClimbingNotifications());
-      userToEdit.setOthers(user.getOthers());
-      userToEdit.setOtherNotifications(user.getOtherNotifications());
-      userRepository.save(userToEdit);
-      log.info("User with id {} updated successfully", userId);
-    }
-    return "redirect:/users";
-  }
-  @PatchMapping(Mappings.GRANT_ADMIN)
-  public String grantAdminPermissions(@PathVariable("userId") long userId)
-      throws ResourceNotFoundExeption {
-    log.info("Updating (grantAdminPermissions) User with id {}", userId);
-    User user = userRepository.findById(userId)
-        .orElseThrow(() -> new ResourceNotFoundExeption("Unable to edit. User with id "
-            + userId + " not found" + HttpStatus.NOT_FOUND));
-    if (!user.getEmail().equals(appProperties.getSuperAdminEmail())){
-      user.setRole("admin");
-      userRepository.save(user);
-    }
-    return "redirect:/users";
-  }
-
-
-  @DeleteMapping(Mappings.DELETE_USER)
-  public String deleteUser(@PathVariable("userId") Long userId) throws ResourceNotFoundExeption {
-    User user = userRepository.findById(userId)
-        .orElseThrow(() -> new ResourceNotFoundExeption("Unable to delete. User with id "
-            + userId + " not found" + HttpStatus.NOT_FOUND));
-    if (!user.getEmail().equals(appProperties.getSuperAdminEmail()))
-      userRepository.delete(user);
-    return "redirect:/users";
+    return ResponseEntity.ok(achievementsAndNotifications);
   }
 }

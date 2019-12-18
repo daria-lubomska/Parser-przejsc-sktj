@@ -14,8 +14,7 @@ import com.sktj.entity.CaveAchievements;
         spec = Between.class, config = "yyyy-MM-dd HH:mm:ss"),
     @Spec(path = "authors.name", params = "name", spec = EqualIgnoreCase.class),
     @Spec(path = "authors.surname", params = "surname", spec = EqualIgnoreCase.class),
-    @Spec(path =  "caveOvercomeStyle", params = "style", spec = EqualIgnoreCase.class)
-})
+    @Spec(path =  "caveOvercomeStyle", params = "style", spec = EqualIgnoreCase.class)})
 public interface CaveAchievFiltersSpecification extends Specification<CaveAchievements> {
 
 }
