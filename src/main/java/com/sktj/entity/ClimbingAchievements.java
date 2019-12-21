@@ -3,6 +3,8 @@ package com.sktj.entity;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import java.io.Serializable;
+import java.time.Duration;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -43,21 +45,16 @@ public class ClimbingAchievements implements Serializable {
   @NotNull
   LocalDateTime notificationTimestamp;
 
-  @Column(name = "entry_timestamp")
-  @NotNull
-  LocalDateTime entryTimestamp;
-
-  @Column(name = "exit_timestamp")
-  @NotNull
-  LocalDateTime exitTimestamp;
-
   @Column
   @NotNull
-  String region;
+  LocalDate date;
 
-  @Column(name = "climbing_route_name")
+  @Column
+  Duration duration;
+
+  @Column(name = "route_name")
   @NotNull
-  String climbingRouteName;
+  String routeName;
 
   @Column(name = "difficulty_grade")
   @NotNull
@@ -68,8 +65,13 @@ public class ClimbingAchievements implements Serializable {
   String wall;
 
   @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-  @JoinColumn(name = "notification_author")
-  User notificationAuthor;
+  @JoinColumn
+  Country country;
+
+  @Column
+  @NotNull
+  String region;
+
 
   @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
   @JoinTable(
@@ -84,4 +86,7 @@ public class ClimbingAchievements implements Serializable {
   @Column(length = 1000)
   String comment;
 
+  @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+  @JoinColumn
+  User notificationAuthor;
 }

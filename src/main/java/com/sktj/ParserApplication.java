@@ -1,6 +1,7 @@
 package com.sktj;
 
-import com.sktj.service.CaveAchievementsProcessor;
+import com.sktj.service.CaveAchievementParser;
+import com.sktj.service.ClimbingAchievementParser;
 import java.util.List;
 import net.kaczmarzyk.spring.data.jpa.web.SpecificationArgumentResolver;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,11 +15,14 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @SpringBootApplication
 public class ParserApplication implements CommandLineRunner, WebMvcConfigurer {
 
-  private final CaveAchievementsProcessor caveAchievementsProcessor;
+  private final CaveAchievementParser caveParser;
+  private final ClimbingAchievementParser climbingParser;
 
   @Autowired
-  public ParserApplication(CaveAchievementsProcessor caveAchievementsProcessor) {
-    this.caveAchievementsProcessor = caveAchievementsProcessor;
+  public ParserApplication(CaveAchievementParser caveParser,
+      ClimbingAchievementParser climbingParser) {
+    this.caveParser = caveParser;
+    this.climbingParser = climbingParser;
   }
 
   @Override
@@ -34,6 +38,7 @@ public class ParserApplication implements CommandLineRunner, WebMvcConfigurer {
 
   @Override
   public void run(String... args) throws Exception {
-    caveAchievementsProcessor.saveDataToDB();
+    caveParser.saveDataToDB();
+    climbingParser.saveDataToDB();
   }
 }

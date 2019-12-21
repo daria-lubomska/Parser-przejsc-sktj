@@ -56,15 +56,15 @@ public class CaveAchievements implements Serializable {
   LocalDateTime exitTimestamp;
 
   @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-  @JoinColumn(name = "cavesOfCountry")
+  @JoinColumn
   Country country;
 
   @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-  @JoinColumn(name = "caves")
+  @JoinColumn
   Cave caveName;
 
   @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-  @JoinColumn(name = "notification_author")
+  @JoinColumn
   User notificationAuthor;
 
   @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})

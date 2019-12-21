@@ -45,6 +45,11 @@ public class Country implements Serializable {
       orphanRemoval = true)
   Set<CaveAchievements> caves;
 
+  @JsonIgnore
+  @OneToMany(mappedBy = "country", cascade = {CascadeType.PERSIST, CascadeType.MERGE},
+      orphanRemoval = true)
+  Set<ClimbingAchievements> climbing;
+
   public Country(@NotNull String name) {
     this.name = name;
   }

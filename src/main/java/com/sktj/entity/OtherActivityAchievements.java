@@ -43,13 +43,13 @@ public class OtherActivityAchievements implements Serializable {
   @NotNull
   LocalDateTime notificationTimestamp;
 
-  @Column(name = "entry_timestamp")
+  @Column(name = "start_timestamp")
   @NotNull
-  LocalDateTime entryTimestamp;
+  LocalDateTime startTimestamp;
 
-  @Column(name = "exit_timestamp")
+  @Column(name = "end_timestamp")
   @NotNull
-  LocalDateTime exitTimestamp;
+  LocalDateTime endTimestamp;
 
   @Column
   @NotNull
@@ -64,7 +64,7 @@ public class OtherActivityAchievements implements Serializable {
   String category; //TODO enum?
 
   @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-  @JoinColumn(name = "notification_author")
+  @JoinColumn
   User notificationAuthor;
 
   @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})

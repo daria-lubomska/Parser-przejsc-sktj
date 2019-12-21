@@ -1,6 +1,5 @@
 package com.sktj.service;
 
-import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvValidationException;
 import com.sktj.entity.Cave;
 import com.sktj.entity.CaveAchievements;
@@ -9,13 +8,10 @@ import com.sktj.repository.CaveAchievementsRepository;
 import com.sktj.repository.CaveRepository;
 import com.sktj.repository.CountryRepository;
 import com.sktj.repository.UserRepository;
-import java.io.BufferedReader;
+import com.sktj.util.attributes.CaveAchievAttributes;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Pattern;
 import lombok.extern.slf4j.Slf4j;
@@ -26,48 +22,35 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 @Slf4j
-@Component("caveAchievementsLoader")
-public class CaveAchievementsProcessor {
+@Component
+public class CaveAchievementParser {
 
   private UserRepository userRepository;
   private CaveAchievementsRepository caveAchievementsRepository;
   private CountryRepository countryRepository;
   private CaveRepository caveRepository;
+  private CSVFileReader reader;
 
   @Autowired
-  public CaveAchievementsProcessor(UserRepository userRepository,
+  public CaveAchievementParser(UserRepository userRepository,
       CaveAchievementsRepository caveAchievementsRepository,
-      CountryRepository countryRepository, CaveRepository caveRepository) {
+      CountryRepository countryRepository, CaveRepository caveRepository, CSVFileReader reader) {
     this.userRepository = userRepository;
     this.caveAchievementsRepository = caveAchievementsRepository;
     this.countryRepository = countryRepository;
     this.caveRepository = caveRepository;
+    this.reader = reader;
   }
 
   @Value("classpath:caveAchiev.csv")
-  Resource caveResource;
+  private Resource caveResource;
 
   private final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-
-  private List<String[]> readFile() throws IOException, CsvValidationException {
-
-    InputStream in = caveResource.getInputStream();
-    BufferedReader reader = new BufferedReader(new InputStreamReader(in));
-    CSVReader csvReader = new CSVReader(reader);
-    List<String[]> list = new ArrayList<>();
-    String[] line;
-    while ((line = csvReader.readNext()) != null) {
-      list.add(line);
-    }
-    reader.close();
-    csvReader.close();
-    return list;
-  }
 
   @Transactional
   public void saveDataToDB() throws IOException, CsvValidationException {
 
-    List<String[]> caveRecords = readFile();
+    List<String[]> caveRecords = reader.readFile(caveResource);
     for (String[] line : caveRecords) {
       LocalDateTime notificationTimestamp = LocalDateTime
           .parse(line[CaveAchievAttributes.NOTIFICATION_TIME.ordinal()].trim(), formatter);
@@ -133,6 +116,6 @@ public class CaveAchievementsProcessor {
     return processedExit;
   }
 
-  public CaveAchievementsProcessor() {
+  public CaveAchievementParser() {
   }
 }

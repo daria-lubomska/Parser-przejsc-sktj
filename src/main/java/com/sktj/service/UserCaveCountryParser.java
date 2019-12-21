@@ -21,24 +21,24 @@ import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
 
 @Slf4j
-@Component("usersLoader")
-public class DataProcessor {
+@Component
+public class UserCaveCountryParser {
 
   private UserRepository userRepository;
   private CaveRepository caveRepository;
   private CountryRepository countryRepository;
 
   @Value("classpath:users.csv")
-  Resource userResource;
+  private Resource userResource;
 
   @Value("classpath:caves.csv")
-  Resource caveResource;
+  private Resource caveResource;
 
   @Value("classpath:countries.csv")
-  Resource countryResource;
+  private Resource countryResource;
 
   @Autowired
-  public DataProcessor(UserRepository userRepository, CaveRepository caveRepository,
+  public UserCaveCountryParser(UserRepository userRepository, CaveRepository caveRepository,
       CountryRepository countryRepository) {
     this.userRepository = userRepository;
     this.caveRepository = caveRepository;

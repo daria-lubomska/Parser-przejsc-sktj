@@ -1,4 +1,4 @@
-package com.sktj.service;
+package com.sktj.util.attributes;
 
 public enum CaveAchievAttributes {
   NOTIFICATION_TIME,
