@@ -74,16 +74,16 @@ public class CaveAchievements implements Serializable {
       inverseJoinColumns = @JoinColumn(name = "user_id"))
   Set<User> authors = new HashSet<>();
 
-  @Column(name = "reached_parts")
+  @Column
   @NotNull
   String reachedParts;
 
-  @Column(name = "cave_overcome_style")
+  @Column
   @NotNull
   String caveOvercomeStyle;
 
-  @Column(name = "authors_from_another_clubs")
-  String authorsFromAnotherClubs;
+  @Column
+  String anotherAuthors;
 
   @Column(length = 1000)
   String comment;

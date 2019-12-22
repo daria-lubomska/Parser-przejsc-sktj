@@ -54,7 +54,7 @@ public class CaveAchievsController {
     caveAchievementsRepository.delete(caveAchievEdited);
     caveAchievEdited.setNotificationTimestamp(caveAchiev.getNotificationTimestamp());
     caveAchievEdited.setCaveName(caveAchiev.getCaveName());
-    caveAchievEdited.setAuthorsFromAnotherClubs(caveAchiev.getAuthorsFromAnotherClubs());
+    caveAchievEdited.setAnotherAuthors(caveAchiev.getAnotherAuthors());
     caveAchievEdited.setAuthors(caveAchiev.getAuthors());
     caveAchievEdited.setCaveOvercomeStyle(caveAchiev.getCaveOvercomeStyle());
     caveAchievEdited.setComment(caveAchiev.getComment());

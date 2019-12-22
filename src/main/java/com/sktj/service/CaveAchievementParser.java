@@ -84,7 +84,7 @@ public class CaveAchievementParser {
         }
       }
       cave.setCountry(countryRepository.findCountryByName(country));
-      cave.setAuthorsFromAnotherClubs(line[CaveAchievAttributes.ANOTHER_AUTHORS.ordinal()].trim());
+      cave.setAnotherAuthors(line[CaveAchievAttributes.ANOTHER_AUTHORS.ordinal()].trim());
       cave.setComment(line[CaveAchievAttributes.COMMENT.ordinal()].trim());
       String email = line[CaveAchievAttributes.NOTIFICATION_AUTHOR.ordinal()].trim();
       cave.setNotificationAuthor(userRepository.findUserByEmail(email));

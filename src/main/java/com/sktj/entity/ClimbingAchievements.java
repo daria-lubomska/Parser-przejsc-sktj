@@ -79,7 +79,7 @@ public class ClimbingAchievements implements Serializable {
       inverseJoinColumns = @JoinColumn(name = "user_id"))
   List<User> authors = new ArrayList<>();
 
-  @Column(name = "authors_from_another_clubs")
+  @Column
   String anotherAuthors;
 
   @Column(length = 1000)

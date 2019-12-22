@@ -1,5 +1,7 @@
 package com.sktj.controller;
 
+import com.sktj.controller.specification.ClimbingAchievFiltersSpecification;
+import com.sktj.controller.specification.ClimbingAchievSearchSpecification;
 import com.sktj.entity.CaveAchievements;
 import com.sktj.entity.ClimbingAchievements;
 import com.sktj.exception.ResourceNotFoundExeption;
