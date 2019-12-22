@@ -28,68 +28,68 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(Mappings.CAVES)
 public class CaveAchievsController {
 
-  private final CaveAchievementsRepository caveAchievementsRepository;
+  private final CaveAchievementsRepository repository;
 
   @Autowired
   public CaveAchievsController(
-      CaveAchievementsRepository caveAchievementsRepository) {
-    this.caveAchievementsRepository = caveAchievementsRepository;
+      CaveAchievementsRepository repository) {
+    this.repository = repository;
   }
 
   @PostMapping(Mappings.ADD_NEW)
-  public ResponseEntity<?> addNewCaveAchiev(@Valid @RequestBody CaveAchievements caveAchievement) {
-    caveAchievementsRepository.save(caveAchievement);
+  public ResponseEntity<?> save(@Valid @RequestBody CaveAchievements achiev) {
+    repository.save(achiev);
     log.info("Cave achievement with notification time {}, created by {} added to DB successfully",
-        caveAchievement.getNotificationTimestamp(), caveAchievement.getNotificationAuthor().getEmail());
+        achiev.getNotificationTimestamp(), achiev.getNotificationAuthor().getEmail());
     return new ResponseEntity<CaveAchievements>(HttpStatus.CREATED);
   }
 
   @PutMapping(Mappings.EDIT_CAVE_ACHIEV)
-  public ResponseEntity<CaveAchievements> updateCaveAchiev(@PathVariable("caveAchievId")
+  public ResponseEntity<CaveAchievements> update(@PathVariable("caveAchievId")
       Long caveAchievId, @Valid @RequestBody CaveAchievements caveAchiev)
       throws ResourceNotFoundExeption {
-    CaveAchievements caveAchievEdited = caveAchievementsRepository.findById(caveAchievId)
+    CaveAchievements editedCaveAchiev = repository.findById(caveAchievId)
         .orElseThrow(() -> new ResourceNotFoundExeption("Cave achievement with id "
             + caveAchievId +" does not exist!" + HttpStatus.NOT_FOUND));
-    caveAchievementsRepository.delete(caveAchievEdited);
-    caveAchievEdited.setNotificationTimestamp(caveAchiev.getNotificationTimestamp());
-    caveAchievEdited.setCaveName(caveAchiev.getCaveName());
-    caveAchievEdited.setAnotherAuthors(caveAchiev.getAnotherAuthors());
-    caveAchievEdited.setAuthors(caveAchiev.getAuthors());
-    caveAchievEdited.setCaveOvercomeStyle(caveAchiev.getCaveOvercomeStyle());
-    caveAchievEdited.setComment(caveAchiev.getComment());
-    caveAchievEdited.setCountry(caveAchiev.getCountry());
-    caveAchievEdited.setEntryTimestamp(caveAchiev.getEntryTimestamp());
-    caveAchievEdited.setExitTimestamp(caveAchiev.getExitTimestamp());
-    caveAchievEdited.setReachedParts(caveAchiev.getReachedParts());
-    caveAchievEdited.setNotificationAuthor(caveAchiev.getNotificationAuthor());
-    caveAchievementsRepository.save(caveAchievEdited);
+    repository.delete(editedCaveAchiev);
+    editedCaveAchiev.setNotificationTimestamp(caveAchiev.getNotificationTimestamp());
+    editedCaveAchiev.setCaveName(caveAchiev.getCaveName());
+    editedCaveAchiev.setAnotherAuthors(caveAchiev.getAnotherAuthors());
+    editedCaveAchiev.setAuthors(caveAchiev.getAuthors());
+    editedCaveAchiev.setCaveOvercomeStyle(caveAchiev.getCaveOvercomeStyle());
+    editedCaveAchiev.setComment(caveAchiev.getComment());
+    editedCaveAchiev.setCountry(caveAchiev.getCountry());
+    editedCaveAchiev.setEntryTimestamp(caveAchiev.getEntryTimestamp());
+    editedCaveAchiev.setExitTimestamp(caveAchiev.getExitTimestamp());
+    editedCaveAchiev.setReachedParts(caveAchiev.getReachedParts());
+    editedCaveAchiev.setNotificationAuthor(caveAchiev.getNotificationAuthor());
+    repository.save(editedCaveAchiev);
     log.info("Cave achievement with id {} updated successfully", caveAchievId);
-    return ResponseEntity.ok(caveAchievEdited);
+    return ResponseEntity.ok(editedCaveAchiev);
   }
 
   @DeleteMapping(Mappings.DELETE_CAVE_ACHIEV)
-  public ResponseEntity<?> deleteCaveAchiev(@PathVariable("caveAchievId") Long caveAchievId)
+  public ResponseEntity<?> delete(@PathVariable("caveAchievId") Long caveAchievId)
       throws ResourceNotFoundExeption {
-    CaveAchievements caveAchiev = caveAchievementsRepository.findById(caveAchievId)
+    CaveAchievements caveAchiev = repository.findById(caveAchievId)
         .orElseThrow(() -> new ResourceNotFoundExeption
             ("Cave achievement with id "+ caveAchievId +" does not exist!" + HttpStatus.NOT_FOUND));
-    caveAchievementsRepository.delete(caveAchiev);
+    repository.delete(caveAchiev);
     log.info("Cave achievement with id {} removed successfully",caveAchievId);
     return new ResponseEntity<CaveAchievements>(HttpStatus.NO_CONTENT);
   }
 
   @GetMapping(Mappings.FILTER)
-  public Iterable<CaveAchievements> getCaveAchievByFilters(CaveAchievFiltersSpecification spec,
+  public Iterable<CaveAchievements> filter(CaveAchievFiltersSpecification spec,
       @PageableDefault(size = 20, sort = "entryTimestamp",
           direction = Direction.DESC) Pageable pageable) {
-    return caveAchievementsRepository.findAll(spec,pageable);
+    return repository.findAll(spec,pageable);
   }
 
   @GetMapping(Mappings.SEARCH)
-  public Iterable<CaveAchievements> getCaveAchievBySearch(CaveAchievSearchSpecification spec,
+  public Iterable<CaveAchievements> search(CaveAchievSearchSpecification spec,
       @PageableDefault(size = 20, sort = "entryTimestamp",
           direction = Direction.DESC) Pageable pageable) {
-    return caveAchievementsRepository.findAll(spec,pageable);
+    return repository.findAll(spec,pageable);
   }
 }

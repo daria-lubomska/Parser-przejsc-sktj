@@ -37,17 +37,17 @@ public class LiveSearchController {
   }
 
   @GetMapping(Mappings.CAVES)
-  public List<Cave> getCaveForLiveSearch(CaveSpecification caveSpecification){
+  public List<Cave> searchCaves(CaveSpecification caveSpecification){
     return mapper.mapCaveEntityToModel(caveRepository.findAll(caveSpecification));
   }
 
   @GetMapping(Mappings.LIVE_USERS)
-  public List<User> getUsersForLiveSearch(UserSpecification userSpecification){
+  public List<User> searchUsers(UserSpecification userSpecification){
     return mapper.mapUserEntityToModel(userRepository.findAll(userSpecification));
   }
 
   @GetMapping(Mappings.LIVE_COUNTRIES)
-  public List<Country> getCountriesForLiveSearch(CountrySpecification countrySpecification){
+  public List<Country> searchCountry(CountrySpecification countrySpecification){
     return mapper.mapCountryEntityToModel(countryRepository.findAll(countrySpecification));
   }
 }

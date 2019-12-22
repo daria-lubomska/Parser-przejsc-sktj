@@ -1,6 +1,6 @@
 package com.sktj.controller.specification;
 
-import com.sktj.entity.ClimbingAchievements;
+import com.sktj.entity.OtherActivityAchievements;
 import net.kaczmarzyk.spring.data.jpa.domain.Between;
 import net.kaczmarzyk.spring.data.jpa.domain.EqualIgnoreCase;
 import net.kaczmarzyk.spring.data.jpa.web.annotation.JoinFetch;
@@ -12,10 +12,10 @@ import org.springframework.data.jpa.domain.Specification;
 @Or({
     @Spec(path = "date", params = {"start", "end"},
         spec = Between.class, config = "yyyy-MM-dd"),
-    @Spec(path = "wall", spec = EqualIgnoreCase.class),
+    @Spec(path = "category", spec = EqualIgnoreCase.class),
     @Spec(path = "authors.name", params = "name", spec = EqualIgnoreCase.class),
     @Spec(path = "authors.surname", params = "surname", spec = EqualIgnoreCase.class),
     @Spec(path = "country.name", params = "country", spec = EqualIgnoreCase.class)})
-public interface ClimbingAchievFiltersSpecification extends Specification<ClimbingAchievements> {
+public interface OtherAchievFiltersSpecification extends Specification<OtherActivityAchievements> {
 
 }

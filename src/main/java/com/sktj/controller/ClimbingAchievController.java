@@ -38,7 +38,7 @@ public class ClimbingAchievController {
 
 
   @PostMapping(Mappings.ADD_NEW)
-  public ResponseEntity<?> addClimbingAchiev(@Valid @RequestBody ClimbingAchievements achiev) {
+  public ResponseEntity<?> save(@Valid @RequestBody ClimbingAchievements achiev) {
     repository.save(achiev);
     log.info("Climbing achievement with notification time {}, created by {} saved successfully",
         achiev.getNotificationTimestamp(), achiev.getNotificationAuthor().getEmail());
@@ -46,32 +46,32 @@ public class ClimbingAchievController {
   }
 
   @PutMapping(Mappings.EDIT_CLIMBING)
-  public ResponseEntity<ClimbingAchievements> updateClimbingAchiev(@PathVariable("climbingId")
+  public ResponseEntity<ClimbingAchievements> update(@PathVariable("climbingId")
       Long climbingId, @Valid @RequestBody ClimbingAchievements achiev)
       throws ResourceNotFoundExeption {
-    ClimbingAchievements achievToEdit = repository.findById(climbingId)
+    ClimbingAchievements editedClimbingAcheiv = repository.findById(climbingId)
         .orElseThrow(() -> new ResourceNotFoundExeption("Climbing achievement with id "
             + climbingId + " does not exist!" + HttpStatus.NOT_FOUND));
-    repository.delete(achievToEdit);
-    achievToEdit.setDuration(achiev.getDuration());
-    achievToEdit.setAnotherAuthors(achiev.getAnotherAuthors());
-    achievToEdit.setCountry(achiev.getCountry());
-    achievToEdit.setRegion(achiev.getRegion());
-    achievToEdit.setWall(achiev.getWall());
-    achievToEdit.setDifficultyGrade(achiev.getDifficultyGrade());
-    achievToEdit.setRouteName(achiev.getRouteName());
-    achievToEdit.setDate(achiev.getDate());
-    achievToEdit.setNotificationTimestamp(achiev.getNotificationTimestamp());
-    achievToEdit.setNotificationAuthor(achiev.getNotificationAuthor());
-    achievToEdit.setComment(achiev.getComment());
-    achievToEdit.setAuthors(achiev.getAuthors());
-    repository.save(achievToEdit);
+    repository.delete(editedClimbingAcheiv);
+    editedClimbingAcheiv.setDuration(achiev.getDuration());
+    editedClimbingAcheiv.setAnotherAuthors(achiev.getAnotherAuthors());
+    editedClimbingAcheiv.setCountry(achiev.getCountry());
+    editedClimbingAcheiv.setRegion(achiev.getRegion());
+    editedClimbingAcheiv.setWall(achiev.getWall());
+    editedClimbingAcheiv.setDifficultyGrade(achiev.getDifficultyGrade());
+    editedClimbingAcheiv.setRouteName(achiev.getRouteName());
+    editedClimbingAcheiv.setDate(achiev.getDate());
+    editedClimbingAcheiv.setNotificationTimestamp(achiev.getNotificationTimestamp());
+    editedClimbingAcheiv.setNotificationAuthor(achiev.getNotificationAuthor());
+    editedClimbingAcheiv.setComment(achiev.getComment());
+    editedClimbingAcheiv.setAuthors(achiev.getAuthors());
+    repository.save(editedClimbingAcheiv);
     log.info("Climbing achievement with id {} updated successfully", climbingId);
-    return ResponseEntity.ok(achievToEdit);
+    return ResponseEntity.ok(editedClimbingAcheiv);
   }
 
   @DeleteMapping(Mappings.DELETE_CLIMBING)
-  public ResponseEntity<?> deleteClimbingAchiev(@PathVariable("climbingId") Long climbingId)
+  public ResponseEntity<?> delete(@PathVariable("climbingId") Long climbingId)
       throws ResourceNotFoundExeption {
     ClimbingAchievements achiev = repository.findById(climbingId)
         .orElseThrow(() -> new ResourceNotFoundExeption
@@ -83,15 +83,14 @@ public class ClimbingAchievController {
   }
 
   @GetMapping(Mappings.FILTER)
-  public Iterable<ClimbingAchievements> filterClimbingAchiev(
-      ClimbingAchievFiltersSpecification spec,
+  public Iterable<ClimbingAchievements> filter(ClimbingAchievFiltersSpecification spec,
       @PageableDefault(size = 20, sort = "date",
           direction = Direction.DESC) Pageable pageable) {
     return repository.findAll(spec, pageable);
   }
 
   @GetMapping(Mappings.SEARCH)
-  public Iterable<ClimbingAchievements> searchClimbing(ClimbingAchievSearchSpecification spec,
+  public Iterable<ClimbingAchievements> search(ClimbingAchievSearchSpecification spec,
       @PageableDefault(size = 20, sort = "entryTimestamp",
           direction = Direction.DESC) Pageable pageable) {
     return repository.findAll(spec, pageable);

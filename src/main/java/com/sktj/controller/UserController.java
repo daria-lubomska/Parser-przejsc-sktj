@@ -31,24 +31,24 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(Mappings.LIVE_USERS)
 public class UserController {
 
-  private final UserRepository userRepository;
-  private final AppProperties appProperties;
+  private final UserRepository repository;
+  private final AppProperties properties;
 
   @Autowired
-  public UserController(UserRepository userRepository, AppProperties appProperties) {
-    this.userRepository = userRepository;
-    this.appProperties = appProperties;
+  public UserController(UserRepository repository, AppProperties properties) {
+    this.repository = repository;
+    this.properties = properties;
   }
 
   @GetMapping
   public Iterable<User> getAll() {
-    return userRepository.findAll();
+    return repository.findAll();
   }
 
   @GetMapping(Mappings.USER_ID)
-  public ResponseEntity<User> getUsersById(@PathVariable(value = "userId") Long userId)
+  public ResponseEntity<User> getUser(@PathVariable(value = "userId") Long userId)
       throws ResourceNotFoundExeption {
-    User user = userRepository.findById(userId)
+    User user = repository.findById(userId)
         .orElseThrow(() -> new ResourceNotFoundExeption("User with id "
             + userId + " not found" + HttpStatus.NOT_FOUND));
     log.info("User with id {} fetched", userId);
@@ -56,49 +56,49 @@ public class UserController {
   }
 
   @PostMapping(Mappings.ADD_NEW)
-  public ResponseEntity<?> createUser(@Valid @RequestBody User user)
+  public ResponseEntity<?> save(@Valid @RequestBody User user)
       throws ForbiddenActionExeption {
     if(!user.getRole().equals("user")){
-      throw new ForbiddenActionExeption("Validation exeption" + HttpStatus.FORBIDDEN);
+      throw new ForbiddenActionExeption("Validation exception" + HttpStatus.FORBIDDEN);
     }
-    userRepository.save(user);
-    log.info("User {} created successfully", user.getSurname());
+    repository.save(user);
+    log.info("User {} {} saved successfully", user.getSurname(), user.getName());
     return new ResponseEntity<User>(HttpStatus.CREATED);
   }
 
   @PutMapping(Mappings.EDIT_USER)
-  public ResponseEntity<User> updateUser(@PathVariable("userId") long userId,
+  public ResponseEntity<User> update(@PathVariable("userId") long userId,
       @Valid @RequestBody User user) throws ResourceNotFoundExeption {
 
-    User userToEdit = userRepository.findById(userId)
-        .orElseThrow(() -> new ResourceNotFoundExeption("Unable to delete. User with id "
-            + userId + " not found" + HttpStatus.NOT_FOUND));
+    User editedUser = repository.findById(userId)
+        .orElseThrow(() -> new ResourceNotFoundExeption("User with id "
+            + userId + " does not exist!" + HttpStatus.NOT_FOUND));
 
-    if (!userToEdit.getEmail().equals(appProperties.getSuperAdminEmail())){
-      userToEdit.setName(user.getName());
-      userToEdit.setSurname(user.getSurname());
-      userToEdit.setCardNumber(userToEdit.getCardNumber());
-      userToEdit.setEmail(user.getEmail());
-      userToEdit.setCaveNotifications(user.getCaveNotifications());
-      userToEdit.setCaves(user.getCaves());
-      userToEdit.setClimbing(user.getClimbing());
-      userToEdit.setClimbingNotifications(user.getClimbingNotifications());
-      userToEdit.setOthers(user.getOthers());
-      userToEdit.setOtherNotifications(user.getOtherNotifications());
-      userRepository.save(userToEdit);
+    if (!editedUser.getEmail().equals(properties.getSuperAdminEmail())){
+      editedUser.setName(user.getName());
+      editedUser.setSurname(user.getSurname());
+      editedUser.setCardNumber(editedUser.getCardNumber());
+      editedUser.setEmail(user.getEmail());
+      editedUser.setCaveNotifications(user.getCaveNotifications());
+      editedUser.setCaves(user.getCaves());
+      editedUser.setClimbing(user.getClimbing());
+      editedUser.setClimbingNotifications(user.getClimbingNotifications());
+      editedUser.setOthers(user.getOthers());
+      editedUser.setOtherNotifications(user.getOtherNotifications());
+      repository.save(editedUser);
       log.info("User with id {} updated successfully", userId);
     }
-    return ResponseEntity.ok(userToEdit);
+    return ResponseEntity.ok(editedUser);
   }
   @PatchMapping(Mappings.GRANT_ADMIN)
   public ResponseEntity<User> grantAdminPermissions(@PathVariable("userId") long userId)
       throws ResourceNotFoundExeption {
-    User user = userRepository.findById(userId)
-        .orElseThrow(() -> new ResourceNotFoundExeption("Unable to edit. User with id "
-            + userId + " not found" + HttpStatus.NOT_FOUND));
-    if (!user.getEmail().equals(appProperties.getSuperAdminEmail())){
+    User user = repository.findById(userId)
+        .orElseThrow(() -> new ResourceNotFoundExeption("User with id "
+            + userId + " does not exist!" + HttpStatus.NOT_FOUND));
+    if (!user.getEmail().equals(properties.getSuperAdminEmail())){
       user.setRole("admin");
-      userRepository.save(user);
+      repository.save(user);
       log.info("Admin permissions granted for User with id {} ", userId);
     }
     return ResponseEntity.ok(user);
@@ -106,12 +106,12 @@ public class UserController {
 
 
   @DeleteMapping(Mappings.DELETE_USER)
-  public ResponseEntity<?> deleteUser(@PathVariable("userId") Long userId) throws ResourceNotFoundExeption {
-    User user = userRepository.findById(userId)
-        .orElseThrow(() -> new ResourceNotFoundExeption("Unable to delete. User with id "
-            + userId + " not found" + HttpStatus.NOT_FOUND));
-    if (!user.getEmail().equals(appProperties.getSuperAdminEmail())){
-      userRepository.delete(user);
+  public ResponseEntity<?> delete(@PathVariable("userId") Long userId) throws ResourceNotFoundExeption {
+    User user = repository.findById(userId)
+        .orElseThrow(() -> new ResourceNotFoundExeption("User with id "
+            + userId + " does not exist!" + HttpStatus.NOT_FOUND));
+    if (!user.getEmail().equals(properties.getSuperAdminEmail())){
+      repository.delete(user);
       log.info("User with id {} removed successfully", userId);
     }
     return new ResponseEntity<User>(HttpStatus.NO_CONTENT);
@@ -122,7 +122,7 @@ public class UserController {
 
   @GetMapping(Mappings.CAVES_AND_NOTIF)
   public ResponseEntity<Set<CaveAchievements>> getUserCaveAchievementsAndNotifications(HttpSession session) {
-    User user = userRepository.findUserByEmail(session.getAttribute("email").toString());
+    User user = repository.findUserByEmail(session.getAttribute("email").toString());
     Set<CaveAchievements> achievementsAndNotifications = user.getCaves();
     achievementsAndNotifications.addAll(user.getCaveNotifications());
     return ResponseEntity.ok().body(achievementsAndNotifications);
@@ -130,7 +130,7 @@ public class UserController {
 
   @GetMapping(Mappings.CLIMBING_AND_NOTIF)
   public ResponseEntity<Set<ClimbingAchievements>> getUserClimbingAchievementsAndNotifications(HttpSession session) {
-    User user = userRepository.findUserByEmail(session.getAttribute("email").toString());
+    User user = repository.findUserByEmail(session.getAttribute("email").toString());
     Set<ClimbingAchievements> achievementsAndNotifications = user.getClimbing();
     achievementsAndNotifications.addAll(user.getClimbingNotifications());
     return ResponseEntity.ok().body(achievementsAndNotifications);
@@ -138,7 +138,7 @@ public class UserController {
 
   @GetMapping(Mappings.OTHERS_AND_NOTIF)
   public ResponseEntity<Set<OtherActivityAchievements>> getUserOtherAchievementsAndNotifications(HttpSession session) {
-    User user = userRepository.findUserByEmail(session.getAttribute("email").toString());
+    User user = repository.findUserByEmail(session.getAttribute("email").toString());
     Set<OtherActivityAchievements> achievementsAndNotifications = user.getOthers();
     achievementsAndNotifications.addAll(user.getOtherNotifications());
     return ResponseEntity.ok(achievementsAndNotifications);

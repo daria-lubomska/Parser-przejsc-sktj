@@ -10,7 +10,7 @@ import com.sktj.entity.CaveAchievements;
 
 @JoinFetch(paths = { "country", "caveName", "authors", "notificationAuthor" })
 @Or({
-    @Spec(path = "entryTimestamp", params = {"entryAfter", "entryBefore"},
+    @Spec(path = "entryTimestamp", params = {"start", "end"},
         spec = Between.class, config = "yyyy-MM-dd HH:mm:ss"),
     @Spec(path = "authors.name", params = "name", spec = EqualIgnoreCase.class),
     @Spec(path = "authors.surname", params = "surname", spec = EqualIgnoreCase.class),

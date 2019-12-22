@@ -3,6 +3,8 @@ package com.sktj.entity;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import java.io.Serializable;
+import java.time.Duration;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -39,29 +41,32 @@ public class OtherActivityAchievements implements Serializable {
   @Column
   Long id;
 
-  @Column(name = "notification_timestamp")
+  @Column
   @NotNull
   LocalDateTime notificationTimestamp;
 
-  @Column(name = "start_timestamp")
+  @Column
   @NotNull
-  LocalDateTime startTimestamp;
+  LocalDate date;
 
-  @Column(name = "end_timestamp")
-  @NotNull
-  LocalDateTime endTimestamp;
+  @Column
+  Duration duration;
 
   @Column
   @NotNull
   String region;
 
-  @Column(name = "achievement_description")
+  @Column
   @NotNull
-  String achievement;
+  String achievementDescription;
 
   @Column
   @NotNull
   String category; //TODO enum?
+
+  @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+  @JoinColumn
+  Country country;
 
   @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
   @JoinColumn
@@ -74,7 +79,7 @@ public class OtherActivityAchievements implements Serializable {
       inverseJoinColumns = @JoinColumn(name = "user_id"))
   List<User> authors = new ArrayList<>();
 
-  @Column(name = "authors_from_another_clubs")
+  @Column
   String anotherAuthors;
 
   @Column(length = 1000)
