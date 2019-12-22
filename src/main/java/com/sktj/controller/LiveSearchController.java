@@ -36,7 +36,7 @@ public class LiveSearchController {
     this.mapper = mapper;
   }
 
-  @GetMapping(Mappings.LIVE_CAVES_AND_CAVE_ACHIEV)
+  @GetMapping(Mappings.CAVES)
   public List<Cave> getCaveForLiveSearch(CaveSpecification caveSpecification){
     return mapper.mapCaveEntityToModel(caveRepository.findAll(caveSpecification));
   }

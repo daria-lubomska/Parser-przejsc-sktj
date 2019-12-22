@@ -25,7 +25,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @Slf4j
 @RestController
-@RequestMapping(Mappings.LIVE_CAVES_AND_CAVE_ACHIEV)
+@RequestMapping(Mappings.CAVES)
 public class CaveAchievsController {
 
   private final CaveAchievementsRepository caveAchievementsRepository;
@@ -79,14 +79,14 @@ public class CaveAchievsController {
     return new ResponseEntity<CaveAchievements>(HttpStatus.NO_CONTENT);
   }
 
-  @GetMapping(Mappings.CAVE_ACHIEV_FILTER)
+  @GetMapping(Mappings.FILTER)
   public Iterable<CaveAchievements> getCaveAchievByFilters(CaveAchievFiltersSpecification spec,
       @PageableDefault(size = 20, sort = "entryTimestamp",
           direction = Direction.DESC) Pageable pageable) {
     return caveAchievementsRepository.findAll(spec,pageable);
   }
 
-  @GetMapping(Mappings.CAVE_ACHIEV_SEARCH)
+  @GetMapping(Mappings.SEARCH)
   public Iterable<CaveAchievements> getCaveAchievBySearch(CaveAchievSearchSpecification spec,
       @PageableDefault(size = 20, sort = "entryTimestamp",
           direction = Direction.DESC) Pageable pageable) {

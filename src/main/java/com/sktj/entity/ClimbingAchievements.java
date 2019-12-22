@@ -72,11 +72,10 @@ public class ClimbingAchievements implements Serializable {
   @NotNull
   String region;
 
-
   @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
   @JoinTable(
       name = "user_climb",
-      joinColumns = @JoinColumn(name = "climb_id"),
+      joinColumns = @JoinColumn(name = "climbing_id"),
       inverseJoinColumns = @JoinColumn(name = "user_id"))
   List<User> authors = new ArrayList<>();
 

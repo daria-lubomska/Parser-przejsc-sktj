@@ -55,7 +55,7 @@ public class UserController {
     return ResponseEntity.ok(user);
   }
 
-  @PostMapping(Mappings.ADD_USER)
+  @PostMapping(Mappings.ADD_NEW)
   public ResponseEntity<?> createUser(@Valid @RequestBody User user)
       throws ForbiddenActionExeption {
     if(!user.getRole().equals("user")){
