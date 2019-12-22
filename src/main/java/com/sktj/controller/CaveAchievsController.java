@@ -36,7 +36,7 @@ public class CaveAchievsController {
     this.caveAchievementsRepository = caveAchievementsRepository;
   }
 
-  @PostMapping(Mappings.ADD_CAVE_ACHIEV)
+  @PostMapping(Mappings.ADD_NEW)
   public ResponseEntity<?> addNewCaveAchiev(@Valid @RequestBody CaveAchievements caveAchievement) {
     caveAchievementsRepository.save(caveAchievement);
     log.info("Cave achievement with notification time {}, created by {} added to DB successfully",

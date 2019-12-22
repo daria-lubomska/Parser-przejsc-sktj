@@ -25,16 +25,17 @@ import org.springframework.transaction.annotation.Transactional;
 @Component
 public class CaveAchievementParser {
 
-  private UserRepository userRepository;
-  private CaveAchievementsRepository caveAchievementsRepository;
-  private CountryRepository countryRepository;
-  private CaveRepository caveRepository;
-  private CSVFileReader reader;
+  private final UserRepository userRepository;
+  private final CaveAchievementsRepository caveAchievementsRepository;
+  private final CountryRepository countryRepository;
+  private final CaveRepository caveRepository;
+  private final CSVFileReader reader;
 
   @Autowired
   public CaveAchievementParser(UserRepository userRepository,
       CaveAchievementsRepository caveAchievementsRepository,
-      CountryRepository countryRepository, CaveRepository caveRepository, CSVFileReader reader) {
+      CountryRepository countryRepository, CaveRepository caveRepository,
+      CSVFileReader reader) {
     this.userRepository = userRepository;
     this.caveAchievementsRepository = caveAchievementsRepository;
     this.countryRepository = countryRepository;
@@ -114,8 +115,5 @@ public class CaveAchievementParser {
       processedExit = exit.plusHours(1);
     }
     return processedExit;
-  }
-
-  public CaveAchievementParser() {
   }
 }

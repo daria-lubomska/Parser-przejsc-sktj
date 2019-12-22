@@ -24,9 +24,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class UserCaveCountryParser {
 
-  private UserRepository userRepository;
-  private CaveRepository caveRepository;
-  private CountryRepository countryRepository;
+  private final UserRepository userRepository;
+  private final CaveRepository caveRepository;
+  private final CountryRepository countryRepository;
 
   @Value("classpath:users.csv")
   private Resource userResource;

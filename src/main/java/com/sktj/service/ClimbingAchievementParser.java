@@ -24,14 +24,15 @@ import org.springframework.transaction.annotation.Transactional;
 @Component
 public class ClimbingAchievementParser {
 
-  private UserRepository userRepository;
-  private CountryRepository countryRepository;
-  private ClimbingRepository climbingRepository;
-  private CSVFileReader reader;
+  private final UserRepository userRepository;
+  private final CountryRepository countryRepository;
+  private final ClimbingRepository climbingRepository;
+  private final CSVFileReader reader;
 
   @Autowired
-  public ClimbingAchievementParser(UserRepository userRepository, CountryRepository
-      countryRepository, ClimbingRepository climbingRepository, CSVFileReader reader) {
+  public ClimbingAchievementParser(UserRepository userRepository,
+      CountryRepository countryRepository, ClimbingRepository climbingRepository,
+      CSVFileReader reader) {
     this.userRepository = userRepository;
     this.countryRepository = countryRepository;
     this.climbingRepository = climbingRepository;
@@ -79,8 +80,5 @@ public class ClimbingAchievementParser {
       log.info("climbing achievement notified at {} parsed", notificationTimestamp.toString());
       climbingRepository.save(climbing);
     }
-  }
-
-  public ClimbingAchievementParser() {
   }
 }
