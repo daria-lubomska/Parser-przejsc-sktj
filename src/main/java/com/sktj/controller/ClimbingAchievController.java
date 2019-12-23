@@ -4,7 +4,6 @@ import com.sktj.controller.specification.ClimbingAchievFiltersSpecification;
 import com.sktj.controller.specification.ClimbingAchievSearchSpecification;
 import com.sktj.entity.CaveAchievements;
 import com.sktj.entity.ClimbingAchievements;
-import com.sktj.exception.ResourceNotFoundExeption;
 import com.sktj.repository.ClimbingRepository;
 import com.sktj.util.Mappings;
 import javax.validation.Valid;
@@ -23,6 +22,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.server.ResponseStatusException;
 
 @Slf4j
 @RestController
@@ -47,11 +47,10 @@ public class ClimbingAchievController {
 
   @PutMapping(Mappings.EDIT_CLIMBING)
   public ResponseEntity<ClimbingAchievements> update(@PathVariable("climbingId")
-      Long climbingId, @Valid @RequestBody ClimbingAchievements achiev)
-      throws ResourceNotFoundExeption {
+      Long climbingId, @Valid @RequestBody ClimbingAchievements achiev) {
     ClimbingAchievements editedClimbingAcheiv = repository.findById(climbingId)
-        .orElseThrow(() -> new ResourceNotFoundExeption("Climbing achievement with id "
-            + climbingId + " does not exist!" + HttpStatus.NOT_FOUND));
+        .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,
+            "Climbing Achievement Not Found"));
     repository.delete(editedClimbingAcheiv);
     editedClimbingAcheiv.setDuration(achiev.getDuration());
     editedClimbingAcheiv.setAnotherAuthors(achiev.getAnotherAuthors());
@@ -71,12 +70,10 @@ public class ClimbingAchievController {
   }
 
   @DeleteMapping(Mappings.DELETE_CLIMBING)
-  public ResponseEntity<?> delete(@PathVariable("climbingId") Long climbingId)
-      throws ResourceNotFoundExeption {
+  public ResponseEntity<?> delete(@PathVariable("climbingId") Long climbingId) {
     ClimbingAchievements achiev = repository.findById(climbingId)
-        .orElseThrow(() -> new ResourceNotFoundExeption
-            ("Climbing achievement with id " + climbingId + " does not exist!"
-                + HttpStatus.NOT_FOUND));
+        .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,
+            "Climbing Achievement Not Found"));
     repository.delete(achiev);
     log.info("Climbing achievement with id {} removed successfully", climbingId);
     return new ResponseEntity<ClimbingAchievements>(HttpStatus.NO_CONTENT);

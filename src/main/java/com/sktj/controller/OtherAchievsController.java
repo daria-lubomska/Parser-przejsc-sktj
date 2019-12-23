@@ -3,7 +3,6 @@ package com.sktj.controller;
 import com.sktj.controller.specification.OtherAchievFiltersSpecification;
 import com.sktj.controller.specification.OtherAchievSearchSpecification;
 import com.sktj.entity.OtherActivityAchievements;
-import com.sktj.exception.ResourceNotFoundExeption;
 import com.sktj.repository.OtherAchievementsRepository;
 import com.sktj.util.Mappings;
 import javax.validation.Valid;
@@ -22,6 +21,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.server.ResponseStatusException;
 
 @Slf4j
 @RestController
@@ -47,11 +47,10 @@ public class OtherAchievsController {
 
   @PutMapping(Mappings.EDIT_OTHER_ACHIEV)
   public ResponseEntity<OtherActivityAchievements> update(@PathVariable("otherId")
-      Long otherId, @Valid @RequestBody OtherActivityAchievements achiev)
-      throws ResourceNotFoundExeption {
+      Long otherId, @Valid @RequestBody OtherActivityAchievements achiev) {
     OtherActivityAchievements editedAchiev = repository.findById(otherId)
-        .orElseThrow(() -> new ResourceNotFoundExeption("Other activity achievement with id "
-            + otherId + " does not exist!" + HttpStatus.NOT_FOUND));
+        .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,
+            "Other Activities Achievement Not Found"));
     repository.delete(editedAchiev);
     editedAchiev.setAnotherAuthors(achiev.getAnotherAuthors());
     editedAchiev.setAuthors(achiev.getAuthors());
@@ -70,11 +69,10 @@ public class OtherAchievsController {
   }
 
   @DeleteMapping(Mappings.DELETE_OTHER_ACHIEV)
-  public ResponseEntity<?> delete(@PathVariable("otherId") Long otherId)
-      throws ResourceNotFoundExeption {
+  public ResponseEntity<?> delete(@PathVariable("otherId") Long otherId) {
     OtherActivityAchievements editedAchiev = repository.findById(otherId)
-        .orElseThrow(() -> new ResourceNotFoundExeption("Other activity achievement with id "
-            + otherId + " does not exist!" + HttpStatus.NOT_FOUND));
+        .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,
+            "Other Activities Achievement Not Found"));
     repository.delete(editedAchiev);
     log.info("Other activity achievement with id  {} removed successfully", otherId);
     return new ResponseEntity<OtherActivityAchievements>(HttpStatus.NO_CONTENT);

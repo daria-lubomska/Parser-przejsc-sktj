@@ -6,7 +6,6 @@ import com.sktj.entity.ClimbingAchievements;
 import com.sktj.entity.OtherActivityAchievements;
 import com.sktj.entity.User;
 import com.sktj.exception.ForbiddenActionExeption;
-import com.sktj.exception.ResourceNotFoundExeption;
 import com.sktj.repository.UserRepository;
 import com.sktj.util.Mappings;
 import java.util.Set;
@@ -25,6 +24,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.server.ResponseStatusException;
 
 @Slf4j
 @RestController
@@ -46,11 +46,9 @@ public class UserController {
   }
 
   @GetMapping(Mappings.USER_ID)
-  public ResponseEntity<User> getUser(@PathVariable(value = "userId") Long userId)
-      throws ResourceNotFoundExeption {
+  public ResponseEntity<User> getUser(@PathVariable(value = "userId") Long userId) {
     User user = repository.findById(userId)
-        .orElseThrow(() -> new ResourceNotFoundExeption("User with id "
-            + userId + " not found" + HttpStatus.NOT_FOUND));
+        .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "User Not Found"));
     log.info("User with id {} fetched", userId);
     return ResponseEntity.ok(user);
   }
@@ -68,12 +66,10 @@ public class UserController {
 
   @PutMapping(Mappings.EDIT_USER)
   public ResponseEntity<User> update(@PathVariable("userId") long userId,
-      @Valid @RequestBody User user) throws ResourceNotFoundExeption {
+      @Valid @RequestBody User user) {
 
     User editedUser = repository.findById(userId)
-        .orElseThrow(() -> new ResourceNotFoundExeption("User with id "
-            + userId + " does not exist!" + HttpStatus.NOT_FOUND));
-
+        .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "User Not Found"));
     if (!editedUser.getEmail().equals(properties.getSuperAdminEmail())){
       editedUser.setName(user.getName());
       editedUser.setSurname(user.getSurname());
@@ -91,11 +87,9 @@ public class UserController {
     return ResponseEntity.ok(editedUser);
   }
   @PatchMapping(Mappings.GRANT_ADMIN)
-  public ResponseEntity<User> grantAdminPermissions(@PathVariable("userId") long userId)
-      throws ResourceNotFoundExeption {
+  public ResponseEntity<User> grantAdminPermissions(@PathVariable("userId") long userId) {
     User user = repository.findById(userId)
-        .orElseThrow(() -> new ResourceNotFoundExeption("User with id "
-            + userId + " does not exist!" + HttpStatus.NOT_FOUND));
+        .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "User Not Found"));
     if (!user.getEmail().equals(properties.getSuperAdminEmail())){
       user.setRole("admin");
       repository.save(user);
@@ -106,10 +100,9 @@ public class UserController {
 
 
   @DeleteMapping(Mappings.DELETE_USER)
-  public ResponseEntity<?> delete(@PathVariable("userId") Long userId) throws ResourceNotFoundExeption {
+  public ResponseEntity<?> delete(@PathVariable("userId") Long userId) {
     User user = repository.findById(userId)
-        .orElseThrow(() -> new ResourceNotFoundExeption("User with id "
-            + userId + " does not exist!" + HttpStatus.NOT_FOUND));
+        .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "User Not Found"));
     if (!user.getEmail().equals(properties.getSuperAdminEmail())){
       repository.delete(user);
       log.info("User with id {} removed successfully", userId);
