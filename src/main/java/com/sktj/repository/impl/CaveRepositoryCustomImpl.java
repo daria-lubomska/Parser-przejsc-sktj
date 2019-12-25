@@ -1,16 +1,18 @@
 package com.sktj.repository.impl;
 
+import com.sktj.entity.Cave;
 import com.sktj.repository.CaveRepositoryCustom;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
-import com.sktj.entity.Cave;
+import org.springframework.transaction.annotation.Transactional;
 
 public class CaveRepositoryCustomImpl implements CaveRepositoryCustom {
 
   @PersistenceContext
   EntityManager entityManager;
 
+  @Transactional
   @Override
   public Cave findByNameAndRegion(String name, String region) {
     Query query = entityManager

@@ -14,6 +14,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Index;
 import javax.persistence.ManyToMany;
+import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -28,10 +29,23 @@ import lombok.experimental.FieldDefaults;
 @Setter
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 @Entity
-@NamedQuery(
-    name = "User.findUserByEmail",
-    query = "SELECT u FROM User u WHERE u.email = :email")
+@NamedQueries({
+    @NamedQuery(
+        name = "User.findUserByEmail",
+        query = "SELECT u FROM User u WHERE u.email = :email"),
+    @NamedQuery(
+        name = "User.findCaves",
+        query = "SELECT u.caves FROM User u WHERE u.email = :email"),
+    @NamedQuery(
+        name = "User.findClimbing",
+        query = "SELECT u.climbing FROM User u WHERE u.email = :email"),
+    @NamedQuery(
+        name = "User.findOthers",
+        query = "SELECT u.others FROM User u WHERE u.email = :email")
+})
+
 @Table(name = "users", indexes = {
     @Index(name = "user_email", columnList = "email")})
 public class User implements Serializable {
@@ -70,7 +84,6 @@ public class User implements Serializable {
   @OneToMany(mappedBy = "notificationAuthor", cascade = {CascadeType.PERSIST, CascadeType.MERGE},
       orphanRemoval = true)
   Set<ClimbingAchievements> climbingNotifications = new HashSet<>();
-  ;
 
   @JsonIgnore
   @OneToMany(mappedBy = "notificationAuthor", cascade = {CascadeType.PERSIST, CascadeType.MERGE},

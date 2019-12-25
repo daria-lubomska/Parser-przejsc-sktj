@@ -1,10 +1,10 @@
 package com.sktj.repository.impl;
 
+import com.sktj.entity.User;
 import com.sktj.repository.UserRepositoryCustom;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
-import com.sktj.entity.User;
 
 public class UserRepositoryCustomImpl implements UserRepositoryCustom {
 

@@ -1,7 +1,7 @@
 package com.sktj.repository;
 
-import org.springframework.stereotype.Repository;
 import com.sktj.entity.User;
+import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UserRepositoryCustom {

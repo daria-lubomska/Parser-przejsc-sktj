@@ -6,6 +6,8 @@ import com.sktj.entity.CaveAchievements;
 import com.sktj.entity.ClimbingAchievements;
 import com.sktj.repository.ClimbingRepository;
 import com.sktj.util.Mappings;
+import java.util.List;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +16,7 @@ import org.springframework.data.domain.Sort.Direction;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -26,7 +29,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 @Slf4j
 @RestController
-@RequestMapping(Mappings.CLIMBINGS)
+@RequestMapping(Mappings.CLIMBING)
 public class ClimbingAchievController {
 
   private final ClimbingRepository repository;
@@ -34,6 +37,15 @@ public class ClimbingAchievController {
   @Autowired
   public ClimbingAchievController(ClimbingRepository repository) {
     this.repository = repository;
+  }
+
+  @GetMapping(Mappings.GET_CLIMBING)
+  public ResponseEntity<?> get(@PathVariable("climbingId") Long climbingId) {
+    ClimbingAchievements achiev = repository.findById(climbingId)
+        .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,
+            "Climbing Not Found"));
+    log.info("Climbing achievement with id {} fetched", climbingId);
+    return ResponseEntity.ok(achiev);
   }
 
 
@@ -91,5 +103,14 @@ public class ClimbingAchievController {
       @PageableDefault(size = 20, sort = "entryTimestamp",
           direction = Direction.DESC) Pageable pageable) {
     return repository.findAll(spec, pageable);
+  }
+
+  @Transactional
+  @GetMapping(Mappings.CLIMBING_AND_NOTIF)
+  public ResponseEntity<List<ClimbingAchievements>> getUserClimbingAchievementsAndNotifications(
+      HttpSession session) {
+    List<ClimbingAchievements> achievementsAndNotifications = repository
+        .findUsersClimbingAchievs(session.getAttribute("email").toString());
+    return ResponseEntity.ok().body(achievementsAndNotifications);
   }
 }

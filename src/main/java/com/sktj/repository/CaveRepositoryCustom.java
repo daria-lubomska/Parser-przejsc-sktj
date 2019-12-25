@@ -5,6 +5,5 @@ import com.sktj.entity.Cave;
 
 @Repository
 public interface CaveRepositoryCustom {
-
   Cave findByNameAndRegion(String name, String region);
 }

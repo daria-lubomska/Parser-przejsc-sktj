@@ -18,6 +18,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import lombok.AccessLevel;
@@ -32,6 +33,12 @@ import lombok.experimental.FieldDefaults;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 @Entity
+@NamedQuery(name = "CaveAchievements.findUsersCaveAchievs",
+    query = "SELECT c FROM CaveAchievements c "
+        + "left JOIN fetch c.country co "
+        + "left JOIN fetch c.caveName cn"
+        + "left JOIN fetch c.notificationAuthor na "
+        + "left JOIN fetch c.authors ca where na.email = :email or ca.email =:email")
 @Table(name = "cave")
 public class CaveAchievements implements Serializable {
 

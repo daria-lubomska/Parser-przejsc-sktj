@@ -1,15 +1,10 @@
 package com.sktj.controller;
 
 import com.sktj.configuration.AppProperties;
-import com.sktj.entity.CaveAchievements;
-import com.sktj.entity.ClimbingAchievements;
-import com.sktj.entity.OtherActivityAchievements;
 import com.sktj.entity.User;
 import com.sktj.exception.ForbiddenActionExeption;
 import com.sktj.repository.UserRepository;
 import com.sktj.util.Mappings;
-import java.util.Set;
-import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +23,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 @Slf4j
 @RestController
-@RequestMapping(Mappings.LIVE_USERS)
+@RequestMapping(Mappings.USERS)
 public class UserController {
 
   private final UserRepository repository;
@@ -98,7 +93,6 @@ public class UserController {
     return ResponseEntity.ok(user);
   }
 
-
   @DeleteMapping(Mappings.DELETE_USER)
   public ResponseEntity<?> delete(@PathVariable("userId") Long userId) {
     User user = repository.findById(userId)
@@ -108,32 +102,5 @@ public class UserController {
       log.info("User with id {} removed successfully", userId);
     }
     return new ResponseEntity<User>(HttpStatus.NO_CONTENT);
-  }
-
-  //TODO integration with Ghost - HttpSession attributes (name, surname, email) currently logged user?
-  // now this method is not working -FIX after integration
-
-  @GetMapping(Mappings.CAVES_AND_NOTIF)
-  public ResponseEntity<Set<CaveAchievements>> getUserCaveAchievementsAndNotifications(HttpSession session) {
-    User user = repository.findUserByEmail(session.getAttribute("email").toString());
-    Set<CaveAchievements> achievementsAndNotifications = user.getCaves();
-    achievementsAndNotifications.addAll(user.getCaveNotifications());
-    return ResponseEntity.ok().body(achievementsAndNotifications);
-  }
-
-  @GetMapping(Mappings.CLIMBING_AND_NOTIF)
-  public ResponseEntity<Set<ClimbingAchievements>> getUserClimbingAchievementsAndNotifications(HttpSession session) {
-    User user = repository.findUserByEmail(session.getAttribute("email").toString());
-    Set<ClimbingAchievements> achievementsAndNotifications = user.getClimbing();
-    achievementsAndNotifications.addAll(user.getClimbingNotifications());
-    return ResponseEntity.ok().body(achievementsAndNotifications);
-  }
-
-  @GetMapping(Mappings.OTHERS_AND_NOTIF)
-  public ResponseEntity<Set<OtherActivityAchievements>> getUserOtherAchievementsAndNotifications(HttpSession session) {
-    User user = repository.findUserByEmail(session.getAttribute("email").toString());
-    Set<OtherActivityAchievements> achievementsAndNotifications = user.getOthers();
-    achievementsAndNotifications.addAll(user.getOtherNotifications());
-    return ResponseEntity.ok(achievementsAndNotifications);
   }
 }

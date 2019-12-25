@@ -41,12 +41,12 @@ public class LiveSearchController {
     return mapper.mapCaveEntityToModel(caveRepository.findAll(caveSpecification));
   }
 
-  @GetMapping(Mappings.LIVE_USERS)
+  @GetMapping(Mappings.USERS)
   public List<User> searchUsers(UserSpecification userSpecification){
     return mapper.mapUserEntityToModel(userRepository.findAll(userSpecification));
   }
 
-  @GetMapping(Mappings.LIVE_COUNTRIES)
+  @GetMapping(Mappings.COUNTRIES)
   public List<Country> searchCountry(CountrySpecification countrySpecification){
     return mapper.mapCountryEntityToModel(countryRepository.findAll(countrySpecification));
   }

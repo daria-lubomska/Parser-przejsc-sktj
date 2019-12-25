@@ -5,6 +5,8 @@ import com.sktj.controller.specification.CaveAchievSearchSpecification;
 import com.sktj.entity.CaveAchievements;
 import com.sktj.repository.CaveAchievementsRepository;
 import com.sktj.util.Mappings;
+import java.util.List;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +15,7 @@ import org.springframework.data.domain.Sort.Direction;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -34,6 +37,15 @@ public class CaveAchievsController {
   public CaveAchievsController(
       CaveAchievementsRepository repository) {
     this.repository = repository;
+  }
+
+  @GetMapping(Mappings.GET_CAVE_ACHIEV)
+  public ResponseEntity<?> get(@PathVariable("caveAchievId") Long caveAchievId) {
+    CaveAchievements achiev = repository.findById(caveAchievId)
+        .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,
+            "Cave achievement Not Found"));
+    log.info("Cave achievement with id {} fetched", caveAchievId);
+    return ResponseEntity.ok(achiev);
   }
 
   @PostMapping(Mappings.ADD_NEW)
@@ -89,5 +101,13 @@ public class CaveAchievsController {
       @PageableDefault(size = 20, sort = "entryTimestamp",
           direction = Direction.DESC) Pageable pageable) {
     return repository.findAll(spec,pageable);
+  }
+
+  @Transactional
+  @GetMapping(Mappings.CAVES_AND_NOTIF)
+  public ResponseEntity<List<CaveAchievements>> getUserCaveAchievementsAndNotifications( HttpSession session) {
+    List<CaveAchievements> achievementsAndNotifications = repository
+        .findUsersCaveAchievs(session.getAttribute("email").toString());
+    return ResponseEntity.ok().body(achievementsAndNotifications);
   }
 }

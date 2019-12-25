@@ -3,8 +3,10 @@ package com.sktj.controller;
 import com.sktj.controller.specification.OtherAchievFiltersSpecification;
 import com.sktj.controller.specification.OtherAchievSearchSpecification;
 import com.sktj.entity.OtherActivityAchievements;
-import com.sktj.repository.OtherAchievementsRepository;
+import com.sktj.repository.OtherAchievRepository;
 import com.sktj.util.Mappings;
+import java.util.List;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,11 +30,20 @@ import org.springframework.web.server.ResponseStatusException;
 @RequestMapping(Mappings.OTHERS)
 public class OtherAchievsController {
 
-  private final OtherAchievementsRepository repository;
+  private final OtherAchievRepository repository;
 
   @Autowired
-  public OtherAchievsController(OtherAchievementsRepository repository) {
+  public OtherAchievsController(OtherAchievRepository repository) {
     this.repository = repository;
+  }
+
+  @GetMapping(Mappings.GET_OTHER)
+  public ResponseEntity<?> get(@PathVariable("otherId") Long otherId) {
+    OtherActivityAchievements achiev = repository.findById(otherId)
+        .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,
+            "Other Activities Achievement Not Found"));
+    log.info("Other activity achievement with id {} fetched", otherId);
+    return ResponseEntity.ok(achiev);
   }
 
   @PostMapping(Mappings.ADD_NEW)
@@ -92,5 +103,13 @@ public class OtherAchievsController {
       @PageableDefault(size = 20, sort = "date",
           direction = Direction.DESC) Pageable pageable) {
     return repository.findAll(spec, pageable);
+  }
+
+  @GetMapping(Mappings.OTHERS_AND_NOTIF)
+  public ResponseEntity<List<OtherActivityAchievements>> getUserOtherAchievementsAndNotifications(
+      HttpSession session) {
+    List<OtherActivityAchievements> achievementsAndNotifications = repository
+        .findUsersOtherAchievs(session.getAttribute("email").toString());
+    return ResponseEntity.ok(achievementsAndNotifications);
   }
 }
