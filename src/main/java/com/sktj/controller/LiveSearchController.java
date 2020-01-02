@@ -11,6 +11,7 @@ import com.sktj.repository.CaveRepository;
 import com.sktj.repository.CountryRepository;
 import com.sktj.repository.UserRepository;
 import com.sktj.util.Mappings;
+import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -38,16 +39,22 @@ public class LiveSearchController {
 
   @GetMapping(Mappings.CAVES)
   public List<CaveModel> searchCaves(CaveSpecification caveSpecification){
-    return mapper.mapCave(caveRepository.findAll(caveSpecification));
+    List<CaveModel> model = new ArrayList<>();
+    caveRepository.findAll(caveSpecification).forEach(i->model.add(mapper.mapCave(i)));
+    return model;
   }
 
   @GetMapping(Mappings.USERS)
   public List<UserModel> searchUsers(UserSpecification userSpecification){
-    return mapper.mapUser(userRepository.findAll(userSpecification));
+    List<UserModel> model = new ArrayList<>();
+    userRepository.findAll(userSpecification).forEach(i-> model.add(mapper.mapUser(i)));
+    return model;
   }
 
   @GetMapping(Mappings.COUNTRIES)
   public List<CountryModel> searchCountry(CountrySpecification countrySpecification){
-    return mapper.mapCountry(countryRepository.findAll(countrySpecification));
+    List<CountryModel> model = new ArrayList<>();
+    countryRepository.findAll(countrySpecification).forEach(i->model.add(mapper.mapCountry(i)));
+    return model;
   }
 }
