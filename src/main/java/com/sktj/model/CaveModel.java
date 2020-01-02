@@ -7,7 +7,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor
-public class Cave {
+public class CaveModel {
 
   private String name;
   private String region;

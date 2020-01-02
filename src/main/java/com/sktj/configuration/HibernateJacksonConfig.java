@@ -11,5 +11,4 @@ public class HibernateJacksonConfig {
   public Hibernate5Module hibernateModule(){
     return new Hibernate5Module();
   }
-
 }

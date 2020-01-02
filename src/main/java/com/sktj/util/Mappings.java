@@ -20,6 +20,7 @@ public class Mappings {
 
   //caves mappings
   public static final String CAVES = "/caves";
+  public static final String GET_ALL = "/all";
   public static final String GET_CAVE_ACHIEV = "/id/{caveAchievId}";
   public static final String DELETE_CAVE_ACHIEV = "/delete/{caveAchievId}";
   public static final String EDIT_CAVE_ACHIEV = "/edit/{caveAchievId}";

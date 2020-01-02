@@ -4,9 +4,9 @@ import com.sktj.controller.specification.CaveAchievFiltersSpecification;
 import com.sktj.controller.specification.CaveAchievSearchSpecification;
 import com.sktj.entity.CaveAchievements;
 import com.sktj.repository.CaveAchievementsRepository;
+import com.sktj.service.CaveAchievementsService;
 import com.sktj.util.Mappings;
 import java.util.List;
-import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,11 +32,18 @@ import org.springframework.web.server.ResponseStatusException;
 public class CaveAchievsController {
 
   private final CaveAchievementsRepository repository;
+  private final CaveAchievementsService service;
 
   @Autowired
-  public CaveAchievsController(
-      CaveAchievementsRepository repository) {
+  public CaveAchievsController(CaveAchievementsRepository repository,
+      CaveAchievementsService service) {
     this.repository = repository;
+    this.service = service;
+  }
+
+  @GetMapping(Mappings.GET_ALL)
+  public ResponseEntity<?> getAll() {
+    return ResponseEntity.ok(service.getAll());
   }
 
   @GetMapping(Mappings.GET_CAVE_ACHIEV)
@@ -81,7 +88,7 @@ public class CaveAchievsController {
 
   @DeleteMapping(Mappings.DELETE_CAVE_ACHIEV)
   public ResponseEntity<?> delete(@PathVariable("caveAchievId") Long caveAchievId) {
-    CaveAchievements caveAchiev = repository.findById(caveAchievId)
+    CaveAchievements caveAchiev = service.find(caveAchievId)
         .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,
             "Cave Achievement Not Found"));
     repository.delete(caveAchiev);
@@ -105,9 +112,10 @@ public class CaveAchievsController {
 
   @Transactional
   @GetMapping(Mappings.CAVES_AND_NOTIF)
-  public ResponseEntity<List<CaveAchievements>> getUserCaveAchievementsAndNotifications( HttpSession session) {
-    List<CaveAchievements> achievementsAndNotifications = repository
-        .findUsersCaveAchievs(session.getAttribute("email").toString());
+  public ResponseEntity<List<CaveAchievements>> getUserCaveAchievementsAndNotifications(
+      String someGhostIntegration) {
+    List<CaveAchievements> achievementsAndNotifications = service
+        .findUsersCaveAchievs(someGhostIntegration);
     return ResponseEntity.ok().body(achievementsAndNotifications);
   }
 }

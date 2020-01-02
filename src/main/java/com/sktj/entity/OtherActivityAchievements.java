@@ -32,7 +32,6 @@ import lombok.experimental.FieldDefaults;
 @Setter
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 @Entity
 @NamedQuery(name = "OtherActivityAchievements.findUserOtherAchievs",
     query = "SELECT c FROM OtherActivityAchievements c "

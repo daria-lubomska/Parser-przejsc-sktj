@@ -4,9 +4,9 @@ import com.sktj.controller.specification.CaveSpecification;
 import com.sktj.controller.specification.CountrySpecification;
 import com.sktj.controller.specification.UserSpecification;
 import com.sktj.mapper.Mapper;
-import com.sktj.model.Cave;
-import com.sktj.model.Country;
-import com.sktj.model.User;
+import com.sktj.model.CaveModel;
+import com.sktj.model.CountryModel;
+import com.sktj.model.UserModel;
 import com.sktj.repository.CaveRepository;
 import com.sktj.repository.CountryRepository;
 import com.sktj.repository.UserRepository;
@@ -37,17 +37,17 @@ public class LiveSearchController {
   }
 
   @GetMapping(Mappings.CAVES)
-  public List<Cave> searchCaves(CaveSpecification caveSpecification){
-    return mapper.mapCaveEntityToModel(caveRepository.findAll(caveSpecification));
+  public List<CaveModel> searchCaves(CaveSpecification caveSpecification){
+    return mapper.mapCave(caveRepository.findAll(caveSpecification));
   }
 
   @GetMapping(Mappings.USERS)
-  public List<User> searchUsers(UserSpecification userSpecification){
-    return mapper.mapUserEntityToModel(userRepository.findAll(userSpecification));
+  public List<UserModel> searchUsers(UserSpecification userSpecification){
+    return mapper.mapUser(userRepository.findAll(userSpecification));
   }
 
   @GetMapping(Mappings.COUNTRIES)
-  public List<Country> searchCountry(CountrySpecification countrySpecification){
-    return mapper.mapCountryEntityToModel(countryRepository.findAll(countrySpecification));
+  public List<CountryModel> searchCountry(CountrySpecification countrySpecification){
+    return mapper.mapCountry(countryRepository.findAll(countrySpecification));
   }
 }

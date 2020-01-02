@@ -32,7 +32,6 @@ import lombok.experimental.FieldDefaults;
 @Setter
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 @NamedQuery(name = "ClimbingAchievements.findUsersClimbingAchievs",
     query = "SELECT c FROM ClimbingAchievements c "
         + "left JOIN fetch c.country co "

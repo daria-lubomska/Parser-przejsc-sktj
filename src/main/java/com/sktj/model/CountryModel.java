@@ -7,7 +7,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor
-public class Country {
+public class CountryModel {
 
   private String name;
 }

@@ -1,9 +1,9 @@
 package com.sktj.repository;
 
 import com.sktj.entity.CaveAchievements;
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
+import org.springframework.data.repository.CrudRepository;
 
-public interface CaveAchievementsRepository extends JpaRepository<CaveAchievements, Long> ,
-    JpaSpecificationExecutor<CaveAchievements>, CaveAchievRepositoryCustom {
+public interface CaveAchievementsRepository extends CrudRepository<CaveAchievements, Long>,
+    JpaSpecificationExecutor<CaveAchievements> {
 }
