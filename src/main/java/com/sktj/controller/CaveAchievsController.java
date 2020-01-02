@@ -3,9 +3,12 @@ package com.sktj.controller;
 import com.sktj.controller.specification.CaveAchievFiltersSpecification;
 import com.sktj.controller.specification.CaveAchievSearchSpecification;
 import com.sktj.entity.CaveAchievements;
+import com.sktj.mapper.Mapper;
+import com.sktj.model.CaveAchievModel;
 import com.sktj.repository.CaveAchievementsRepository;
 import com.sktj.service.CaveAchievementsService;
 import com.sktj.util.Mappings;
+import java.util.ArrayList;
 import java.util.List;
 import javax.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
@@ -33,26 +36,35 @@ public class CaveAchievsController {
 
   private final CaveAchievementsRepository repository;
   private final CaveAchievementsService service;
+  private final Mapper mapper;
 
   @Autowired
   public CaveAchievsController(CaveAchievementsRepository repository,
-      CaveAchievementsService service) {
+      CaveAchievementsService service, Mapper mapper) {
     this.repository = repository;
     this.service = service;
+    this.mapper = mapper;
   }
 
   @GetMapping(Mappings.GET_ALL)
   public ResponseEntity<?> getAll() {
+    List<CaveAchievModel> model = new ArrayList<>();
+    service.getAll().forEach(i -> model.add(mapper.mapCaveAchiev(i)));
+    return ResponseEntity.ok(model);
+  }
+  @GetMapping("/test")
+  public ResponseEntity<?> test() {
     return ResponseEntity.ok(service.getAll());
   }
 
+  @Transactional
   @GetMapping(Mappings.GET_CAVE_ACHIEV)
   public ResponseEntity<?> get(@PathVariable("caveAchievId") Long caveAchievId) {
     CaveAchievements achiev = repository.findById(caveAchievId)
         .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,
             "Cave achievement Not Found"));
     log.info("Cave achievement with id {} fetched", caveAchievId);
-    return ResponseEntity.ok(achiev);
+    return ResponseEntity.ok(mapper.mapCaveAchiev(achiev));
   }
 
   @PostMapping(Mappings.ADD_NEW)
@@ -97,25 +109,32 @@ public class CaveAchievsController {
   }
 
   @GetMapping(Mappings.FILTER)
-  public Iterable<CaveAchievements> filter(CaveAchievFiltersSpecification spec,
+  public Iterable<CaveAchievModel> filter(CaveAchievFiltersSpecification spec,
       @PageableDefault(size = 20, sort = "entryTimestamp",
           direction = Direction.DESC) Pageable pageable) {
-    return repository.findAll(spec,pageable);
+    List<CaveAchievModel> model = new ArrayList<>();
+    repository.findAll(spec,pageable).forEach(i-> model.add(mapper.mapCaveAchiev(i)));
+    return model;
   }
 
   @GetMapping(Mappings.SEARCH)
-  public Iterable<CaveAchievements> search(CaveAchievSearchSpecification spec,
+  public Iterable<CaveAchievModel> search(CaveAchievSearchSpecification spec,
       @PageableDefault(size = 20, sort = "entryTimestamp",
           direction = Direction.DESC) Pageable pageable) {
-    return repository.findAll(spec,pageable);
+    List<CaveAchievModel> model = new ArrayList<>();
+    repository.findAll(spec,pageable).forEach(i-> model.add(mapper.mapCaveAchiev(i)));
+    return model;
   }
 
-  @Transactional
+  //TODO check after Ghost integration
+
   @GetMapping(Mappings.CAVES_AND_NOTIF)
-  public ResponseEntity<List<CaveAchievements>> getUserCaveAchievementsAndNotifications(
+  public ResponseEntity<List<CaveAchievModel>> getUserCaveAchievementsAndNotifications(
       String someGhostIntegration) {
     List<CaveAchievements> achievementsAndNotifications = service
         .findUsersCaveAchievs(someGhostIntegration);
-    return ResponseEntity.ok().body(achievementsAndNotifications);
+    List<CaveAchievModel> model = new ArrayList<>();
+    service.findUsersCaveAchievs(someGhostIntegration).forEach(i->model.add(mapper.mapCaveAchiev(i)));
+    return ResponseEntity.ok().body(model);
   }
 }

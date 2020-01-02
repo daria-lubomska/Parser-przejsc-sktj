@@ -105,7 +105,8 @@ public class ClimbingAchievController {
     return repository.findAll(spec, pageable);
   }
 
-  @Transactional
+  //TODO check after Ghost integration
+
   @GetMapping(Mappings.CLIMBING_AND_NOTIF)
   public ResponseEntity<List<ClimbingAchievements>> getUserClimbingAchievementsAndNotifications(
       HttpSession session) {

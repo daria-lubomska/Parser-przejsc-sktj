@@ -105,6 +105,8 @@ public class OtherAchievsController {
     return repository.findAll(spec, pageable);
   }
 
+  //TODO check after Ghost integration
+
   @GetMapping(Mappings.OTHERS_AND_NOTIF)
   public ResponseEntity<List<OtherActivityAchievements>> getUserOtherAchievementsAndNotifications(
       HttpSession session) {
