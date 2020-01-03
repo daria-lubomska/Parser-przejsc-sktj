@@ -4,7 +4,6 @@ import com.opencsv.exceptions.CsvValidationException;
 import com.sktj.entity.ClimbingAchievements;
 import com.sktj.entity.User;
 import com.sktj.repository.ClimbingRepository;
-import com.sktj.repository.CountryRepository;
 import com.sktj.repository.UserRepository;
 import com.sktj.util.attributes.ClimbingAchievAttributes;
 import java.io.IOException;
@@ -25,16 +24,18 @@ import org.springframework.transaction.annotation.Transactional;
 public class ClimbingAchievementParser {
 
   private final UserRepository userRepository;
-  private final CountryRepository countryRepository;
+  private final UserService userService;
+  private final CountryService countryService;
   private final ClimbingRepository climbingRepository;
   private final CSVFileReader reader;
 
   @Autowired
   public ClimbingAchievementParser(UserRepository userRepository,
-      CountryRepository countryRepository, ClimbingRepository climbingRepository,
-      CSVFileReader reader) {
+      UserService userService, CountryService countryService,
+      ClimbingRepository climbingRepository, CSVFileReader reader) {
     this.userRepository = userRepository;
-    this.countryRepository = countryRepository;
+    this.userService = userService;
+    this.countryService = countryService;
     this.climbingRepository = climbingRepository;
     this.reader = reader;
   }
@@ -64,9 +65,9 @@ public class ClimbingAchievementParser {
       climbing.setDifficultyGrade(line[ClimbingAchievAttributes.DIFFICULTY.ordinal()].trim());
       climbing.setWall(line[ClimbingAchievAttributes.WALL.ordinal()].trim());
       String country = line[ClimbingAchievAttributes.COUNTRY.ordinal()].trim();
-      climbing.setCountry(countryRepository.findCountryByName(country));
+      climbing.setCountry(countryService.findCountryByName(country));
       climbing.setRegion(line[ClimbingAchievAttributes.REGION.ordinal()].trim());
-      List<User> userBatchList = userRepository.findAll();
+      List<User> userBatchList = (List<User>) userRepository.findAll();
       String authors = line[ClimbingAchievAttributes.AUTHORS.ordinal()];
       for (User user : userBatchList) {
         if (authors.toUpperCase().contains(user.getSurname().toUpperCase())) {
@@ -76,7 +77,7 @@ public class ClimbingAchievementParser {
       climbing.setAnotherAuthors(line[ClimbingAchievAttributes.ANOTHER_AUTHORS.ordinal()].trim());
       climbing.setComment(line[ClimbingAchievAttributes.COMMENT.ordinal()].trim());
       String email = line[ClimbingAchievAttributes.NOTIFICATION_AUTHOR.ordinal()].trim();
-      climbing.setNotificationAuthor(userRepository.findUserByEmail(email));
+      climbing.setNotificationAuthor(userService.findUserByEmail(email));
       log.info("climbing achievement notified at {} parsed", notificationTimestamp.toString());
       climbingRepository.save(climbing);
     }

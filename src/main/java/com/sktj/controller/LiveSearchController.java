@@ -22,16 +22,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(Mappings.LIVE)
 public class LiveSearchController {
 
-  private final CaveRepository caveRepository;
+  private final CaveRepository caveService;
   private final UserRepository userRepository;
   private final CountryRepository countryRepository;
   private final Mapper mapper;
 
   @Autowired
-  public LiveSearchController(CaveRepository caveRepository,
+  public LiveSearchController(CaveRepository caveService,
       UserRepository userRepository, CountryRepository countryRepository,
       Mapper mapper) {
-    this.caveRepository = caveRepository;
+    this.caveService = caveService;
     this.userRepository = userRepository;
     this.countryRepository = countryRepository;
     this.mapper = mapper;
@@ -40,7 +40,7 @@ public class LiveSearchController {
   @GetMapping(Mappings.CAVES)
   public List<CaveModel> searchCaves(CaveSpecification caveSpecification){
     List<CaveModel> model = new ArrayList<>();
-    caveRepository.findAll(caveSpecification).forEach(i->model.add(mapper.mapCave(i)));
+    caveService.findAll(caveSpecification).forEach(i->model.add(mapper.mapCave(i)));
     return model;
   }
 

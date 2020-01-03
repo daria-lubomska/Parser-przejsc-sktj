@@ -1,9 +1,8 @@
 package com.sktj.repository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import com.sktj.entity.Cave;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
+import org.springframework.data.repository.CrudRepository;
 
-public interface CaveRepository extends JpaRepository<Cave, Long>,
-    JpaSpecificationExecutor<Cave>, CaveRepositoryCustom{
+public interface CaveRepository extends CrudRepository<Cave, Long>, JpaSpecificationExecutor<Cave> {
 }

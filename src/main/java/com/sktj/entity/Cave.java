@@ -47,8 +47,7 @@ public class Cave implements Serializable {
   String region;
 
   @JsonIgnore
-  @OneToMany(mappedBy = "caveName", cascade = {CascadeType.PERSIST, CascadeType.MERGE},
-      orphanRemoval = true)
+  @OneToMany(mappedBy = "caveName", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
   Set<CaveAchievements> caves;
 
   public Cave(@NotNull String name, @NotNull String region) {

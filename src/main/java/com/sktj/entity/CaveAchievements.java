@@ -33,20 +33,12 @@ import lombok.experimental.FieldDefaults;
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Entity
-@NamedQueries({
-    @NamedQuery(name = "CaveAchievements.findUsersCaveAchievs",
+@NamedQuery(name = "CaveAchievements.findUsersCaveAchievs",
     query = "SELECT c FROM CaveAchievements c "
         + "left JOIN fetch c.country co "
-        + "left JOIN fetch c.caveName cn "
+        + "left JOIN fetch c.caveName cn"
         + "left JOIN fetch c.notificationAuthor na "
-        + "left JOIN fetch c.authors ca where na.email = :email or ca.email =:email"),
-    @NamedQuery(name = "CaveAchievements.findAll",
-        query = "SELECT c FROM CaveAchievements c "
-        + "left JOIN fetch c.country "
-        + "left JOIN fetch c.caveName "
-        + "left JOIN fetch c.notificationAuthor "
-        + "left JOIN fetch c.authors")
-})
+        + "left JOIN fetch c.authors ca where na.email = :email or ca.email =:email")
 @Table(name = "cave")
 public class CaveAchievements implements Serializable {
 
@@ -82,7 +74,7 @@ public class CaveAchievements implements Serializable {
   @JoinColumn
   User notificationAuthor;
 
-  @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+  @ManyToMany(cascade = {CascadeType.MERGE})
   @JoinTable(
       name = "user_cave",
       joinColumns = @JoinColumn(name = "cave_id"),

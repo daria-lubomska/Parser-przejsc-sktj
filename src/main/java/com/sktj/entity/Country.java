@@ -41,18 +41,15 @@ public class Country implements Serializable {
   String name;
 
   @JsonIgnore
-  @OneToMany(mappedBy = "country", cascade = {CascadeType.PERSIST, CascadeType.MERGE},
-      orphanRemoval = true)
+  @OneToMany(mappedBy = "country", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
   Set<CaveAchievements> caves;
 
   @JsonIgnore
-  @OneToMany(mappedBy = "country", cascade = {CascadeType.PERSIST, CascadeType.MERGE},
-      orphanRemoval = true)
+  @OneToMany(mappedBy = "country", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
   Set<ClimbingAchievements> climbing;
 
   @JsonIgnore
-  @OneToMany(mappedBy = "country", cascade = {CascadeType.PERSIST, CascadeType.MERGE},
-      orphanRemoval = true)
+  @OneToMany(mappedBy = "country", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
   Set<ClimbingAchievements> others;
 
   public Country(@NotNull String name) {

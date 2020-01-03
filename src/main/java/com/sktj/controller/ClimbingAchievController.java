@@ -63,7 +63,6 @@ public class ClimbingAchievController {
     ClimbingAchievements editedClimbingAcheiv = repository.findById(climbingId)
         .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,
             "Climbing Achievement Not Found"));
-    repository.delete(editedClimbingAcheiv);
     editedClimbingAcheiv.setDuration(achiev.getDuration());
     editedClimbingAcheiv.setAnotherAuthors(achiev.getAnotherAuthors());
     editedClimbingAcheiv.setCountry(achiev.getCountry());

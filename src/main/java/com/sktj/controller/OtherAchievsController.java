@@ -62,7 +62,6 @@ public class OtherAchievsController {
     OtherActivityAchievements editedAchiev = repository.findById(otherId)
         .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,
             "Other Activities Achievement Not Found"));
-    repository.delete(editedAchiev);
     editedAchiev.setAnotherAuthors(achiev.getAnotherAuthors());
     editedAchiev.setAuthors(achiev.getAuthors());
     editedAchiev.setCategory(achiev.getCategory());

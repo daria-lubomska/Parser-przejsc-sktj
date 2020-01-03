@@ -76,18 +76,15 @@ public class User implements Serializable {
   String email;
 
   @JsonIgnore
-  @OneToMany(mappedBy = "notificationAuthor", cascade = {CascadeType.PERSIST, CascadeType.MERGE},
-      orphanRemoval = true)
+  @OneToMany(mappedBy = "notificationAuthor", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
   Set<CaveAchievements> caveNotifications = new HashSet<>();
 
   @JsonIgnore
-  @OneToMany(mappedBy = "notificationAuthor", cascade = {CascadeType.PERSIST, CascadeType.MERGE},
-      orphanRemoval = true)
+  @OneToMany(mappedBy = "notificationAuthor", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
   Set<ClimbingAchievements> climbingNotifications = new HashSet<>();
 
   @JsonIgnore
-  @OneToMany(mappedBy = "notificationAuthor", cascade = {CascadeType.PERSIST, CascadeType.MERGE},
-      orphanRemoval = true)
+  @OneToMany(mappedBy = "notificationAuthor", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
   Set<OtherActivityAchievements> otherNotifications = new HashSet<>();
 
   @JsonIgnore

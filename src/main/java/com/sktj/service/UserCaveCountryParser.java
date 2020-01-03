@@ -25,7 +25,7 @@ import org.springframework.stereotype.Component;
 public class UserCaveCountryParser {
 
   private final UserRepository userRepository;
-  private final CaveRepository caveRepository;
+  private final CaveRepository caveService;
   private final CountryRepository countryRepository;
 
   @Value("classpath:users.csv")
@@ -38,10 +38,10 @@ public class UserCaveCountryParser {
   private Resource countryResource;
 
   @Autowired
-  public UserCaveCountryParser(UserRepository userRepository, CaveRepository caveRepository,
+  public UserCaveCountryParser(UserRepository userRepository, CaveRepository caveService,
       CountryRepository countryRepository) {
     this.userRepository = userRepository;
-    this.caveRepository = caveRepository;
+    this.caveService = caveService;
     this.countryRepository = countryRepository;
   }
 
@@ -71,7 +71,7 @@ public class UserCaveCountryParser {
       String[] line = record.split(",");
       Cave cave = new Cave(line[0].trim(), line[1].trim());
       log.info("cave {} was saved to DB", Arrays.toString(line));
-      caveRepository.save(cave);
+      caveService.save(cave);
     }
 
     List<String> countryRecords = readFile(countryResource);

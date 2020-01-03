@@ -26,19 +26,24 @@ import org.springframework.transaction.annotation.Transactional;
 public class CaveAchievementParser {
 
   private final UserRepository userRepository;
+  private final UserService userService;
   private final CaveAchievementsRepository caveAchievementsRepository;
-  private final CountryRepository countryRepository;
+  private final CountryService countryService;
+  private final CaveService caveService;
   private final CaveRepository caveRepository;
   private final CSVFileReader reader;
 
   @Autowired
   public CaveAchievementParser(UserRepository userRepository,
+      UserService userService,
       CaveAchievementsRepository caveAchievementsRepository,
-      CountryRepository countryRepository, CaveRepository caveRepository,
-      CSVFileReader reader) {
+      CountryService countryService, CaveService caveService,
+      CaveRepository caveRepository, CSVFileReader reader) {
     this.userRepository = userRepository;
+    this.userService = userService;
     this.caveAchievementsRepository = caveAchievementsRepository;
-    this.countryRepository = countryRepository;
+    this.countryService = countryService;
+    this.caveService = caveService;
     this.caveRepository = caveRepository;
     this.reader = reader;
   }
@@ -64,19 +69,19 @@ public class CaveAchievementParser {
       String caveName = line[CaveAchievAttributes.CAVE_NAME.ordinal()].trim();
       String region = line[CaveAchievAttributes.REGION.ordinal()].trim();
 
-      if (caveRepository.findByNameAndRegion(caveName, region) == null) {
+      if (caveService.findByNameAndRegion(caveName, region) == null) {
         Cave newCave = new Cave(caveName, region);
         caveRepository.save(newCave);
         cave.setCaveName(newCave);
       } else {
-        cave.setCaveName(caveRepository.findByNameAndRegion(caveName, region));
+        cave.setCaveName(caveService.findByNameAndRegion(caveName, region));
       }
 
       cave.setReachedParts(line[CaveAchievAttributes.REACHED_PARTS.ordinal()].trim());
       cave.setCaveOvercomeStyle(line[CaveAchievAttributes.CAVE_OVERCOME_STYLE.ordinal()]
           .trim().toUpperCase());
       String country = line[CaveAchievAttributes.COUNTRY.ordinal()].trim();
-      List<User> userBatchList = userRepository.findAll();
+      List<User> userBatchList = (List<User>) userRepository.findAll();
       String authors = line[CaveAchievAttributes.AUTHORS.ordinal()];
 
       for (User user : userBatchList) {
@@ -84,11 +89,11 @@ public class CaveAchievementParser {
           cave.getAuthors().add(user);
         }
       }
-      cave.setCountry(countryRepository.findCountryByName(country));
+      cave.setCountry(countryService.findCountryByName(country));
       cave.setAnotherAuthors(line[CaveAchievAttributes.ANOTHER_AUTHORS.ordinal()].trim());
       cave.setComment(line[CaveAchievAttributes.COMMENT.ordinal()].trim());
       String email = line[CaveAchievAttributes.NOTIFICATION_AUTHOR.ordinal()].trim();
-      cave.setNotificationAuthor(userRepository.findUserByEmail(email));
+      cave.setNotificationAuthor(userService.findUserByEmail(email));
       log.info("cave {} achievement on {}", caveName, notificationTimestamp.toString());
       caveAchievementsRepository.save(cave);
     }
