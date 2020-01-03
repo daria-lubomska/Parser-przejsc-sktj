@@ -4,11 +4,14 @@ import com.sktj.controller.specification.OtherAchievFiltersSpecification;
 import com.sktj.controller.specification.OtherAchievSearchSpecification;
 import com.sktj.entity.OtherActivityAchievements;
 import com.sktj.entity.User;
+import com.sktj.mapper.Mapper;
+import com.sktj.model.OtherAchievModel;
 import com.sktj.repository.OtherAchievRepository;
 import com.sktj.service.CountryService;
 import com.sktj.service.OtherService;
 import com.sktj.service.UserService;
 import com.sktj.util.Mappings;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -40,14 +43,17 @@ public class OtherAchievsController {
   private final OtherService service;
   private final UserService userService;
   private final CountryService countryService;
+  private final Mapper mapper;
 
   @Autowired
   public OtherAchievsController(OtherAchievRepository repository,
-      OtherService service, UserService userService, CountryService countryService) {
+      OtherService service, UserService userService, CountryService countryService,
+      Mapper mapper) {
     this.repository = repository;
     this.service = service;
     this.userService = userService;
     this.countryService = countryService;
+    this.mapper = mapper;
   }
 
   @Transactional
@@ -57,7 +63,7 @@ public class OtherAchievsController {
         .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,
             "Other Activities Achievement Not Found"));
     log.info("Other activity achievement with id {} fetched", otherId);
-    return ResponseEntity.ok(achiev);
+    return ResponseEntity.ok(mapper.mapOtherAchiev(achiev));
   }
 
   @PostMapping(Mappings.ADD_NEW)
@@ -112,28 +118,33 @@ public class OtherAchievsController {
   }
 
   @GetMapping(Mappings.FILTER)
-  public Iterable<OtherActivityAchievements> filter(
+  public Iterable<OtherAchievModel> filter(
       OtherAchievFiltersSpecification spec,
       @PageableDefault(size = 20, sort = "date",
           direction = Direction.DESC) Pageable pageable) {
-    return repository.findAll(spec, pageable);
+    List<OtherAchievModel> model = new ArrayList<>();
+    repository.findAll(spec, pageable).forEach(i -> model.add(mapper.mapOtherAchiev(i)));
+    return model;
   }
 
   @GetMapping(Mappings.SEARCH)
-  public Iterable<OtherActivityAchievements> search(
+  public Iterable<OtherAchievModel> search(
       OtherAchievSearchSpecification spec,
       @PageableDefault(size = 20, sort = "date",
           direction = Direction.DESC) Pageable pageable) {
-    return repository.findAll(spec, pageable);
+    List<OtherAchievModel> model = new ArrayList<>();
+    repository.findAll(spec, pageable).forEach(i -> model.add(mapper.mapOtherAchiev(i)));
+    return model;
   }
 
   //TODO check after Ghost integration
 
   @GetMapping(Mappings.OTHERS_AND_NOTIF)
-  public ResponseEntity<List<OtherActivityAchievements>> getUserOtherAchievementsAndNotifications(
+  public ResponseEntity<List<OtherAchievModel>> getUserOtherAchievementsAndNotifications(
       String someGhostIntegration) {
-    List<OtherActivityAchievements> achievementsAndNotifications = service
-        .findUsersOtherAchievs(someGhostIntegration);
-    return ResponseEntity.ok(achievementsAndNotifications);
+    List<OtherAchievModel> model = new ArrayList<>();
+    service.findUsersOtherAchievs(someGhostIntegration)
+        .forEach(i -> model.add(mapper.mapOtherAchiev(i)));
+    return ResponseEntity.ok().body(model);
   }
 }

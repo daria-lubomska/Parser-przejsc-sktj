@@ -157,7 +157,8 @@ public class CaveAchievsController {
     List<CaveAchievements> achievementsAndNotifications = service
         .findUsersCaveAchievs(someGhostIntegration);
     List<CaveAchievModel> model = new ArrayList<>();
-    service.findUsersCaveAchievs(someGhostIntegration).forEach(i->model.add(mapper.mapCaveAchiev(i)));
+    service.findUsersCaveAchievs(someGhostIntegration)
+        .forEach(i -> model.add(mapper.mapCaveAchiev(i)));
     return ResponseEntity.ok().body(model);
   }
 }
