@@ -1,10 +1,9 @@
 package com.sktj.repository;
 
 import com.sktj.entity.OtherActivityAchievements;
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
+import org.springframework.data.repository.CrudRepository;
 
-public interface OtherAchievRepository extends JpaRepository<OtherActivityAchievements, Long>,
-    JpaSpecificationExecutor<OtherActivityAchievements>, OtherAchievRepositoryCustom {
-
+public interface OtherAchievRepository extends CrudRepository<OtherActivityAchievements, Long>,
+    JpaSpecificationExecutor<OtherActivityAchievements> {
 }

@@ -2,11 +2,18 @@ package com.sktj.controller;
 
 import com.sktj.controller.specification.ClimbingAchievFiltersSpecification;
 import com.sktj.controller.specification.ClimbingAchievSearchSpecification;
+import com.sktj.entity.Cave;
 import com.sktj.entity.CaveAchievements;
 import com.sktj.entity.ClimbingAchievements;
+import com.sktj.entity.User;
 import com.sktj.repository.ClimbingRepository;
+import com.sktj.service.ClimbingService;
+import com.sktj.service.CountryService;
+import com.sktj.service.UserService;
 import com.sktj.util.Mappings;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
@@ -33,10 +40,18 @@ import org.springframework.web.server.ResponseStatusException;
 public class ClimbingAchievController {
 
   private final ClimbingRepository repository;
+  private final ClimbingService service;
+  private final UserService userService;
+  private final CountryService countryService;
 
   @Autowired
-  public ClimbingAchievController(ClimbingRepository repository) {
+  public ClimbingAchievController(ClimbingRepository repository,
+      ClimbingService service, UserService userService,
+      CountryService countryService) {
     this.repository = repository;
+    this.service = service;
+    this.userService = userService;
+    this.countryService = countryService;
   }
 
   @GetMapping(Mappings.GET_CLIMBING)
@@ -48,15 +63,21 @@ public class ClimbingAchievController {
     return ResponseEntity.ok(achiev);
   }
 
-
   @PostMapping(Mappings.ADD_NEW)
   public ResponseEntity<?> save(@Valid @RequestBody ClimbingAchievements achiev) {
+    Set<User> authors = new HashSet<>();
+    achiev.getAuthors().forEach(i -> authors.add(userService.findUserByEmail(i.getEmail())));
+    achiev.setAuthors(authors);
+    achiev.setCountry(countryService.findCountryByName(achiev.getCountry().getName()));
+    achiev.setNotificationAuthor(userService.
+        findUserByEmail(achiev.getNotificationAuthor().getEmail()));
     repository.save(achiev);
     log.info("Climbing achievement with notification time {}, created by {} saved successfully",
         achiev.getNotificationTimestamp(), achiev.getNotificationAuthor().getEmail());
     return new ResponseEntity<CaveAchievements>(HttpStatus.CREATED);
   }
 
+  //fixme
   @PutMapping(Mappings.EDIT_CLIMBING)
   public ResponseEntity<ClimbingAchievements> update(@PathVariable("climbingId")
       Long climbingId, @Valid @RequestBody ClimbingAchievements achiev) {
@@ -108,9 +129,9 @@ public class ClimbingAchievController {
 
   @GetMapping(Mappings.CLIMBING_AND_NOTIF)
   public ResponseEntity<List<ClimbingAchievements>> getUserClimbingAchievementsAndNotifications(
-      HttpSession session) {
-    List<ClimbingAchievements> achievementsAndNotifications = repository
-        .findUsersClimbingAchievs(session.getAttribute("email").toString());
+      String someGhostIntegration) {
+    List<ClimbingAchievements> achievementsAndNotifications = service
+        .findUsersClimbingAchievs(someGhostIntegration);
     return ResponseEntity.ok().body(achievementsAndNotifications);
   }
 }

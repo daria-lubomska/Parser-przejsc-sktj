@@ -4,9 +4,9 @@ import com.sktj.controller.specification.OtherAchievFiltersSpecification;
 import com.sktj.controller.specification.OtherAchievSearchSpecification;
 import com.sktj.entity.OtherActivityAchievements;
 import com.sktj.repository.OtherAchievRepository;
+import com.sktj.service.OtherService;
 import com.sktj.util.Mappings;
 import java.util.List;
-import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,10 +31,13 @@ import org.springframework.web.server.ResponseStatusException;
 public class OtherAchievsController {
 
   private final OtherAchievRepository repository;
+  private final OtherService service;
 
   @Autowired
-  public OtherAchievsController(OtherAchievRepository repository) {
+  public OtherAchievsController(OtherAchievRepository repository,
+      OtherService service) {
     this.repository = repository;
+    this.service = service;
   }
 
   @GetMapping(Mappings.GET_OTHER)
@@ -46,6 +49,7 @@ public class OtherAchievsController {
     return ResponseEntity.ok(achiev);
   }
 
+  //fixme
   @PostMapping(Mappings.ADD_NEW)
   public ResponseEntity<?> save(@Valid @RequestBody OtherActivityAchievements achiev) {
     repository.save(achiev);
@@ -56,6 +60,7 @@ public class OtherAchievsController {
     return new ResponseEntity<OtherActivityAchievements>(HttpStatus.CREATED);
   }
 
+  //fixme
   @PutMapping(Mappings.EDIT_OTHER_ACHIEV)
   public ResponseEntity<OtherActivityAchievements> update(@PathVariable("otherId")
       Long otherId, @Valid @RequestBody OtherActivityAchievements achiev) {
@@ -108,9 +113,9 @@ public class OtherAchievsController {
 
   @GetMapping(Mappings.OTHERS_AND_NOTIF)
   public ResponseEntity<List<OtherActivityAchievements>> getUserOtherAchievementsAndNotifications(
-      HttpSession session) {
-    List<OtherActivityAchievements> achievementsAndNotifications = repository
-        .findUsersOtherAchievs(session.getAttribute("email").toString());
+      String someGhostIntegration) {
+    List<OtherActivityAchievements> achievementsAndNotifications = service
+        .findUsersOtherAchievs(someGhostIntegration);
     return ResponseEntity.ok(achievementsAndNotifications);
   }
 }

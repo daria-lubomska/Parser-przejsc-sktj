@@ -4,6 +4,7 @@ import com.sktj.controller.specification.CaveAchievFiltersSpecification;
 import com.sktj.controller.specification.CaveAchievSearchSpecification;
 import com.sktj.entity.Cave;
 import com.sktj.entity.CaveAchievements;
+import com.sktj.entity.ClimbingAchievements;
 import com.sktj.entity.User;
 import com.sktj.mapper.Mapper;
 import com.sktj.model.CaveAchievModel;
@@ -127,6 +128,19 @@ public class CaveAchievsController {
     repository.save(editedCaveAchiev);
     log.info("Cave achievement with id {} updated successfully", caveAchievId);
     return ResponseEntity.ok(editedCaveAchiev);
+  }
+
+  private void process(CaveAchievements achiev){
+    Cave cave = achiev.getCaveName();
+    if (caveService.findByNameAndRegion(cave.getName(), cave.getRegion()) != null) {
+      achiev.setCaveName(caveService.findByNameAndRegion(cave.getName(), cave.getRegion()));
+    }
+    Set<User> authors = new HashSet<>();
+    achiev.getAuthors().forEach(i -> authors.add(userService.findUserByEmail(i.getEmail())));
+    achiev.setAuthors(authors);
+    achiev.setCountry(countryService.findCountryByName(achiev.getCountry().getName()));
+    achiev.setNotificationAuthor(userService.
+        findUserByEmail(achiev.getNotificationAuthor().getEmail()));
   }
 
   @DeleteMapping(Mappings.DELETE_CAVE_ACHIEV)

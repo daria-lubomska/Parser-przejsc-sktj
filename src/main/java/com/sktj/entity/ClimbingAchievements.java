@@ -1,13 +1,13 @@
 package com.sktj.entity;
 
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import java.io.Serializable;
 import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -82,7 +82,7 @@ public class ClimbingAchievements implements Serializable {
       name = "user_climb",
       joinColumns = @JoinColumn(name = "climbing_id"),
       inverseJoinColumns = @JoinColumn(name = "user_id"))
-  List<User> authors = new ArrayList<>();
+  Set<User> authors = new HashSet<>();
 
   @Column
   String anotherAuthors;

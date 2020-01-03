@@ -1,7 +1,5 @@
 package com.sktj.entity;
 
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import java.io.Serializable;
 import java.time.Duration;
 import java.time.LocalDate;

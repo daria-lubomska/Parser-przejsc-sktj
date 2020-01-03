@@ -1,20 +1,18 @@
-package com.sktj.repository.impl;
+package com.sktj.dao;
 
 import com.sktj.entity.OtherActivityAchievements;
-import com.sktj.repository.OtherAchievRepositoryCustom;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
-import org.springframework.transaction.annotation.Transactional;
+import org.springframework.stereotype.Component;
 
-public class OtherAchievRepositoryCustomImpl implements OtherAchievRepositoryCustom {
+@Component
+public class OtherAchievementsDao {
 
   @PersistenceContext
   EntityManager entityManager;
 
-  @Transactional
-  @Override
   public List<OtherActivityAchievements> findUsersOtherAchievs(String email) {
     Query query = entityManager
         .createNamedQuery("ClimbingAchievements.findUsersClimbingAchievs")
