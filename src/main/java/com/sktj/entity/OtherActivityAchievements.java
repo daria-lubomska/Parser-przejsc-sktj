@@ -4,8 +4,8 @@ import java.io.Serializable;
 import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -80,7 +80,7 @@ public class OtherActivityAchievements implements Serializable {
       name = "user_other",
       joinColumns = @JoinColumn(name = "other_id"),
       inverseJoinColumns = @JoinColumn(name = "user_id"))
-  List<User> authors = new ArrayList<>();
+  Set<User> authors = new HashSet<>();
 
   @Column
   String anotherAuthors;

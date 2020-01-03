@@ -2,7 +2,6 @@ package com.sktj.controller;
 
 import com.sktj.controller.specification.ClimbingAchievFiltersSpecification;
 import com.sktj.controller.specification.ClimbingAchievSearchSpecification;
-import com.sktj.entity.Cave;
 import com.sktj.entity.CaveAchievements;
 import com.sktj.entity.ClimbingAchievements;
 import com.sktj.entity.User;
@@ -14,7 +13,6 @@ import com.sktj.util.Mappings;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -54,6 +52,7 @@ public class ClimbingAchievController {
     this.countryService = countryService;
   }
 
+  @Transactional
   @GetMapping(Mappings.GET_CLIMBING)
   public ResponseEntity<?> get(@PathVariable("climbingId") Long climbingId) {
     ClimbingAchievements achiev = repository.findById(climbingId)
@@ -77,7 +76,6 @@ public class ClimbingAchievController {
     return new ResponseEntity<CaveAchievements>(HttpStatus.CREATED);
   }
 
-  //fixme
   @PutMapping(Mappings.EDIT_CLIMBING)
   public ResponseEntity<ClimbingAchievements> update(@PathVariable("climbingId")
       Long climbingId, @Valid @RequestBody ClimbingAchievements achiev) {
@@ -86,16 +84,19 @@ public class ClimbingAchievController {
             "Climbing Achievement Not Found"));
     editedClimbingAcheiv.setDuration(achiev.getDuration());
     editedClimbingAcheiv.setAnotherAuthors(achiev.getAnotherAuthors());
-    editedClimbingAcheiv.setCountry(achiev.getCountry());
+    editedClimbingAcheiv.setCountry(countryService.findCountryByName(achiev.getCountry().getName()));
+    editedClimbingAcheiv.setNotificationAuthor(userService.
+        findUserByEmail(achiev.getNotificationAuthor().getEmail()));
     editedClimbingAcheiv.setRegion(achiev.getRegion());
     editedClimbingAcheiv.setWall(achiev.getWall());
     editedClimbingAcheiv.setDifficultyGrade(achiev.getDifficultyGrade());
     editedClimbingAcheiv.setRouteName(achiev.getRouteName());
     editedClimbingAcheiv.setDate(achiev.getDate());
     editedClimbingAcheiv.setNotificationTimestamp(achiev.getNotificationTimestamp());
-    editedClimbingAcheiv.setNotificationAuthor(achiev.getNotificationAuthor());
     editedClimbingAcheiv.setComment(achiev.getComment());
-    editedClimbingAcheiv.setAuthors(achiev.getAuthors());
+    Set<User> authors = new HashSet<>();
+    achiev.getAuthors().forEach(i -> authors.add(userService.findUserByEmail(i.getEmail())));
+    editedClimbingAcheiv.setAuthors(authors);
     repository.save(editedClimbingAcheiv);
     log.info("Climbing achievement with id {} updated successfully", climbingId);
     return ResponseEntity.ok(editedClimbingAcheiv);

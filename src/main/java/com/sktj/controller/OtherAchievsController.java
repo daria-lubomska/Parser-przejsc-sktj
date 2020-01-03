@@ -3,10 +3,15 @@ package com.sktj.controller;
 import com.sktj.controller.specification.OtherAchievFiltersSpecification;
 import com.sktj.controller.specification.OtherAchievSearchSpecification;
 import com.sktj.entity.OtherActivityAchievements;
+import com.sktj.entity.User;
 import com.sktj.repository.OtherAchievRepository;
+import com.sktj.service.CountryService;
 import com.sktj.service.OtherService;
+import com.sktj.service.UserService;
 import com.sktj.util.Mappings;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import javax.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +20,7 @@ import org.springframework.data.domain.Sort.Direction;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -32,14 +38,19 @@ public class OtherAchievsController {
 
   private final OtherAchievRepository repository;
   private final OtherService service;
+  private final UserService userService;
+  private final CountryService countryService;
 
   @Autowired
   public OtherAchievsController(OtherAchievRepository repository,
-      OtherService service) {
+      OtherService service, UserService userService, CountryService countryService) {
     this.repository = repository;
     this.service = service;
+    this.userService = userService;
+    this.countryService = countryService;
   }
 
+  @Transactional
   @GetMapping(Mappings.GET_OTHER)
   public ResponseEntity<?> get(@PathVariable("otherId") Long otherId) {
     OtherActivityAchievements achiev = repository.findById(otherId)
@@ -49,9 +60,14 @@ public class OtherAchievsController {
     return ResponseEntity.ok(achiev);
   }
 
-  //fixme
   @PostMapping(Mappings.ADD_NEW)
   public ResponseEntity<?> save(@Valid @RequestBody OtherActivityAchievements achiev) {
+    Set<User> authors = new HashSet<>();
+    achiev.getAuthors().forEach(i -> authors.add(userService.findUserByEmail(i.getEmail())));
+    achiev.setAuthors(authors);
+    achiev.setCountry(countryService.findCountryByName(achiev.getCountry().getName()));
+    achiev.setNotificationAuthor(userService.
+        findUserByEmail(achiev.getNotificationAuthor().getEmail()));
     repository.save(achiev);
     log.info(
         "Other activity achievement with notification time {}, created by {} saved successfully",
@@ -59,8 +75,7 @@ public class OtherAchievsController {
         achiev.getNotificationAuthor().getEmail());
     return new ResponseEntity<OtherActivityAchievements>(HttpStatus.CREATED);
   }
-
-  //fixme
+  
   @PutMapping(Mappings.EDIT_OTHER_ACHIEV)
   public ResponseEntity<OtherActivityAchievements> update(@PathVariable("otherId")
       Long otherId, @Valid @RequestBody OtherActivityAchievements achiev) {
@@ -68,16 +83,19 @@ public class OtherAchievsController {
         .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,
             "Other Activities Achievement Not Found"));
     editedAchiev.setAnotherAuthors(achiev.getAnotherAuthors());
-    editedAchiev.setAuthors(achiev.getAuthors());
     editedAchiev.setCategory(achiev.getCategory());
     editedAchiev.setComment(achiev.getComment());
-    editedAchiev.setNotificationAuthor(achiev.getNotificationAuthor());
     editedAchiev.setNotificationTimestamp(achiev.getNotificationTimestamp());
     editedAchiev.setRegion(achiev.getRegion());
     editedAchiev.setDuration(achiev.getDuration());
-    editedAchiev.setCountry(achiev.getCountry());
     editedAchiev.setDate(achiev.getDate());
     editedAchiev.setAchievementDescription(achiev.getAchievementDescription());
+    Set<User> authors = new HashSet<>();
+    achiev.getAuthors().forEach(i -> authors.add(userService.findUserByEmail(i.getEmail())));
+    editedAchiev.setAuthors(authors);
+    editedAchiev.setCountry(countryService.findCountryByName(achiev.getCountry().getName()));
+    editedAchiev.setNotificationAuthor(userService.
+        findUserByEmail(achiev.getNotificationAuthor().getEmail()));
     repository.save(editedAchiev);
     log.info("Other activity achievement with id {} updated successfully", otherId);
     return ResponseEntity.ok(editedAchiev);
