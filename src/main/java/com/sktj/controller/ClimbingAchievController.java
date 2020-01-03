@@ -5,11 +5,14 @@ import com.sktj.controller.specification.ClimbingAchievSearchSpecification;
 import com.sktj.entity.CaveAchievements;
 import com.sktj.entity.ClimbingAchievements;
 import com.sktj.entity.User;
+import com.sktj.mapper.Mapper;
+import com.sktj.model.ClimbingModel;
 import com.sktj.repository.ClimbingRepository;
 import com.sktj.service.ClimbingService;
 import com.sktj.service.CountryService;
 import com.sktj.service.UserService;
 import com.sktj.util.Mappings;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -41,15 +44,17 @@ public class ClimbingAchievController {
   private final ClimbingService service;
   private final UserService userService;
   private final CountryService countryService;
+  private final Mapper mapper;
 
   @Autowired
   public ClimbingAchievController(ClimbingRepository repository,
       ClimbingService service, UserService userService,
-      CountryService countryService) {
+      CountryService countryService, Mapper mapper) {
     this.repository = repository;
     this.service = service;
     this.userService = userService;
     this.countryService = countryService;
+    this.mapper = mapper;
   }
 
   @Transactional
@@ -59,7 +64,7 @@ public class ClimbingAchievController {
         .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,
             "Climbing Not Found"));
     log.info("Climbing achievement with id {} fetched", climbingId);
-    return ResponseEntity.ok(achiev);
+    return ResponseEntity.ok(mapper.mapClimbing(achiev));
   }
 
   @PostMapping(Mappings.ADD_NEW)
@@ -113,26 +118,31 @@ public class ClimbingAchievController {
   }
 
   @GetMapping(Mappings.FILTER)
-  public Iterable<ClimbingAchievements> filter(ClimbingAchievFiltersSpecification spec,
+  public Iterable<ClimbingModel> filter(ClimbingAchievFiltersSpecification spec,
       @PageableDefault(size = 20, sort = "date",
           direction = Direction.DESC) Pageable pageable) {
-    return repository.findAll(spec, pageable);
+    List<ClimbingModel> model = new ArrayList<>();
+    repository.findAll(spec, pageable).forEach(i -> model.add(mapper.mapClimbing(i)));
+    return model;
   }
 
   @GetMapping(Mappings.SEARCH)
-  public Iterable<ClimbingAchievements> search(ClimbingAchievSearchSpecification spec,
+  public Iterable<ClimbingModel> search(ClimbingAchievSearchSpecification spec,
       @PageableDefault(size = 20, sort = "entryTimestamp",
           direction = Direction.DESC) Pageable pageable) {
-    return repository.findAll(spec, pageable);
+    List<ClimbingModel> model = new ArrayList<>();
+    repository.findAll(spec, pageable).forEach(i -> model.add(mapper.mapClimbing(i)));
+    return model;
   }
 
   //TODO check after Ghost integration
 
   @GetMapping(Mappings.CLIMBING_AND_NOTIF)
-  public ResponseEntity<List<ClimbingAchievements>> getUserClimbingAchievementsAndNotifications(
+  public ResponseEntity<List<ClimbingModel>> getUserClimbingAchievementsAndNotifications(
       String someGhostIntegration) {
-    List<ClimbingAchievements> achievementsAndNotifications = service
-        .findUsersClimbingAchievs(someGhostIntegration);
-    return ResponseEntity.ok().body(achievementsAndNotifications);
+    List<ClimbingModel> model = new ArrayList<>();
+    service.findUsersClimbingAchievs(someGhostIntegration)
+        .forEach(i -> model.add(mapper.mapClimbing(i)));
+    return ResponseEntity.ok().body(model);
   }
 }

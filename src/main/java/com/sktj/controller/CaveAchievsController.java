@@ -62,14 +62,6 @@ public class CaveAchievsController {
   }
 
   @Transactional
-  @GetMapping(Mappings.GET_ALL)
-  public ResponseEntity<?> getAll() {
-    List<CaveAchievModel> model = new ArrayList<>();
-    repository.findAll().forEach(i -> model.add(mapper.mapCaveAchiev(i)));
-    return ResponseEntity.ok(model);
-  }
-
-  @Transactional
   @GetMapping(Mappings.GET_CAVE_ACHIEV)
   public ResponseEntity<?> get(@PathVariable("caveAchievId") Long caveAchievId) {
     CaveAchievements achiev = repository.findById(caveAchievId)

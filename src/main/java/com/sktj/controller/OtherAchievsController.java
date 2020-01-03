@@ -75,7 +75,7 @@ public class OtherAchievsController {
         achiev.getNotificationAuthor().getEmail());
     return new ResponseEntity<OtherActivityAchievements>(HttpStatus.CREATED);
   }
-  
+
   @PutMapping(Mappings.EDIT_OTHER_ACHIEV)
   public ResponseEntity<OtherActivityAchievements> update(@PathVariable("otherId")
       Long otherId, @Valid @RequestBody OtherActivityAchievements achiev) {
