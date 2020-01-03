@@ -9,9 +9,6 @@ import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
@@ -37,17 +34,7 @@ import lombok.experimental.FieldDefaults;
         + "left JOIN fetch c.notificationAuthor na "
         + "left JOIN fetch c.authors ca where na.email = :email or ca.email =:email")
 @Table(name = "cave")
-public class CaveAchievements implements Serializable {
-
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  @Column
-  Long id;
-
-  @Column(name = "notification_timestamp")
-  @NotNull
-  @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
-  LocalDateTime notificationTimestamp;
+public class CaveAchievements extends Achievement implements Serializable {
 
   @Column(name = "entry_timestamp")
   @NotNull
@@ -61,22 +48,7 @@ public class CaveAchievements implements Serializable {
 
   @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
   @JoinColumn
-  Country country;
-
-  @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-  @JoinColumn
   Cave caveName;
-
-  @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-  @JoinColumn
-  User notificationAuthor;
-
-  @ManyToMany(cascade = {CascadeType.MERGE})
-  @JoinTable(
-      name = "user_cave",
-      joinColumns = @JoinColumn(name = "cave_id"),
-      inverseJoinColumns = @JoinColumn(name = "user_id"))
-  Set<User> authors = new HashSet<>();
 
   @Column
   @NotNull
@@ -86,10 +58,10 @@ public class CaveAchievements implements Serializable {
   @NotNull
   String caveOvercomeStyle;
 
-  @Column
-  String anotherAuthors;
-
-  @Column(length = 1000)
-  String comment;
-
+  @ManyToMany(cascade = {CascadeType.MERGE})
+  @JoinTable(
+      name = "user_cave",
+      joinColumns = @JoinColumn(name = "cave_id"),
+      inverseJoinColumns = @JoinColumn(name = "user_id"))
+  Set<User> authors = new HashSet<>();
 }

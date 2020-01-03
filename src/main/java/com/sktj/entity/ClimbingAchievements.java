@@ -3,22 +3,14 @@ package com.sktj.entity;
 import java.io.Serializable;
 import java.time.Duration;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
@@ -39,16 +31,7 @@ import lombok.experimental.FieldDefaults;
         + "left JOIN fetch c.authors ca where na.email = :email or ca.email =:email")
 @Entity
 @Table(name = "climbing")
-public class ClimbingAchievements implements Serializable {
-
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  @Column
-  Long id;
-
-  @Column(name = "notification_timestamp")
-  @NotNull
-  LocalDateTime notificationTimestamp;
+public class ClimbingAchievements extends Achievement implements Serializable {
 
   @Column
   @NotNull
@@ -69,10 +52,6 @@ public class ClimbingAchievements implements Serializable {
   @NotNull
   String wall;
 
-  @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-  @JoinColumn
-  Country country;
-
   @Column
   @NotNull
   String region;
@@ -83,14 +62,4 @@ public class ClimbingAchievements implements Serializable {
       joinColumns = @JoinColumn(name = "climbing_id"),
       inverseJoinColumns = @JoinColumn(name = "user_id"))
   Set<User> authors = new HashSet<>();
-
-  @Column
-  String anotherAuthors;
-
-  @Column(length = 1000)
-  String comment;
-
-  @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-  @JoinColumn
-  User notificationAuthor;
 }
