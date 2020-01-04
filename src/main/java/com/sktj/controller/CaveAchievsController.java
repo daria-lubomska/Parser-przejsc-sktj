@@ -2,12 +2,10 @@ package com.sktj.controller;
 
 import com.sktj.controller.specification.CaveAchievFiltersSpecification;
 import com.sktj.controller.specification.CaveAchievSearchSpecification;
-import com.sktj.entity.Cave;
 import com.sktj.entity.CaveAchievements;
 import com.sktj.model.CaveAchievModel;
 import com.sktj.repository.CaveAchievementsRepository;
 import com.sktj.service.CaveAchievementsService;
-import com.sktj.service.CaveService;
 import com.sktj.service.Mapper;
 import com.sktj.util.Mappings;
 import java.util.ArrayList;
@@ -52,12 +50,12 @@ public class CaveAchievsController {
 
   @Transactional
   @GetMapping(Mappings.GET_CAVE_ACHIEV)
-  public ResponseEntity<?> get(@PathVariable("caveAchievId") Long caveAchievId) {
+  public CaveAchievModel get(@PathVariable("caveAchievId") Long caveAchievId) {
     CaveAchievements achiev = repository.findById(caveAchievId)
         .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,
             "Cave achievement Not Found"));
     log.info("Cave achievement with id {} fetched", caveAchievId);
-    return ResponseEntity.ok(mapper.mapCaveAchiev(achiev));
+    return mapper.mapCaveAchiev(achiev);
   }
 
   @Transactional

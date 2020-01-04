@@ -50,12 +50,12 @@ public class OtherAchievsController {
 
   @Transactional
   @GetMapping(Mappings.GET_OTHER)
-  public ResponseEntity<?> get(@PathVariable("otherId") Long otherId) {
+  public OtherAchievModel get(@PathVariable("otherId") Long otherId) {
     OtherActivityAchievements achiev = repository.findById(otherId)
         .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,
             "Other Activities Achievement Not Found"));
     log.info("Other activity achievement with id {} fetched", otherId);
-    return ResponseEntity.ok(mapper.mapOtherAchiev(achiev));
+    return mapper.mapOtherAchiev(achiev);
   }
 
   @Transactional

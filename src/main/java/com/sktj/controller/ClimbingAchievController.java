@@ -51,12 +51,12 @@ public class ClimbingAchievController {
 
   @Transactional
   @GetMapping(Mappings.GET_CLIMBING)
-  public ResponseEntity<?> get(@PathVariable("climbingId") Long climbingId) {
+  public ClimbingModel get(@PathVariable("climbingId") Long climbingId) {
     ClimbingAchievements achiev = repository.findById(climbingId)
         .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,
             "Climbing Not Found"));
     log.info("Climbing achievement with id {} fetched", climbingId);
-    return ResponseEntity.ok(mapper.mapClimbing(achiev));
+    return mapper.mapClimbing(achiev);
   }
 
   @Transactional
