@@ -1,15 +1,19 @@
-package com.sktj.mapper;
+package com.sktj.service;
 
+import com.sktj.entity.Achievement;
+import com.sktj.entity.AchievementDetails;
 import com.sktj.entity.Cave;
 import com.sktj.entity.CaveAchievements;
 import com.sktj.entity.ClimbingAchievements;
 import com.sktj.entity.Country;
 import com.sktj.entity.OtherActivityAchievements;
 import com.sktj.entity.User;
+import com.sktj.model.AchievModel;
 import com.sktj.model.CaveAchievModel;
 import com.sktj.model.CaveModel;
 import com.sktj.model.ClimbingModel;
 import com.sktj.model.CountryModel;
+import com.sktj.model.DetailedAchievModel;
 import com.sktj.model.OtherAchievModel;
 import com.sktj.model.UserModel;
 import java.util.HashSet;
@@ -32,60 +36,51 @@ public class Mapper {
     return new CountryModel(country.getName());
   }
 
-  public CaveAchievModel mapCaveAchiev(CaveAchievements achiev) {
-    CaveAchievModel model = new CaveAchievModel();
-    model.setEntryTimestamp(achiev.getEntryTimestamp());
-    model.setExitTimestamp(achiev.getExitTimestamp());
+  private void mapAchiev(Achievement achiev, AchievModel model) {
+    model.setAnotherAuthors(achiev.getAnotherAuthors());
     model.setNotificationTimestamp(achiev.getNotificationTimestamp());
     model.setAnotherAuthors(achiev.getAnotherAuthors());
     model.setComment(achiev.getComment());
-    model.setCaveName(mapCave(achiev.getCaveName()));
-    model.setCaveOvercomeStyle(achiev.getCaveOvercomeStyle());
     model.setNotificationAuthor(mapUser(achiev.getNotificationAuthor()));
     model.setCountry(mapCountry(achiev.getCountry()));
-    model.setReachedParts(achiev.getReachedParts());
     Set<UserModel> authors = new HashSet<>();
     achiev.getAuthors()
         .forEach(i -> authors.add(new UserModel(i.getName(), i.getSurname(), i.getEmail())));
     model.setAuthors(authors);
+  }
+
+  private void mapDetailedAchiev(AchievementDetails achiev, DetailedAchievModel model) {
+    model.setDate(achiev.getDate());
+    model.setDuration(achiev.getDuration());
+    model.setRegion(achiev.getRegion());
+    mapAchiev(achiev, model);
+  }
+
+  public CaveAchievModel mapCaveAchiev(CaveAchievements achiev) {
+    CaveAchievModel model = new CaveAchievModel();
+    model.setEntryTimestamp(achiev.getEntryTimestamp());
+    model.setExitTimestamp(achiev.getExitTimestamp());
+    model.setCaveName(mapCave(achiev.getCaveName()));
+    model.setCaveOvercomeStyle(achiev.getCaveOvercomeStyle());
+    model.setReachedParts(achiev.getReachedParts());
+    mapAchiev(achiev, model);
     return model;
   }
 
   public ClimbingModel mapClimbing(ClimbingAchievements achiev){
     ClimbingModel model = new ClimbingModel();
-    model.setAnotherAuthors(achiev.getAnotherAuthors());
-    model.setComment(achiev.getComment());
-    model.setCountry(mapCountry(achiev.getCountry()));
-    model.setDate(achiev.getDate());
     model.setDifficultyGrade(achiev.getDifficultyGrade());
-    model.setDuration(achiev.getDuration());
-    model.setNotificationAuthor(mapUser(achiev.getNotificationAuthor()));
-    model.setNotificationTimestamp(achiev.getNotificationTimestamp());
-    model.setRegion(achiev.getRegion());
     model.setRouteName(achiev.getRouteName());
     model.setWall(achiev.getWall());
-    Set<UserModel> authors = new HashSet<>();
-    achiev.getAuthors()
-        .forEach(i -> authors.add(new UserModel(i.getName(), i.getSurname(), i.getEmail())));
-    model.setAuthors(authors);
+    mapDetailedAchiev(achiev, model);
     return model;
   }
 
   public OtherAchievModel mapOtherAchiev(OtherActivityAchievements achiev){
     OtherAchievModel model = new OtherAchievModel();
-    model.setAnotherAuthors(achiev.getAnotherAuthors());
-    model.setComment(achiev.getComment());
-    model.setCountry(mapCountry(achiev.getCountry()));
-    model.setDate(achiev.getDate());
-    model.setDuration(achiev.getDuration());
-    model.setNotificationAuthor(mapUser(achiev.getNotificationAuthor()));
-    model.setNotificationTimestamp(achiev.getNotificationTimestamp());
-    model.setRegion(achiev.getRegion());
     model.setAchievementDescription(achiev.getAchievementDescription());
-    Set<UserModel> authors = new HashSet<>();
-    achiev.getAuthors()
-        .forEach(i -> authors.add(new UserModel(i.getName(), i.getSurname(), i.getEmail())));
-    model.setAuthors(authors);
+    model.setCategory(achiev.getCategory());
+    mapDetailedAchiev(achiev, model);
     return  model;
   }
 }

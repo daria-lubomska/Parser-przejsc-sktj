@@ -4,18 +4,13 @@ import com.sktj.controller.specification.ClimbingAchievFiltersSpecification;
 import com.sktj.controller.specification.ClimbingAchievSearchSpecification;
 import com.sktj.entity.CaveAchievements;
 import com.sktj.entity.ClimbingAchievements;
-import com.sktj.entity.User;
-import com.sktj.mapper.Mapper;
 import com.sktj.model.ClimbingModel;
 import com.sktj.repository.ClimbingRepository;
 import com.sktj.service.ClimbingService;
-import com.sktj.service.CountryService;
-import com.sktj.service.UserService;
+import com.sktj.service.Mapper;
 import com.sktj.util.Mappings;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 import javax.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,18 +37,15 @@ public class ClimbingAchievController {
 
   private final ClimbingRepository repository;
   private final ClimbingService service;
-  private final UserService userService;
-  private final CountryService countryService;
+  private final SaveUpdateProcessor processor;
   private final Mapper mapper;
 
   @Autowired
-  public ClimbingAchievController(ClimbingRepository repository,
-      ClimbingService service, UserService userService,
-      CountryService countryService, Mapper mapper) {
+  public ClimbingAchievController(ClimbingRepository repository, ClimbingService service,
+      SaveUpdateProcessor processor, Mapper mapper) {
     this.repository = repository;
     this.service = service;
-    this.userService = userService;
-    this.countryService = countryService;
+    this.processor = processor;
     this.mapper = mapper;
   }
 
@@ -67,14 +59,10 @@ public class ClimbingAchievController {
     return ResponseEntity.ok(mapper.mapClimbing(achiev));
   }
 
+  @Transactional
   @PostMapping(Mappings.ADD_NEW)
   public ResponseEntity<?> save(@Valid @RequestBody ClimbingAchievements achiev) {
-    Set<User> authors = new HashSet<>();
-    achiev.getAuthors().forEach(i -> authors.add(userService.findUserByEmail(i.getEmail())));
-    achiev.setAuthors(authors);
-    achiev.setCountry(countryService.findCountryByName(achiev.getCountry().getName()));
-    achiev.setNotificationAuthor(userService.
-        findUserByEmail(achiev.getNotificationAuthor().getEmail()));
+    processor.saveProcess(achiev);
     repository.save(achiev);
     log.info("Climbing achievement with notification time {}, created by {} saved successfully",
         achiev.getNotificationTimestamp(), achiev.getNotificationAuthor().getEmail());
@@ -87,21 +75,7 @@ public class ClimbingAchievController {
     ClimbingAchievements editedClimbingAcheiv = repository.findById(climbingId)
         .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,
             "Climbing Achievement Not Found"));
-    editedClimbingAcheiv.setDuration(achiev.getDuration());
-    editedClimbingAcheiv.setAnotherAuthors(achiev.getAnotherAuthors());
-    editedClimbingAcheiv.setCountry(countryService.findCountryByName(achiev.getCountry().getName()));
-    editedClimbingAcheiv.setNotificationAuthor(userService.
-        findUserByEmail(achiev.getNotificationAuthor().getEmail()));
-    editedClimbingAcheiv.setRegion(achiev.getRegion());
-    editedClimbingAcheiv.setWall(achiev.getWall());
-    editedClimbingAcheiv.setDifficultyGrade(achiev.getDifficultyGrade());
-    editedClimbingAcheiv.setRouteName(achiev.getRouteName());
-    editedClimbingAcheiv.setDate(achiev.getDate());
-    editedClimbingAcheiv.setNotificationTimestamp(achiev.getNotificationTimestamp());
-    editedClimbingAcheiv.setComment(achiev.getComment());
-    Set<User> authors = new HashSet<>();
-    achiev.getAuthors().forEach(i -> authors.add(userService.findUserByEmail(i.getEmail())));
-    editedClimbingAcheiv.setAuthors(authors);
+    processor.updateClimbingAchievProcess(achiev, editedClimbingAcheiv);
     repository.save(editedClimbingAcheiv);
     log.info("Climbing achievement with id {} updated successfully", climbingId);
     return ResponseEntity.ok(editedClimbingAcheiv);

@@ -3,7 +3,7 @@ package com.sktj.controller;
 import com.sktj.controller.specification.CaveSpecification;
 import com.sktj.controller.specification.CountrySpecification;
 import com.sktj.controller.specification.UserSpecification;
-import com.sktj.mapper.Mapper;
+import com.sktj.service.Mapper;
 import com.sktj.model.CaveModel;
 import com.sktj.model.CountryModel;
 import com.sktj.model.UserModel;

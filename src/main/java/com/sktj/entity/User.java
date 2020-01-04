@@ -27,8 +27,8 @@ import lombok.experimental.FieldDefaults;
 
 @Getter
 @Setter
-@NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
+@NoArgsConstructor
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 @Entity
 @NamedQueries({
@@ -76,7 +76,7 @@ public class User implements Serializable {
   String email;
 
   @JsonIgnore
-  @OneToMany(mappedBy = "notificationAuthor", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+  @OneToMany(mappedBy = "notificationAuthor", cascade = CascadeType.ALL)
   Set<CaveAchievements> caveNotifications = new HashSet<>();
 
   @JsonIgnore
@@ -98,6 +98,5 @@ public class User implements Serializable {
   @JsonIgnore
   @ManyToMany(mappedBy = "authors", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
   Set<OtherActivityAchievements> others = new HashSet<>();
-
 }
 

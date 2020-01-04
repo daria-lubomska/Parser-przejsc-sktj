@@ -6,7 +6,6 @@ import com.sktj.entity.CaveAchievements;
 import com.sktj.entity.User;
 import com.sktj.repository.CaveAchievementsRepository;
 import com.sktj.repository.CaveRepository;
-import com.sktj.repository.CountryRepository;
 import com.sktj.repository.UserRepository;
 import com.sktj.util.attributes.CaveAchievAttributes;
 import java.io.IOException;

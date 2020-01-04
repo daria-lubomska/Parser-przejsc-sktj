@@ -4,19 +4,14 @@ import com.sktj.controller.specification.CaveAchievFiltersSpecification;
 import com.sktj.controller.specification.CaveAchievSearchSpecification;
 import com.sktj.entity.Cave;
 import com.sktj.entity.CaveAchievements;
-import com.sktj.entity.User;
-import com.sktj.mapper.Mapper;
 import com.sktj.model.CaveAchievModel;
 import com.sktj.repository.CaveAchievementsRepository;
 import com.sktj.service.CaveAchievementsService;
 import com.sktj.service.CaveService;
-import com.sktj.service.CountryService;
-import com.sktj.service.UserService;
+import com.sktj.service.Mapper;
 import com.sktj.util.Mappings;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 import javax.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,21 +38,15 @@ public class CaveAchievsController {
 
   private final CaveAchievementsRepository repository;
   private final CaveAchievementsService service;
-  private final CaveService caveService;
-  private final CountryService countryService;
-  private final com.sktj.service.UserService userService;
+  private final SaveUpdateProcessor processor;
   private final Mapper mapper;
 
   @Autowired
   public CaveAchievsController(CaveAchievementsRepository repository,
-      CaveAchievementsService service, CaveService caveService,
-      CountryService countryService, UserService userService,
-      Mapper mapper) {
+      CaveAchievementsService service, SaveUpdateProcessor processor, Mapper mapper) {
     this.repository = repository;
     this.service = service;
-    this.caveService = caveService;
-    this.countryService = countryService;
-    this.userService = userService;
+    this.processor = processor;
     this.mapper = mapper;
   }
 
@@ -71,18 +60,10 @@ public class CaveAchievsController {
     return ResponseEntity.ok(mapper.mapCaveAchiev(achiev));
   }
 
+  @Transactional
   @PostMapping(Mappings.ADD_NEW)
   public ResponseEntity<?> save(@Valid @RequestBody CaveAchievements achiev) {
-    Cave cave = achiev.getCaveName();
-    if (caveService.findByNameAndRegion(cave.getName(), cave.getRegion()) != null) {
-      achiev.setCaveName(caveService.findByNameAndRegion(cave.getName(), cave.getRegion()));
-    }
-    Set<User> authors = new HashSet<>();
-    achiev.getAuthors().forEach(i -> authors.add(userService.findUserByEmail(i.getEmail())));
-    achiev.setAuthors(authors);
-    achiev.setCountry(countryService.findCountryByName(achiev.getCountry().getName()));
-    achiev.setNotificationAuthor(userService.
-        findUserByEmail(achiev.getNotificationAuthor().getEmail()));
+    processor.saveCaveAchievProcess(achiev);
     repository.save(achiev);
     log.info("Cave achievement with notification time {}, created by {} added to DB successfully",
         achiev.getNotificationTimestamp(), achiev.getNotificationAuthor().getEmail());
@@ -95,27 +76,7 @@ public class CaveAchievsController {
     CaveAchievements editedCaveAchiev = repository.findById(caveAchievId)
         .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,
             "Cave Achievement Not Found"));
-    editedCaveAchiev.setNotificationTimestamp(caveAchiev.getNotificationTimestamp());
-    Cave editedCave = caveAchiev.getCaveName();
-    if (caveService.findByNameAndRegion(editedCave.getName(), editedCave.getRegion()) == null) {
-      editedCaveAchiev.setCaveName(editedCave);
-    } else {
-      Cave cave = caveService.findByNameAndRegion(editedCave.getName(), editedCave.getRegion());
-      editedCaveAchiev.setCaveName(cave);
-    }
-    editedCaveAchiev.setAnotherAuthors(caveAchiev.getAnotherAuthors());
-    Set<User> authors = new HashSet<>();
-    caveAchiev.getAuthors().forEach(i -> authors.add(userService.findUserByEmail(i.getEmail())));
-    editedCaveAchiev.setAuthors(authors);
-    editedCaveAchiev
-        .setCountry(countryService.findCountryByName(caveAchiev.getCountry().getName()));
-    editedCaveAchiev.setNotificationAuthor(userService.
-        findUserByEmail(caveAchiev.getNotificationAuthor().getEmail()));
-    editedCaveAchiev.setCaveOvercomeStyle(caveAchiev.getCaveOvercomeStyle());
-    editedCaveAchiev.setComment(caveAchiev.getComment());
-    editedCaveAchiev.setEntryTimestamp(caveAchiev.getEntryTimestamp());
-    editedCaveAchiev.setExitTimestamp(caveAchiev.getExitTimestamp());
-    editedCaveAchiev.setReachedParts(caveAchiev.getReachedParts());
+    processor.updateCaveAchievProcess(caveAchiev, editedCaveAchiev);
     repository.save(editedCaveAchiev);
     log.info("Cave achievement with id {} updated successfully", caveAchievId);
     return ResponseEntity.ok(editedCaveAchiev);
@@ -154,8 +115,6 @@ public class CaveAchievsController {
   @GetMapping(Mappings.CAVES_AND_NOTIF)
   public ResponseEntity<List<CaveAchievModel>> getUserCaveAchievementsAndNotifications(
       String someGhostIntegration) {
-    List<CaveAchievements> achievementsAndNotifications = service
-        .findUsersCaveAchievs(someGhostIntegration);
     List<CaveAchievModel> model = new ArrayList<>();
     service.findUsersCaveAchievs(someGhostIntegration)
         .forEach(i -> model.add(mapper.mapCaveAchiev(i)));

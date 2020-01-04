@@ -3,15 +3,11 @@ package com.sktj.entity;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import java.io.Serializable;
 import java.time.LocalDateTime;
-import java.util.HashSet;
-import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
@@ -57,11 +53,4 @@ public class CaveAchievements extends Achievement implements Serializable {
   @Column
   @NotNull
   String caveOvercomeStyle;
-
-  @ManyToMany(cascade = {CascadeType.MERGE})
-  @JoinTable(
-      name = "user_cave",
-      joinColumns = @JoinColumn(name = "cave_id"),
-      inverseJoinColumns = @JoinColumn(name = "user_id"))
-  Set<User> authors = new HashSet<>();
 }

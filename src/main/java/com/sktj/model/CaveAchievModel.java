@@ -7,17 +7,11 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class CaveAchievModel {
+public class CaveAchievModel extends AchievModel{
 
-  LocalDateTime notificationTimestamp;
   LocalDateTime entryTimestamp;
   LocalDateTime exitTimestamp;
-  CountryModel country;
   CaveModel caveName;
-  UserModel notificationAuthor;
-  Set<UserModel> authors;
   String reachedParts;
   String caveOvercomeStyle;
-  String anotherAuthors;
-  String comment;
 }
