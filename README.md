@@ -8,7 +8,7 @@
 * [Status](#status)
 
 ## Overview
-> The project is dedicated for members of Sopot Cave Club to manage cave, climbing and other activities achievements. Service will be integrated with Ghost CMS and will be available just for logged Club members. Initial data such as cave and climbing achievements comes from previously collected data (CSV format), wchich were parsed and saved using PostgreSQL DBMS (there are just sample data). The main features such as user and achievements management or live search, filtration of achievements are implemented as a REST endpoints.
+> The project is dedicated for members of Sopot Cave Club to manage cave, climbing and other activities achievements. Service will be integrated with Ghost CMS and will be available just for logged Club members. Initial data such as cave and climbing achievements comes from previously collected data (CSV format), which were parsed and saved using PostgreSQL DBMS (there are just sample data). The main features such as user and achievements management or live search, filtration of achievements are implemented as a REST endpoints.
 
 ## Features
 
