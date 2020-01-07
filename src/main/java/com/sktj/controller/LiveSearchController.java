@@ -3,17 +3,14 @@ package com.sktj.controller;
 import com.sktj.controller.specification.CaveSpecification;
 import com.sktj.controller.specification.CountrySpecification;
 import com.sktj.controller.specification.UserSpecification;
-import com.sktj.service.Mapper;
 import com.sktj.model.CaveModel;
 import com.sktj.model.CountryModel;
 import com.sktj.model.UserModel;
-import com.sktj.repository.CaveRepository;
-import com.sktj.repository.CountryRepository;
-import com.sktj.repository.UserRepository;
+import com.sktj.service.CaveService;
+import com.sktj.service.CountryService;
+import com.sktj.service.UserService;
 import com.sktj.util.Mappings;
-import java.util.ArrayList;
 import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,39 +19,29 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(Mappings.LIVE)
 public class LiveSearchController {
 
-  private final CaveRepository caveService;
-  private final UserRepository userRepository;
-  private final CountryRepository countryRepository;
-  private final Mapper mapper;
+  private final CaveService caveService;
+  private final UserService userService;
+  private final CountryService countryService;
 
-  @Autowired
-  public LiveSearchController(CaveRepository caveService,
-      UserRepository userRepository, CountryRepository countryRepository,
-      Mapper mapper) {
+  public LiveSearchController(CaveService caveService, UserService userService,
+      CountryService countryService) {
     this.caveService = caveService;
-    this.userRepository = userRepository;
-    this.countryRepository = countryRepository;
-    this.mapper = mapper;
+    this.userService = userService;
+    this.countryService = countryService;
   }
 
   @GetMapping(Mappings.CAVES)
   public List<CaveModel> searchCaves(CaveSpecification caveSpecification){
-    List<CaveModel> model = new ArrayList<>();
-    caveService.findAll(caveSpecification).forEach(i->model.add(mapper.mapCave(i)));
-    return model;
+    return caveService.searchCaves(caveSpecification);
   }
 
   @GetMapping(Mappings.USERS)
   public List<UserModel> searchUsers(UserSpecification userSpecification){
-    List<UserModel> model = new ArrayList<>();
-    userRepository.findAll(userSpecification).forEach(i-> model.add(mapper.mapUser(i)));
-    return model;
+    return userService.searchUsers(userSpecification);
   }
 
   @GetMapping(Mappings.COUNTRIES)
   public List<CountryModel> searchCountry(CountrySpecification countrySpecification){
-    List<CountryModel> model = new ArrayList<>();
-    countryRepository.findAll(countrySpecification).forEach(i->model.add(mapper.mapCountry(i)));
-    return model;
+    return countryService.searchCountry(countrySpecification);
   }
 }

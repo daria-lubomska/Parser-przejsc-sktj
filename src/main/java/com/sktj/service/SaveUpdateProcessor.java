@@ -1,4 +1,4 @@
-package com.sktj.controller;
+package com.sktj.service;
 
 import com.sktj.entity.Achievement;
 import com.sktj.entity.AchievementDetails;
@@ -16,7 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-class SaveUpdateProcessor {
+public class SaveUpdateProcessor {
 
   private final CountryService countryService;
   private final com.sktj.service.UserService userService;
@@ -30,7 +30,7 @@ class SaveUpdateProcessor {
     this.caveService = caveService;
   }
 
-  void saveProcess(Achievement achiev) {
+  public void saveProcess(Achievement achiev) {
     Set<User> authors = new HashSet<>();
     achiev.getAuthors().forEach(i -> authors.add(userService.findUserByEmail(i.getEmail())));
     achiev.setAuthors(authors);
@@ -39,7 +39,7 @@ class SaveUpdateProcessor {
         findUserByEmail(achiev.getNotificationAuthor().getEmail()));
   }
 
-  void saveCaveAchievProcess(CaveAchievements achiev) {
+  public void saveCaveAchievProcess(CaveAchievements achiev) {
     saveProcess(achiev);
     Cave cave = achiev.getCaveName();
     if (caveService.findByNameAndRegion(cave.getName(), cave.getRegion()) != null) {
@@ -84,7 +84,7 @@ class SaveUpdateProcessor {
     editedCaveAchiev.setRegion(achiev.getRegion());
   }
 
-  void updateClimbingAchievProcess(ClimbingAchievements achiev,
+  public void updateClimbingAchievProcess(ClimbingAchievements achiev,
       ClimbingAchievements editedCaveAchiev) {
     detailedSaveProcess(achiev, editedCaveAchiev);
     editedCaveAchiev.setWall(achiev.getWall());
@@ -92,7 +92,7 @@ class SaveUpdateProcessor {
     editedCaveAchiev.setRouteName(achiev.getRouteName());
   }
 
-  void updateOtherAchievProcess(OtherActivityAchievements achiev,
+  public void updateOtherAchievProcess(OtherActivityAchievements achiev,
       OtherActivityAchievements editedOtherAchiev) {
     detailedSaveProcess(achiev, editedOtherAchiev);
     editedOtherAchiev.setAchievementDescription(achiev.getAchievementDescription());

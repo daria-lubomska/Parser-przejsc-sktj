@@ -9,7 +9,7 @@ public class Mappings {
 
   //users mappings
   public static final String USERS = "/users";
-  public static final String USER_ID = "/{userId}";
+  public static final String USER_ID = "/id/{userId}";
   public static final String EDIT_USER = "/edit/{userID}";
   public static final String DELETE_USER = "/delete/{userId}";
   public static final String GRANT_ADMIN = "/grantAdminPermissions/{userId}";
@@ -20,7 +20,6 @@ public class Mappings {
 
   //caves mappings
   public static final String CAVES = "/caves";
-  public static final String GET_ALL = "/all";
   public static final String GET_CAVE_ACHIEV = "/id/{caveAchievId}";
   public static final String DELETE_CAVE_ACHIEV = "/delete/{caveAchievId}";
   public static final String EDIT_CAVE_ACHIEV = "/edit/{caveAchievId}";
@@ -35,7 +34,7 @@ public class Mappings {
 
   //others mappings
   public static final String OTHERS = "/others";
-  public static final String GET_OTHER = "/{otherId}";
+  public static final String GET_OTHER = "/id/{otherId}";
   public static final String DELETE_OTHER_ACHIEV = "/delete/{otherId}";
   public static final String EDIT_OTHER_ACHIEV = "/edit/{otherId}";
   public static final String OTHERS_AND_NOTIF = "/otherAndNotific";

@@ -5,18 +5,13 @@ import com.sktj.controller.specification.ClimbingAchievSearchSpecification;
 import com.sktj.entity.CaveAchievements;
 import com.sktj.entity.ClimbingAchievements;
 import com.sktj.model.ClimbingModel;
-import com.sktj.repository.ClimbingRepository;
 import com.sktj.service.ClimbingService;
-import com.sktj.service.Mapper;
 import com.sktj.util.Mappings;
-import java.util.ArrayList;
 import java.util.List;
 import javax.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort.Direction;
-import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
@@ -28,42 +23,36 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.server.ResponseStatusException;
 
 @Slf4j
 @RestController
 @RequestMapping(Mappings.CLIMBING)
 public class ClimbingAchievController {
 
-  private final ClimbingRepository repository;
   private final ClimbingService service;
-  private final SaveUpdateProcessor processor;
-  private final Mapper mapper;
 
   @Autowired
-  public ClimbingAchievController(ClimbingRepository repository, ClimbingService service,
-      SaveUpdateProcessor processor, Mapper mapper) {
-    this.repository = repository;
+  public ClimbingAchievController(ClimbingService service) {
     this.service = service;
-    this.processor = processor;
-    this.mapper = mapper;
+  }
+
+  @Transactional
+  @GetMapping
+  public List<ClimbingModel> getAll() {
+    return service.getAll();
   }
 
   @Transactional
   @GetMapping(Mappings.GET_CLIMBING)
-  public ClimbingModel get(@PathVariable("climbingId") Long climbingId) {
-    ClimbingAchievements achiev = repository.findById(climbingId)
-        .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,
-            "Climbing Not Found"));
-    log.info("Climbing achievement with id {} fetched", climbingId);
-    return mapper.mapClimbing(achiev);
+  public ClimbingModel get(@PathVariable("climbingId") Long id) {
+    log.info("Climbing achievement with id {} fetched", id);
+    return service.get(id);
   }
 
   @Transactional
   @PostMapping(Mappings.ADD_NEW)
   public ResponseEntity<?> save(@Valid @RequestBody ClimbingAchievements achiev) {
-    processor.saveProcess(achiev);
-    repository.save(achiev);
+    service.save(achiev);
     log.info("Climbing achievement with notification time {}, created by {} saved successfully",
         achiev.getNotificationTimestamp(), achiev.getNotificationAuthor().getEmail());
     return new ResponseEntity<CaveAchievements>(HttpStatus.CREATED);
@@ -71,42 +60,27 @@ public class ClimbingAchievController {
 
   @PutMapping(Mappings.EDIT_CLIMBING)
   public ResponseEntity<ClimbingAchievements> update(@PathVariable("climbingId")
-      Long climbingId, @Valid @RequestBody ClimbingAchievements achiev) {
-    ClimbingAchievements editedClimbingAcheiv = repository.findById(climbingId)
-        .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,
-            "Climbing Achievement Not Found"));
-    processor.updateClimbingAchievProcess(achiev, editedClimbingAcheiv);
-    repository.save(editedClimbingAcheiv);
-    log.info("Climbing achievement with id {} updated successfully", climbingId);
-    return ResponseEntity.ok(editedClimbingAcheiv);
+      Long id, @Valid @RequestBody ClimbingAchievements achiev) {
+    service.update(id, achiev);
+    log.info("Climbing achievement with id {} updated successfully", id);
+    return ResponseEntity.ok().build();
   }
 
   @DeleteMapping(Mappings.DELETE_CLIMBING)
-  public ResponseEntity<?> delete(@PathVariable("climbingId") Long climbingId) {
-    ClimbingAchievements achiev = repository.findById(climbingId)
-        .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,
-            "Climbing Achievement Not Found"));
-    repository.delete(achiev);
-    log.info("Climbing achievement with id {} removed successfully", climbingId);
+  public ResponseEntity<?> delete(@PathVariable("climbingId") Long id) {
+    service.delete(id);
+    log.info("Climbing achievement with id {} removed successfully", id);
     return new ResponseEntity<ClimbingAchievements>(HttpStatus.NO_CONTENT);
   }
 
   @GetMapping(Mappings.FILTER)
-  public Iterable<ClimbingModel> filter(ClimbingAchievFiltersSpecification spec,
-      @PageableDefault(size = 20, sort = "date",
-          direction = Direction.DESC) Pageable pageable) {
-    List<ClimbingModel> model = new ArrayList<>();
-    repository.findAll(spec, pageable).forEach(i -> model.add(mapper.mapClimbing(i)));
-    return model;
+  public List<ClimbingModel> filter(ClimbingAchievFiltersSpecification spec, Pageable pageable) {
+    return service.filter(spec, pageable);
   }
 
   @GetMapping(Mappings.SEARCH)
-  public Iterable<ClimbingModel> search(ClimbingAchievSearchSpecification spec,
-      @PageableDefault(size = 20, sort = "entryTimestamp",
-          direction = Direction.DESC) Pageable pageable) {
-    List<ClimbingModel> model = new ArrayList<>();
-    repository.findAll(spec, pageable).forEach(i -> model.add(mapper.mapClimbing(i)));
-    return model;
+  public List<ClimbingModel> search(ClimbingAchievSearchSpecification spec, Pageable pageable) {
+    return service.search(spec, pageable);
   }
 
   //TODO check after Ghost integration
@@ -114,9 +88,7 @@ public class ClimbingAchievController {
   @GetMapping(Mappings.CLIMBING_AND_NOTIF)
   public ResponseEntity<List<ClimbingModel>> getUserClimbingAchievementsAndNotifications(
       String someGhostIntegration) {
-    List<ClimbingModel> model = new ArrayList<>();
-    service.findUsersClimbingAchievs(someGhostIntegration)
-        .forEach(i -> model.add(mapper.mapClimbing(i)));
-    return ResponseEntity.ok().body(model);
+    return ResponseEntity.ok()
+        .body(service.getUserClimbingAchievementsAndNotifications(someGhostIntegration));
   }
 }

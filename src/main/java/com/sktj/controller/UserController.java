@@ -1,10 +1,11 @@
 package com.sktj.controller;
 
-import com.sktj.configuration.AppProperties;
 import com.sktj.entity.User;
 import com.sktj.exception.ForbiddenActionExeption;
-import com.sktj.repository.UserRepository;
+import com.sktj.model.UserModel;
+import com.sktj.service.UserService;
 import com.sktj.util.Mappings;
+import java.util.List;
 import javax.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,88 +20,55 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.server.ResponseStatusException;
 
 @Slf4j
 @RestController
 @RequestMapping(Mappings.USERS)
 public class UserController {
 
-  private final UserRepository repository;
-  private final AppProperties properties;
+  private final UserService service;
 
   @Autowired
-  public UserController(UserRepository repository, AppProperties properties) {
-    this.repository = repository;
-    this.properties = properties;
+  public UserController(UserService service) {
+    this.service = service;
   }
 
   @GetMapping
-  public Iterable<User> getAll() {
-    return repository.findAll();
+  public List<UserModel> getAll() {
+    return service.getAll();
   }
 
   @GetMapping(Mappings.USER_ID)
-  public ResponseEntity<User> getUser(@PathVariable(value = "userId") Long userId) {
-    User user = repository.findById(userId)
-        .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "User Not Found"));
-    log.info("User with id {} fetched", userId);
-    return ResponseEntity.ok(user);
+  public ResponseEntity<UserModel> getUser(@PathVariable(value = "userId") Long id) {
+    log.info("User with id {} fetched", id);
+    return ResponseEntity.ok(service.getUser(id));
   }
 
   @PostMapping(Mappings.ADD_NEW)
-  public ResponseEntity<?> save(@Valid @RequestBody User user)
-      throws ForbiddenActionExeption {
-    if(!user.getRole().equals("user")){
-      throw new ForbiddenActionExeption("Validation exception" + HttpStatus.FORBIDDEN);
-    }
-    repository.save(user);
+  public ResponseEntity<?> save(@Valid @RequestBody User user) throws ForbiddenActionExeption {
+    service.save(user);
     log.info("User {} {} saved successfully", user.getSurname(), user.getName());
     return new ResponseEntity<User>(HttpStatus.CREATED);
   }
 
   @PutMapping(Mappings.EDIT_USER)
-  public ResponseEntity<User> update(@PathVariable("userId") long userId,
+  public ResponseEntity<User> update(@PathVariable("userId") long id,
       @Valid @RequestBody User user) {
-
-    User editedUser = repository.findById(userId)
-        .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "User Not Found"));
-    if (!editedUser.getEmail().equals(properties.getSuperAdminEmail())){
-      editedUser.setName(user.getName());
-      editedUser.setSurname(user.getSurname());
-      editedUser.setCardNumber(editedUser.getCardNumber());
-      editedUser.setEmail(user.getEmail());
-      editedUser.setCaveNotifications(user.getCaveNotifications());
-      editedUser.setCaves(user.getCaves());
-      editedUser.setClimbing(user.getClimbing());
-      editedUser.setClimbingNotifications(user.getClimbingNotifications());
-      editedUser.setOthers(user.getOthers());
-      editedUser.setOtherNotifications(user.getOtherNotifications());
-      repository.save(editedUser);
-      log.info("User with id {} updated successfully", userId);
-    }
-    return ResponseEntity.ok(editedUser);
+    service.update(id, user);
+    log.info("User with id {} updated successfully", id);
+    return ResponseEntity.ok().build();
   }
   @PatchMapping(Mappings.GRANT_ADMIN)
-  public ResponseEntity<User> grantAdminPermissions(@PathVariable("userId") long userId) {
-    User user = repository.findById(userId)
-        .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "User Not Found"));
-    if (!user.getEmail().equals(properties.getSuperAdminEmail())){
-      user.setRole("admin");
-      repository.save(user);
-      log.info("Admin permissions granted for User with id {} ", userId);
-    }
-    return ResponseEntity.ok(user);
+  public ResponseEntity<User> grantAdminPermissions(@PathVariable("userId") long id) {
+    service.grantAdminPermissions(id);
+    log.info("Admin permissions granted for User with id {} ", id);
+    return ResponseEntity.ok().build();
   }
 
   @DeleteMapping(Mappings.DELETE_USER)
-  public ResponseEntity<?> delete(@PathVariable("userId") Long userId) {
-    User user = repository.findById(userId)
-        .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "User Not Found"));
-    if (!user.getEmail().equals(properties.getSuperAdminEmail())){
-      repository.delete(user);
-      log.info("User with id {} removed successfully", userId);
-    }
+  public ResponseEntity<?> delete(@PathVariable("userId") Long id) {
+    service.delete(id);
+    log.info("User with id {} removed successfully", id);
     return new ResponseEntity<User>(HttpStatus.NO_CONTENT);
   }
 }
