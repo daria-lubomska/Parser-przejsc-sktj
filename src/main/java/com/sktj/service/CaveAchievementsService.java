@@ -2,7 +2,6 @@ package com.sktj.service;
 
 import com.sktj.controller.specification.CaveAchievFiltersSpecification;
 import com.sktj.controller.specification.CaveAchievSearchSpecification;
-import com.sktj.dao.CaveAchievementsDao;
 import com.sktj.entity.CaveAchievements;
 import com.sktj.model.CaveAchievModel;
 import com.sktj.repository.CaveAchievementsRepository;
@@ -18,15 +17,12 @@ import org.springframework.web.server.ResponseStatusException;
 @Service
 public class CaveAchievementsService {
 
-  private CaveAchievementsDao dao;
   private final CaveAchievementsRepository repository;
   private final SaveUpdateProcessor processor;
   private final Mapper mapper;
 
-  public CaveAchievementsService(CaveAchievementsDao dao,
-      CaveAchievementsRepository repository, SaveUpdateProcessor processor,
-      Mapper mapper) {
-    this.dao = dao;
+  public CaveAchievementsService(CaveAchievementsRepository repository,
+      SaveUpdateProcessor processor, Mapper mapper) {
     this.repository = repository;
     this.processor = processor;
     this.mapper = mapper;
@@ -86,7 +82,7 @@ public class CaveAchievementsService {
   public List<CaveAchievModel> getUserCaveAchievementsAndNotifications(
       String someGhostIntegration) {
     List<CaveAchievModel> model = new ArrayList<>();
-    dao.findUsersCaveAchievs(someGhostIntegration)
+    repository.findUsersCaveAchievs(someGhostIntegration)
         .forEach(i -> model.add(mapper.mapCaveAchiev(i)));
     return model;
   }

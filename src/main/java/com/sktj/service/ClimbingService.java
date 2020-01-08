@@ -2,7 +2,6 @@ package com.sktj.service;
 
 import com.sktj.controller.specification.ClimbingAchievFiltersSpecification;
 import com.sktj.controller.specification.ClimbingAchievSearchSpecification;
-import com.sktj.dao.ClimbingAchievementsDao;
 import com.sktj.entity.ClimbingAchievements;
 import com.sktj.model.ClimbingModel;
 import com.sktj.repository.ClimbingRepository;
@@ -19,15 +18,13 @@ import org.springframework.web.server.ResponseStatusException;
 @Service
 public class ClimbingService {
 
-  private ClimbingAchievementsDao dao;
   private final ClimbingRepository repository;
   private final SaveUpdateProcessor processor;
   private final Mapper mapper;
 
   @Autowired
-  public ClimbingService(ClimbingAchievementsDao dao,
-      ClimbingRepository repository, SaveUpdateProcessor processor, Mapper mapper) {
-    this.dao = dao;
+  public ClimbingService(ClimbingRepository repository,
+      SaveUpdateProcessor processor, Mapper mapper) {
     this.repository = repository;
     this.processor = processor;
     this.mapper = mapper;
@@ -87,7 +84,7 @@ public class ClimbingService {
   public List<ClimbingModel> getUserClimbingAchievementsAndNotifications(
       String someGhostIntegration) {
     List<ClimbingModel> model = new ArrayList<>();
-    dao.findUsersClimbingAchievs(someGhostIntegration)
+    repository.findUsersClimbingAchievs(someGhostIntegration)
         .forEach(i -> model.add(mapper.mapClimbing(i)));
     return model;
   }

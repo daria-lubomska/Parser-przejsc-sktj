@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.repository.CrudRepository;
 
 public interface ClimbingRepository extends CrudRepository<ClimbingAchievements, Long>,
-    JpaSpecificationExecutor<ClimbingAchievements> {
+    JpaSpecificationExecutor<ClimbingAchievements>, ClimbingRepositoryCustom{
 }

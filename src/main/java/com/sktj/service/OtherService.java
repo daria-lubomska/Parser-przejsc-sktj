@@ -2,7 +2,6 @@ package com.sktj.service;
 
 import com.sktj.controller.specification.OtherAchievFiltersSpecification;
 import com.sktj.controller.specification.OtherAchievSearchSpecification;
-import com.sktj.dao.OtherAchievementsDao;
 import com.sktj.entity.OtherActivityAchievements;
 import com.sktj.model.OtherAchievModel;
 import com.sktj.repository.OtherAchievRepository;
@@ -24,15 +23,13 @@ import org.springframework.web.server.ResponseStatusException;
 @Service
 public class OtherService {
 
-  private OtherAchievementsDao dao;
   private final OtherAchievRepository repository;
   private final SaveUpdateProcessor processor;
   private final Mapper mapper;
 
   @Autowired
-  public OtherService(OtherAchievementsDao dao, OtherAchievRepository repository,
+  public OtherService(OtherAchievRepository repository,
       SaveUpdateProcessor processor, Mapper mapper) {
-    this.dao = dao;
     this.repository = repository;
     this.processor = processor;
     this.mapper = mapper;
@@ -95,7 +92,7 @@ public class OtherService {
   public List<OtherAchievModel> getUserOtherAchievementsAndNotifications(
       String someGhostIntegration) {
     List<OtherAchievModel> model = new ArrayList<>();
-    dao.findUsersOtherAchievs(someGhostIntegration)
+    repository.findUsersOtherAchievs(someGhostIntegration)
         .forEach(i -> model.add(mapper.mapOtherAchiev(i)));
     return model;
   }

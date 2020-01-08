@@ -2,7 +2,6 @@ package com.sktj.service;
 
 import com.sktj.configuration.AppProperties;
 import com.sktj.controller.specification.UserSpecification;
-import com.sktj.dao.UserDao;
 import com.sktj.entity.User;
 import com.sktj.exception.ForbiddenActionExeption;
 import com.sktj.model.UserModel;
@@ -17,15 +16,12 @@ import org.springframework.web.server.ResponseStatusException;
 @Service
 public class UserService {
 
-  private UserDao dao;
   private final UserRepository repository;
   private final AppProperties properties;
   private final Mapper mapper;
 
   @Autowired
-  public UserService(UserDao dao, UserRepository repository,
-      AppProperties properties, Mapper mapper) {
-    this.dao = dao;
+  public UserService(UserRepository repository, AppProperties properties, Mapper mapper) {
     this.repository = repository;
     this.properties = properties;
     this.mapper = mapper;
@@ -88,7 +84,7 @@ public class UserService {
   }
 
   User findUserByEmail(String email) {
-    return dao.findUserByEmail(email);
+    return repository.findUserByEmail(email);
   }
 
   public List<UserModel> searchUsers(UserSpecification userSpecification) {

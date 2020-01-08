@@ -1,7 +1,6 @@
 package com.sktj.service;
 
 import com.sktj.controller.specification.CaveSpecification;
-import com.sktj.dao.CaveDao;
 import com.sktj.entity.Cave;
 import com.sktj.model.CaveModel;
 import com.sktj.repository.CaveRepository;
@@ -13,13 +12,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class CaveService {
 
-  private final CaveDao dao;
   private final CaveRepository repository;
   private final Mapper mapper;
 
   @Autowired
-  public CaveService(CaveDao dao, CaveRepository repository, Mapper mapper) {
-    this.dao = dao;
+  public CaveService(CaveRepository repository, Mapper mapper) {
     this.repository = repository;
     this.mapper = mapper;
   }
@@ -31,6 +28,6 @@ public class CaveService {
   }
 
   Cave findByNameAndRegion(String name, String region) {
-    return dao.findByNameAndRegion(name,region);
+    return repository.findByNameAndRegion(name, region);
   }
 }
