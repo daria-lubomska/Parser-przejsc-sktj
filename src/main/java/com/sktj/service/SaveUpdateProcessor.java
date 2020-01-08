@@ -7,9 +7,6 @@ import com.sktj.entity.CaveAchievements;
 import com.sktj.entity.ClimbingAchievements;
 import com.sktj.entity.OtherActivityAchievements;
 import com.sktj.entity.User;
-import com.sktj.service.CaveService;
-import com.sktj.service.CountryService;
-import com.sktj.service.UserService;
 import java.util.HashSet;
 import java.util.Set;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,7 +27,7 @@ public class SaveUpdateProcessor {
     this.caveService = caveService;
   }
 
-  public void saveProcess(Achievement achiev) {
+  void saveProcess(Achievement achiev) {
     Set<User> authors = new HashSet<>();
     achiev.getAuthors().forEach(i -> authors.add(userService.findUserByEmail(i.getEmail())));
     achiev.setAuthors(authors);
@@ -39,7 +36,7 @@ public class SaveUpdateProcessor {
         findUserByEmail(achiev.getNotificationAuthor().getEmail()));
   }
 
-  public void saveCaveAchievProcess(CaveAchievements achiev) {
+  void saveCaveAchievProcess(CaveAchievements achiev) {
     saveProcess(achiev);
     Cave cave = achiev.getCaveName();
     if (caveService.findByNameAndRegion(cave.getName(), cave.getRegion()) != null) {
@@ -84,7 +81,7 @@ public class SaveUpdateProcessor {
     editedCaveAchiev.setRegion(achiev.getRegion());
   }
 
-  public void updateClimbingAchievProcess(ClimbingAchievements achiev,
+  void updateClimbingAchievProcess(ClimbingAchievements achiev,
       ClimbingAchievements editedCaveAchiev) {
     detailedSaveProcess(achiev, editedCaveAchiev);
     editedCaveAchiev.setWall(achiev.getWall());
@@ -92,7 +89,7 @@ public class SaveUpdateProcessor {
     editedCaveAchiev.setRouteName(achiev.getRouteName());
   }
 
-  public void updateOtherAchievProcess(OtherActivityAchievements achiev,
+  void updateOtherAchievProcess(OtherActivityAchievements achiev,
       OtherActivityAchievements editedOtherAchiev) {
     detailedSaveProcess(achiev, editedOtherAchiev);
     editedOtherAchiev.setAchievementDescription(achiev.getAchievementDescription());

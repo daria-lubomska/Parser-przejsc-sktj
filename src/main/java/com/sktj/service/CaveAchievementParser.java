@@ -17,11 +17,11 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Slf4j
-@Component
+@Service
 public class CaveAchievementParser {
 
   private final UserRepository userRepository;
@@ -53,9 +53,15 @@ public class CaveAchievementParser {
   private final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
   @Transactional
-  public void saveDataToDB() throws IOException, CsvValidationException {
+  public void saveDataToDB() {
 
-    List<String[]> caveRecords = reader.readFile(caveResource);
+    List<String[]> caveRecords = null;
+    try {
+      caveRecords = reader.readFile(caveResource);
+    } catch (IOException | CsvValidationException e) {
+      log.error(e.getMessage());
+    }
+    assert caveRecords != null;
     for (String[] line : caveRecords) {
       LocalDateTime notificationTimestamp = LocalDateTime
           .parse(line[CaveAchievAttributes.NOTIFICATION_TIME.ordinal()].trim(), formatter);

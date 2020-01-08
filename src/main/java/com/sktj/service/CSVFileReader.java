@@ -9,9 +9,9 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.core.io.Resource;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
+@Service
 class CSVFileReader {
 
   List<String[]> readFile(Resource resource) throws IOException, CsvValidationException {

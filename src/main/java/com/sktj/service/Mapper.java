@@ -24,15 +24,15 @@ import org.springframework.stereotype.Service;
 @Service
 public class Mapper {
 
-  public UserModel mapUser(User user) {
+  UserModel mapUser(User user) {
     return new UserModel(user.getName(), user.getSurname(), user.getEmail());
   }
 
-  public CaveModel mapCave(Cave cave) {
+  CaveModel mapCave(Cave cave) {
     return new CaveModel(cave.getName(), cave.getRegion());
   }
 
-  public CountryModel mapCountry(Country country) {
+  CountryModel mapCountry(Country country) {
     return new CountryModel(country.getName());
   }
 
@@ -56,7 +56,7 @@ public class Mapper {
     mapAchiev(achiev, model);
   }
 
-  public CaveAchievModel mapCaveAchiev(CaveAchievements achiev) {
+  CaveAchievModel mapCaveAchiev(CaveAchievements achiev) {
     CaveAchievModel model = new CaveAchievModel();
     model.setEntryTimestamp(achiev.getEntryTimestamp());
     model.setExitTimestamp(achiev.getExitTimestamp());
@@ -67,7 +67,7 @@ public class Mapper {
     return model;
   }
 
-  public ClimbingModel mapClimbing(ClimbingAchievements achiev){
+  ClimbingModel mapClimbing(ClimbingAchievements achiev){
     ClimbingModel model = new ClimbingModel();
     model.setDifficultyGrade(achiev.getDifficultyGrade());
     model.setRouteName(achiev.getRouteName());
@@ -76,7 +76,7 @@ public class Mapper {
     return model;
   }
 
-  public OtherAchievModel mapOtherAchiev(OtherActivityAchievements achiev){
+  OtherAchievModel mapOtherAchiev(OtherActivityAchievements achiev){
     OtherAchievModel model = new OtherAchievModel();
     model.setAchievementDescription(achiev.getAchievementDescription());
     model.setCategory(achiev.getCategory());
