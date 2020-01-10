@@ -47,45 +47,44 @@ public class ClimbingAchievementParser {
   @Transactional
   public void saveDataToDB() {
 
-    List<String[]> caveRecords = null;
     try {
-      caveRecords = reader.readFile(climbingResource);
+      List<String[]> caveRecords = reader.readFile(climbingResource);
+      for (String[] line : caveRecords) {
+        ClimbingAchievements climbing = new ClimbingAchievements();
+        LocalDateTime notificationTimestamp = LocalDateTime
+            .parse(line[ClimbingAchievAttributes.NOTIFICATION_TIME.ordinal()].trim(), formatter);
+        climbing.setNotificationTimestamp(notificationTimestamp);
+        climbing.setDate(LocalDate.parse(line[ClimbingAchievAttributes.DATE.ordinal()].trim()));
+        String duration = line[ClimbingAchievAttributes.DURATION.ordinal()].trim();
+        if (!duration.isEmpty()) {
+          climbing
+              .setDuration(
+                  Duration.parse(line[ClimbingAchievAttributes.DURATION.ordinal()].trim()));
+        } else {
+          climbing.setDuration(null);
+        }
+        climbing.setRouteName(line[ClimbingAchievAttributes.ROUTE_NAME.ordinal()].trim());
+        climbing.setDifficultyGrade(line[ClimbingAchievAttributes.DIFFICULTY.ordinal()].trim());
+        climbing.setWall(line[ClimbingAchievAttributes.WALL.ordinal()].trim());
+        String country = line[ClimbingAchievAttributes.COUNTRY.ordinal()].trim();
+        climbing.setCountry(countryService.findCountryByName(country));
+        climbing.setRegion(line[ClimbingAchievAttributes.REGION.ordinal()].trim());
+        List<User> userBatchList = (List<User>) userRepository.findAll();
+        String authors = line[ClimbingAchievAttributes.AUTHORS.ordinal()];
+        for (User user : userBatchList) {
+          if (authors.toUpperCase().contains(user.getSurname().toUpperCase())) {
+            climbing.getAuthors().add(user);
+          }
+        }
+        climbing.setAnotherAuthors(line[ClimbingAchievAttributes.ANOTHER_AUTHORS.ordinal()].trim());
+        climbing.setComment(line[ClimbingAchievAttributes.COMMENT.ordinal()].trim());
+        String email = line[ClimbingAchievAttributes.NOTIFICATION_AUTHOR.ordinal()].trim();
+        climbing.setNotificationAuthor(userService.findUserByEmail(email));
+        log.info("climbing achievement notified at {} parsed", notificationTimestamp.toString());
+        climbingRepository.save(climbing);
+      }
     } catch (IOException | CsvValidationException e) {
       log.error(e.getMessage());
-    }
-    assert caveRecords != null;
-    for (String[] line : caveRecords) {
-      ClimbingAchievements climbing = new ClimbingAchievements();
-      LocalDateTime notificationTimestamp = LocalDateTime
-          .parse(line[ClimbingAchievAttributes.NOTIFICATION_TIME.ordinal()].trim(), formatter);
-      climbing.setNotificationTimestamp(notificationTimestamp);
-      climbing.setDate(LocalDate.parse(line[ClimbingAchievAttributes.DATE.ordinal()].trim()));
-      String duration = line[ClimbingAchievAttributes.DURATION.ordinal()].trim();
-      if (!duration.isEmpty()){
-        climbing
-            .setDuration(Duration.parse(line[ClimbingAchievAttributes.DURATION.ordinal()].trim()));
-      }else {
-        climbing.setDuration(null);
-      }
-      climbing.setRouteName(line[ClimbingAchievAttributes.ROUTE_NAME.ordinal()].trim());
-      climbing.setDifficultyGrade(line[ClimbingAchievAttributes.DIFFICULTY.ordinal()].trim());
-      climbing.setWall(line[ClimbingAchievAttributes.WALL.ordinal()].trim());
-      String country = line[ClimbingAchievAttributes.COUNTRY.ordinal()].trim();
-      climbing.setCountry(countryService.findCountryByName(country));
-      climbing.setRegion(line[ClimbingAchievAttributes.REGION.ordinal()].trim());
-      List<User> userBatchList = (List<User>) userRepository.findAll();
-      String authors = line[ClimbingAchievAttributes.AUTHORS.ordinal()];
-      for (User user : userBatchList) {
-        if (authors.toUpperCase().contains(user.getSurname().toUpperCase())) {
-          climbing.getAuthors().add(user);
-        }
-      }
-      climbing.setAnotherAuthors(line[ClimbingAchievAttributes.ANOTHER_AUTHORS.ordinal()].trim());
-      climbing.setComment(line[ClimbingAchievAttributes.COMMENT.ordinal()].trim());
-      String email = line[ClimbingAchievAttributes.NOTIFICATION_AUTHOR.ordinal()].trim();
-      climbing.setNotificationAuthor(userService.findUserByEmail(email));
-      log.info("climbing achievement notified at {} parsed", notificationTimestamp.toString());
-      climbingRepository.save(climbing);
     }
   }
 }
